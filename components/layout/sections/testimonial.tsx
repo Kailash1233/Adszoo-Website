@@ -26,7 +26,7 @@ interface ReviewProps {
 
 const reviewList: ReviewProps[] = [
   {
-    image: "https://github.com/shadcn.png",
+    image: "/profilepic.webp",
     name: "Naveen M R",
     userName: "Founder & CEO, KVM CMart",
     comment:
@@ -34,7 +34,7 @@ const reviewList: ReviewProps[] = [
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
+    image: "/profilepic.webp",
     name: "Dhananjeyan S",
     userName: "HR, Anthen Engineering",
     comment:
@@ -43,7 +43,7 @@ const reviewList: ReviewProps[] = [
   },
 
   {
-    image: "https://github.com/shadcn.png",
+    image: "/profilepic.webp",
     name: "Dr. Mohan Ram",
     userName: "Founder, Regain Hair Transplant Clinic",
     comment:
@@ -51,7 +51,7 @@ const reviewList: ReviewProps[] = [
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
+    image: "/profilepic.webp",
     name: "Manoj Kumar",
     userName: "Founder, Tagknot",
     comment:
@@ -59,7 +59,7 @@ const reviewList: ReviewProps[] = [
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
+    image: "/profilepic.webp",
     name: "Yugesh S",
     userName: "Freelance Graphic Designer",
     comment:
@@ -67,7 +67,7 @@ const reviewList: ReviewProps[] = [
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
+    image: "/profilepic.webp",
     name: "Arief",
     userName: "Founder, HiTech Interiors",
     comment:
@@ -116,10 +116,7 @@ export const TestimonialSection = () => {
                 <CardHeader>
                   <div className="flex flex-row items-center gap-4">
                     <Avatar>
-                      <AvatarImage
-                        src="https://avatars.githubusercontent.com/u/75042455?v=4"
-                        alt="radix"
-                      />
+                      <AvatarImage src="/profilepic.webp" alt="Profile Pic" />
                       <AvatarFallback>SV</AvatarFallback>
                     </Avatar>
 

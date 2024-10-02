@@ -39,7 +39,7 @@ export const BenefitsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Adszoo?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             At Adszoo, we are more than just a digital marketing agency — we are
-            your partners in growth. Here's why businesses choose us:
+            your partners in growth. Here&apos;s why businesses choose us:
           </p>
         </div>
 

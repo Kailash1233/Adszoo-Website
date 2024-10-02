@@ -69,7 +69,7 @@ export const ContactSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold">Connect With Us</h2>
           </div>
           <p className="mb-8 text-muted-foreground lg:w-5/6">
-            Let's Connect and Cook Up Some Digital Success Together!
+            Let&apos;s Connect and Cook Up Some Digital Success Together!
           </p>
 
           <div className="flex flex-col gap-4">

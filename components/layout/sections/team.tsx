@@ -27,7 +27,7 @@ export const TeamSection = () => {
       imageUrl: "/Kailash.jpeg",
       firstName: "Kailash",
       lastName: "G",
-      positions: ["Founder & CEO"],
+      positions: ["Head of Operations"],
       socialNetworks: [
         {
           name: "LinkedIn",

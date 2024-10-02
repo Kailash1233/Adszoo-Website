@@ -17,13 +17,13 @@ export const metadata = {
     "We specialize in empowering your business with a comprehensive suite of digital solutions",
   openGraph: {
     type: "website",
-    url: "",
+    url: "https://github.com/Kailash1233/Adszoo-Website",
     title: "Adszoo - Digital Marketing Agency",
     description:
       "We specialize in empowering your business with a comprehensive suite of digital solutions",
     images: [
       {
-        url: "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg",
+        url: "https://github.com/Kailash1233/Adszoo-Website",
         width: 1200,
         height: 630,
         alt: "Adszoo - Digital Marketing Agency",
@@ -32,13 +32,11 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "",
+    site: "https://github.com/Kailash1233/Adszoo-Website",
     title: "Adszoo - Digital Marketing Agency",
     description:
       "We specialize in empowering your business with a comprehensive suite of digital solutions",
-    images: [
-      "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg",
-    ],
+    images: ["https://github.com/Kailash1233/Adszoo-Website"],
   },
 };
 
