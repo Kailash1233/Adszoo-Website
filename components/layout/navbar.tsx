@@ -22,6 +22,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { ToggleTheme } from "./toogle-theme";
+import { useTheme } from "next-themes";
 
 interface RouteProps {
   href: string;
@@ -54,37 +55,40 @@ const routeList: RouteProps[] = [
 
 const featureList: FeatureProps[] = [
   {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
-  },
-  {
-    title: "Build Trust",
+    title: "Website Development",
     description:
-      "Leverages social proof elements to establish trust and credibility.",
+      "Custom websites that are designed to elevate your brand and meet your business needs.",
   },
   {
-    title: "Capture Leads",
+    title: "Lead Generation",
     description:
-      "Make your lead capture form visually appealing and strategically.",
+      "Targeted ad campaigns on Facebook and Instagram to generate high-quality leads.",
   },
   {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
-  },
-  {
-    title: "Build Trust",
+    title: "Social Media Management",
     description:
-      "Leverages social proof elements to establish trust and credibility.",
+      "From Instagram to LinkedIn, we craft content that connects with your audience.",
   },
   {
-    title: "Capture Leads",
+    title: "Custom Software Development",
     description:
-      "Make your lead capture form visually appealing and strategically.",
+      "Tailored, scalable, and high-performance solutions to enhance user engagement.",
+  },
+  {
+    title: "Graphic Designing",
+    description:
+      "Eye-catching logos, banners, and designs to make your brand stand out.",
+  },
+  {
+    title: "Video Editing",
+    description:
+      "Create stunning videos with smooth cuts, effects, and storytelling to captivate your audience.",
   },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const { theme } = useTheme();
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
@@ -157,11 +161,11 @@ export const Navbar = () => {
             <NavigationMenuContent>
               <div className="grid w-[600px] grid-cols-2 gap-5 p-4">
                 <Image
-                  src="https://cdn.create.vista.com/downloads/35cfb6eb-ff06-4ec8-b5d5-5fd5c1cb6abb_1024.jpeg"
-                  alt="RadixLogo"
                   className="h-full w-full rounded-md object-cover"
                   width={600}
                   height={600}
+                  src={theme === "light" ? "/man.jpg" : "/man.jpg"}
+                  alt="Adszoo Services"
                 />
                 <ul className="flex flex-col gap-2">
                   {featureList.map(({ title, description }) => (

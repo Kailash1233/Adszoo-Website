@@ -17,24 +17,25 @@ interface ServiceProps {
 }
 const serviceList: ServiceProps[] = [
   {
-    title: "Custom Domain Integration",
+    title: "Website Development",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
+      "Custom websites that are designed to elevate your brand and meet your business needs.",
     pro: 0,
   },
   {
-    title: "Social Media Integrations",
+    title: "Social Media Management",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
     pro: 0,
   },
   {
-    title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
+    title: "Lead Generation",
+    description:
+      "Targeted ad campaigns on Facebook and Instagram to generate high-quality leads.",
     pro: 0,
   },
   {
-    title: "SEO Optimization",
+    title: "Custom Software Development",
     description: "Lorem ipsum dolor sit amet consectetur.",
     pro: 1,
   },
