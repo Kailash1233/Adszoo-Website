@@ -4,7 +4,7 @@
 
 <a href="https://github.com/Kailash1233/Adszoo-Website.git" target="_blank"></a>
 
-![Alt text](./public/demo-img.jpg)
+![Alt text](./public/demo-img.PNG)
 
 ## Sections
 
