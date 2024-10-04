@@ -18,8 +18,19 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.create.vista.com",
       },
+      {
+        protocol: "https",
+        hostname: "www.bigeng.io",
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.pixabay.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
 
 export default nextConfig;
+

@@ -37,6 +37,10 @@ interface FeatureProps {
 
 const routeList: RouteProps[] = [
   {
+    href: "/services",
+    label: "Services",
+  },
+  {
     href: "#testimonials",
     label: "Testimonials",
   },
@@ -51,6 +55,10 @@ const routeList: RouteProps[] = [
   {
     href: "#faq",
     label: "FAQ",
+  },
+  {
+    href: "/blogs",
+    label: "Blogs",
   },
 ];
 
@@ -93,7 +101,14 @@ export const Navbar = () => {
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
-        <img src="/Logo.png" alt="Adszoo Logo" className="mr-2 w-6 h-6" />
+        {/* <img src="/Logo.png" alt="Adszoo Logo" className="mr-2 w-6 h-6" /> */}
+        <Image
+          src="/Logo.png"
+          alt="Adszoo Logo"
+          width={24}
+          height={24}
+          style={{ marginRight: "6px" }}
+        />
         ADSZOO
       </Link>
 
@@ -159,43 +174,50 @@ export const Navbar = () => {
       {/* <!-- Desktop --> */}
       <NavigationMenu className="hidden lg:block mx-auto">
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-card text-base">
-              Services
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <div className="grid w-[600px] grid-cols-2 gap-5 p-4">
-                <Image
-                  className="h-full w-full rounded-md object-cover"
-                  width={600}
-                  height={600}
-                  // src={theme === "light" ? "/img.jpg" : "/img.jpg"}
-                  src="/img.jpg"
-                  alt="Adszoo Services"
-                />
-                <ul className="flex flex-col gap-2">
-                  {featureList.map(({ title, description }) => (
-                    <li
-                      key={title}
-                      className="rounded-md p-3 text-sm hover:bg-muted"
-                    >
-                      <p className="mb-1 font-semibold leading-none text-foreground">
-                        {title}
-                      </p>
-                      <p className="line-clamp-2 text-muted-foreground">
-                        {description}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
+          <Link href="/services">
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="bg-card text-base">
+                Services
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="grid w-[600px] grid-cols-2 gap-5 p-4">
+                  <Image
+                    className="h-full w-full rounded-md object-cover"
+                    width={600}
+                    height={600}
+                    // src={theme === "light" ? "/img.jpg" : "/img.jpg"}
+                    src="/img.jpg"
+                    alt="Adszoo Services"
+                  />
+                  <ul className="flex flex-col gap-2">
+                    {featureList.map(({ title, description }) => (
+                      <li
+                        key={title}
+                        className="rounded-md p-3 text-sm hover:bg-muted"
+                      >
+                        <p className="mb-1 font-semibold leading-none text-foreground">
+                          {title}
+                        </p>
+                        <p className="line-clamp-2 text-muted-foreground">
+                          {description}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </Link>
 
           <NavigationMenuItem>
             {routeList.map(({ href, label }) => (
               <NavigationMenuLink key={href} asChild>
-                <Link href={href} className="text-base px-2">
+                <Link
+                  href={href}
+                  className={`text-base px-2 ${
+                    label === "Services" ? "hidden" : ""
+                  }`}
+                >
                   {label}
                 </Link>
               </NavigationMenuLink>

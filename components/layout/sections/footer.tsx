@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { ChevronsDownIcon } from "lucide-react";
+import Image from "@/node_modules/next/image";
 import Link from "next/link";
 
 export const FooterSection = () => {
@@ -9,7 +9,13 @@ export const FooterSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
           <div className="col-span-full xl:col-span-2">
             <Link href="/" className="font-bold text-lg flex items-center">
-              <img src="/Logo.png" alt="Adszoo Logo" className="mr-2 w-6 h-6" />
+              <Image
+                src="/Logo.png"
+                alt="Adszoo Logo"
+                width={24}
+                height={24}
+                style={{ marginRight: "6px" }}
+              />
               ADSZOO
             </Link>
           </div>
@@ -81,7 +87,7 @@ export const FooterSection = () => {
             <h3 className="font-bold text-lg">Quick Links</h3>
             <div>
               <Link
-                href="https://www.freeprivacypolicy.com/live/44f6eed1-7095-4010-9931-0789849e0f8c"
+                href="https://www.freeprivacypolicy.com/live/88aab8d7-80e1-4933-b668-bd3ade2e645a"
                 className="opacity-60 hover:opacity-100"
               >
                 Privacy Policy
@@ -90,7 +96,7 @@ export const FooterSection = () => {
 
             <div>
               <Link
-                href="https://www.termsandconditionsgenerator.com/live.php?token=8VF7ceEzP988VwHzCZzDK0G539fvenGY"
+                href="https://www.termsfeed.com/live/a6fc321c-401b-4e40-a8f8-b488b9697882"
                 className="opacity-60 hover:opacity-100"
               >
                 Terms and Conditions
@@ -99,7 +105,7 @@ export const FooterSection = () => {
 
             <div>
               <Link
-                href="https://www.termsandconditionsgenerator.com/live.php?token=8VF7ceEzP988VwHzCZzDK0G539fvenGY"
+                href="https://www.termsfeed.com/live/a6fc321c-401b-4e40-a8f8-b488b9697882"
                 className="opacity-60 hover:opacity-100"
               >
                 Code of Conduct
