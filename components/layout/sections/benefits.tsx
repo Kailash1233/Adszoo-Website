@@ -9,23 +9,23 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "Blocks",
+    icon: "TrendingUp",
     title: "Proven Results",
     description: "We focus on ROI and delivering measurable growth.",
   },
   {
-    icon: "LineChart",
+    icon: "Settings",
     title: "Tailored Solutions",
     description: "Every business is unique; so are our strategies.",
   },
   {
-    icon: "Wallet",
+    icon: "Users",
     title: "Experienced Team",
     description:
       "We bring expertise in web development, social media, and lead generation.",
   },
   {
-    icon: "Sparkle",
+    icon: "Heart",
     title: "Customer-Centric",
     description: "Your satisfaction is our top priority.",
   },

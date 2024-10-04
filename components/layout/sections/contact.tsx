@@ -88,7 +88,7 @@ export const ContactSection = () => {
                 <div className="font-bold">Call us</div>
               </div>
 
-              <div>+91 99999 99999</div>
+              <div>+91 63690 50929</div>
             </div>
 
             <div>

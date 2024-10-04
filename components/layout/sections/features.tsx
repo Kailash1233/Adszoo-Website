@@ -10,37 +10,37 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "TabletSmartphone",
+    icon: "Globe",
     title: "Website Development",
     description:
       "Custom websites that are designed to elevate your brand and meet your business needs.",
   },
   {
-    icon: "BadgeCheck",
+    icon: "MessageCircle",
     title: "Social Media Management",
     description:
       "From Instagram to LinkedIn, we craft content that connects with your audience.",
   },
   {
-    icon: "Goal",
+    icon: "TrendingUp",
     title: "Lead Generation",
     description:
       "Targeted ad campaigns on Facebook and Instagram to generate high-quality leads.",
   },
   {
-    icon: "PictureInPicture",
+    icon: "Code",
     title: "Custom Software Development",
     description:
       "Tailored, scalable, and high-performance solutions to enhance user engagement.",
   },
   {
-    icon: "MousePointerClick",
+    icon: "PenTool",
     title: "Graphic Designing",
     description:
       "Eye-catching logos, banners, and designs to make your brand stand out.",
   },
   {
-    icon: "Newspaper",
+    icon: "Video",
     title: "Video Editing",
     description:
       "Create stunning videos with smooth cuts, effects, and storytelling to captivate your audience.",
@@ -77,7 +77,7 @@ export const FeaturesSection = () => {
                   />
                 </div>
 
-                <CardTitle>{title}</CardTitle>
+                <CardTitle className="text-center">{title}</CardTitle>
               </CardHeader>
 
               <CardContent className="text-muted-foreground text-center">

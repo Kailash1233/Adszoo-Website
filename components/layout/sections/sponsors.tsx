@@ -116,7 +116,7 @@ const sponsors: SponsorsProps[] = [
 
 export const SponsorsSection = () => {
   return (
-    <section id="sponsors" className="max-w-[50%] mx-auto">
+    <section id="sponsors" className="md:max-w-[60%] mx-auto">
       <h2 className="text-lg md:text-xl text-center mb-6">Our Clients</h2>
 
       <div className="mx-auto">

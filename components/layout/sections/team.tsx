@@ -24,7 +24,7 @@ interface SocialNetworkProps {
 export const TeamSection = () => {
   const teamList: TeamProps[] = [
     {
-      imageUrl: "/Kailash.jpeg",
+      imageUrl: "/team/Kailash.jpeg",
       firstName: "Kailash",
       lastName: "G",
       positions: ["Head of Operations"],
@@ -44,9 +44,9 @@ export const TeamSection = () => {
       ],
     },
     {
-      imageUrl: "/askar.jfif",
-      firstName: "Md",
-      lastName: "Askar",
+      imageUrl: "/team/askar.jpeg",
+      firstName: "Askar",
+      lastName: "MD",
       positions: ["Head of Marketing"],
       socialNetworks: [
         {
@@ -59,74 +59,66 @@ export const TeamSection = () => {
         // },
       ],
     },
-    // {
-    //   imageUrl:
-    //     "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    //   firstName: "David",
-    //   lastName: "Diaz",
-    //   positions: ["Machine Learning Engineer", "TensorFlow Tinkerer"],
-    //   socialNetworks: [
-    //     {
-    //       name: "LinkedIn",
-    //       url: "https://www.linkedin.com/in/leopoldo-miranda/",
-    //     },
-    //     {
-    //       name: "Github",
-    //       url: "https://github.com/leoMirandaa",
-    //     },
-    //   ],
-    // },
-    // {
-    //   imageUrl:
-    //     "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    //   firstName: "Sarah",
-    //   lastName: "Robinson",
-    //   positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
-    //   socialNetworks: [
-    //     {
-    //       name: "LinkedIn",
-    //       url: "https://www.linkedin.com/in/leopoldo-miranda/",
-    //     },
-    //     {
-    //       name: "Github",
-    //       url: "https://github.com/leoMirandaa",
-    //     },
-    //     {
-    //       name: "X",
-    //       url: "https://x.com/leo_mirand4",
-    //     },
-    //   ],
-    // },
-    // {
-    //   imageUrl:
-    //     "https://images.unsplash.com/photo-1616805765352-beedbad46b2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    //   firstName: "Michael",
-    //   lastName: "Holland",
-    //   positions: ["DevOps Engineer", "CI/CD Pipeline Mastermind"],
-    //   socialNetworks: [
-    //     {
-    //       name: "LinkedIn",
-    //       url: "https://www.linkedin.com/in/leopoldo-miranda/",
-    //     },
-    //   ],
-    // },
-    // {
-    //   imageUrl:
-    //     "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    //   firstName: "Zoe",
-    //   lastName: "Garcia",
-    //   positions: ["JavaScript Evangelist", "Deno Champion"],
-    //   socialNetworks: [
-    //     {
-    //       name: "LinkedIn",
-    //       url: "https://www.linkedin.com/in/leopoldo-miranda/",
-    //     },
-    //     {
-    //       name: "Github",
-    //       url: "https://github.com/leoMirandaa",
-    //     },
-    //   ],
-    // },
+    {
+      imageUrl: "/team/Prem.jpeg",
+      firstName: "Prem",
+      lastName: "Kumar",
+      positions: ["Technology & Development"],
+      socialNetworks: [
+        {
+          name: "LinkedIn",
+          url: "https://www.linkedin.com/in/leopoldo-miranda/",
+        },
+        {
+          name: "Github",
+          url: "https://github.com/Premkumar708",
+        },
+      ],
+    },
+    {
+      imageUrl: "/team/Fardeen.jpg",
+      firstName: "Ibrahim",
+      lastName: "Fardeen",
+      positions: ["Technology & Development"],
+      socialNetworks: [
+        {
+          name: "LinkedIn",
+          url: "https://www.linkedin.com/in/ibrahim-fardeen-754770254/",
+        },
+        {
+          name: "Github",
+          url: "https://github.com/ibrahimfardeen",
+        },
+      ],
+    },
+    {
+      imageUrl: "/team/Karthiz.jpeg",
+      firstName: "Karthik",
+      lastName: "Raja",
+      positions: ["Lead Executive"],
+      socialNetworks: [
+        {
+          name: "LinkedIn",
+          url: "https://www.linkedin.com/in/karthikraja-pb/",
+        },
+      ],
+    },
+    {
+      imageUrl: "/team/Prethvii.jpeg",
+      firstName: "Prethive",
+      lastName: "Raj",
+      positions: ["Development"],
+      socialNetworks: [
+        {
+          name: "LinkedIn",
+          url: "https://www.linkedin.com/in/prethiveraj-v/",
+        },
+        // {
+        //   name: "Github",
+        //   url: "https://github.com/leoMirandaa",
+        // },
+      ],
+    },
     // {
     //   imageUrl:
     //     "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -207,7 +199,7 @@ export const TeamSection = () => {
                 </div>
                 <CardTitle className="py-6 pb-4 px-6">
                   {firstName}
-                  <span className="text-primary ml-2">{lastName}</span>
+                  <span className="text-primary ml-1">{lastName}</span>
                 </CardTitle>
               </CardHeader>
               {positions.map((position, index) => (
