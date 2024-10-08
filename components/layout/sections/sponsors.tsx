@@ -54,19 +54,19 @@ export const SponsorsSection = () => {
         >
           {sponsors.map(({ logo, name }) => (
             <div key={name} className="flex items-center">
-              {/* <img
+              <img
                 src={logo}
                 alt={name}
                 className="h-16 md:h-24 object-contain"
-              /> */}
-              <Image
+              />
+              {/* <Image
                 src={logo}
                 alt={name}
                 className="h-16 md:h-24 object-contain"
                 layout="intrinsic"
                 width={100}
                 height={100}
-              />
+              /> */}
             </div>
           ))}
         </Marquee>

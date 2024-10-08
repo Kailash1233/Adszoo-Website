@@ -48,10 +48,10 @@ const routeList: RouteProps[] = [
     href: "#team",
     label: "Team",
   },
-  {
-    href: "#contact",
-    label: "Contact",
-  },
+  // {
+  //   href: "#contact",
+  //   label: "Contact",
+  // },
   {
     href: "#faq",
     label: "FAQ",
@@ -164,7 +164,7 @@ export const Navbar = () => {
               <ToggleTheme />
             </SheetFooter> */}
             <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-              <Link href="/">Talk to Us</Link>
+              <Link href="#contact">Talk to Us</Link>
               <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
             </Button>
           </SheetContent>
@@ -228,7 +228,7 @@ export const Navbar = () => {
 
       <div className="hidden lg:flex">
         <Button className="md:w-4/4 font-bold group/arrow">
-          <Link href="/">Talk to Us</Link>
+          <Link href="#contact">Talk to Us</Link>
           <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
         </Button>
         {/* <ToggleTheme /> */}

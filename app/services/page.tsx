@@ -41,7 +41,7 @@ const services = [
     title: "Video Editing",
     description:
       "Create stunning videos with smooth cuts, effects, and storytelling to captivate your audience.",
-    image: "/services/uiux.jpg",
+    image: "/services/video.jpg",
   },
 ];
 
