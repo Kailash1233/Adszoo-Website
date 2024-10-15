@@ -191,7 +191,7 @@ export const TeamSection = () => {
                 <div className="h-full overflow-hidden">
                   <Image
                     src={imageUrl}
-                    alt=""
+                    alt="Adszoo Digital Marketing"
                     width={300}
                     height={300}
                     className="w-full aspect-square object-cover saturate-0 transition-all duration-200 ease-linear size-full group-hover/hoverimg:saturate-100 group-hover/hoverimg:scale-[1.01]"

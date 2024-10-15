@@ -104,10 +104,11 @@ export const Navbar = () => {
         {/* <img src="/Logo.png" alt="Adszoo Logo" className="mr-2 w-6 h-6" /> */}
         <Image
           src="/Logo.png"
-          alt="Adszoo Logo"
+          alt="Adszoo Digital Marketing Agency Logo"
           width={24}
           height={24}
           style={{ marginRight: "6px" }}
+          loading="lazy"
         />
         ADSZOO
       </Link>
@@ -135,8 +136,9 @@ export const Navbar = () => {
                   >
                     <img
                       src="/Logo.png"
-                      alt="Adszoo Logo"
+                      alt="Adszoo Digital Marketing Agency Logo"
                       className="mr-2 w-6 h-6"
+                      loading="lazy"
                     />
                     ADSZOO
                   </Link>
@@ -187,7 +189,8 @@ export const Navbar = () => {
                     height={600}
                     // src={theme === "light" ? "/img.jpg" : "/img.jpg"}
                     src="/img.jpg"
-                    alt="Adszoo Services"
+                    alt="Adszoo Digital Marketing"
+                    loading="lazy"
                   />
                   <ul className="flex flex-col gap-2">
                     {featureList.map(({ title, description }) => (

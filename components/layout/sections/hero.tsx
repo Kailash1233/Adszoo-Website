@@ -71,7 +71,8 @@ export const HeroSection = () => {
             height={1200}
             className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border-secondary  border-t-primary/30"
             src="/hero-bg.jpeg"
-            alt="dashboard"
+            alt="Adszoo Digital Marketing"
+            loading="lazy"
           />
           <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div>
         </motion.div>
