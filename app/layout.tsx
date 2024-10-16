@@ -24,7 +24,10 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Existing Metadata */}
+        <meta
+          name="google-site-verification"
+          content="2scpu4pXHJ-tPOYU7PA9trnQsFwk6z3AUfDywzNVt6Y"
+        />
         <title>
           Adszoo - Best Website Development & Social Media Marketing Agency
         </title>
