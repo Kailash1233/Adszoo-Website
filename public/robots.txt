@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://adszoo.vercel.app
+
+# Sitemaps
+Sitemap: https://adszoo.vercel.app/sitemap.xml
