@@ -1,4 +1,3 @@
-import { FooterSection } from "@/components/layout/sections/footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";

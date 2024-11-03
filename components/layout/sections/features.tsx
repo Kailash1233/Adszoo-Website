@@ -1,5 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
+import Link from "@/node_modules/next/link";
 import { icons } from "lucide-react";
 
 interface FeaturesProps {
@@ -68,7 +70,7 @@ export const FeaturesSection = () => {
           <div key={title}>
             <Card className="h-full bg-background border-0 shadow-none">
               <CardHeader className="flex justify-center items-center">
-                <div className="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4">
+                <div className="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4 hover:scale-110 duration-200">
                   <Icon
                     name={icon as keyof typeof icons}
                     size={24}
@@ -86,6 +88,13 @@ export const FeaturesSection = () => {
             </Card>
           </div>
         ))}
+      </div>
+      <div className="mt-4 flex justify-center">
+        <Link href="/services">
+          <Button className="w-1/6 md:w-full font-bold group/arrow">
+            Learn More
+          </Button>
+        </Link>
       </div>
     </section>
   );

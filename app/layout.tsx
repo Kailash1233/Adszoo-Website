@@ -36,27 +36,31 @@ export default function RootLayout({
           content="Boost your business with expert PPC, Website Development and Social Media services. Partner with Adszoo for proven digital marketing strategies."
         />
         {/* Add JSON-LD structured data */}
-        <script type="application/ld+json">
-          {`{
-            "@context": "https://schema.org",
-            "@type": "DigitalMarketingAgency",
-            "name": "Adszoo",
-            "url": "https://www.adszoo.in",
-            "logo": "https://scontent.fmaa3-2.fna.fbcdn.net/v/t39.30808-6/458183186_1154363618956225_8041723116845708442_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=DVNm2ZPTdb0Q7kNvgFb9Teo&_nc_zt=23&_nc_ht=scontent.fmaa3-2.fna&_nc_gid=Amezj7l9h0sZE6iavzBW-MW&oh=00_AYCSGZJIE2EOEFvZwtc-yQl5TP2K2AGfUbCWLuCJ0alDrw&oe=67147A90",
-            "description": "Adszoo offers Website Development and Social Media services to grow your business online.",
-            "sameAs": [
-              "https://www.facebook.com/profile.php?id=61565406179842",
-            ],
-            "address": {
-              "@type": "Chromepet, Chennai",
-              "streetAddress": "123 Adszoo St.",
-              "addressLocality": "Chennai",
-              "addressRegion": "TamilNadu",
-              "postalCode": "600044",
-              "addressCountry": "IN"
-            }
-          }`}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "DigitalMarketingAgency",
+              name: "Adszoo",
+              url: "https://www.adszoo.in",
+              logo: "https://scontent.fmaa3-2.fna.fbcdn.net/v/t39.30808-6/458183186_1154363618956225_8041723116845708442_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=DVNm2ZPTdb0Q7kNvgFb9Teo&_nc_zt=23&_nc_ht=scontent.fmaa3-2.fna&_nc_gid=Amezj7l9h0sZE6iavzBW-MW&oh=00_AYCSGZJIE2EOEFvZwtc-yQl5TP2K2AGfUbCWLuCJ0alDrw&oe=67147A90",
+              description:
+                "Adszoo offers Website Development and Social Media services to grow your business online.",
+              sameAs: [
+                "https://www.facebook.com/profile.php?id=61565406179842",
+              ],
+              address: {
+                "@type": "Chromepet, Chennai",
+                streetAddress: "Nehru Nagar",
+                addressLocality: "Chennai",
+                addressRegion: "TamilNadu",
+                postalCode: "600044",
+                addressCountry: "IN",
+              },
+            }),
+          }}
+        />
       </head>
       <body className={cn("min-h-screen bg-background", inter.className)}>
         {/* <ThemeProvider
