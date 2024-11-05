@@ -34,7 +34,7 @@ interface FeatureProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
+    href: "#service",
     label: "Services",
   },
   {
@@ -166,7 +166,7 @@ export const Navbar = () => {
       {/* <!-- Desktop --> */}
       <NavigationMenu className="hidden lg:block mx-auto">
         <NavigationMenuList>
-          <Link href="#features">
+          <Link href="#service">
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-card text-base">
                 Services

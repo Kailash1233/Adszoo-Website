@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator";
-import Image from "@/node_modules/next/image";
+import Image from "next/image";
 import Link from "next/link";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 export const FooterSection = () => {
   return (
@@ -27,13 +28,11 @@ export const FooterSection = () => {
                 Services
               </Link>
             </div>
-
             <div>
               <Link href="/" className="opacity-60 hover:opacity-100">
                 About Us
               </Link>
             </div>
-
             <div>
               <Link href="#contact" className="opacity-60 hover:opacity-100">
                 Contact Us
@@ -48,13 +47,11 @@ export const FooterSection = () => {
                 Web Development
               </Link>
             </div>
-
             <div>
               <Link href="/" className="opacity-60 hover:opacity-100">
                 Lead Generation
               </Link>
             </div>
-
             <div>
               <Link href="/" className="opacity-60 hover:opacity-100">
                 Social Media Management
@@ -69,13 +66,11 @@ export const FooterSection = () => {
                 Contact Us
               </Link>
             </div>
-
             <div>
               <Link href="#faq" className="opacity-60 hover:opacity-100">
                 FAQ
               </Link>
             </div>
-
             <div>
               <Link href="/" className="opacity-60 hover:opacity-100">
                 Feedback
@@ -93,7 +88,6 @@ export const FooterSection = () => {
                 Privacy Policy
               </Link>
             </div>
-
             <div>
               <Link
                 href="https://www.termsfeed.com/live/a6fc321c-401b-4e40-a8f8-b488b9697882"
@@ -102,7 +96,6 @@ export const FooterSection = () => {
                 Terms and Conditions
               </Link>
             </div>
-
             <div>
               <Link
                 href="https://www.termsfeed.com/live/a6fc321c-401b-4e40-a8f8-b488b9697882"
@@ -115,17 +108,39 @@ export const FooterSection = () => {
         </div>
 
         <Separator className="my-6" />
-        <section className="">
-          <h3 className="">
+
+        <section className="flex justify-between items-center">
+          <h3>
             &copy; 2024 All rights reserved
             <Link
               target="_blank"
-              href=""
+              href="/"
               className="text-primary transition-all border-primary hover:border-b-2 ml-1"
             >
               Adszoo
             </Link>
           </h3>
+
+          <div className="flex gap-4">
+            <Link
+              href="https://www.facebook.com/profile.php?id=61565406179842"
+              target="_blank"
+            >
+              <Facebook className="w-5 h-5 text-accent-foreground hover:text-primary" />
+            </Link>
+            <Link href="https://x.com/Kailash61203" target="_blank">
+              <Twitter className="w-5 h-5 text-accent-foreground hover:text-primary" />
+            </Link>
+            <Link href="https://www.instagram.com/adszoo_/" target="_blank">
+              <Instagram className="w-5 h-5 text-accent-foreground hover:text-primary" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/adszoo/"
+              target="_blank"
+            >
+              <Linkedin className="w-5 h-5 text-accent-foreground hover:text-primary" />
+            </Link>
+          </div>
         </section>
       </div>
     </footer>

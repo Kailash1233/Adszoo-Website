@@ -53,10 +53,6 @@ export const TeamSection = () => {
           name: "LinkedIn",
           url: "https://www.linkedin.com/in/mohammed-askar-9b1079221/",
         },
-        // {
-        //   name: "X",
-        //   url: "https://x.com/leo_mirand4",
-        // },
       ],
     },
     {
@@ -113,10 +109,6 @@ export const TeamSection = () => {
           name: "LinkedIn",
           url: "https://www.linkedin.com/in/prethiveraj-v/",
         },
-        // {
-        //   name: "Github",
-        //   url: "https://github.com/leoMirandaa",
-        // },
       ],
     },
     // {

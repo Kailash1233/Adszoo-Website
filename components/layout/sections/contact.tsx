@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import {
   Card,
   CardContent,
@@ -48,13 +49,35 @@ export const ContactSection = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     const { firstName, lastName, email, subject, message } = values;
-    console.log(values);
+    const formspreeEndpoint = "https://formspree.io/f/xjvnqvzo";
 
-    const mailToLink = `mailto:thekinnovations@gmail.com?subject=${subject}&body=Hello I am ${firstName} ${lastName}, my Email is ${email}. %0D%0A${message}`;
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          subject,
+          message,
+        }),
+      });
 
-    window.location.href = mailToLink;
+      if (response.ok) {
+        alert("Message sent successfully!");
+        form.reset(); // Reset form on successful submission
+      } else {
+        alert("Error sending message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Error sending message. Please try again.");
+    }
   }
 
   return (
@@ -65,7 +88,6 @@ export const ContactSection = () => {
             <h2 className="text-lg text-primary mb-2 tracking-wider">
               Contact
             </h2>
-
             <h2 className="text-3xl md:text-4xl font-bold">Connect With Us</h2>
           </div>
           <p className="mb-8 text-muted-foreground lg:w-5/6">
@@ -78,7 +100,6 @@ export const ContactSection = () => {
                 <Building2 />
                 <div className="font-bold">Find us</div>
               </div>
-
               <div>Chennai, Tamil Nadu</div>
             </div>
 
@@ -87,7 +108,6 @@ export const ContactSection = () => {
                 <Phone />
                 <div className="font-bold">Call us</div>
               </div>
-
               <div>+91 63690 50929</div>
             </div>
 
@@ -96,7 +116,6 @@ export const ContactSection = () => {
                 <Mail />
                 <div className="font-bold">Mail US</div>
               </div>
-
               <div>info@adszoo.in</div>
             </div>
           </div>
@@ -217,7 +236,6 @@ export const ContactSection = () => {
                             {...field}
                           />
                         </FormControl>
-
                         <FormMessage />
                       </FormItem>
                     )}
