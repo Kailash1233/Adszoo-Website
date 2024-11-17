@@ -28,6 +28,10 @@ export default function RootLayout({
           name="google-site-verification"
           content="2scpu4pXHJ-tPOYU7PA9trnQsFwk6z3AUfDywzNVt6Y"
         />
+        <meta
+          name="ahrefs-site-verification"
+          content="52cc875c8d0ea547fbd9cfc1b7a156038a191d34a4edbf623f55a5e7590ac90b"
+        ></meta>
         <title>
           Adszoo - Best Website Development & Social Media Marketing Agency
         </title>
