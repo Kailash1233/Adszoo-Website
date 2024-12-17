@@ -179,7 +179,7 @@ export const Navbar = () => {
                     height={600}
                     src="/img.jpg"
                     alt="Adszoo Digital Marketing"
-                    loading="lazy"
+                    // loading="lazy"
                   />
                   <ul className="flex flex-col gap-2">
                     {featureList.map(({ title, description }) => (

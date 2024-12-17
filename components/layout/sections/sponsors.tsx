@@ -38,6 +38,10 @@ const sponsors: SponsorsProps[] = [
     logo: "/clients/symbiote.avif",
     name: "Symbiote",
   },
+  {
+    logo: "/clients/Boom1.png",
+    name: "Jii Boom Baah",
+  },
 ];
 
 export const SponsorsSection = () => {
