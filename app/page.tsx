@@ -17,7 +17,7 @@ export const metadata = {
     "We specialize in empowering your business with a comprehensive suite of digital solutions",
   openGraph: {
     type: "website",
-    url: "https://adszoo-website.vercel.app/",
+    url: "https://adszoo.in/",
     title: "Adszoo - Digital Marketing Agency",
     description:
       "We specialize in empowering your business with a comprehensive suite of digital solutions",
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://adszoo-website.vercel.app/",
+    site: "https://adszoo.in/",
     title: "Adszoo - Digital Marketing Agency",
     description:
       "We specialize in empowering your business with a comprehensive suite of digital solutions",
