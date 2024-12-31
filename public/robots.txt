@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://adszoo.vercel.app
+Host: https://adszoo.in
 
 # Sitemaps
-Sitemap: https://adszoo.vercel.app/sitemap.xml
+Sitemap: https://adszoo.in/sitemap.xml
