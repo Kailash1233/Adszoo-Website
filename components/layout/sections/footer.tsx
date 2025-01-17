@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 export const FooterSection = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer id="footer" className="container py-4 sm:py-4">
       <div className="p-10 bg-card border border-secondary rounded-2xl">
@@ -111,7 +113,7 @@ export const FooterSection = () => {
 
         <section className="flex justify-between items-center">
           <h3>
-            &copy; 2024 All rights reserved
+            &copy; {currentYear} All rights reserved
             <Link
               target="_blank"
               href="/"

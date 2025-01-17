@@ -47,7 +47,7 @@ export const TeamSection = () => {
       imageUrl: "/team/askar.jpeg",
       firstName: "Askar",
       lastName: "MD",
-      positions: ["Head of Marketing"],
+      positions: ["CoFounder & Head of Marketing"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -87,23 +87,23 @@ export const TeamSection = () => {
         },
       ],
     },
-    {
-      imageUrl: "/team/Karthiz.jpeg",
-      firstName: "Karthik",
-      lastName: "Raja",
-      positions: ["Lead Executive"],
-      socialNetworks: [
-        {
-          name: "LinkedIn",
-          url: "https://www.linkedin.com/in/karthikraja-pb/",
-        },
-      ],
-    },
+    // {
+    //   imageUrl: "/team/Karthiz.jpeg",
+    //   firstName: "Karthik",
+    //   lastName: "Raja",
+    //   positions: ["Lead Executive"],
+    //   socialNetworks: [
+    //     {
+    //       name: "LinkedIn",
+    //       url: "https://www.linkedin.com/in/karthikraja-pb/",
+    //     },
+    //   ],
+    // },
     {
       imageUrl: "/team/Prethvii.jpeg",
       firstName: "Prethive",
       lastName: "Raj",
-      positions: ["Development"],
+      positions: ["Web Developer"],
       socialNetworks: [
         {
           name: "LinkedIn",
@@ -169,7 +169,7 @@ export const TeamSection = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
         {teamList.map(
           (
             { imageUrl, firstName, lastName, positions, socialNetworks },
