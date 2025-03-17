@@ -31,13 +31,29 @@ const sponsors: SponsorsProps[] = [
     name: "Srinivasan Chess Academy",
   },
   {
-    logo: "/clients/Pixels.png",
-    name: "Pixels Studio",
+    logo: "/clients/asli.jpg",
+    name: "Asli Healing",
   },
   {
-    logo: "/clients/symbiote.avif",
-    name: "Symbiote",
+    logo: "/clients/Taiyo.png",
+    name: "Taiyo",
   },
+  {
+    logo: "/clients/abdesignlabs.png",
+    name: "Ab Design Labs",
+  },
+  {
+    logo: "/clients/go.png",
+    name: "Gameon Solution",
+  },
+  // {
+  //   logo: "/clients/Pixels.png",
+  //   name: "Pixels Studio",
+  // },
+  // {
+  //   logo: "/clients/symbiote.avif",
+  //   name: "Symbiote",
+  // },
   {
     logo: "/clients/Boom1.png",
     name: "Jii Boom Baah",
@@ -47,7 +63,9 @@ const sponsors: SponsorsProps[] = [
 export const SponsorsSection = () => {
   return (
     <section id="sponsors" className="md:max-w-[60%] mx-auto">
-      <h2 className="text-lg md:text-xl text-center mb-6">Our Clients</h2>
+      <h2 className="text-lg md:text-xl text-center mb-6">
+        We&apos;ve worked with
+      </h2>
 
       <div className="mx-auto">
         <Marquee

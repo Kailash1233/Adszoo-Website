@@ -4,6 +4,10 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+const title = "Best Digital Marketing Blogs in 2025 | Adszoo";
+const description =
+  "Stay updated with the latest trends, tips, and strategies in digital marketing. Explore in-depth insights on social media, advertising, and online business growth.";
+
 const BlogPage = () => {
   const blogPosts = [
     {
@@ -58,76 +62,91 @@ const BlogPage = () => {
   ];
 
   return (
-    <section className="container w-full">
-      <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
-        {/* Featured Blog Post */}
-        <div className="text-center space-y-8">
-          <div className="max-w-screen-md mx-auto text-center text-4xl md:text-5xl font-bold">
-            <h1>
-              Stay Ahead with Our
-              <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                Blog Insights
-              </span>
-            </h1>
+    <>
+      {/* Dynamic SEO Metadata */}
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta
+          name="keywords"
+          content="digital marketing, SEO, social media, business growth"
+        />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="/blogs/why-you-need-website.jpg" />
+        <meta property="og:type" content="article" />
+      </Head>
+      <section className="container w-full">
+        <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
+          {/* Featured Blog Post */}
+          <div className="text-center space-y-8">
+            <div className="max-w-screen-md mx-auto text-center text-4xl md:text-5xl font-bold">
+              <h1>
+                Stay Ahead with Our
+                <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
+                  Blog Insights
+                </span>
+              </h1>
+            </div>
+
+            <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
+              Discover the latest trends, tips, and strategies in digital
+              marketing to help your business thrive.
+            </p>
           </div>
 
-          <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            Discover the latest trends, tips, and strategies in digital
-            marketing to help your business thrive.
-          </p>
-        </div>
+          {/* Blog Post Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+            {blogPosts.map((post, index) => (
+              <div
+                key={index}
+                className="border rounded-lg shadow-lg overflow-hidden group"
+              >
+                <div className="relative">
+                  <Image
+                    width={600}
+                    height={400}
+                    src={post.image}
+                    alt={post.title}
+                    className="object-cover h-48 w-full"
+                  />
+                  <div className="absolute inset-0 bg-black/40 transition-opacity group-hover:opacity-70"></div>
+                </div>
 
-        {/* Blog Post Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-          {blogPosts.map((post, index) => (
-            <div
-              key={index}
-              className="border rounded-lg shadow-lg overflow-hidden group"
-            >
-              <div className="relative">
-                <Image
-                  width={600}
-                  height={400}
-                  src={post.image}
-                  alt={post.title}
-                  className="object-cover h-48 w-full"
-                />
-                <div className="absolute inset-0 bg-black/40 transition-opacity group-hover:opacity-70"></div>
+                <div className="p-5 space-y-3">
+                  <h2 className="text-2xl font-semibold">{post.title}</h2>
+                  <p className="text-muted-foreground text-sm">{post.date}</p>
+                  <p className="text-base text-muted-foreground line-clamp-2">
+                    {post.description}
+                  </p>
+
+                  <Button variant="link" className="p-0">
+                    <Link href={post.href}>
+                      <span className="inline-flex items-center">
+                        Read More
+                        <ArrowRight className="ml-2" />
+                      </span>
+                    </Link>
+                  </Button>
+                </div>
               </div>
+            ))}
+          </div>
 
-              <div className="p-5 space-y-3">
-                <h2 className="text-2xl font-semibold">{post.title}</h2>
-                <p className="text-muted-foreground text-sm">{post.date}</p>
-                <p className="text-base text-muted-foreground line-clamp-2">
-                  {post.description}
-                </p>
-
-                <Button variant="link" className="p-0">
-                  <Link href={post.href}>
-                    <span className="inline-flex items-center">
-                      Read More
-                      <ArrowRight className="ml-2" />
-                    </span>
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          ))}
+          {/* Call to Action */}
+          <div className="mt-12">
+            <Button className="w-full md:w-3/3 font-bold group/arrow">
+              <Link href="/blogs">
+                <span className="inline-flex items-center">
+                  View All Blog Posts
+                  <ArrowRight className="ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            </Button>
+          </div>
         </div>
-
-        {/* Call to Action */}
-        <div className="mt-12">
-          <Button className="w-full md:w-3/3 font-bold group/arrow">
-            <Link href="/blogs">
-              <span className="inline-flex items-center">
-                View All Blog Posts
-                <ArrowRight className="ml-2 group-hover/arrow:translate-x-1 transition-transform" />
-              </span>
-            </Link>
-          </Button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
