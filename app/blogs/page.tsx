@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Head from "next/head";
 import Link from "next/link";
 
 const title = "Best Digital Marketing Blogs in 2025 | Adszoo";
