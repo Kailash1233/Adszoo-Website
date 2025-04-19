@@ -42,10 +42,10 @@ const sponsors: SponsorsProps[] = [
     logo: "/clients/abdesignlabs.png",
     name: "Ab Design Labs",
   },
-  {
-    logo: "/clients/go.png",
-    name: "Gameon Solution",
-  },
+  // {
+  //   logo: "/clients/go.png",
+  //   name: "Gameon Solution",
+  // },
   // {
   //   logo: "/clients/Pixels.png",
   //   name: "Pixels Studio",
