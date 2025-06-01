@@ -24,7 +24,7 @@ interface SocialNetworkProps {
 export const TeamSection = () => {
   const teamList: TeamProps[] = [
     {
-      imageUrl: "/team/Kailash.jpeg",
+      imageUrl: "/team/Kailash.webp",
       firstName: "Kailash",
       lastName: "G",
       positions: ["Head of Operations"],
@@ -37,14 +37,14 @@ export const TeamSection = () => {
           name: "Github",
           url: "https://github.com/Kailash1233",
         },
-        {
-          name: "X",
-          url: "https://x.com/Kailash61203",
-        },
+        // {
+        //   name: "X",
+        //   url: "https://x.com/Kailash61203",
+        // },
       ],
     },
     {
-      imageUrl: "/team/askar.jpeg",
+      imageUrl: "/team/Askar.webp",
       firstName: "Askar",
       lastName: "MD",
       positions: ["CoFounder & Head of Marketing"],
@@ -56,7 +56,7 @@ export const TeamSection = () => {
       ],
     },
     {
-      imageUrl: "/team/Prem.jpeg",
+      imageUrl: "/team/Prem.webp",
       firstName: "Prem",
       lastName: "Kumar",
       positions: ["Technology & Development"],
@@ -72,7 +72,7 @@ export const TeamSection = () => {
       ],
     },
     {
-      imageUrl: "/team/Fardeen.jpg",
+      imageUrl: "/team/Fardeen.webp",
       firstName: "Ibrahim",
       lastName: "Fardeen",
       positions: ["Technology & Development"],
@@ -87,20 +87,9 @@ export const TeamSection = () => {
         },
       ],
     },
-    // {
-    //   imageUrl: "/team/Karthiz.jpeg",
-    //   firstName: "Karthik",
-    //   lastName: "Raja",
-    //   positions: ["Lead Executive"],
-    //   socialNetworks: [
-    //     {
-    //       name: "LinkedIn",
-    //       url: "https://www.linkedin.com/in/karthikraja-pb/",
-    //     },
-    //   ],
-    // },
+
     {
-      imageUrl: "/team/Prethvii.jpeg",
+      imageUrl: "/team/Prethvii.webp",
       firstName: "Prethive",
       lastName: "Raj",
       positions: ["Web Developer"],

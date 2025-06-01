@@ -2,8 +2,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import { Link as ScrollLink } from "react-scroll";
+import Image from "next/image";
+import Link from "next/link";
 
 const containerVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -17,13 +18,9 @@ const buttonVariants = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
 };
 
-const imageVariants = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
-};
-
 export const HeroSection = () => {
   return (
-    <section className="container w-full" id="hero">
+    <section className="container w-full h-screen" id="hero">
       <motion.div
         className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32"
         variants={containerVariants}
@@ -32,168 +29,82 @@ export const HeroSection = () => {
       >
         {/* Text Section */}
         <motion.div className="text-center space-y-8" variants={textVariants}>
-          <div className="max-w-screen-md mx-auto text-center text-4xl md:text-5xl font-bold">
+          <div className="max-w-screen-md mx-auto text-center text-6xl md:text-7xl font-extrabold tracking-tighter">
             <h1>
-              Accelerate Your Growth:
-              <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                Drive Engagement,
-              </span>
-              Boost Sales
+              We Turn Visitors into Paying Customers
+              {/* <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
+                Visitors
+              </span> */}
+              {/* <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
+                Paying Customers
+              </span> */}
             </h1>
           </div>
 
-          <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            {`We craft jaw-dropping websites and deliver unmatched ROI through expert digital marketing.`}
+          <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground font-medium">
+            {`High-converting websites and targeted ads crafted with clear strategy and smooth execution—designed to attract ready-to-buy customers and help businesses grow fast.`}
           </p>
 
-          {/* Button Section */}
+          {/* Call-to-Action Section */}
           <motion.div
-            className="space-y-4 md:space-y-0 md:space-x-4"
+            className="flex flex-col md:flex-row justify-center items-center gap-4 mt-6 w-full"
             variants={buttonVariants}
           >
-            <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-              <ScrollLink to="contact" smooth={true}>
-                Talk to Us
-              </ScrollLink>
-              <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+            <Button className="font-bold w-full md:w-auto px-6 py-3 flex items-center justify-center group/arrow">
+              <a
+                href="https://cal.com/adszoo/15min"
+                target="_blank"
+                className="text-white text-lg font-medium cursor-pointer flex items-center"
+                rel="noopener noreferrer"
+              >
+                Schedule a Call
+                <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+              </a>
             </Button>
-          </motion.div>
-        </motion.div>
 
-        {/* Image Section */}
-        <motion.div className="relative group mt-14" variants={imageVariants}>
-          <div className="absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/50 rounded-full blur-3xl"></div>
-          <Image
-            width={1200}
-            height={1200}
-            className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border-secondary  border-t-primary/30"
-            src="/hero-bg.jpeg"
-            alt="Adszoo Digital Marketing"
-            loading="lazy"
-          />
-          <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div>
+            <Link
+              href="/case-study"
+              className="w-full md:w-auto text-center text-primary underline text-lg font-medium cursor-pointer"
+            >
+              View Case Study
+            </Link>
+          </motion.div>
+
+          {/* Trusted Section */}
+          <div className="mt-8 text-center">
+            <p className="text-muted-foreground text-sm">
+              Trusted by 15+ Businesses
+            </p>
+            <div className="mt-4 flex flex-wrap justify-center items-center gap-4">
+              {[
+                { src: "/clients/Anthen.webp", alt: "Anthen Engineering" },
+                { src: "/clients/Kvm.webp", alt: "KVM CMart" },
+                { src: "/clients/Regain.webp", alt: "Regain Hair Care" },
+                // { src: "/clients/Eswari.webp", alt: "Eswari Builders" },
+                // { src: "/clients/GafClickz.webp", alt: "GafClickz" },
+                // { src: "/clients/Supreme.webp", alt: "Supreme Aluminium" },
+                // { src: "/clients/Vizhipom.webp", alt: "Vizhipom Vidhaipom" },
+                {
+                  src: "/clients/Gafur.webp",
+                  alt: "Gaf Clickz",
+                },
+                { src: "/clients/Tagknot.webp", alt: "Tagknot" },
+                { src: "/clients/Taiyo.webp", alt: "Taiyo" },
+                { src: "/clients/abdesignlabs.webp", alt: "AB Design Labs" },
+              ].map((logo, i) => (
+                <Image
+                  key={i}
+                  src={logo.src}
+                  alt={`${logo.alt} Logo`}
+                  width={80}
+                  height={40}
+                  className="filter grayscale hover:grayscale-0 transition duration-300 w-12 sm:w-16 md:w-20 h-auto object-contain"
+                />
+              ))}
+            </div>
+          </div>
         </motion.div>
       </motion.div>
     </section>
   );
 };
-
-// "use client";
-// import { motion } from "framer-motion";
-// import { Button } from "@/components/ui/button";
-// import { ArrowRight } from "lucide-react";
-// import Image from "next/image";
-// import { useEffect, useState } from "react";
-// import { Link as ScrollLink } from "react-scroll";
-
-// // Animation Variants
-// const containerVariants = {
-//   hidden: { opacity: 0, y: 50 },
-//   visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.6 } },
-// };
-
-// const textVariants = {
-//   hidden: { opacity: 0, y: -50 },
-//   visible: { opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.8 } },
-// };
-
-// const buttonVariants = {
-//   hidden: { opacity: 0, scale: 0.8 },
-//   visible: { opacity: 1, scale: 1, transition: { delay: 0.6, duration: 0.4 } },
-// };
-
-// const imageVariants = {
-//   hidden: { opacity: 0, scale: 0.9 },
-//   visible: {
-//     opacity: 1,
-//     scale: 1,
-//     transition: { duration: 1.2, ease: "easeInOut" },
-//   }, // Smooth transition with ease
-// };
-
-// // Image array
-// const images = [
-//   { src: "/hero-bg.jpeg", alt: "Adszoo Digital Marketing" },
-//   { src: "/image2.jpg", alt: "Second Image" },
-//   { src: "/image1.jpg", alt: "Third Image" },
-// ];
-
-// export const HeroSection = () => {
-//   const [isMounted, setIsMounted] = useState(false);
-//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-//   useEffect(() => {
-//     setIsMounted(true); // Ensure the component is mounted
-//     // Set up an interval to change the current image
-//     const interval = setInterval(() => {
-//       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length); // Loop through images
-//     }, 5000); // Change image every 5 seconds
-
-//     return () => clearInterval(interval); // Clean up the interval
-//   }, []);
-
-//   return (
-//     <section className="container w-full" id="hero">
-//       {isMounted && (
-//         <motion.div
-//           className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32"
-//           variants={containerVariants}
-//           initial="hidden"
-//           animate="visible"
-//         >
-//           {/* Text Section */}
-//           <motion.div className="text-center space-y-8" variants={textVariants}>
-//             <div className="max-w-screen-md mx-auto text-center text-4xl md:text-5xl font-bold">
-//               <h1>
-//                 Accelerate Your Growth:
-//                 <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-//                   Drive Engagement,
-//                 </span>
-//                 Boost Sales
-//               </h1>
-//             </div>
-
-//             <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-//               {`We craft jaw-dropping websites and deliver unmatched ROI through expert digital marketing.`}
-//             </p>
-
-//             {/* Button Section */}
-//             <motion.div
-//               className="space-y-4 md:space-y-0 md:space-x-4"
-//               variants={buttonVariants}
-//             >
-//               <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-//                 <ScrollLink to="contact" smooth={true}>
-//                   Talk to Us
-//                 </ScrollLink>
-//                 <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
-//               </Button>
-//             </motion.div>
-//           </motion.div>
-
-//           {/* Image Carousel Section */}
-//           <motion.div className="relative group mt-14" variants={imageVariants}>
-//             <div className="absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/50 rounded-full blur-3xl"></div>
-//             <motion.div
-//               key={currentImageIndex} // Ensure Framer Motion detects the change in image
-//               initial={{ opacity: 0, scale: 0.9 }}
-//               animate={{ opacity: 1, scale: 1 }}
-//               exit={{ opacity: 0, scale: 0.9 }}
-//               transition={{ duration: 1.2, ease: "easeInOut" }} // Smooth transition for image switch
-//             >
-//               <Image
-//                 width={1200}
-//                 height={1200}
-//                 className="w-full md:w-[1200px] mx-auto rounded-lg relative leading-none flex items-center border-secondary border-t-primary/30"
-//                 src={images[currentImageIndex].src}
-//                 alt={images[currentImageIndex].alt}
-//                 loading="lazy"
-//               />
-//             </motion.div>
-//             <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div>
-//           </motion.div>
-//         </motion.div>
-//       )}
-//     </section>
-//   );
-// };

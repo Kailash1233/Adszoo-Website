@@ -97,9 +97,9 @@ export const Navbar = () => {
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
-        {/* <img src="/Logo.png" alt="Adszoo Logo" className="mr-2 w-6 h-6" /> */}
+        {/* <img src="/Logo.webp" alt="Adszoo Logo" className="mr-2 w-6 h-6" /> */}
         <Image
-          src="/Logo.png"
+          src="/Logo.webp"
           alt="Adszoo Digital Marketing Agency Logo"
           width={24}
           height={24}
@@ -131,7 +131,7 @@ export const Navbar = () => {
                     className="font-bold text-lg flex items-center"
                   >
                     <img
-                      src="/Logo.png"
+                      src="/Logo.webp"
                       alt="Adszoo Digital Marketing Agency Logo"
                       className="mr-2 w-6 h-6"
                       loading="lazy"
@@ -177,7 +177,7 @@ export const Navbar = () => {
                     className="h-full w-full rounded-md object-cover"
                     width={600}
                     height={600}
-                    src="/img.jpg"
+                    src="/img.webp"
                     alt="Adszoo Digital Marketing"
                     // loading="lazy"
                   />
@@ -328,7 +328,7 @@ export const Navbar = () => {
 //         className="font-bold text-lg flex items-center cursor-pointer"
 //       >
 //         <Image
-//           src="/Logo.png"
+//           src="/Logo.webp"
 //           alt="Adszoo Digital Marketing Agency Logo"
 //           width={24}
 //           height={24}
@@ -361,7 +361,7 @@ export const Navbar = () => {
 //                     className="font-bold text-lg flex items-center"
 //                   >
 //                     <img
-//                       src="/Logo.png"
+//                       src="/Logo.webp"
 //                       alt="Adszoo Digital Marketing Agency Logo"
 //                       className="mr-2 w-6 h-6"
 //                       loading="lazy"
@@ -411,7 +411,7 @@ export const Navbar = () => {
 //                     className="h-full w-full rounded-md object-cover"
 //                     width={600}
 //                     height={600}
-//                     src="/img.jpg"
+//                     src="/img.webp"
 //                     alt="Adszoo Digital Marketing"
 //                     loading="lazy"
 //                   />

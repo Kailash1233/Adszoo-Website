@@ -112,11 +112,11 @@ export const TestimonialSection = () => {
               <Card className="bg-muted/50 dark:bg-card">
                 <CardContent className="pt-6 pb-0">
                   <div className="flex gap-1 pb-6">
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
+                    <Star className="size-4 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-4 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-4 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-4 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-4 fill-yellow-500 text-yellow-500" />
                   </div>
                   {`"${review.comment}"`}
                 </CardContent>

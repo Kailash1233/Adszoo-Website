@@ -1,15 +1,18 @@
 import { BenefitsSection } from "@/components/layout/sections/benefits";
 import { CommunitySection } from "@/components/layout/sections/community";
 import { ContactSection } from "@/components/layout/sections/contact";
-import { FAQSection } from "@/components/layout/sections/faq";
-import { FeaturesSection } from "@/components/layout/sections/features";
+// import { FAQSection } from "@/components/layout/sections/faq";
+// import { FeaturesSection } from "@/components/layout/sections/features";
 // import { FooterSection } from "@/components/layout/sections/footer";
 import { HeroSection } from "@/components/layout/sections/hero";
-// import { PricingSection } from "@/components/layout/sections/pricing";
+import { PricingSection } from "@/components/layout/sections/pricing";
+import ServiceFAQ from "@/components/layout/sections/servicefaq";
 // import { ServicesSection } from "@/components/layout/sections/services";
-import { SponsorsSection } from "@/components/layout/sections/sponsors";
+// import { SponsorsSection } from "@/components/layout/sections/sponsors";
 import { TeamSection } from "@/components/layout/sections/team";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
+import DigitalMarketingFAQ from "@/components/ui/digi-faq";
+// import ServicesAccordion from "@/components/ui/service-accordion";
 
 export const metadata = {
   title: "Adszoo - Best Digital Marketing Agency in Chromepet",
@@ -44,16 +47,19 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <SponsorsSection />
+      {/* <SponsorsSection /> */}
       <BenefitsSection />
-      <FeaturesSection />
+      {/* <ServicesAccordion /> */}
+      <ServiceFAQ />
+      {/* <FeaturesSection /> */}
       {/* <ServicesSection /> */}
       <TestimonialSection />
       <TeamSection />
       <CommunitySection />
-      {/* <PricingSection /> */}
+      <PricingSection />
+      <DigitalMarketingFAQ />
       <ContactSection />
-      <FAQSection />
+      {/* <FAQSection /> */}
       {/* <FooterSection /> */}
     </>
   );
