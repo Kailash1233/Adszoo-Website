@@ -45,7 +45,7 @@ export default function DigitalMarketingFAQ() {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-16 h-full" id="faq">
+    <div className="w-full max-w-7xl mx-auto px-4 py-24 h-screen" id="faq">
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         {/* Left Content */}
         <div className="space-y-8">

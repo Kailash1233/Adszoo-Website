@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -55,33 +55,39 @@ const BlogPostPage = async ({
       <Head>
         <title>{title} | Adszoo Blog</title>
       </Head>
-      <section className="container w-full py-10">
-        <div className="lg:max-w-screen-xl mx-auto space-y-10">
+      <section className="container w-full py-16 md:py-24 lg:py-32">
+        <div className="max-w-screen-xl mx-auto space-y-14 px-4 sm:px-6 lg:px-8">
           {/* Blog Image */}
-          <div className="relative w-full h-[400px] lg:h-[600px]">
+          <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-xl shadow-lg overflow-hidden">
             <Image
               src={image}
               alt={`Image for blog post: ${title}`}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
+              fill
+              style={{ objectFit: "cover" }}
+              className="rounded-xl"
               priority
             />
           </div>
 
           {/* Blog Content */}
-          <div className="prose dark:prose-invert max-w-screen-lg mx-auto my-6 text-lg leading-relaxed">
-            <h1 className="text-4xl font-bold">{title}</h1>
-            <p className="text-muted-foreground text-sm">{date}</p>
+          <article className="prose prose-emerald max-w-screen-md mx-auto dark:prose-invert leading-relaxed text-lg">
+            <h1 className="text-4xl font-extrabold tracking-tight mb-3">
+              {title}
+            </h1>
+            <p className="text-sm text-muted-foreground mb-10">{date}</p>
             <div dangerouslySetInnerHTML={{ __html: content }} />
 
-            <Button asChild className="mt-10">
-              <Link href="/blogs" className="inline-flex items-center">
+            <Button
+              asChild
+              variant="outline"
+              className="mt-12 font-semibold group inline-flex items-center gap-2 hover:bg-primary hover:text-white transition"
+            >
+              <Link href="/blogs">
+                <ArrowLeft className="transition-transform group-hover:translate-x-1" />
                 Back to Blogs
-                <ArrowRight className="ml-2" />
               </Link>
             </Button>
-          </div>
+          </article>
         </div>
       </section>
     </>

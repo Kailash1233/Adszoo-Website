@@ -156,7 +156,6 @@ import {
   MapPin,
   Phone,
   Facebook,
-  Twitter,
   Instagram,
   Linkedin,
 } from "lucide-react";
@@ -204,7 +203,7 @@ export const FooterSection = () => {
             href="/services"
             className="text-sm text-muted-foreground hover:text-black"
           >
-            Service
+            Services
           </Link>
           <Link
             href="/agency"
@@ -218,7 +217,7 @@ export const FooterSection = () => {
           >
             Case Study
           </Link>
-          <Link
+          {/* <Link
             href="/resources"
             className="text-sm text-muted-foreground hover:text-black"
           >
@@ -229,7 +228,7 @@ export const FooterSection = () => {
             className="text-sm text-muted-foreground hover:text-black"
           >
             Contact
-          </Link>
+          </Link> */}
         </div>
 
         {/* Licence */}

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link as ScrollLink } from "react-scroll";
+// import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,15 +30,7 @@ export const HeroSection = () => {
         {/* Text Section */}
         <motion.div className="text-center space-y-8" variants={textVariants}>
           <div className="max-w-screen-md mx-auto text-center text-6xl md:text-7xl font-extrabold tracking-tighter">
-            <h1>
-              We Turn Visitors into Paying Customers
-              {/* <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                Visitors
-              </span> */}
-              {/* <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                Paying Customers
-              </span> */}
-            </h1>
+            <h1>We Turn Visitors into Paying Customers.</h1>
           </div>
 
           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground font-medium">
@@ -51,23 +43,24 @@ export const HeroSection = () => {
             variants={buttonVariants}
           >
             <Button className="font-bold w-full md:w-auto px-6 py-3 flex items-center justify-center group/arrow">
-              <a
+              <Link
                 href="https://cal.com/adszoo/15min"
                 target="_blank"
-                className="text-white text-lg font-medium cursor-pointer flex items-center"
+                className="text-white text-lg font-bold cursor-pointer flex items-center"
                 rel="noopener noreferrer"
               >
                 Schedule a Call
                 <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </Button>
-
-            <Link
-              href="/case-study"
-              className="w-full md:w-auto text-center text-primary underline text-lg font-medium cursor-pointer"
-            >
-              View Case Study
-            </Link>
+            <Button className="font-bold w-full md:w-auto px-6 py-3 flex items-center justify-center bg-white border border-black hover:bg-white">
+              <Link
+                href="/case-study"
+                className="w-full md:w-auto text-center text-primary text-lg font-bold cursor-pointer"
+              >
+                View Case Study
+              </Link>
+            </Button>
           </motion.div>
 
           {/* Trusted Section */}

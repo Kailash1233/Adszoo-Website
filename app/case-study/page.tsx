@@ -8,12 +8,13 @@ export default function CaseStudiesPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="text-center mb-16">
           <h2 className="text-emerald-600 font-medium mb-3">Case Studies</h2>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Our Success Stories
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6">
+            Real Work. Real Results.
           </h1>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-            Explore how we&apos;ve transformed digital experiences across
-            diverse industries, delivering impactful results for our clients.
+            Here&apos;s a look at the kind of impact we&apos;ve made for our
+            clients. From growing leads to scaling revenue, these are real
+            stories of businesses we&apos;ve helped grow, the honest way.
           </p>
         </div>
 
