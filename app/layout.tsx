@@ -7,6 +7,7 @@ import { FooterSection } from "@/components/layout/sections/footer";
 // import { ThemeProvider } from "@/components/layout/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 import { Analytics } from "@vercel/analytics/react";
+// import PageTransitionProvider from "./PageTransitionProvider";
 
 export const metadata: Metadata = {
   title: "Adszoo | Best Website Development & Social Media Marketing Agency",
@@ -74,9 +75,10 @@ export default function RootLayout({
           disableTransitionOnChange
         > */}
         <Analytics />
-        <Navbar />
-
+        {/* <Navbar /> */}
+        {/* <PageTransitionProvider>{children}</PageTransitionProvider> */}
         {children}
+
         <FooterSection />
         {/* </ThemeProvider> */}
       </body>

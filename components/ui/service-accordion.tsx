@@ -13,7 +13,7 @@ const accordionData: AccordionItem[] = [
     title: "Websites Built for Impact",
     content: [
       "Custom-coded websites tailored for conversions",
-      "Execution on any platform: Webflow, Shopify, Next.js & more",
+      "Execution on any platform: Shopify, Next.js & more",
       "Digital style guide & scalable design systems",
       "UI/UX principles that blend beauty & usability",
       "High-performance builds that load fast and stay true to your brand",
@@ -23,14 +23,14 @@ const accordionData: AccordionItem[] = [
     title: "Performance Marketing That Scales",
     content: [
       "High-impact ad creatives with no design caps",
-      "Meta, Google & YouTube ad campaigns built for ROI",
+      "Meta and Google ad campaigns built for ROI",
       "Funnel strategy & audience segmentation",
       "CRM automation to boost repeat purchases",
       "Full-funnel performance tracking & analytics",
     ],
   },
   {
-    title: "Full-Funnel Customer Acquisition",
+    title: "Lead Generation",
     content: [
       "Meta Ads with advanced bid strategy execution",
       "Unlimited ad variations tailored for lead quality",
@@ -40,7 +40,7 @@ const accordionData: AccordionItem[] = [
     ],
   },
   {
-    title: "The Brand Blueprint",
+    title: "The Branding Blueprint",
     content: [
       "Deep-dive customer research & persona mapping",
       "Strategic brand positioning & storytelling",
@@ -59,7 +59,7 @@ export default function ServicesAccordion() {
   };
 
   return (
-    <div className="w-full bg-white text-black">
+    <div className="w-full bg-gray-50 text-black">
       {accordionData.map((item, index) => (
         <div key={index} className="border-b border-black">
           <button

@@ -14,28 +14,27 @@ interface BenefitsProps {
 const benefitList: BenefitsProps[] = [
   {
     icon: "TrendingUp",
-    title: "Proven Results",
-    description: "We focus on ROI and delivering measurable growth.",
+    title: "Real Results",
+    description: "We don’t just run campaigns, we help you grow your revenue.",
   },
   {
     icon: "Settings",
-    title: "Tailored Solutions",
-    description: "Every business is unique; so are our strategies.",
+    title: "Custom Strategies",
+    description: "Everything is tailored to your business goals.",
   },
   {
     icon: "Users",
-    title: "Experienced Team",
-    description:
-      "We bring expertise in web development, social media, and lead generation.",
+    title: "Skilled Team",
+    description: "From design to ads, our experts know what actually works.",
   },
   {
     icon: "Heart",
-    title: "Customer-Centric",
-    description: "Your satisfaction is our top priority.",
+    title: "People-First",
+    description:
+      "We care. Your wins are our wins, and we treat you like a partner.",
   },
 ];
 
-// Animation Variants for left and right slide-ins
 const cardVariants = {
   hiddenLeft: { opacity: 0, x: -50 },
   hiddenRight: { opacity: 0, x: 50 },
@@ -46,7 +45,6 @@ export const BenefitsSection = () => {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
-  // Use Intersection Observer to trigger animation
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -65,6 +63,7 @@ export const BenefitsSection = () => {
 
     return () => {
       if (sectionRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(sectionRef.current);
       }
     };
@@ -78,10 +77,13 @@ export const BenefitsSection = () => {
     >
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Adszoo?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            What Makes Adszoo Different?
+          </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            At Adszoo, we are more than just a digital marketing agency — we are
-            your partners in growth. Here&apos;s why businesses choose us:
+            We&apos;re not just another agency. We&apos;re your growth partner —
+            creative, strategic, and always focused on results. Here&apos;s why
+            businesses trust us:
           </p>
         </div>
 
@@ -89,7 +91,6 @@ export const BenefitsSection = () => {
           {benefitList.map(({ icon, title, description }, index) => (
             <motion.div
               key={title}
-              // Animate from left for even index and right for odd index
               variants={
                 index % 2 === 0
                   ? cardVariants

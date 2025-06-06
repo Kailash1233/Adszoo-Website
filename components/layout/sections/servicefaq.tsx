@@ -2,7 +2,7 @@ import ServicesAccordion from "@/components/ui/service-accordion";
 
 export default function ServiceFAQ() {
   return (
-    <div className="min-h-screen bg-white py-16" id="service">
+    <div className="min-h-screen py-16 bg-gray-50" id="service">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-lg text-primary text-center mb-2 tracking-wider">

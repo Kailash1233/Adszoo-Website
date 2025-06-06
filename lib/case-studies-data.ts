@@ -19,6 +19,27 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: "6",
+    title: "Vizhipom Vidhaipom",
+    slug: "vizhipom-vidhaipom",
+    description:
+      "Vizhipom Vidhaipom, an NGO focused on education and empowerment, needed a digital space to share their mission and attract donors and volunteers. Their primary goal was to communicate impact while simplifying navigation for diverse users.",
+    shortDescription: "Mission-driven website for an educational NGO",
+    client: "Vizhipom Vidhaipom",
+    turnaround: "Completed",
+    stack: ["HTML", "CSS", "JavaScript", "PHP"],
+    industry: ["NGO", "Social Sector"],
+    services: ["Web Design", "Development"],
+    scopeOfWork: ["Web Design", "Development"],
+    logoUrl: "/CaseStudy/6.webp",
+    previewImage: "/CaseStudy/VV.webp",
+    challenge:
+      "They needed a lightweight yet impactful platform to share their story and drive donations and volunteer signups.",
+    approach:
+      "We designed a clean, mission-driven website with clear CTAs and navigation tailored to non-tech-savvy users.",
+    results: [],
+  },
+  {
     id: "1",
     title: "Eswari Builders",
     slug: "eswari-builders",
@@ -32,8 +53,8 @@ export const caseStudies: CaseStudy[] = [
     industry: ["Construction", "Real Estate"],
     services: ["Web Design", "UI/UX", "Development"],
     scopeOfWork: ["Web Design", "UI/UX", "Development"],
-    logoUrl: "/",
-    previewImage: "/",
+    logoUrl: "/CaseStudy/1.webp",
+    previewImage: "/CaseStudy/ES.webp",
     challenge:
       "They needed a site that highlights their architectural craftsmanship and builds trust across a broad audience, from developers to prospective homeowners.",
     approach:
@@ -54,8 +75,8 @@ export const caseStudies: CaseStudy[] = [
     industry: ["Photography"],
     services: ["Development"],
     scopeOfWork: ["Web Development"],
-    logoUrl: "/sa-case-study-thumbnail.webp",
-    previewImage: "/placeholder.svg?height=400&width=800",
+    logoUrl: "/CaseStudy/2.webp",
+    previewImage: "/CaseStudy/Gaf.webp",
     challenge:
       "They needed a lightweight site with fast image rendering and minimal UI distractions to allow their work to speak for itself.",
     approach:
@@ -76,8 +97,8 @@ export const caseStudies: CaseStudy[] = [
     industry: ["Education", "Chess Academy"],
     services: ["Development"],
     scopeOfWork: ["Development"],
-    logoUrl: "/placeholder.svg?height=128&width=128",
-    previewImage: "/placeholder.svg?height=400&width=800",
+    logoUrl: "/CaseStudy/3.webp",
+    previewImage: "/CaseStudy/SCA.webp",
     challenge:
       "To create a trustworthy, distraction-free educational portal for kids and parents with clear course details and scheduling.",
     approach:
@@ -98,8 +119,8 @@ export const caseStudies: CaseStudy[] = [
     industry: ["Manufacturing", "Aluminium"],
     services: ["Development", "UI/UX"],
     scopeOfWork: ["Development", "UI/UX"],
-    logoUrl: "/placeholder.svg?height=128&width=128",
-    previewImage: "/placeholder.svg?height=400&width=800",
+    logoUrl: "/CaseStudy/7.webp",
+    previewImage: "/CaseStudy/Supreme.webp",
     challenge:
       "They needed to present their aluminium products with clarity and credibility to both technical and executive audiences.",
     approach:
@@ -120,33 +141,12 @@ export const caseStudies: CaseStudy[] = [
     industry: ["Construction", "E-Commerce"],
     services: ["Development", "Web Design"],
     scopeOfWork: ["Development", "Web Design"],
-    logoUrl: "/placeholder.svg?height=128&width=128",
-    previewImage: "/placeholder.svg?height=400&width=800",
+    logoUrl: "/CaseStudy/4.webp",
+    previewImage: "/CaseStudy/KVM.webp",
     challenge:
       "They needed a modern e-commerce site with CMS integration to simplify operations and enable easy updates.",
     approach:
       "We created a robust frontend paired with a Strapi-powered backend, ensuring easy content management and scalability.",
-    results: [],
-  },
-  {
-    id: "6",
-    title: "Vizhipom Vidhaipom",
-    slug: "vizhipom-vidhaipom",
-    description:
-      "Vizhipom Vidhaipom, an NGO focused on education and empowerment, needed a digital space to share their mission and attract donors and volunteers. Their primary goal was to communicate impact while simplifying navigation for diverse users.",
-    shortDescription: "Mission-driven website for an educational NGO",
-    client: "Vizhipom Vidhaipom",
-    turnaround: "Completed",
-    stack: ["HTML", "CSS", "JavaScript", "PHP"],
-    industry: ["NGO", "Social Sector"],
-    services: ["Web Design", "Development"],
-    scopeOfWork: ["Web Design", "Development"],
-    logoUrl: "/placeholder.svg?height=128&width=128",
-    previewImage: "/placeholder.svg?height=400&width=800",
-    challenge:
-      "They needed a lightweight yet impactful platform to share their story and drive donations and volunteer signups.",
-    approach:
-      "We designed a clean, mission-driven website with clear CTAs and navigation tailored to non-tech-savvy users.",
     results: [],
   },
 ];

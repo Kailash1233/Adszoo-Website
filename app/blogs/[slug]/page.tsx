@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import { blogPosts } from "@/lib/blog-posts";
+import { Navbar } from "@/components/layout/navbar";
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -52,6 +53,7 @@ const BlogPostPage = async ({
 
   return (
     <>
+      <Navbar />
       <Head>
         <title>{title} | Adszoo Blog</title>
       </Head>

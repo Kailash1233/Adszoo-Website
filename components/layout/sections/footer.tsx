@@ -200,17 +200,17 @@ export const FooterSection = () => {
         <div className="flex flex-col gap-2">
           <h4 className="font-bold text-lg mb-2">Navigation</h4>
           <Link
-            href="/services"
+            href="/blogs"
             className="text-sm text-muted-foreground hover:text-black"
           >
-            Services
+            Blogs
           </Link>
-          <Link
+          {/* <Link
             href="/agency"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Agency
-          </Link>
+          </Link> */}
           <Link
             href="/case-study"
             className="text-sm text-muted-foreground hover:text-black"
@@ -235,13 +235,13 @@ export const FooterSection = () => {
         <div className="flex flex-col gap-2">
           <h4 className="font-bold text-lg mb-2">Licence</h4>
           <Link
-            href="/privacy"
+            href="https://www.termsfeed.com/live/db33214e-8ccd-4fa2-a894-871b309c383c"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Privacy Policy
           </Link>
           <Link
-            href="/copyright"
+            href="https://www.termsfeed.com/live/db33214e-8ccd-4fa2-a894-871b309c383c"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Copyright

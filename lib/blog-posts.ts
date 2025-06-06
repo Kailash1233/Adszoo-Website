@@ -2,6 +2,8 @@ export const blogPosts = [
   {
     slug: "why-your-business-needs-a-website",
     title: "Top 15 Reasons Why Your Business Needs a Website",
+    description:
+      "In today's digital age, having a website is essential for businesses. It increases online visibility, builds credibility, showcases products/services, reaches a wider audience, and provides convenience to customers. Embrace the digital era now!",
     content: `
           <p>In today's digital age, having a website is essential for businesses. It increases online visibility, builds credibility, showcases products and services, reaches a wider audience, and provides convenience to customers.</p>
           <br />
@@ -29,12 +31,15 @@ export const blogPosts = [
           <br />
           <p><strong>Investing in a professional website will ultimately lead to better customer engagement and business growth.</strong></p>
         `,
-    image: "/blogs/why-you-need-website.jpg",
+    image: "/blogs/1.webp",
     date: "September 15, 2024",
+    href: "/blogs/why-your-business-needs-a-website",
   },
   {
     slug: "social-media-management-pricing-2024",
     title: "How Much to Charge for Social Media Management in 2024",
+    description:
+      "Pricing your social media services fairly can be daunting whether you’ve just started your social media marketing agency or you’re a well-established agency. How much should one charge for a social media post? What about a campaign? Or a social media content strategy?",
     content: `
           <p>Pricing your social media services fairly can be daunting whether you’ve just started your social media marketing agency or you’re a well-established agency.</p>
           <br />
@@ -50,12 +55,15 @@ export const blogPosts = [
           <br />
           <p>With the rise of social media marketing, understanding how to price your services effectively is essential for your agency's success. By partnering with <b>Adszoo</b> - Our Digital Marketing Agency, you can enhance your pricing strategy to reflect the true value of your expertise and deliver exceptional results to your clients.</p>
         `,
-    image: "/blogs/social-media.jpg",
+    image: "/blogs/3.webp",
     date: "September 25, 2024",
+    href: "/blogs/social-media-management-pricing-2024",
   },
   {
     slug: "social-media-to-grow-business",
     title: "How to Use Social Media to Grow Your Business",
+    description:
+      "You can leverage social media marketing to grow your business in many ways, from building your brand to engaging with customers. But no matter your business goal, you’ll want to be sure you’re using the right social media tool for your needs.",
     content: `
           <p>You can leverage social media marketing to grow your business in many ways, from building your brand to engaging with customers.</p>
           <br />
@@ -71,12 +79,15 @@ export const blogPosts = [
           <br />
           <p>Collaborating with <b>Adszoo</b> - Our Digital Marketing Agency can amplify your social media efforts. With our expertise, we can help you devise a comprehensive social media strategy tailored to your unique business needs, ensuring you effectively reach and engage your audience for sustained growth.</p>
         `,
-    image: "/blogs/smma.jpg",
+    image: "/blogs/5.webp",
     date: "October 1, 2024",
+    href: "/blogs/social-media-to-grow-business",
   },
   {
     slug: "strategies-to-grow-online-business",
     title: "9 Strategies To Grow Your Online Business",
+    description:
+      "Discover 7 powerful strategies to grow your online business and generate stable incomes through Digital Marketing. Understand the significance of specifying your niche, developing a unique brand, and knowing your audience well for targeted growth.",
     content: `
           <p>Discover 9 powerful strategies to grow your online business and generate stable income through Digital Marketing. Understanding the significance of specifying your niche, developing a unique brand, and knowing your audience well for targeted growth is essential.</p>
           <br />
@@ -96,12 +107,15 @@ export const blogPosts = [
           <br />
           <p><b>Adszoo</b> - Our Digital Marketing Agency can help you implement these strategies effectively, ensuring that your online business thrives in a competitive market. Together, we can create a roadmap for success that resonates with your target audience.</p>
         `,
-    image: "/blogs/business-growth.jpg",
+    image: "/blogs/2.webp",
     date: "October 5, 2024",
+    href: "/blogs/strategies-to-grow-online-business",
   },
   {
     slug: "quality-instagram-reels",
     title: "How to Create Quality Instagram Reels in Less Time",
+    description: `Looking for a faster and easier way to create Instagram reels? Wondering when to use native tools and when to use a third-party app? In this article, you'll learn how to make the most of Instagram’s reels editor and learn when third-party apps are worth the extra steps.`,
+
     content: `
           <p>Looking for a faster and easier way to create Instagram reels? Wondering when to use native tools and when to use a third-party app?</p>
           <br />
@@ -117,12 +131,15 @@ export const blogPosts = [
           <br />
           <p>In this fast-paced digital environment, creating engaging content quickly is essential. Collaborating with <b>Adszoo</b> - Our Digital Marketing Agency can help you develop an effective strategy for your Instagram reels, ensuring you connect with your audience while saving time and resources.</p>
         `,
-    image: "/blogs/reels.webp",
+    image: "/blogs/6.webp",
     date: "October 10, 2024",
+    href: "/blogs/quality-instagram-reels",
   },
   {
     slug: "top-5-meta-ads-strategies",
     title: "Top 5 Meta Ads Strategies",
+    description: `2.9 billion. That’s the total number of monthly active users on Meta platforms today. Advertising on Meta allows you to tap into this vast audience, giving your brand the potential to reach billions of people directly across Facebook, Instagram, Messenger, and more. Discovering effective strategies to engage this audience is essential for maximizing your ad performance.`,
+
     content: `
         <p>2.9 billion. That’s the total number of monthly active users on Meta platforms today. This immense user base means that if you advertise on Meta, you have the potential to access billions of people directly across Facebook, Instagram, Messenger, and more. However, with so much potential comes the challenge of crafting effective ad campaigns. To help you navigate this landscape, we’ve compiled a list of the top five Meta ads strategies for 2024.</p>
         <br />
@@ -146,7 +163,8 @@ export const blogPosts = [
     
         <p>Investing in well-crafted Meta ad campaigns will ultimately lead to improved customer engagement and increased conversions.</p>
       `,
-    image: "/blogs/meta_ads.webp",
+    image: "/blogs/4.webp",
     date: "September 15, 2024",
+    href: "/blogs/top-5-meta-ads-strategies",
   },
 ];
