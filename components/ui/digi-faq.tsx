@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import { motion, useInView } from "framer-motion";
 
 interface FAQItem {
   question: string;
@@ -12,58 +13,60 @@ const faqData: FAQItem[] = [
   {
     question: "What services does Adszoo offer?",
     answer:
-      "At Adszoo, we provide a comprehensive range of digital marketing services, including website development, social media marketing, PPC advertising, graphic design, and video editing.",
+      "We provide website development, social media marketing, PPC ads, graphic design, and video editing.",
   },
   {
-    question:
-      "How long does it take to see results from your marketing campaigns?",
+    question: "How long until I see results?",
     answer:
-      "Results vary based on the specific services and goals of each campaign. Generally, clients start seeing significant improvements within 2-3 months, but we focus on long-term growth strategies.",
+      "Most clients see noticeable improvements within 2–3 months. We focus on sustainable, long-term growth.",
   },
   {
-    question: "Do you offer customized marketing solutions?",
+    question: "Are your services customized?",
     answer:
-      "Yes! We understand that every business is unique, which is why we tailor our strategies to meet your specific needs and objectives.",
+      "Yes! Every business is unique. We create custom plans for your specific goals and budget.",
   },
   {
-    question: "What industries do you serve?",
+    question: "Which industries do you work with?",
     answer:
-      "Adszoo works with a diverse range of industries, including e-commerce, healthcare, education, technology, and more.",
+      "We serve startups, e-commerce, healthcare, education, real estate, and more.",
   },
   {
-    question: "How can I get started with Adszoo?",
+    question: "How do I start with Adszoo?",
     answer:
-      "Getting started is easy! You can reach out to us through our website's contact form, schedule a consultation, or call us directly.",
+      "Contact us via the website, book a call, or just say hi on WhatsApp!",
   },
 ];
 
 export default function DigitalMarketingFAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0); // Only one item open at a time
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const toggleItem = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-24 h-screen" id="faq">
+    <motion.div
+      ref={ref}
+      id="faq"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="w-full max-w-7xl mx-auto px-4 py-24"
+    >
       <div className="grid lg:grid-cols-2 gap-16 items-start">
-        {/* Left Content */}
         <div className="space-y-8">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">
               Digital Marketing FAQs
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Welcome to Adszoo’s Digital Marketing FAQ hub — a helpful space
-              where business owners, founders, and marketers can get clear
-              answers to common questions about SEO, Google Ads, social media,
-              and lead generation. As a growing startup, we’re focused on
-              delivering results-driven strategies that actually move the
-              needle. These insights come straight from our hands-on experience
-              helping real businesses grow online.
+              Welcome to Adszoo’s FAQ hub — where business owners get clear
+              answers to SEO, Ads, social media, and leads. These come straight
+              from real projects that worked.
             </p>
           </div>
-
           <div className="flex flex-wrap gap-4">
             <button className="px-8 py-3 border-2 border-black text-black font-medium rounded-full hover:bg-black hover:text-white transition-colors duration-200">
               More Questions
@@ -74,7 +77,6 @@ export default function DigitalMarketingFAQ() {
           </div>
         </div>
 
-        {/* Right FAQ Accordion */}
         <div className="space-y-0">
           {faqData.map((item, index) => (
             <div key={index} className="border-b border-gray-200">
@@ -93,7 +95,6 @@ export default function DigitalMarketingFAQ() {
                   )}
                 </div>
               </button>
-
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
                   openIndex === index
@@ -111,6 +112,6 @@ export default function DigitalMarketingFAQ() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

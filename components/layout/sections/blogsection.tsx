@@ -1,37 +1,75 @@
-// "use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { blogPosts } from "@/lib/blog-posts";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 function getRandomBlogs(count: number) {
   const shuffled = [...blogPosts].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
 }
 
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 export default function BlogSection() {
-  const randomBlogs = getRandomBlogs(3);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const [randomBlogs, setRandomBlogs] = useState<typeof blogPosts>([]);
+
+  useEffect(() => {
+    const selected = getRandomBlogs(3);
+    setRandomBlogs(selected);
+  }, []);
 
   return (
-    <section className="py-16 bg-gray-50">
+    <motion.section
+      ref={ref}
+      className="py-16 bg-gray-50"
+      initial="hidden"
+      animate={isInView ? "show" : "hidden"}
+      variants={containerVariants}
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
+        <motion.div
+          className="text-center mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
             Blogs
           </h2>
-
           <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
             From Our Blogs{" "}
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          className="grid gap-10 md:grid-cols-2 lg:grid-cols-3"
+          variants={containerVariants}
+        >
           {randomBlogs.map(({ slug, title, description, image, date }) => (
-            <article
+            <motion.article
               key={slug}
               className="group rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+              variants={cardVariants}
             >
               <Link
                 href={`/blogs/${slug}`}
@@ -68,19 +106,24 @@ export default function BlogSection() {
                   </Link>
                 </Button>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="mt-12 text-center">
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+        >
           <Link href="/blogs">
             <Button size="lg" className="text-lg font-medium">
               More Blogs
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
