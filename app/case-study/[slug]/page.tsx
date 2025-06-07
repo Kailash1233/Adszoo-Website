@@ -122,14 +122,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               <p className="text-lg text-gray-600 mb-6">
                 The new {caseStudy.title} website has significantly improved
                 user engagement metrics:
+                <br /> <br />
+                {caseStudy.results}
               </p>
-              <ul className="list-disc pl-6 text-lg text-gray-600 mb-10">
-                {caseStudy.results.map((result, index) => (
-                  <li key={index} className="mb-2">
-                    {result}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
 
