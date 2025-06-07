@@ -14,7 +14,7 @@ export interface CaseStudy {
   previewImage: string;
   challenge: string;
   approach: string;
-  results: string[];
+  results: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -32,12 +32,13 @@ export const caseStudies: CaseStudy[] = [
     services: ["Web Design", "Development"],
     scopeOfWork: ["Web Design", "Development"],
     logoUrl: "/CaseStudy/6.webp",
-    previewImage: "/CaseStudy/VV.webp",
+    previewImage: "/CaseStudy/6.webp",
     challenge:
-      "They needed a lightweight yet impactful platform to share their story and drive donations and volunteer signups.",
+      "They needed a simple website to share what they do, encourage donations, and help more people get involved — all while being easy for anyone to use.",
     approach:
-      "We designed a clean, mission-driven website with clear CTAs and navigation tailored to non-tech-savvy users.",
-    results: [],
+      "We built a clean and lightweight site with clear messaging, simple navigation, and strong calls to action for donations and volunteering",
+    results:
+      "The site became a useful platform for sharing their mission, collecting donations, and helping volunteers reach out easily.",
   },
   {
     id: "1",
@@ -54,12 +55,13 @@ export const caseStudies: CaseStudy[] = [
     services: ["Web Design", "UI/UX", "Development"],
     scopeOfWork: ["Web Design", "UI/UX", "Development"],
     logoUrl: "/CaseStudy/1.webp",
-    previewImage: "/CaseStudy/ES.webp",
+    previewImage: "/CaseStudy/1.webp",
     challenge:
-      "They needed a site that highlights their architectural craftsmanship and builds trust across a broad audience, from developers to prospective homeowners.",
+      "They wanted a modern site that showcases their past work, reflects their brand's credibility, and speaks to both homeowners and commercial clients.",
     approach:
-      "We designed a visually strong, responsive website that combines technical sophistication with elegant aesthetics. Using microinteractions and smooth transitions, we emphasized their philosophy while simplifying navigation and lead generation.",
-    results: [],
+      "We designed a sleek, responsive website that focuses on visuals and smooth experience, while keeping the content clear and professional.",
+    results:
+      "The new site built trust with visitors, gave them a strong online presence, and helped potential clients understand their services better.",
   },
   {
     id: "2",
@@ -76,12 +78,13 @@ export const caseStudies: CaseStudy[] = [
     services: ["Development"],
     scopeOfWork: ["Web Development"],
     logoUrl: "/CaseStudy/2.webp",
-    previewImage: "/CaseStudy/Gaf.webp",
+    previewImage: "/CaseStudy/2.webp",
     challenge:
-      "They needed a lightweight site with fast image rendering and minimal UI distractions to allow their work to speak for itself.",
+      "As a photography brand, they needed a fast-loading portfolio where their pictures could speak for themselves, without too many distractions.",
     approach:
-      "We created a bold and responsive website using modern frontend frameworks, emphasizing visual clarity and gallery performance.",
-    results: [],
+      "We built a minimal, performance-first website with focus on galleries, so that users could scroll through photos seamlessly.",
+    results:
+      "They now have a fast and stylish portfolio that makes their work shine, and helps them share it easily with clients.",
   },
   {
     id: "3",
@@ -98,12 +101,13 @@ export const caseStudies: CaseStudy[] = [
     services: ["Development"],
     scopeOfWork: ["Development"],
     logoUrl: "/CaseStudy/3.webp",
-    previewImage: "/CaseStudy/SCA.webp",
+    previewImage: "/CaseStudy/3.webp",
     challenge:
-      "To create a trustworthy, distraction-free educational portal for kids and parents with clear course details and scheduling.",
+      "They needed a basic, trustable website that parents and students could use to see class schedules and understand what’s being offered.",
     approach:
-      "We created a streamlined site that’s fast and responsive, purpose-built to serve educational content with straightforward navigation.",
-    results: [],
+      "We kept it simple — fast-loading pages, clear course info, and easy access to updates or new sessions.",
+    results:
+      "The website made it easier for parents to engage with the academy and for the team to share class details with their audience.",
   },
   {
     id: "4",
@@ -114,18 +118,19 @@ export const caseStudies: CaseStudy[] = [
     shortDescription:
       "Corporate website for a high-precision aluminium company",
     client: "Supreme Aluminium",
-    turnaround: "Completed",
+    turnaround: "Ongoing",
     stack: ["Vite.js", "React.js", "TailwindCSS", "Framer Motion"],
     industry: ["Manufacturing", "Aluminium"],
     services: ["Development", "UI/UX"],
     scopeOfWork: ["Development", "UI/UX"],
     logoUrl: "/CaseStudy/7.webp",
-    previewImage: "/CaseStudy/Supreme.webp",
+    previewImage: "/CaseStudy/7.webp",
     challenge:
-      "They needed to present their aluminium products with clarity and credibility to both technical and executive audiences.",
+      "They wanted to show their aluminium product range clearly — but also look polished and professional to business clients.",
     approach:
-      "We built a polished, performance-focused site with a component-based structure and seamless animations for modern UX.",
-    results: [],
+      "We created a clean, structured website with smooth animations and a balance of visuals and technical info.",
+    results:
+      "The final site helped them present their brand better online, especially when sharing it with corporate leads or during pitches.",
   },
   {
     id: "5",
@@ -142,12 +147,13 @@ export const caseStudies: CaseStudy[] = [
     services: ["Development", "Web Design"],
     scopeOfWork: ["Development", "Web Design"],
     logoUrl: "/CaseStudy/4.webp",
-    previewImage: "/CaseStudy/KVM.webp",
+    previewImage: "/CaseStudy/4.webp",
     challenge:
-      "They needed a modern e-commerce site with CMS integration to simplify operations and enable easy updates.",
+      "They needed a website to sell construction materials — something easy to use, yet powerful enough to manage inventory and updates.",
     approach:
-      "We created a robust frontend paired with a Strapi-powered backend, ensuring easy content management and scalability.",
-    results: [],
+      "We designed an e-commerce site with a content management system (CMS), so they could handle everything without needing to code.",
+    results:
+      "The team now runs their business online, updates products easily, and offers a smoother buying experience to their customers.",
   },
 ];
 
