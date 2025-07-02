@@ -2,9 +2,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-// import { Link as ScrollLink } from "react-scroll";
-import Image from "next/image";
 import Link from "next/link";
+import { SponsorsSection } from "./sponsors";
 
 const containerVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -20,24 +19,22 @@ const buttonVariants = {
 
 export const HeroSection = () => {
   return (
-    <section className="container w-full h-screen" id="hero">
+    <section className="w-full px-4 py-20 md:py-32" id="hero">
       <motion.div
-        className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32"
+        className="flex flex-col items-center justify-center gap-8 max-w-screen-xl mx-auto"
         variants={containerVariants}
         initial="visible"
         animate="visible"
       >
-        {/* Text Section */}
         <motion.div className="text-center space-y-8" variants={textVariants}>
-          <div className="max-w-screen-md mx-auto text-center text-6xl md:text-7xl font-extrabold tracking-tighter">
+          <div className="max-w-screen-md mx-auto text-center text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight">
             <h1>We Turn Visitors into Paying Customers.</h1>
           </div>
 
-          <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground font-medium">
-            {`High-converting websites and targeted ads crafted with clear strategy and smooth execution—designed to attract ready-to-buy customers and help businesses grow fast.`}
+          <p className="max-w-screen-sm mx-auto text-lg md:text-xl text-muted-foreground font-medium">
+            {`High-converting websites and targeted ads crafted with clear strategy and smooth execution - designed to attract ready-to-buy customers and help businesses grow fast.`}
           </p>
 
-          {/* Call-to-Action Section */}
           <motion.div
             className="flex flex-col md:flex-row justify-center items-center gap-4 mt-6 w-full"
             variants={buttonVariants}
@@ -56,47 +53,15 @@ export const HeroSection = () => {
             <Button className="font-bold w-full md:w-auto px-6 py-3 flex items-center justify-center bg-white border border-black hover:bg-white">
               <Link
                 href="/case-study"
-                className="w-full md:w-auto text-center text-primary text-lg font-bold cursor-pointer"
+                className="w-full text-center text-primary text-lg font-bold"
               >
                 View Case Study
               </Link>
             </Button>
           </motion.div>
-
-          {/* Trusted Section */}
-          <div className="mt-8 text-center">
-            <p className="text-muted-foreground text-sm">
-              Trusted by 15+ Businesses
-            </p>
-            <div className="mt-4 flex flex-wrap justify-center items-center gap-4">
-              {[
-                { src: "/clients/Anthen.webp", alt: "Anthen Engineering" },
-                { src: "/clients/Kvm.webp", alt: "KVM CMart" },
-                { src: "/clients/Regain.webp", alt: "Regain Hair Care" },
-                // { src: "/clients/Eswari.webp", alt: "Eswari Builders" },
-                // { src: "/clients/GafClickz.webp", alt: "GafClickz" },
-                // { src: "/clients/Supreme.webp", alt: "Supreme Aluminium" },
-                // { src: "/clients/Vizhipom.webp", alt: "Vizhipom Vidhaipom" },
-                {
-                  src: "/clients/Gafur.webp",
-                  alt: "Gaf Clickz",
-                },
-                { src: "/clients/Tagknot.webp", alt: "Tagknot" },
-                { src: "/clients/Taiyo.webp", alt: "Taiyo" },
-                { src: "/clients/abdesignlabs.webp", alt: "AB Design Labs" },
-              ].map((logo, i) => (
-                <Image
-                  key={i}
-                  src={logo.src}
-                  alt={`${logo.alt} Logo`}
-                  width={80}
-                  height={40}
-                  className="filter grayscale hover:grayscale-0 transition duration-300 w-12 sm:w-16 md:w-20 h-auto object-contain"
-                />
-              ))}
-            </div>
-          </div>
         </motion.div>
+
+        <SponsorsSection />
       </motion.div>
     </section>
   );

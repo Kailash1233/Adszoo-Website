@@ -73,7 +73,7 @@ export const BenefitsSection = () => {
     <section
       id="benefits"
       ref={sectionRef}
-      className="container py-24 sm:py-32"
+      className="container py-24 sm:py-32 mt-6 md:mt-12 min-h-screen"
     >
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
         <div>

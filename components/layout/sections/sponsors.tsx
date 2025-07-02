@@ -1,8 +1,8 @@
 "use client";
 
-// import Image from "@/node_modules/next/image";
 import { Marquee } from "@devnomic/marquee";
 import "@devnomic/marquee/dist/index.css";
+import Image from "next/image";
 
 interface SponsorsProps {
   logo: string;
@@ -10,85 +10,39 @@ interface SponsorsProps {
 }
 
 const sponsors: SponsorsProps[] = [
+  { logo: "/clients/Anthen.webp", name: "Anthen Engineering" },
+  { logo: "/clients/Kvm.webp", name: "KVM CMart" },
+  { logo: "/clients/Regain.webp", name: "Regain Hair Care" },
   {
-    logo: "/clients/anthen.jpeg",
-    name: "Anthen Engineering",
+    logo: "/clients/Gafur.webp",
+    name: "Gaf Clickz",
   },
-  {
-    logo: "/clients/kvm.jpeg",
-    name: "KVM CMart",
-  },
-  {
-    logo: "/clients/tagknot.png",
-    name: "TagKnot",
-  },
-  {
-    logo: "/clients/Regain.jpeg",
-    name: "Regain Hair Clinic",
-  },
-  {
-    logo: "/clients/SRINIVASAN.png",
-    name: "Srinivasan Chess Academy",
-  },
-  {
-    logo: "/clients/asli.jpg",
-    name: "Asli Healing",
-  },
-  {
-    logo: "/clients/Taiyo.png",
-    name: "Taiyo",
-  },
-  {
-    logo: "/clients/abdesignlabs.png",
-    name: "Ab Design Labs",
-  },
-  // {
-  //   logo: "/clients/go.png",
-  //   name: "Gameon Solution",
-  // },
-  // {
-  //   logo: "/clients/Pixels.png",
-  //   name: "Pixels Studio",
-  // },
-  // {
-  //   logo: "/clients/symbiote.avif",
-  //   name: "Symbiote",
-  // },
-  {
-    logo: "/clients/Boom1.png",
-    name: "Jii Boom Baah",
-  },
+  { logo: "/clients/Tagknot.webp", name: "Tagknot" },
+  { logo: "/clients/Taiyo.webp", name: "Taiyo" },
+  { logo: "/clients/abdesignlabs.webp", name: "AB Design Labs" },
 ];
 
 export const SponsorsSection = () => {
   return (
-    <section id="sponsors" className="md:max-w-[60%] mx-auto">
-      <h2 className="text-lg md:text-xl text-center mb-6">
-        We&apos;ve worked with
+    <section id="sponsors" className="w-full max-w-6xl mx-auto px-4 mt-10">
+      <h2 className="text-sm md:text-md text-center mb-6 font-semibold text-muted-foreground">
+        Trusted by 15+ Businesses
       </h2>
 
-      <div className="mx-auto">
-        <Marquee
-          className="gap-[3rem]"
-          fade
-          innerClassName="gap-[3rem]"
-          pauseOnHover
-        >
+      <div className="overflow-hidden">
+        <Marquee className="gap-12" fade innerClassName="gap-12" pauseOnHover>
           {sponsors.map(({ logo, name }) => (
-            <div key={name} className="flex items-center">
-              <img
+            <div
+              key={name}
+              className="flex items-center justify-center h-16 md:h-24"
+            >
+              <Image
                 src={logo}
                 alt={name}
-                className="h-16 md:h-24 object-contain"
+                width={120}
+                height={60}
+                className="object-contain w-auto h-full grayscale hover:grayscale-0 transition"
               />
-              {/* <Image
-                src={logo}
-                alt={name}
-                className="h-16 md:h-24 object-contain"
-                layout="intrinsic"
-                width={100}
-                height={100}
-              /> */}
             </div>
           ))}
         </Marquee>
