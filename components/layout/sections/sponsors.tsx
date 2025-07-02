@@ -24,7 +24,7 @@ const sponsors: SponsorsProps[] = [
 
 export const SponsorsSection = () => {
   return (
-    <section id="sponsors" className="w-full max-w-6xl mx-auto px-4 mt-10">
+    <section id="sponsors" className="w-full max-w-6xl mx-auto px-4">
       <h2 className="text-sm md:text-md text-center mb-6 font-semibold text-muted-foreground">
         Trusted by 15+ Businesses
       </h2>
