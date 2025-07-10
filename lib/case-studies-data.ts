@@ -32,7 +32,7 @@ export const caseStudies: CaseStudy[] = [
     services: ["Web Design", "Development"],
     scopeOfWork: ["Web Design", "Development"],
     logoUrl: "/CaseStudy/6.webp",
-    previewImage: "/CaseStudy/6.webp",
+    previewImage: "/casestudy-websites/VizhipomVidhaipom.png",
     challenge:
       "They needed a simple website to share what they do, encourage donations, and help more people get involved — all while being easy for anyone to use.",
     approach:
@@ -55,7 +55,7 @@ export const caseStudies: CaseStudy[] = [
     services: ["Web Design", "UI/UX", "Development"],
     scopeOfWork: ["Web Design", "UI/UX", "Development"],
     logoUrl: "/CaseStudy/1.webp",
-    previewImage: "/CaseStudy/1.webp",
+    previewImage: "/casestudy-websites/Eswari Builders.png",
     challenge:
       "They wanted a modern site that showcases their past work, reflects their brand's credibility, and speaks to both homeowners and commercial clients.",
     approach:
@@ -78,7 +78,7 @@ export const caseStudies: CaseStudy[] = [
     services: ["Development"],
     scopeOfWork: ["Web Development"],
     logoUrl: "/CaseStudy/2.webp",
-    previewImage: "/CaseStudy/2.webp",
+    previewImage: "/casestudy-websites/GafClickz.png",
     challenge:
       "As a photography brand, they needed a fast-loading portfolio where their pictures could speak for themselves, without too many distractions.",
     approach:
@@ -101,7 +101,7 @@ export const caseStudies: CaseStudy[] = [
     services: ["Development"],
     scopeOfWork: ["Development"],
     logoUrl: "/CaseStudy/3.webp",
-    previewImage: "/CaseStudy/3.webp",
+    previewImage: "/casestudy-websites/SrinivasanChessAcademy.png",
     challenge:
       "They needed a basic, trustable website that parents and students could use to see class schedules and understand what’s being offered.",
     approach:
@@ -147,7 +147,8 @@ export const caseStudies: CaseStudy[] = [
     services: ["Development", "Web Design"],
     scopeOfWork: ["Development", "Web Design"],
     logoUrl: "/CaseStudy/4.webp",
-    previewImage: "/CaseStudy/4.webp",
+    // previewImage: "/casestudy-websites/KVMCMart.png",
+    previewImage: "/casestudy-websites/Portfolio-KVM.png",
     challenge:
       "They needed a website to sell construction materials — something easy to use, yet powerful enough to manage inventory and updates.",
     approach:

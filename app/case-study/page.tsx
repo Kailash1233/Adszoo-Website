@@ -2,6 +2,52 @@ import Link from "next/link";
 import Image from "next/image";
 import { caseStudies } from "@/lib/case-studies-data";
 import { Navbar } from "@/components/layout/navbar";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Client Success Stories | Real Digital Marketing Results - Adszoo",
+  description:
+    "Explore Adszoo's case studies and discover how we've helped clients increase leads, boost revenue, and grow online. Real strategies. Real results.",
+  keywords: [
+    "case studies",
+    "digital marketing success",
+    "adszoo results",
+    "marketing campaigns",
+    "lead generation",
+    "performance marketing",
+    "client success",
+  ],
+  openGraph: {
+    title: "Client Success Stories | Real Digital Marketing Results - Adszoo",
+    description:
+      "Discover real-world case studies of how Adszoo has delivered measurable results for clients across industries.",
+    url: "https://adszoo.in/case-study",
+    siteName: "Adszoo",
+    images: [
+      {
+        url: "https://adszoo.in/og-case-studies.png",
+        width: 1200,
+        height: 630,
+        alt: "Adszoo Case Studies",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Client Success Stories | Real Digital Marketing Results - Adszoo",
+    description:
+      "Explore how Adszoo helped real businesses grow using proven digital marketing strategies.",
+    images: ["https://adszoo.in/og-case-studies.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://adszoo.in/case-study",
+  },
+};
 
 export default function CaseStudiesPage() {
   return (

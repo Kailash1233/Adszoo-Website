@@ -94,13 +94,25 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
           {/* Project Preview */}
           <div className="mb-20 border border-gray-200 rounded-2xl overflow-hidden">
-            <div className="bg-gray-50 p-8">
+            {/* <div className="bg-gray-50 p-8">
               <Image
                 src={caseStudy.previewImage || "/placeholder.svg"}
                 alt={`${caseStudy.title} Preview`}
                 width={800}
                 height={400}
                 className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div> */}
+            <div className="relative w-full h-auto overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src={caseStudy.previewImage || "/placeholder.svg"}
+                alt={`${caseStudy.title} Preview`}
+                className="w-full h-auto object-contain"
+                sizes="100vw"
+                width={0}
+                height={0}
+                style={{ width: "100%", height: "auto" }}
+                priority
               />
             </div>
           </div>

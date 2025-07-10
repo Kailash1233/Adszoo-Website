@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/layout/navbar";
 import { FooterSection } from "@/components/layout/sections/footer";
 // import { ThemeProvider } from "@/components/layout/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 import { Analytics } from "@vercel/analytics/react";
 // import PageTransitionProvider from "./PageTransitionProvider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Adszoo | Best Website Development & Social Media Marketing Agency",
@@ -33,13 +33,13 @@ export default function RootLayout({
           name="ahrefs-site-verification"
           content="52cc875c8d0ea547fbd9cfc1b7a156038a191d34a4edbf623f55a5e7590ac90b"
         ></meta>
-        <title>
+        {/* <title>
           Adszoo - Best Website Development & Social Media Marketing Agency
         </title>
         <meta
           name="description"
           content="Boost your business with expert PPC, Website Development and Social Media services. Partner with Adszoo for proven digital marketing strategies."
-        />
+        /> */}
         {/* Add JSON-LD structured data */}
         <script
           type="application/ld+json"
@@ -75,6 +75,7 @@ export default function RootLayout({
           disableTransitionOnChange
         > */}
         <Analytics />
+        <SpeedInsights />
         {/* <Navbar /> */}
         {/* <PageTransitionProvider>{children}</PageTransitionProvider> */}
         {children}
