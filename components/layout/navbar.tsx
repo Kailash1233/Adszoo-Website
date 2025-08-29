@@ -76,7 +76,7 @@ export const Navbar = () => {
         className="font-extrabold text-lg flex items-center tracking-tight"
       >
         <Image
-          src="/Logo.png"
+          src="/Logo1.png"
           alt="Adszoo Digital Marketing Agency Logo"
           width={24}
           height={24}
@@ -104,11 +104,11 @@ export const Navbar = () => {
                     className="font-extrabold text-lg flex items-center tracking-tight"
                   >
                     <Image
-                      src="/Logo.webp"
+                      src="/Logo1.png"
                       alt="Adszoo Logo"
                       width={24}
                       height={24}
-                      className="mr-2 w-6 h-6"
+                      className="mr-2 w-6 h-6 rounded-full"
                       loading="lazy"
                     />
                     Adszoo

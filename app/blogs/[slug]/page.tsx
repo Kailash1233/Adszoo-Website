@@ -183,7 +183,7 @@ const BlogPostPage = async ({
       name: "Adszoo",
       logo: {
         "@type": "ImageObject",
-        url: "https://adszoo.in/logo.png",
+        url: "https://adszoo.in/Logo1.png",
       },
     },
     datePublished: date,

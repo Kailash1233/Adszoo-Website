@@ -28,7 +28,7 @@ export const metadata = {
       "We specialize in empowering your business with a comprehensive suite of digital solutions",
     images: [
       {
-        url: "https://i.ibb.co/jRzxGYd/WebSS.png",
+        url: "https://www.adszoo.in/Logo1.png",
         width: 1200,
         height: 630,
         alt: "Adszoo - Digital Marketing Agency",
@@ -41,7 +41,7 @@ export const metadata = {
     title: "Adszoo - Digital Marketing Agency",
     description:
       "We specialize in empowering your business with a comprehensive suite of digital solutions",
-    images: ["https://i.ibb.co/jRzxGYd/WebSS.png"],
+    images: ["https://www.adszoo.in/Logo1.png"],
   },
 };
 

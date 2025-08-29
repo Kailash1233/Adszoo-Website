@@ -171,7 +171,7 @@ export const FooterSection = () => {
         {/* Logo + About */}
         <div>
           <Link href="/" className="flex items-center mb-4">
-            <Image src="/Logo.webp" alt="Adszoo Logo" width={32} height={32} />
+            <Image src="/Logo1.png" alt="Adszoo Logo" width={32} height={32} />
             <span className="ml-2 font-bold text-xl">Adszoo</span>
           </Link>
           <p className="text-sm text-muted-foreground mb-4">
