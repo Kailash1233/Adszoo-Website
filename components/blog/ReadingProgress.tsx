@@ -16,7 +16,7 @@ export default function ReadingProgress({
     if (!target) return;
 
     function onScroll() {
-      const rect = target.getBoundingClientRect();
+      if (!target) return;
       const total = target.scrollHeight - window.innerHeight;
       const scrolled = Math.min(
         Math.max(window.scrollY - (target.offsetTop - 0), 0),
@@ -44,4 +44,3 @@ export default function ReadingProgress({
     </div>
   );
 }
-
