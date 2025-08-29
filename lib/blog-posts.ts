@@ -211,7 +211,7 @@ export const blogPosts = [
 <div>Smaller budgets. Bigger impact.</div>
 </div>`,
     image: "/blogs/7.jpg",
-    date: "2025-07-02",
+    date: "JULY 7, 2025",
     href: "/blog/indian-d2c-brands-ppc-strategies",
     metaTitle: "PPC Strategies Indian D2C Brands Use to Go Viral | Adszoo Blog",
     metaDescription:
@@ -241,7 +241,7 @@ export const blogPosts = [
 </div>
 `,
     image: "/blogs/8.jpg",
-    date: "2025-07-02",
+    date: "JULY 7, 2025",
     href: "/blog/chennai-startups-digital-marketing",
     metaTitle: "Why Chennai Startups Need Smart Digital Marketing | Adszoo",
     metaDescription:
@@ -275,7 +275,7 @@ export const blogPosts = [
 </div>
 `,
     image: "/blogs/9.jpg",
-    date: "2025-07-02",
+    date: "JULY 7, 2025",
     href: "/blog/google-ads-small-business-fix",
     metaTitle: "Fix Google Ads for Small Business: Real Case Study Inside",
     metaDescription:
@@ -315,7 +315,7 @@ export const blogPosts = [
 </div>
 `,
     image: "/blogs/10.jpg",
-    date: "2025-07-02",
+    date: "JULY 7, 2025",
     href: "/blog/email-marketing-guide-2025",
     metaTitle: "Email Marketing Best Practices for 2025 | Adszoo Blog",
     metaDescription:
@@ -350,10 +350,308 @@ export const blogPosts = [
 </div>
 `,
     image: "/blogs/11.jpg",
-    date: "2025-07-02",
+    date: "JULY 7, 2025",
     href: "/blog/seo-content-ranking-guide",
     metaTitle: "boAt & Mamaearth's SEO Secrets to Rank on Google | Adszoo",
     metaDescription:
       "Learn how top Indian brands use SEO content to dominate search. Use the same 10-step process to grow your small business organically.",
+  },
+  {
+    slug: "local-seo-small-business-guide",
+    title: "Local SEO Guide for Small Businesses in 2025",
+    description:
+      "Learn simple steps to rank higher on Google Maps and local search. Get more calls and visits with easy local SEO tips.",
+    content: `
+          <p>Local SEO helps people near you find your business. It is simple to start and can bring fast results.</p>
+          <br />
+          <h2>Do these 6 things first:</h2>
+          <br />
+          <ol>
+            <li><strong>Claim your Google Business Profile:</strong> Add name, address, phone, hours, and photos.</li>
+            <li><strong>Use local keywords:</strong> Like “dentist in Anna Nagar” or “bakery in Andheri”.</li>
+            <li><strong>Get reviews:</strong> Ask happy customers to leave 5-star reviews with details.</li>
+            <li><strong>Fix NAP:</strong> Keep your Name, Address, Phone the same everywhere.</li>
+            <li><strong>Add local pages:</strong> Create pages for each area you serve.</li>
+            <li><strong>Build local links:</strong> Partner with nearby groups and list on local sites.</li>
+          </ol>
+          <br />
+          <p>With smart local SEO, you will get more calls, footfalls, and sales every month.</p>
+        `,
+    image: "/blogs/blog12.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/local-seo-small-business-guide",
+    metaTitle: "Local SEO Guide 2025: Rank on Google Maps | Adszoo",
+    metaDescription:
+      "Simple local SEO tips to rank higher on Google Maps and local search. Get more calls and visits in 2025.",
+  },
+  {
+    slug: "instagram-marketing-for-small-brands",
+    title: "Instagram Marketing for Small Brands: A Simple Plan",
+    description:
+      "Grow your small brand on Instagram with a clear, simple plan. Learn content ideas, timing, and easy growth tips.",
+    content: `
+          <p>Instagram helps small brands reach customers fast. You only need a simple plan and consistency.</p>
+          <br />
+          <h2>Follow this weekly routine:</h2>
+          <br />
+          <ul>
+            <li><strong>3 Reels:</strong> Show product use, behind-the-scenes, and customer stories.</li>
+            <li><strong>2 Carousels:</strong> Tips, before/after, or mini-guides your audience cares about.</li>
+            <li><strong>Stories daily:</strong> Polls, questions, and quick updates.</li>
+            <li><strong>Reply fast:</strong> Answer DMs and comments within an hour.</li>
+          </ul>
+          <br />
+          <p>Post at the same time, use clear captions, and keep CTAs simple. Small steps bring steady growth.</p>
+        `,
+    image: "/blogs/blog13.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/instagram-marketing-for-small-brands",
+    metaTitle: "Simple Instagram Marketing Plan for Small Brands | Adszoo",
+    metaDescription:
+      "A weekly Instagram plan for small brands. Reels, carousels, stories, and quick engagement tips to grow.",
+  },
+  {
+    slug: "landing-page-design-that-converts",
+    title: "Landing Page Design That Converts: 7 Essentials",
+    description:
+      "Make landing pages that turn visitors into leads. Use 7 simple design rules that work for any industry.",
+    content: `
+          <p>A good landing page is simple, fast, and focused on one goal. Use these basics to increase conversions.</p>
+          <br />
+          <h2>7 must-haves:</h2>
+          <br />
+          <ol>
+            <li><strong>Clear headline:</strong> Say what you offer and who it is for.</li>
+            <li><strong>Strong subtext:</strong> Explain the key benefit in one line.</li>
+            <li><strong>Hero proof:</strong> Show a product image, demo, or short video.</li>
+            <li><strong>Trust signals:</strong> Add logos, ratings, and short testimonials.</li>
+            <li><strong>Simple form:</strong> Ask only what you need (name, email, phone).</li>
+            <li><strong>One CTA:</strong> Use one clear button and repeat it down the page.</li>
+            <li><strong>Fast load:</strong> Compress images and avoid heavy scripts.</li>
+          </ol>
+          <br />
+          <p>Test one change at a time. Small improvements can double your leads.</p>
+        `,
+    image: "/blogs/blog14.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/landing-page-design-that-converts",
+    metaTitle: "7 Landing Page Essentials to Boost Conversions | Adszoo",
+    metaDescription:
+      "Use these 7 simple landing page rules to get more leads. Clear copy, trust signals, and one strong CTA.",
+  },
+  {
+    slug: "content-marketing-ideas-for-service-businesses",
+    title: "Content Marketing Ideas for Service Businesses",
+    description:
+      "Simple content ideas for service businesses like clinics, gyms, salons, and agencies. Attract and convert more clients.",
+    content: `
+          <p>Content marketing builds trust before a call or visit. Share helpful content that answers real questions.</p>
+          <br />
+          <h2>Start with these ideas:</h2>
+          <br />
+          <ul>
+            <li><strong>How-to blogs:</strong> Teach one useful thing your customer needs.</li>
+            <li><strong>Before/after stories:</strong> Show real results with short case studies.</li>
+            <li><strong>Pricing guides:</strong> Be transparent about price and value.</li>
+            <li><strong>FAQs:</strong> Make a page for common questions and clear answers.</li>
+            <li><strong>Local guides:</strong> Create helpful local lists and resources.</li>
+          </ul>
+          <br />
+          <p>Keep the language simple. Use images and short paragraphs. End with a clear CTA.</p>
+        `,
+    image: "/blogs/blog15.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/content-marketing-ideas-for-service-businesses",
+    metaTitle: "Content Marketing Ideas for Service Businesses | Adszoo",
+    metaDescription:
+      "Easy content ideas for clinics, gyms, salons, and agencies. Build trust and get more clients.",
+  },
+  {
+    slug: "google-ads-keywords-for-local-leads",
+    title: "Google Ads Keywords for Local Leads: A Quick Guide",
+    description:
+      "Choose the right Google Ads keywords for local leads. Use match types, negatives, and intent keywords.",
+    content: `
+          <p>Right keywords make Google Ads cheaper and more effective. Focus on local and intent-based searches.</p>
+          <br />
+          <h2>Tips to choose better keywords:</h2>
+          <br />
+          <ol>
+            <li><strong>Use intent words:</strong> “near me”, “best”, “price”, “book”, “consult”.</li>
+            <li><strong>Add location:</strong> Area, city, or landmark for each ad group.</li>
+            <li><strong>Use match types:</strong> Start with phrase and exact match.</li>
+            <li><strong>Add negatives:</strong> Block “free”, “jobs”, and unrelated searches.</li>
+            <li><strong>Check search terms:</strong> Add winners and remove waste weekly.</li>
+          </ol>
+          <br />
+          <p>Small changes to keywords can cut cost and improve lead quality quickly.</p>
+        `,
+    image: "/blogs/blog16.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/google-ads-keywords-for-local-leads",
+    metaTitle: "Best Google Ads Keywords for Local Leads | Adszoo",
+    metaDescription:
+      "A simple guide to picking Google Ads keywords for local leads. Use intent, location, and negatives the right way.",
+  },
+  {
+    slug: "facebook-ads-vs-google-ads-which-to-choose",
+    title: "Facebook Ads vs Google Ads: Which Should You Choose?",
+    description:
+      "Understand the difference between Facebook Ads and Google Ads. Learn when to use each for better ROI.",
+    content: `
+          <p>Both platforms work well, but they solve different problems. Choose based on your goal and budget.</p>
+          <br />
+          <h2>Quick comparison:</h2>
+          <br />
+          <ul>
+            <li><strong>Google Ads:</strong> People search with intent. Great for leads now.</li>
+            <li><strong>Facebook Ads:</strong> People browse. Great for awareness and retargeting.</li>
+            <li><strong>Cost:</strong> Facebook often cheaper per click. Google often higher intent.</li>
+            <li><strong>Best pair:</strong> Use Google for demand capture and Facebook for remarketing.</li>
+          </ul>
+          <br />
+          <p>If you are new, start with Google Search. Add Facebook remarketing after 30 days.</p>
+        `,
+    image: "/blogs/blog17.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/facebook-ads-vs-google-ads-which-to-choose",
+    metaTitle: "Facebook Ads vs Google Ads: What to Choose in 2025 | Adszoo",
+    metaDescription:
+      "Clear differences between Facebook and Google Ads. Learn when to use each and how to combine them for ROI.",
+  },
+  {
+    slug: "ecommerce-seo-checklist-2025",
+    title: "Ecommerce SEO Checklist for 2025",
+    description:
+      "A simple ecommerce SEO checklist to improve rankings and sales. Fix technical SEO, content, and conversion.",
+    content: `
+          <p>Ecommerce SEO needs strong basics. Use this checklist to improve rankings and sales step by step.</p>
+          <br />
+          <h2>Checklist:</h2>
+          <br />
+          <ol>
+            <li><strong>Fast site:</strong> Compress images and use a CDN.</li>
+            <li><strong>Unique product content:</strong> Write your own titles and descriptions.</li>
+            <li><strong>Category pages:</strong> Add 150–300 words of helpful text.</li>
+            <li><strong>Internal links:</strong> Link related products and guides.</li>
+            <li><strong>Structured data:</strong> Add Product, Review, and Breadcrumb schema.</li>
+            <li><strong>Fix 404s:</strong> Redirect old URLs to the closest page.</li>
+          </ol>
+          <br />
+          <p>Do a few items each week. Small wins add up to big results.</p>
+        `,
+    image: "/blogs/blog18.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/ecommerce-seo-checklist-2025",
+    metaTitle: "Ecommerce SEO Checklist 2025: Simple Steps | Adszoo",
+    metaDescription:
+      "Follow this simple ecommerce SEO checklist for 2025. Improve speed, content, links, and schema to grow sales.",
+  },
+  {
+    slug: "b2b-linkedin-ads-beginners-guide",
+    title: "B2B LinkedIn Ads: A Beginner&apos;s Guide",
+    description:
+      "Get started with LinkedIn Ads for B2B. Learn targeting, ad types, budgets, and a simple campaign plan.",
+    content: `
+          <p>LinkedIn is great for B2B leads. Start small, target well, and focus on value-led offers.</p>
+          <br />
+          <h2>Basic plan:</h2>
+          <br />
+          <ol>
+            <li><strong>Target:</strong> Job titles, industries, company size, and locations.</li>
+            <li><strong>Offer:</strong> Free audit, calculator, or short guide.</li>
+            <li><strong>Ad type:</strong> Start with single image and document ads.</li>
+            <li><strong>Budget:</strong> Begin with a small daily cap and optimize weekly.</li>
+            <li><strong>Follow-up:</strong> Send fast, helpful follow-up emails.</li>
+          </ol>
+          <br />
+          <p>Track cost per lead and lead quality. Improve targeting and offer based on data.</p>
+        `,
+    image: "/blogs/blog19.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/b2b-linkedin-ads-beginners-guide",
+    metaTitle: "Beginner&apos;s Guide to B2B LinkedIn Ads | Adszoo",
+    metaDescription:
+      "A simple LinkedIn Ads guide for B2B. Targeting, offers, ad types, and budget tips to get quality leads.",
+  },
+  {
+    slug: "youtube-ads-for-lead-generation",
+    title: "YouTube Ads for Lead Generation: Simple Setup",
+    description:
+      "Use YouTube Ads to get more leads. Learn audience types, video structure, and tracking basics.",
+    content: `
+          <p>YouTube has large reach and low cost. Use short, clear videos with strong hooks and one CTA.</p>
+          <br />
+          <h2>How to set up:</h2>
+          <br />
+          <ul>
+            <li><strong>Audience:</strong> Custom intent, remarketing, and lookalikes.</li>
+            <li><strong>Video:</strong> Hook in 3 seconds, show value, social proof, CTA.</li>
+            <li><strong>Landing page:</strong> Match the offer and keep it simple.</li>
+            <li><strong>Tracking:</strong> Set up conversions in Google Ads.</li>
+          </ul>
+          <br />
+          <p>Test two videos at a time. Keep improving the first 5 seconds and the CTA.</p>
+        `,
+    image: "/blogs/blog20.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/youtube-ads-for-lead-generation",
+    metaTitle: "YouTube Ads for Leads: Easy Setup Guide | Adszoo",
+    metaDescription:
+      "A simple YouTube Ads setup for lead generation. Audience, video structure, landing page, and tracking tips.",
+  },
+  {
+    slug: "whatsapp-marketing-best-practices-2025",
+    title: "WhatsApp Marketing Best Practices for 2025",
+    description:
+      "Use WhatsApp the right way to get more replies and sales. Learn consent, templates, and follow-up tips.",
+    content: `
+          <p>WhatsApp has high open rates. Use it with respect and clear value. Never spam.</p>
+          <br />
+          <h2>Do this:</h2>
+          <br />
+          <ol>
+            <li><strong>Get consent:</strong> Ask users to opt in on your site or forms.</li>
+            <li><strong>Use templates:</strong> Keep messages short, helpful, and personal.</li>
+            <li><strong>Send at the right time:</strong> Work hours only and local time zones.</li>
+            <li><strong>Follow-up lightly:</strong> 1–2 reminders max with real value.</li>
+            <li><strong>Automate:</strong> Use quick replies and labels for faster support.</li>
+          </ol>
+          <br />
+          <p>Track replies, leads, and sales. Improve your messages based on what works.</p>
+        `,
+    image: "/blogs/blog21.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/whatsapp-marketing-best-practices-2025",
+    metaTitle: "WhatsApp Marketing Best Practices 2025 | Adszoo",
+    metaDescription:
+      "Best practices for WhatsApp marketing in 2025. Get consent, use templates, time messages well, and automate smartly.",
+  },
+  {
+    slug: "analytics-metrics-every-founder-should-track",
+    title: "Website Metrics Every Founder Should Track",
+    description:
+      "Track the right website metrics to grow faster. Learn simple KPIs for traffic, leads, and revenue.",
+    content: `
+          <p>Good decisions need good data. Track a few metrics well instead of many metrics poorly.</p>
+          <br />
+          <h2>Start with these KPIs:</h2>
+          <br />
+          <ul>
+            <li><strong>Organic visits:</strong> Are your SEO efforts working?</li>
+            <li><strong>Conversion rate:</strong> What percent of visitors become leads?</li>
+            <li><strong>Cost per lead:</strong> Which channel brings affordable leads?</li>
+            <li><strong>Lead to sale rate:</strong> Are leads becoming customers?</li>
+            <li><strong>LTV vs CAC:</strong> Are you profitable over time?</li>
+          </ul>
+          <br />
+          <p>Review weekly. Improve one area at a time for steady growth.</p>
+        `,
+    image: "/blogs/blog22.jpg",
+    date: "AUGUST 29, 2025",
+    href: "/blogs/analytics-metrics-every-founder-should-track",
+    metaTitle: "Top Website Metrics for Founders to Track | Adszoo",
+    metaDescription:
+      "Simple website KPIs for founders. Track traffic, conversion rate, cost per lead, and profitability.",
   },
 ];
