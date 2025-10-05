@@ -62,7 +62,7 @@ export default function DigitalMarketingFAQ() {
               Digital Marketing FAQs
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Welcome to Adszoo’s FAQ hub — where business owners get clear
+              Welcome to Adszoo&apos;s FAQ hub - where business owners get clear
               answers to SEO, Ads, social media, and leads. These come straight
               from real projects that worked.
             </p>
@@ -72,7 +72,9 @@ export default function DigitalMarketingFAQ() {
               More Questions
             </button>
             <button className="px-8 py-3 text-black font-medium hover:text-gray-600 transition-colors duration-200">
-              Contact Us
+              <a href="https://cal.com/adszoo/15min" target="_blank">
+                Contact Us
+              </a>
             </button>
           </div>
         </div>
@@ -82,7 +84,7 @@ export default function DigitalMarketingFAQ() {
             <div key={index} className="border-b border-gray-200">
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full flex items-center justify-between py-6 text-left hover:bg-gray-50 transition-colors duration-200"
+                className="w-full flex items-center justify-between py-6 text-left  transition-colors duration-200"
               >
                 <h3 className="text-xl font-semibold text-black pr-8 leading-tight">
                   {item.question}

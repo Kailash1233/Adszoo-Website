@@ -6,14 +6,24 @@ import Link from "next/link";
 import { SponsorsSection } from "./sponsors";
 
 const containerVariants = {
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      staggerChildren: 0.2, // makes each child appear one after the other
+    },
+  },
 };
 
 const textVariants = {
+  hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
 const buttonVariants = {
+  hidden: { opacity: 0, scale: 0.95 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
 };
 
@@ -23,7 +33,7 @@ export const HeroSection = () => {
       <motion.div
         className="flex flex-col items-center justify-center gap-8 max-w-screen-xl mx-auto"
         variants={containerVariants}
-        initial="visible"
+        initial="hidden"
         animate="visible"
       >
         <motion.div className="text-center space-y-8" variants={textVariants}>
