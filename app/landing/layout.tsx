@@ -1,4 +1,5 @@
 // app/layout.tsx
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -49,6 +50,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-white text-black antialiased`}>
+        <GoogleAnalytics
+          gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"}
+        />
         {children}
       </body>
     </html>

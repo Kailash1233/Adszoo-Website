@@ -109,6 +109,7 @@ import { Navbar } from "@/components/layout/navbar";
 import ReadingProgress from "@/components/blog/ReadingProgress";
 import ShareBar from "@/components/blog/ShareBar";
 import TableOfContents from "@/components/blog/TableOfContents";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 function getReadingTime(content: string) {
   const plainText = content.replace(/<[^>]+>/g, ""); // Strip HTML tags
@@ -196,6 +197,7 @@ const BlogPostPage = async ({
 
   return (
     <>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
       {/* <Head>
         <title>{metaTitle}</title>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { caseStudies } from "@/lib/case-studies-data";
 import { Navbar } from "@/components/layout/navbar";
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Client Success Stories | Real Digital Marketing Results - Adszoo",
@@ -52,6 +53,7 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   return (
     <>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
       <div className="bg-white text-black min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">

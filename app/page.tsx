@@ -15,6 +15,7 @@ import ServiceFAQ from "@/components/layout/sections/servicefaq";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 import LeadPopup from "@/components/LeadPopup";
 import DigitalMarketingFAQ from "@/components/ui/digi-faq";
+import { GoogleAnalytics } from "@next/third-parties/google";
 // import ServicesAccordion from "@/components/ui/service-accordion";
 
 export const metadata = {
@@ -49,6 +50,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
       <HeroSection />
       <LeadPopup />

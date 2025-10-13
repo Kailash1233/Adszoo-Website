@@ -29,17 +29,36 @@ type ErrorMap = Partial<Record<keyof FormState | "message", string>>;
 
 export default function LeadPopup() {
   const [open, setOpen] = useState(false);
+  const [animate, setAnimate] = useState(false); // NEW - controls CSS animation
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(defaultState);
 
   const [errors, setErrors] = useState<ErrorMap>({});
 
-  // show after slight delay to avoid interrupting immediate UX
   useEffect(() => {
-    const t = setTimeout(() => setOpen(true), 900);
+    const t = setTimeout(() => {
+      setOpen(true);
+      // wait for the element to mount, then trigger animation for smooth transition
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setAnimate(true);
+        });
+      });
+    }, 9000); // keep your 9000 ms delay
     return () => clearTimeout(t);
   }, []);
+
+  // helper to close with exit animation
+  const closeWithAnimation = () => {
+    // start exit animation
+    setAnimate(false);
+    // wait for the animation to finish, then unmount
+    const ANIM_DURATION = 500; // must match duration in classes (ms)
+    setTimeout(() => {
+      setOpen(false);
+    }, ANIM_DURATION);
+  };
 
   const toggleService = (s: string) => {
     setForm((f) => ({
@@ -122,15 +141,28 @@ export default function LeadPopup() {
     <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
       {/* backdrop */}
       <div
-        onClick={() => setOpen(false)}
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
+        onClick={closeWithAnimation}
+        className={`absolute inset-0 backdrop-blur-sm transition-opacity duration-500 ${
+          animate ? "bg-black/50 opacity-100" : "bg-black/0 opacity-0"
+        }`}
         aria-hidden
       />
 
       <div
         role="dialog"
         aria-modal="true"
-        className="relative m-4 max-w-xl w-full bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 transform transition-all duration-300"
+        className={`
+            relative m-4 w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100
+            transform transition-all duration-500 ease-[cubic-bezier(.16,.84,.44,1)]
+            ${
+              animate
+                ? "opacity-100 translate-y-0 scale-100"
+                : "opacity-0 translate-y-6 md:translate-y-8 scale-95"
+            }
+          `}
+        // prevent clicking inside from closing accidentally
+        onClick={(e) => e.stopPropagation()}
+        style={{ willChange: "transform, opacity" }}
       >
         <div className="flex gap-4 p-6 md:p-8">
           {/* Left visual */}

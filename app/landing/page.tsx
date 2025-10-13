@@ -6,6 +6,7 @@ import { caseStudies } from "@/lib/case-studies-data";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 40 },
@@ -65,6 +66,7 @@ export default function LandingPage() {
 
   return (
     <>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Head>
         <title>Ads Adszoo | Digital Marketing That Delivers Results</title>
         <meta

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/layout/navbar";
 import { blogPosts } from "@/lib/blog-posts";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const title = "Best Digital Marketing Blogs in 2025 | Adszoo";
 const description =
@@ -15,6 +16,7 @@ const description =
 export default function BlogPage() {
   return (
     <>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
       <Head>
         <title>{title}</title>

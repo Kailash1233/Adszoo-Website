@@ -207,8 +207,8 @@ import {
   caseStudies,
 } from "@/lib/case-studies-data";
 import { Navbar } from "@/components/layout/navbar";
-import AnimatedPreview from "@/components/AnimatedPreview";
 import AnimatedPreviewWithLightbox from "@/components/AnimatedPreviewWithLightbox";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 interface CaseStudyPageProps {
   params: Promise<{ slug: string }>;
@@ -224,6 +224,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
   return (
     <>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
 
       <main className="bg-white text-black min-h-screen">
