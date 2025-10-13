@@ -13,6 +13,7 @@ import ServiceFAQ from "@/components/layout/sections/servicefaq";
 // import { SponsorsSection } from "@/components/layout/sections/sponsors";
 // import { TeamSection } from "@/components/layout/sections/team";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
+import LeadPopup from "@/components/LeadPopup";
 import DigitalMarketingFAQ from "@/components/ui/digi-faq";
 // import ServicesAccordion from "@/components/ui/service-accordion";
 
@@ -50,6 +51,7 @@ export default function Home() {
     <>
       <Navbar />
       <HeroSection />
+      <LeadPopup />
       {/* <SponsorsSection /> */}
       <BenefitsSection />
       {/* <ServicesAccordion /> */}

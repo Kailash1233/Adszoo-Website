@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 import { Analytics } from "@vercel/analytics/react";
 // import PageTransitionProvider from "./PageTransitionProvider";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Adszoo | Best Website Development & Social Media Marketing Agency",
@@ -74,6 +75,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         > */}
+        <GoogleAnalytics
+          gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"}
+        />
         <Analytics />
         <SpeedInsights />
         {/* <Navbar /> */}
