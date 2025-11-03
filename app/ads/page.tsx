@@ -1,12 +1,21 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useMemo } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Space_Grotesk } from "next/font/google";
+import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
+import Image from "next/image";
 
-const PHONE = "+916369050929";
-const WHATSAPP = `https://wa.me/91${PHONE.replace(/\D/g, "").slice(0)}`;
-const BOOKING_LINK = "https://cal.com/adszoo/strategy-call"; // replace if needed
-const PDF_DOWNLOAD_LINK = "/adszoo-web-system.pdf"; // keep inside /public
+const grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-grotesk",
+  weight: ["400", "500", "700"],
+});
+
+const BRAND_GREEN = "#53D366";
+
+const BOOKING_LINK = "https://cal.com/adszoo/15min";
+const PDF_DOWNLOAD_LINK = "/adszoo-web-system.pdf";
 
 type LeadFormData = {
   name: string;
@@ -18,55 +27,110 @@ export default function AdsLanding() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // scroll bg parallax
+  const { scrollY } = useScroll();
+  const glowOpacity = useTransform(scrollY, [0, 300], [1, 0.2]);
+
   return (
-    <div className="min-h-screen bg-black text-zinc-100">
+    <div
+      className={`min-h-screen bg-black text-zinc-100 ${grotesk.variable} font-sans`}
+    >
+      {/* soft animated backdrop */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none fixed inset-0"
+        style={{
+          background:
+            "radial-gradient(60% 40% at 50% 0%, rgba(83,211,102,0.12), transparent 65%), radial-gradient(50% 30% at 20% 10%, rgba(83,211,102,0.10), transparent 60%)",
+        }}
+        animate={{ opacity: [0.8, 1, 0.8] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* NAVBAR */}
+      <header className="relative z-20">
+        <nav className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+          <a href="/" className="group inline-flex items-center gap-3">
+            {/* Logo mark */}
+            <Image src="/Logo1.png" alt="Adszoo Logo" width={40} height={40} />
+          </a>
+
+          <div className="flex items-center gap-3">
+            <a
+              href={BOOKING_LINK}
+              target="_blank"
+              className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_rgba(83,211,102,0.9)]"
+              style={{ backgroundColor: BRAND_GREEN }}
+            >
+              <HiOutlineChatBubbleLeftRight className="text-black" />
+              Need help?
+            </a>
+          </div>
+        </nav>
+      </header>
+
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.15),transparent_70%)]" />
-        <div className="max-w-4xl mx-auto px-6 pt-24 pb-16 relative z-10">
+        {/* subtle top glow */}
+        <motion.div
+          aria-hidden
+          className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] rounded-full blur-[110px]"
+          style={{
+            backgroundColor: "rgba(83,211,102,0.12)",
+            opacity: glowOpacity as any,
+          }}
+        />
+        <div className="max-w-5xl mx-auto px-6 pt-14 pb-10 relative z-10">
           <motion.h1
-            initial={{ y: 20, opacity: 0 }}
+            initial={{ y: 24, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-white"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-[34px] md:text-6xl font-medium tracking-tight leading-[1.07] text-white"
           >
-            your website should{" "}
-            <span className="underline decoration-emerald-500">
-              make you money
-            </span>{" "}
-            — not cost you.
+            Your Website Should{" "}
+            <span className="text-primary font-bold">
+              <Highlight>Make You Money</Highlight>
+            </span>
+            - Not Cost You.
           </motion.h1>
 
           <motion.p
-            initial={{ y: 20, opacity: 0 }}
+            initial={{ y: 18, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-4 text-lg md:text-xl text-zinc-400"
+            transition={{ duration: 0.6, delay: 0.08 }}
+            className="mt-5 text-lg md:text-xl text-zinc-300"
           >
-            download the setup top web agencies use to build web systems that
+            Download the setup top web agencies use to build{" "}
+            <span className="text-white font-semibold">web systems</span> that
             actually drive revenue.
           </motion.p>
 
           <motion.p
-            initial={{ y: 20, opacity: 0 }}
+            initial={{ y: 18, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.16 }}
             className="mt-3 text-sm md:text-base text-zinc-500"
           >
-            no theory. no bs. just the exact framework we use to build sites
-            that work — clean, fast, and built to sell.
+            No theory. No BS. Just the exact framework we use to launch sites
+            that are clean, fast, and built to sell.
           </motion.p>
 
-          {/* FORM SECTION */}
-          <div className="mt-10">
+          {/* FORM + trust */}
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-10"
+          >
             {!submitted ? (
               <LeadForm
                 onSubmit={async (data: LeadFormData) => {
                   setLoading(true);
+                  // simulate API & then trigger download
                   setTimeout(() => {
                     setSubmitted(true);
                     setLoading(false);
-                    // Trigger PDF download only after submission
                     const link = document.createElement("a");
                     link.href = PDF_DOWNLOAD_LINK;
                     link.download = "AdsZOO-WebSystem.pdf";
@@ -78,207 +142,140 @@ export default function AdsLanding() {
             ) : (
               <AfterForm />
             )}
-          </div>
+          </motion.div>
+
+          {/* trust strip */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="mt-8 text-xs md:text-sm text-zinc-500"
+          >
+            You’ll work 1:1 with us until you’re satisfied. No guesswork. No
+            wasted time. No risk.
+          </motion.div>
         </div>
       </section>
-
-      {/* WHY IT WORKS */}
-      <SectionWrapper>
-        <SectionHeader
-          title="clean. fast. built to sell."
-          subtitle="we design revenue-first websites and funnels that convert attention into customers."
-        />
-        <div className="mt-8 grid md:grid-cols-3 gap-6">
-          <ValueCard
-            title="clarity over clutter"
-            desc="a focused message, above-the-fold offer, and frictionless contact path."
-          />
-          <ValueCard
-            title="conversion thinking"
-            desc="copy, layout, and ctas crafted using funnel psychology that works."
-          />
-          <ValueCard
-            title="data & iteration"
-            desc="tracking, heatmaps, and fast cycles to keep improving results."
-          />
-        </div>
-      </SectionWrapper>
-
-      {/* WHAT'S INSIDE PDF */}
-      <SectionWrapper bg="muted">
-        <SectionHeader
-          title="what you'll get inside"
-          subtitle="use this plug-and-play framework to build a site that performs."
-        />
-        <ul className="mt-6 space-y-3 text-zinc-400 text-sm md:text-base">
-          <li>• a proven website architecture used by top agencies</li>
-          <li>• high-converting page blocks and ctas you can copy</li>
-          <li>• lead capture + nurture flow (email & whatsapp)</li>
-          <li>• performance checklist: speed, seo, analytics</li>
-          <li>• sample copy + the exact launch sequence we use</li>
-        </ul>
-
-        {/* CTA */}
-        <div className="mt-8 flex flex-wrap gap-3">
-          <button
-            onClick={() => alert("fill the form above to get instant access")}
-            className="px-5 py-3 bg-emerald-600 text-white rounded-lg disabled:opacity-70"
-            disabled={!submitted}
-          >
-            {submitted ? "download again" : "download the pdf"}
-          </button>
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            className="px-5 py-3 border border-emerald-600 text-emerald-400 rounded-lg"
-          >
-            ask a quick question ↗
-          </a>
-        </div>
-      </SectionWrapper>
-
-      {/* PROOF / CASES */}
-      <SectionWrapper>
-        <SectionHeader
-          title="proof it works"
-          subtitle="a few outcomes we've helped create for clients."
-        />
-        <div className="mt-8 grid md:grid-cols-3 gap-6">
-          <ProofCard kpi="+150%" desc="more qualified leads in 90 days." />
-          <ProofCard kpi="3x" desc="increase in inbound inquiries." />
-          <ProofCard kpi="-40%" desc="lower cost per acquisition." />
-        </div>
-      </SectionWrapper>
-
-      {/* PROCESS */}
-      <SectionWrapper bg="muted">
-        <SectionHeader
-          title="how we build it"
-          subtitle="straightforward, fast, and measurable."
-        />
-        <ol className="mt-6 grid md:grid-cols-3 gap-6 text-zinc-400">
-          <ProcessStep
-            step="01"
-            title="strategy & wireframe"
-            desc="map your offer, audience, and conversion path."
-          />
-          <ProcessStep
-            step="02"
-            title="design & build"
-            desc="clean ui, fast pages, copy that sells."
-          />
-          <ProcessStep
-            step="03"
-            title="launch & optimize"
-            desc="ship, test, iterate. keep what works."
-          />
-        </ol>
-      </SectionWrapper>
-
-      {/* TESTIMONIALS */}
-      <SectionWrapper>
-        <SectionHeader title="what clients say" />
-        <div className="mt-6 grid md:grid-cols-2 gap-6">
-          <Quote
-            text="the site went from a brochure to a pipeline. calls doubled in 30 days."
-            author="founder, service business"
-          />
-          <Quote
-            text="adszoo kept it simple — and it worked. finally a website that pulls weight."
-            author="owner, d2c brand"
-          />
-        </div>
-      </SectionWrapper>
-
-      {/* FINAL CTA */}
-      <section className="py-16 text-center bg-gradient-to-r from-emerald-600 to-emerald-700 text-white">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl font-extrabold">
-            When you&apos;re ready to build yours, let&apos;s talk.
-          </h2>
-          <p className="mt-3 text-emerald-100">
-            We&apos;ll map your funnel, show you the plan, and start where it
-            the most revenue first.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-4 justify-center">
-            <a
-              href={BOOKING_LINK}
-              className="px-6 py-3 bg-white text-emerald-700 rounded-lg font-medium"
-            >
-              book a call
-            </a>
-            <a
-              href={WHATSAPP}
-              target="_blank"
-              className="px-6 py-3 border border-white rounded-lg"
-            >
-              whatsapp us
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="py-8 text-center text-xs text-zinc-600">
-        we’re <span className="text-zinc-300">adszoo.in</span> — the team behind
-        real results.
-      </footer>
     </div>
   );
 }
 
-/* ---------- Reusable UI Components ---------- */
+/* ---------- UI Bits ---------- */
 
-function LeadForm({ onSubmit, loading }: any) {
+function Highlight({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="relative inline-block">
+      <motion.span
+        aria-hidden
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="absolute inset-0"
+        style={{
+          backgroundColor: BRAND_GREEN,
+          transformOrigin: "left center",
+        }}
+      />
+      <span className="relative z-10 px-1 py-0.5">{children}</span>
+    </span>
+  );
+}
+
+function LeadForm({
+  onSubmit,
+  loading,
+}: {
+  onSubmit: (d: LeadFormData) => void;
+  loading: boolean;
+}) {
   const [name, setName] = useState("");
-  const [role, setRole] = useState("Business");
+  const [role, setRole] = useState<LeadFormData["role"]>("Business");
   const [contact, setContact] = useState("");
 
+  // gradient ring border for the card
+  const cardBorder = useMemo(
+    () => ({
+      background:
+        "linear-gradient(#0b0b0b,#0b0b0b) padding-box, conic-gradient(from 180deg, rgba(83,211,102,0.35), rgba(83,211,102,0.05), rgba(83,211,102,0.35)) border-box",
+    }),
+    []
+  );
+
   return (
-    <form
+    <motion.form
       onSubmit={(e) => {
         e.preventDefault();
         onSubmit({ name, role, contact });
       }}
-      className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-5 backdrop-blur-sm max-w-xl"
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="relative max-w-xl rounded-2xl p-6 md:p-7 shadow-[0_10px_60px_-20px_rgba(0,0,0,0.6)]"
+      style={{
+        border: "1px solid transparent",
+        ...cardBorder,
+      }}
     >
-      <div className="text-sm font-medium text-zinc-300">get the pdf</div>
-      <div className="mt-3 grid gap-3">
-        <input
-          className="w-full bg-black border border-zinc-700 rounded px-3 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
-          placeholder="name"
-          required
+      {/* badge */}
+      <div className="inline-flex items-center gap-2 text-[11px] tracking-wide uppercase text-zinc-400 bg-zinc-900/60 border border-zinc-800 rounded-full px-3 py-1">
+        Free Download • PDF
+      </div>
+
+      <div className="mt-4 grid gap-3">
+        <FloatingInput
+          label="your name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <select
-          className="w-full bg-black border border-zinc-700 rounded px-3 py-2 text-zinc-100 focus:outline-none focus:ring-1 focus:ring-emerald-500"
-          value={role}
-          onChange={(e) => setRole(e.target.value)}
-        >
-          <option>Business</option>
-          <option>Agency</option>
-          <option>Freelancer</option>
-        </select>
-        <input
-          className="w-full bg-black border border-zinc-700 rounded px-3 py-2 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
-          placeholder="email or whatsapp"
+          onChange={setName}
+          placeholder="john carter"
           required
+        />
+        <FloatingSelect
+          label="you are a"
+          value={role}
+          onChange={setRole}
+          options={["Business", "Agency", "Freelancer"]}
+        />
+        <FloatingInput
+          label="email or whatsapp"
           value={contact}
-          onChange={(e) => setContact(e.target.value)}
+          onChange={setContact}
+          placeholder="you@example.com / +91…"
+          required
         />
       </div>
-      <button
+
+      <motion.button
         type="submit"
         disabled={loading}
-        className="mt-4 w-full px-4 py-3 bg-emerald-600 hover:bg-emerald-700 transition text-white font-medium rounded disabled:opacity-50"
+        whileTap={{ scale: 0.98 }}
+        className="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-black font-semibold disabled:opacity-60"
+        style={{
+          backgroundColor: BRAND_GREEN,
+          boxShadow: "0 20px 40px -18px rgba(83,211,102,0.6)",
+        }}
       >
-        {loading ? "preparing your pdf…" : "download now"}
-      </button>
-      <p className="mt-2 text-xs text-zinc-500">
-        by submitting, you agree to be contacted regarding this resource.
+        {loading ? (
+          <>
+            <Spinner />
+            preparing your pdf…
+          </>
+        ) : (
+          <>Download now</>
+        )}
+      </motion.button>
+
+      <p className="mt-3 text-[11px] leading-relaxed text-zinc-500">
+        By submitting, you agree to be contacted regarding this resource.
       </p>
-    </form>
+
+      {/* soft corner glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-6 -right-6 h-24 w-24 rounded-full blur-2xl"
+        style={{ backgroundColor: "rgba(83,211,102,0.25)" }}
+      />
+    </motion.form>
   );
 }
 
@@ -287,7 +284,7 @@ function AfterForm() {
     <motion.div
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
-      className="border border-zinc-800 bg-zinc-900/70 p-6 rounded-xl max-w-xl"
+      className="border border-zinc-800 bg-zinc-900/70 p-6 rounded-2xl max-w-xl shadow-[0_10px_60px_-20px_rgba(0,0,0,0.6)]"
     >
       <p className="text-zinc-200">
         <strong>read it.</strong> you’ll see why we don’t just make websites —
@@ -297,97 +294,101 @@ function AfterForm() {
         we’re <span className="text-zinc-300">adszoo.in</span> — the team behind
         real results.
       </p>
-      <div className="mt-4 flex gap-3">
+      <div className="mt-4 flex flex-wrap gap-3">
         <a
           href={PDF_DOWNLOAD_LINK}
-          className="px-5 py-2 bg-emerald-600 text-white rounded"
+          className="px-5 py-2 rounded-xl text-black font-semibold"
+          style={{ backgroundColor: BRAND_GREEN }}
         >
-          download again
+          Download again
         </a>
         <a
-          href={WHATSAPP}
+          href={BOOKING_LINK}
           target="_blank"
-          className="px-5 py-2 border border-emerald-600 text-emerald-400 rounded"
+          className="px-5 py-2 rounded-xl border"
+          style={{ borderColor: BRAND_GREEN, color: BRAND_GREEN }}
         >
-          whatsapp us
+          Book a Call
         </a>
       </div>
     </motion.div>
   );
 }
 
-function SectionWrapper({ children, bg }: any) {
+/* ---- Inputs ---- */
+
+function FloatingInput({
+  label,
+  value,
+  onChange,
+  placeholder,
+  required,
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  placeholder?: string;
+  required?: boolean;
+}) {
   return (
-    <section className={bg === "muted" ? "bg-zinc-950 py-16" : "py-16"}>
-      <div className="max-w-5xl mx-auto px-6">{children}</div>
-    </section>
+    <label className="group relative block">
+      <input
+        className="peer w-full bg-zinc-950/70 border border-zinc-800 rounded-xl px-4 py-3 text-zinc-100 placeholder-transparent outline-none transition focus:border-zinc-700"
+        placeholder={placeholder || label}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        required={required}
+      />
+      <span className="pointer-events-none absolute left-4 top-3 text-sm text-zinc-500 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-zinc-500 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-zinc-400 peer-not-placeholder-shown:-top-3 peer-not-placeholder-shown:text-xs">
+        {label}
+      </span>
+      <span
+        aria-hidden
+        className="absolute inset-0 rounded-xl ring-0 group-focus-within:ring-2"
+        style={{
+          boxShadow: `0 0 0 0px rgba(83,211,102,0), 0 0 0 0 rgba(83,211,102,0)`,
+        }}
+      />
+    </label>
   );
 }
 
-function SectionHeader({ title, subtitle }: any) {
+function FloatingSelect({
+  label,
+  value,
+  onChange,
+  options,
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  options: string[];
+}) {
   return (
-    <div>
-      <h2 className="text-2xl md:text-3xl font-extrabold text-white">
-        {title}
-      </h2>
-      {subtitle && (
-        <p className="mt-2 text-zinc-500 text-sm md:text-base">{subtitle}</p>
-      )}
-    </div>
+    <label className="relative block">
+      <select
+        className="w-full appearance-none bg-zinc-950/70 border border-zinc-800 rounded-xl px-4 py-3 text-zinc-100 outline-none focus:border-zinc-700"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      >
+        {options.map((o) => (
+          <option key={o}>{o}</option>
+        ))}
+      </select>
+      <span className="pointer-events-none absolute left-4 -top-3 text-xs text-zinc-400">
+        {label}
+      </span>
+    </label>
   );
 }
 
-function ValueCard({ title, desc }: any) {
+function Spinner() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 15 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-      className="border border-zinc-800 bg-zinc-900 p-5 rounded-xl"
-    >
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
-      <p className="text-sm text-zinc-500 mt-2">{desc}</p>
-    </motion.div>
-  );
-}
-
-function ProofCard({ kpi, desc }: any) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 15 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-      className="border border-zinc-800 bg-zinc-900 p-5 rounded-xl"
-    >
-      <div className="text-3xl font-extrabold text-white">{kpi}</div>
-      <p className="text-sm text-zinc-500 mt-2">{desc}</p>
-    </motion.div>
-  );
-}
-
-function ProcessStep({ step, title, desc }: any) {
-  return (
-    <div className="border border-zinc-800 bg-zinc-900 p-5 rounded-xl">
-      <div className="text-xs uppercase text-zinc-500">step {step}</div>
-      <div className="text-white font-semibold mt-2">{title}</div>
-      <p className="text-sm text-zinc-500 mt-2">{desc}</p>
-    </div>
-  );
-}
-
-function Quote({ text, author }: any) {
-  return (
-    <motion.blockquote
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="p-6 border border-zinc-800 bg-zinc-900 rounded-xl"
-    >
-      <p className="text-zinc-200">“{text}”</p>
-      <footer className="mt-3 text-xs text-zinc-500">— {author}</footer>
-    </motion.blockquote>
+    <motion.span
+      className="inline-block h-[18px] w-[18px] rounded-full border-2 border-black/20"
+      style={{ borderTopColor: "black" }}
+      animate={{ rotate: 360 }}
+      transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+    />
   );
 }
