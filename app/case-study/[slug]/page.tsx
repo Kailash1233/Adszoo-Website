@@ -209,6 +209,7 @@ import {
 import { Navbar } from "@/components/layout/navbar";
 import AnimatedPreviewWithLightbox from "@/components/AnimatedPreviewWithLightbox";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { FooterSection } from "@/components/layout/sections/footer";
 
 interface CaseStudyPageProps {
   params: Promise<{ slug: string }>;
@@ -439,6 +440,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           </section>
         </div>
       </main>
+      <FooterSection />
     </>
   );
 }

@@ -8,6 +8,7 @@ import { ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/layout/navbar";
 import { blogPosts } from "@/lib/blog-posts";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { FooterSection } from "@/components/layout/sections/footer";
 
 const title = "Best Digital Marketing Blogs in 2025 | Adszoo";
 const description =
@@ -109,6 +110,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+      <FooterSection />
     </>
   );
 }

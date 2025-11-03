@@ -234,7 +234,7 @@ export const PricingSection: React.FC = () => {
           Choose a package that fits your stage
         </h2>
         <p className="mt-3 text-gray-600">
-          Clear packages — measurable outcomes. Pick a plan and we&apos;ll send
+          Clear packages - measurable outcomes. Pick a plan and we&apos;ll send
           a tailored proposal with timelines and next steps.
         </p>
       </div>

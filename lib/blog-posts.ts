@@ -221,7 +221,7 @@ export const blogPosts = [
     slug: "chennai-startups-digital-marketing",
     title: "Chennai’s Booming Startup Scene Needs Better Ads. Here’s Why.",
     description:
-      "Startups in Chennai are scaling fast—but most struggle with digital marketing. Learn how the right agency can transform your growth.",
+      "Startups in Chennai are scaling fast-but most struggle with digital marketing. Learn how the right agency can transform your growth.",
     content: `<div>
 <div>Chennai has become a startup hotspot. With government support, skilled talent, and growing investor interest, the ecosystem is booming.</div>
 <br />
@@ -285,7 +285,7 @@ export const blogPosts = [
     slug: "email-marketing-guide-2025",
     title: "Email Marketing in 2025: Still Alive & More Powerful Than Ever",
     description:
-      "Email marketing still gives the best ROI—if done right. Learn the 2025 tactics that top Indian brands are using.",
+      "Email marketing still gives the best ROI-if done right. Learn the 2025 tactics that top Indian brands are using.",
     content: `<div>
 <div>Email marketing isn&rsquo;t dead. In fact, it&rsquo;s more alive than ever.</div>
 <br />
@@ -325,7 +325,7 @@ export const blogPosts = [
     slug: "seo-content-ranking-guide",
     title: "How boAt & Mamaearth Win Google with SEO (You Can Too)",
     description:
-      "Discover how top Indian brands use content to rank on Google—and how your small business can follow the same 10-step SEO formula.",
+      "Discover how top Indian brands use content to rank on Google-and how your small business can follow the same 10-step SEO formula.",
     content: `<div>
 <div>Ever searched for &ldquo;best headphones under ₹2000&rdquo; or &ldquo;organic face wash&rdquo;? Chances are you landed on blogs by boAt or Mamaearth.</div>
 <br />
@@ -362,7 +362,7 @@ export const blogPosts = [
     description:
       "Learn simple steps to rank higher on Google Maps and local search. Get more calls and visits with easy local SEO tips.",
     content: `
-    <p>Are you a small business owner in Chennai, Tamil Nadu? Whether you run a bakery in Chromepet, a clinic in Anna Nagar, or a salon in Velachery, one thing is clear — your customers are searching for you on <strong>Google Maps</strong> and local search.</p> <br />
+    <p>Are you a small business owner in Chennai, Tamil Nadu? Whether you run a bakery in Chromepet, a clinic in Anna Nagar, or a salon in Velachery, one thing is clear - your customers are searching for you on <strong>Google Maps</strong> and local search.</p> <br />
     
     <p>But here’s the problem: if your business doesn’t show up on top when people search, you’re losing calls, leads, and walk-ins to your competitors.</p><br />
 
@@ -418,7 +418,7 @@ export const blogPosts = [
       <br />
       <li>
         <strong>Fix Your NAP Consistency:</strong>
-        <p>Your <strong>Name, Address, and Phone Number</strong> should be the same everywhere — website, Google, Facebook, Instagram, directories. Even small differences (like Rd. vs Road) can confuse Google.</p>
+        <p>Your <strong>Name, Address, and Phone Number</strong> should be the same everywhere - website, Google, Facebook, Instagram, directories. Even small differences (like Rd. vs Road) can confuse Google.</p>
       </li>
 
       <li>
@@ -496,7 +496,7 @@ export const blogPosts = [
       <li>• In Chennai, local searches like <em>“best salon in Chromepet”</em> or <em>“handmade gifts in Anna Nagar”</em> often lead to Instagram profiles before websites.</li>
     </ul>
     <br />
-    <p>For small businesses, this means Instagram is not optional — it’s a must. A strong presence helps you connect with your audience directly, without depending only on ads or middlemen.</p>
+    <p>For small businesses, this means Instagram is not optional - it’s a must. A strong presence helps you connect with your audience directly, without depending only on ads or middlemen.</p>
 
     <br />
     <h2>A Weekly Instagram Plan That Works</h2>
@@ -560,7 +560,7 @@ export const blogPosts = [
       <li>Instagram Ads for lead generation</li>
       <li>Monthly analytics and growth tracking</li>
     </ul>
-    <p>We don’t just manage pages — we help brands <strong>generate leads and sales</strong>.</p>
+    <p>We don’t just manage pages - we help brands <strong>generate leads and sales</strong>.</p>
 
     <br />
     <h2>Final Words</h2>

@@ -112,7 +112,7 @@ export const HeroSection = () => {
 //           </div>
 
 //           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground font-medium">
-//             {`High-converting websites and targeted ads crafted with clear strategy and smooth execution—designed to attract ready-to-buy customers and help businesses grow fast.`}
+//             {`High-converting websites and targeted ads crafted with clear strategy and smooth execution-designed to attract ready-to-buy customers and help businesses grow fast.`}
 //           </p>
 
 //           {/* Call-to-Action Section */}

@@ -4,6 +4,7 @@ import { caseStudies } from "@/lib/case-studies-data";
 import { Navbar } from "@/components/layout/navbar";
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { FooterSection } from "@/components/layout/sections/footer";
 
 export const metadata: Metadata = {
   title: "Client Success Stories | Real Digital Marketing Results - Adszoo",
@@ -139,6 +140,7 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </div>
+      <FooterSection />
     </>
   );
 }

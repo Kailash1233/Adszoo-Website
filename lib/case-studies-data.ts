@@ -47,7 +47,7 @@ export const caseStudies: CaseStudy[] = [
     approach:
       "We designed a minimal yet industrially bold website that showcased their expertise and credibility through structured sections, smooth animations, and optimized layouts.",
     results:
-      "The new website positioned Promide Steel Fabrication as a modern, trusted steel brand — increasing business inquiries and improving client confidence.",
+      "The new website positioned Promide Steel Fabrication as a modern, trusted steel brand - increasing business inquiries and improving client confidence.",
   },
   {
     id: "2",
@@ -115,7 +115,7 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       "They needed a seamless gallery experience that let their photos shine, without performance issues or visual distractions.",
     approach:
-      "We developed a performance-optimized site with clean layouts and fluid animations — allowing users to browse through photos effortlessly.",
+      "We developed a performance-optimized site with clean layouts and fluid animations - allowing users to browse through photos effortlessly.",
     results:
       "The result was a bold, fast-loading digital portfolio that perfectly reflected the brand’s artistic identity and helped them win more creative collaborations.",
   },
@@ -163,7 +163,7 @@ export const caseStudies: CaseStudy[] = [
     approach:
       "We crafted a structured, visually refined layout with smooth animations and clear product storytelling.",
     results:
-      "The new digital interface is in progress — built to elevate Supreme Aluminium’s credibility and online reach among business clients.",
+      "The new digital interface is in progress - built to elevate Supreme Aluminium’s credibility and online reach among business clients.",
   },
   {
     id: "7",
@@ -185,7 +185,7 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       "They needed an easy-to-manage platform to sell construction materials online and handle daily updates efficiently.",
     approach:
-      "We built an e-commerce site powered by Strapi CMS — allowing non-technical staff to manage products, orders, and updates smoothly.",
+      "We built an e-commerce site powered by Strapi CMS - allowing non-technical staff to manage products, orders, and updates smoothly.",
     results:
       "The shift to digital helped KVM CMart expand their reach, improve efficiency, and modernize how clients purchase building materials.",
   },
@@ -218,7 +218,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "nura",
     website: "https://getnura.shop/",
     description:
-      "Nura, a skincare and wellness brand, wanted an e-commerce experience that balanced luxury, simplicity, and trust — helping users buy confidently online.",
+      "Nura, a skincare and wellness brand, wanted an e-commerce experience that balanced luxury, simplicity, and trust - helping users buy confidently online.",
     shortDescription: "Luxury skincare e-commerce platform with smooth UX",
     client: "Nura",
     turnaround: "Completed",
@@ -229,7 +229,7 @@ export const caseStudies: CaseStudy[] = [
     logoUrl: "/CaseStudy/10.webp",
     previewImage: "/casestudy-websites/nura.png",
     challenge:
-      "They needed a digital storefront that reflected their premium skincare positioning — combining product trust, elegance, and conversion-focused design.",
+      "They needed a digital storefront that reflected their premium skincare positioning - combining product trust, elegance, and conversion-focused design.",
     approach:
       "We crafted a Shopify-integrated website with immersive visuals, minimal navigation, and seamless checkout flow for a refined user experience.",
     results:

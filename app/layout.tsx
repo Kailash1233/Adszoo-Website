@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { FooterSection } from "@/components/layout/sections/footer";
+// import { FooterSection } from "@/components/layout/sections/footer";
 // import { ThemeProvider } from "@/components/layout/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 import { Analytics } from "@vercel/analytics/react";
@@ -84,7 +84,7 @@ export default function RootLayout({
         {/* <PageTransitionProvider>{children}</PageTransitionProvider> */}
         {children}
 
-        <FooterSection />
+        {/* <FooterSection /> */}
         {/* </ThemeProvider> */}
       </body>
     </html>

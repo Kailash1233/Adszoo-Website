@@ -110,6 +110,7 @@ import ReadingProgress from "@/components/blog/ReadingProgress";
 import ShareBar from "@/components/blog/ShareBar";
 import TableOfContents from "@/components/blog/TableOfContents";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { FooterSection } from "@/components/layout/sections/footer";
 
 function getReadingTime(content: string) {
   const plainText = content.replace(/<[^>]+>/g, ""); // Strip HTML tags
@@ -310,6 +311,7 @@ const BlogPostPage = async ({
           </div>
         </div>
       </section>
+      <FooterSection />
     </>
   );
 };

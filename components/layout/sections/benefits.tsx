@@ -81,7 +81,7 @@ export const BenefitsSection = () => {
             What Makes Adszoo Different?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            We&apos;re not just another agency. We&apos;re your growth partner —
+            We&apos;re not just another agency. We&apos;re your growth partner -
             creative, strategic, and always focused on results. Here&apos;s why
             businesses trust us:
           </p>

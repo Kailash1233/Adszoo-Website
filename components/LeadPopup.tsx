@@ -78,7 +78,7 @@ export default function LeadPopup() {
     if (!/^[0-9]{7,15}$/.test(form.phone.replace(/[^0-9]/g, "")))
       e.phone = "Enter a valid phone number";
 
-    // services error is a string message (not an array) — allowed by ErrorMap now
+    // services error is a string message (not an array) - allowed by ErrorMap now
     if (!form.services.length) e.services = "Pick at least one service";
 
     setErrors(e);
@@ -103,7 +103,7 @@ export default function LeadPopup() {
         services: form.services.join(", "), // send as comma-separated string
         budget: form.budget,
         message: form.message,
-        _subject: "New lead — Adszoo popup", // optional
+        _subject: "New lead - Adszoo popup", // optional
       };
 
       const res = await fetch(FORMSPREE_ENDPOINT, {
@@ -116,7 +116,7 @@ export default function LeadPopup() {
       });
 
       if (res.ok) {
-        setSuccess("Thanks — we'll reach out within 24 hours.");
+        setSuccess("Thanks - we'll reach out within 24 hours.");
         setForm(defaultState);
         setTimeout(() => setOpen(false), 1400);
       } else {
@@ -351,7 +351,7 @@ export default function LeadPopup() {
               </button>
 
               <div className="text-sm text-gray-500">
-                No spam — we respect your privacy.
+                No spam - we respect your privacy.
               </div>
             </div>
 
@@ -417,7 +417,7 @@ export async function POST(req: Request) {
 
 2) API: Add the `app/api/leads/route.ts` file and connect it with your CRM or Zapier. The example simply logs.
 
-3) Tailwind: This component relies on Tailwind v3+ and expects your site to already have Tailwind configured. The design follows Adszoo's aesthetic—clean layout, blue-indigo gradient CTA, rounded cards, and trust microcopy.
+3) Tailwind: This component relies on Tailwind v3+ and expects your site to already have Tailwind configured. The design follows Adszoo's aesthetic-clean layout, blue-indigo gradient CTA, rounded cards, and trust microcopy.
 
 4) Accessibility: Focus states, ARIA roles, and proper labels are included. The form is intentionally short to reduce friction.
 
