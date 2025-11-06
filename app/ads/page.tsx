@@ -47,7 +47,7 @@ export default function AdsLanding() {
 
   return (
     <div
-      className={`min-h-screen bg-black text-zinc-100 ${grotesk.variable} font-sans`}
+      className={`min-h-screen bg-black text-zinc-100 ${grotesk.variable} font-sans tracking-tighter`}
     >
       {/* animated backdrop */}
       <motion.div
@@ -129,7 +129,7 @@ export default function AdsLanding() {
             transition={{ duration: 0.6, delay: 0.08 }}
             className="mt-6 text-xl text-white/95 font-semibold"
           >
-            Free Download: “The Web System Blueprint”
+            Download the Playbook: “The Web System Blueprint”
           </motion.p>
 
           <motion.p

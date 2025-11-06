@@ -542,7 +542,7 @@ export default function LandingPage() {
         />
       </Head>
 
-      <div className="bg-white text-black relative">
+      <div className="bg-white text-black relative tracking-tighter">
         {/* Scroll Indicator */}
         <div
           className="fixed top-0 left-0 h-1 bg-emerald-600 z-50 transition-all duration-200"
@@ -1037,22 +1037,20 @@ export default function LandingPage() {
         </div>
 
         {/* Floating chat (WhatsApp) - simple fallback link for fast replies */}
-        <a
-          href="https://wa.me/91XXXXXXXXXX?text=Hi%20Adszoo%2C%20I%27d%20like%20a%20free%20strategy%20call"
+        {/* <a
+          href="https://wa.me/916369050929?text=Hi%20Adszoo%2C%20I%27d%20like%20a%20free%20strategy%20call"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed right-4 bottom-24 bg-emerald-600 text-white rounded-full p-3 shadow-lg z-50 hidden md:block"
+          className="fixed right-4 bottom-4 text-white p-3 z-50 hidden md:block"
           aria-label="Chat on WhatsApp"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M20.52 3.48A11.9 11.9 0 0012 0C5.37 0 .01 5.37.01 12a11.8 11.8 0 001.77 6.03L0 24l5.15-1.66A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.17-3.48-8.52zM12 21.5c-1.1 0-2.18-.18-3.2-.53l-.23-.08-3.06.99.99-3.01-.09-.24A9.52 9.52 0 012.5 12c0-5.25 4.25-9.5 9.5-9.5S21.5 6.75 21.5 12 17.25 21.5 12 21.5z" />
-          </svg>
-        </a>
+          <Image
+            src="/whatsapp.png"
+            alt="WhatsApp logo"
+            width={48}
+            height={48}
+          />
+        </a> */}
       </div>
     </>
   );

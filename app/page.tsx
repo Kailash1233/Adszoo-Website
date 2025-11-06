@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/navbar";
 import { BenefitsSection } from "@/components/layout/sections/benefits";
 import BlogSection from "@/components/layout/sections/blogsection";
-// import { CommunitySection } from "@/components/layout/sections/community";
+import { CommunitySection } from "@/components/layout/sections/community";
 // import { ContactSection } from "@/components/layout/sections/contact";
 // import { FAQSection } from "@/components/layout/sections/faq";
 // import { FeaturesSection } from "@/components/layout/sections/features";
@@ -62,7 +62,7 @@ export default function Home() {
       {/* <ServicesSection /> */}
       <TestimonialSection />
       {/* <TeamSection /> */}
-      {/* <CommunitySection /> */}
+      <CommunitySection />
       {/* <PricingSection /> */}
       <DigitalMarketingFAQ />
       <BlogSection />

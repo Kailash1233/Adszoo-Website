@@ -228,7 +228,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
 
-      <main className="bg-white text-black min-h-screen">
+      <main className="bg-white text-black min-h-screen tracking-tighter">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
           {/* HERO */}
           <section className="grid lg:grid-cols-3 gap-12 items-start mb-16">

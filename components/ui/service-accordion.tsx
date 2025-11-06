@@ -59,7 +59,7 @@ export default function ServicesAccordion() {
   };
 
   return (
-    <div className="w-full bg-gray-50 text-black">
+    <div className="w-full bg-gray-50 text-black tracking-tighter">
       {accordionData.map((item, index) => (
         <div key={index} className="border-b border-black">
           <button

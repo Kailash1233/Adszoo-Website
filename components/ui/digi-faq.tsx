@@ -53,7 +53,7 @@ export default function DigitalMarketingFAQ() {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full max-w-7xl mx-auto px-4 py-24"
+      className="w-full max-w-7xl mx-auto px-4 py-24 tracking-tighter"
     >
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         <div className="space-y-8">

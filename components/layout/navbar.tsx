@@ -70,7 +70,7 @@ export const Navbar = () => {
   }, [pathname]);
 
   return (
-    <header className="bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-lg">
+    <header className="bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-lg tracking-tighter">
       <Link
         href="/"
         className="font-extrabold text-lg flex items-center tracking-tight"

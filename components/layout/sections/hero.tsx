@@ -17,12 +17,10 @@ const containerVariants = {
 };
 
 const textVariants = {
-  // hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
 const buttonVariants = {
-  // hidden: { opacity: 0, scale: 0.95 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
 };
 
@@ -37,11 +35,11 @@ export const HeroSection = () => {
       >
         <motion.div className="text-center space-y-8" variants={textVariants}>
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight">
-            <h1>We Turn Visitors into Paying Customers.</h1>
+            <h1>We Turn Your Visitors into Paying Customers.</h1>
           </div>
 
-          <p className="max-w-screen-sm mx-auto text-lg md:text-xl text-muted-foreground font-medium">
-            {`High-converting websites and targeted ads crafted with clear strategy and smooth execution - designed to attract ready-to-buy customers and help businesses grow fast.`}
+          <p className="max-w-screen-sm mx-auto text-lg md:text-xl text-muted-foreground font-medium tracking-tighter">
+            {`Conversion-focused websites and targeted ads that pull in ready-to-buy customers and grow your business, fast.`}
           </p>
 
           <motion.div

@@ -37,15 +37,15 @@ export default function ServiceFAQ() {
     >
       <div className="container mx-auto px-4">
         <motion.div className="text-center mb-8" variants={fadeUpVariant}>
-          <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
+          <h2 className="text-lg text-primary text-center mb-2 tracking-tighter">
             Services
           </h2>
 
-          <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl text-center font-bold mb-4 tracking-tighter">
             Grow Your Business
           </h2>
 
-          <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
+          <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8 tracking-tighter">
             From marketing and sales to operations and strategy, we have the
             expertise to help you achieve your goals.
           </h3>

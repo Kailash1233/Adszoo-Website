@@ -32,14 +32,12 @@ export default function BlogPage() {
         <meta property="og:type" content="article" />
       </Head>
 
-      <section className="bg-white text-black min-h-screen">
+      <section className="bg-white text-black min-h-screen tracking-tighter">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 md:py-28">
           {/* Header */}
           <header className="text-center max-w-4xl mx-auto mb-16">
-            <h2 className="text-emerald-600 font-semibold tracking-wide mb-2">
-              Our Blogs
-            </h2>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6">
+            <h2 className="text-emerald-600 font-semibold mb-2">Our Blogs</h2>
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
               Ideas, Insights & Real Talk
             </h1>
             <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto">
@@ -100,14 +98,14 @@ export default function BlogPage() {
           </div>
 
           {/* CTA */}
-          <div className="mt-20 text-center">
+          {/* <div className="mt-20 text-center">
             <Button size="lg" className="font-bold px-10 bg-primary">
               <Link href="/blogs" className="inline-flex items-center gap-2">
                 View All Blog Posts
                 <ArrowRight className="w-6 h-6" />
               </Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
       <FooterSection />

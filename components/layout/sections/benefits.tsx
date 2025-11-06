@@ -77,17 +77,17 @@ export const BenefitsSection = () => {
     >
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tighter">
             What Makes Adszoo Different?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            We&apos;re not just another agency. We&apos;re your growth partner -
+          <p className="text-xl text-muted-foreground mb-8 tracking-tighter">
+            We&apos;re not just another agency. We&apos;re your growth partner,
             creative, strategic, and always focused on results. Here&apos;s why
             businesses trust us:
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-4 w-full">
+        <div className="grid lg:grid-cols-2 gap-4 w-full tracking-tighter">
           {benefitList.map(({ icon, title, description }, index) => (
             <motion.div
               key={title}
@@ -99,7 +99,7 @@ export const BenefitsSection = () => {
               initial="hiddenLeft"
               animate={isInView ? "visible" : "hiddenLeft"}
             >
-              <Card className="bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number">
+              <Card className="bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number tracking-tighter">
                 <CardHeader>
                   <div className="flex justify-between">
                     <Icon

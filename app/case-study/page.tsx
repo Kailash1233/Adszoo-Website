@@ -56,7 +56,7 @@ export default function CaseStudiesPage() {
     <>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
-      <div className="bg-white text-black min-h-screen">
+      <div className="bg-white text-black min-h-screen tracking-tighter">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center mb-16">
             <h2 className="text-emerald-600 font-medium mb-3">Case Studies</h2>

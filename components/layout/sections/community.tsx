@@ -1,4 +1,7 @@
-import { BookOpen } from "lucide-react"; // Import the book icon
+"use client";
+
+import { useMemo } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,40 +10,125 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Link from "@/node_modules/next/link";
+import Link from "next/link";
 
 export const CommunitySection = () => {
-  return (
-    <section id="community" className="py-12 ">
-      <hr className="border-secondary" />
-      <div className="container py-20 sm:py-20">
-        <div className="lg:w-[60%] mx-auto">
-          <Card className="bg-background border-none shadow-none text-center flex flex-col items-center justify-center">
-            <CardHeader>
-              <CardTitle className="text-4xl md:text-5xl font-bold flex flex-col items-center">
-                <BookOpen className="w-12 h-12" />
-                <div>
-                  Explore Our Insightful
-                  <span className="text-transparent pl-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                    Blogs!
-                  </span>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="lg:w-[80%] text-xl text-muted-foreground">
-              Explore the latest digital marketing trends and tips with
-              Adszoo&apos;s expert blogs. 📖
-            </CardContent>
+  const reduceMotion = useReducedMotion();
 
-            <CardFooter>
-              <Button asChild>
-                <Link href="/blogs">Explore our blogs!</Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        </div>
+  // Variants that respect reduced motion
+  const containerVariants = useMemo(
+    () => ({
+      hidden: { opacity: 0, y: reduceMotion ? 0 : 12 },
+      show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: reduceMotion ? 0 : 0.6,
+          ease: [0.22, 1, 0.36, 1],
+          when: "beforeChildren",
+          staggerChildren: reduceMotion ? 0 : 0.08,
+        },
+      },
+    }),
+    [reduceMotion]
+  );
+
+  const itemVariants = useMemo(
+    () => ({
+      hidden: { opacity: 0, y: reduceMotion ? 0 : 10 },
+      show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: reduceMotion ? 0 : 0.5,
+          ease: [0.22, 1, 0.36, 1],
+        },
+      },
+    }),
+    [reduceMotion]
+  );
+
+  const iframeVariants = useMemo(
+    () => ({
+      hidden: {
+        opacity: 0,
+        y: reduceMotion ? 0 : 10,
+        scale: reduceMotion ? 1 : 0.99,
+      },
+      show: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: {
+          duration: reduceMotion ? 0 : 0.6,
+          ease: [0.22, 1, 0.36, 1],
+        },
+      },
+    }),
+    [reduceMotion]
+  );
+
+  return (
+    <section id="community" className="py-10 sm:py-12 bg-white text-black">
+      <div className="container px-4">
+        {/* Top Section */}
+        <motion.div
+          className="lg:w-[60%] mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div variants={itemVariants}>
+            <Card className="bg-white text-black border border-black/10 rounded-3xl shadow-sm text-center flex flex-col items-center justify-center tracking-tighter">
+              <CardHeader className="px-4 sm:px-8 pt-8 sm:pt-10">
+                <CardTitle className="text-3xl sm:text-4xl md:text-5xl font-bold flex flex-col items-center gap-3 leading-tight tracking-tighter">
+                  <div>If you&apos;re ready to stop leaving money behind</div>
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent className="lg:w-[80%] px-4 sm:px-8 text-base sm:text-lg md:text-xl text-black/70">
+                Let&apos;s fix the bottlenecks and unlock your revenue potential
+                today.
+              </CardContent>
+
+              <CardFooter className="pb-8 sm:pb-10">
+                <Button
+                  asChild
+                  className="w-full sm:w-auto px-6 py-3 rounded-full bg-black text-white hover:bg-black/90"
+                >
+                  <Link
+                    href="https://cal.com/adszoo/15min?overlayCalendar=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Book a Strategy Call"
+                  >
+                    Book a Strategy Call
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className="w-full mt-8 sm:mt-10"
+          variants={iframeVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <iframe
+            src="https://cal.com/adszoo/15min?embed=true&theme=light&layout=month_view"
+            className="w-full"
+            style={{
+              height: "600px",
+              border: "none",
+            }}
+            allowFullScreen
+          />
+        </motion.div>
       </div>
-      <hr className="border-secondary" />
     </section>
   );
 };

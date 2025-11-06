@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="bg-white text-black min-h-screen flex items-center justify-center">
+    <div className="bg-white text-black min-h-screen flex items-center justify-center tracking-tighter">
       <div className="text-center px-4">
         <h1 className="text-6xl font-bold mb-4">404</h1>
         <h2 className="text-3xl font-semibold mb-6">Case Study Not Found</h2>

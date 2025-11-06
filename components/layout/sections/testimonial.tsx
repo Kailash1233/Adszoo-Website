@@ -123,13 +123,13 @@ export const TestimonialSection = () => {
     <motion.section
       ref={ref}
       id="testimonials"
-      className="container py-24 sm:py-32"
+      className="container py-24 sm:py-32 tracking-tighter"
       initial="hidden"
       animate={isInView ? "show" : "hidden"}
       variants={containerVariants}
     >
       <motion.div className="text-center mb-8" variants={fadeUpVariant}>
-        <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
+        <h2 className="text-lg text-primary text-center mb-2">
           Testimonials
         </h2>
 

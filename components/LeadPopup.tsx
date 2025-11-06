@@ -138,7 +138,7 @@ export default function LeadPopup() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center tracking-tighter">
       {/* backdrop */}
       <div
         onClick={closeWithAnimation}

@@ -41,7 +41,7 @@ export default function BlogSection() {
   return (
     <motion.section
       ref={ref}
-      className="py-16 bg-gray-50"
+      className="py-16 bg-gray-50 tracking-tighter"
       initial="hidden"
       animate={isInView ? "show" : "hidden"}
       variants={containerVariants}
@@ -53,7 +53,7 @@ export default function BlogSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
+          <h2 className="text-lg text-primary text-center mb-2 tracking-tighter">
             Blogs
           </h2>
           <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">

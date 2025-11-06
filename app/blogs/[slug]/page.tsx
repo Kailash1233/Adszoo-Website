@@ -205,7 +205,7 @@ const BlogPostPage = async ({
         <meta name="description" content={metaDescription} />
       </Head> */}
       <ReadingProgress targetSelector="article" />
-      <section className="w-full">
+      <section className="w-full tracking-tighter">
         {/* Hero */}
         <div className="relative w-full">
           <div className="relative h-[320px] md:h-[420px] lg:h-[520px] overflow-hidden">
@@ -222,7 +222,7 @@ const BlogPostPage = async ({
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="-mt-24 md:-mt-28 lg:-mt-32">
                 <div className="backdrop-blur supports-[backdrop-filter]:bg-background/70 bg-background/90 border rounded-2xl shadow-xl p-6 md:p-8">
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-center mb-4">
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter text-center mb-4">
                     {title}
                   </h1>
                   <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
