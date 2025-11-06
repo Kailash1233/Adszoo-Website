@@ -372,7 +372,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 </p>
 
                 <Link
-                  href="https://cal.com/adszoo/15min"
+                  href="https://cal.com/adszoo/30min"
                   className="block w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-4 py-3 font-medium"
                 >
                   Start a project

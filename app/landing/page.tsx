@@ -126,7 +126,7 @@
 //                 attract quality leads with smart marketing.
 //               </p>
 //               <a
-//                 href="https://cal.com/adszoo/15min"
+//                 href="https://cal.com/adszoo/30min"
 //                 target="_blank"
 //                 rel="noopener noreferrer"
 //                 className="inline-block bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-3 px-6 rounded-xl text-base sm:text-lg transition-transform transform hover:scale-105 shadow-md"
@@ -184,7 +184,7 @@
 //           </motion.div>
 
 //           <motion.a
-//             href="https://cal.com/adszoo/15min"
+//             href="https://cal.com/adszoo/30min"
 //             target="_blank"
 //             rel="noopener noreferrer"
 //             className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-xl text-lg shadow-md"
@@ -249,7 +249,7 @@
 
 //           {/* CTA Button */}
 //           <motion.a
-//             href="https://cal.com/adszoo/15min"
+//             href="https://cal.com/adszoo/30min"
 //             target="_blank"
 //             rel="noopener noreferrer"
 //             className="inline-block bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-3 px-8 rounded-xl text-lg shadow-lg hover:scale-105 transition-transform"
@@ -387,7 +387,7 @@
 //             variants={fadeIn}
 //           >
 //             <a
-//               href="https://cal.com/adszoo/15min"
+//               href="https://cal.com/adszoo/30min"
 //               target="_blank"
 //               rel="noopener noreferrer"
 //               className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-xl text-lg shadow-md"
@@ -400,7 +400,7 @@
 //         {/* Mobile Sticky CTA */}
 //         <div className="fixed bottom-0 left-0 w-full bg-emerald-600 text-white text-center py-3 px-4 z-40 md:hidden">
 //           <a
-//             href="https://cal.com/adszoo/15min"
+//             href="https://cal.com/adszoo/30min"
 //             target="_blank"
 //             rel="noopener noreferrer"
 //             className="block font-semibold text-lg"
@@ -578,12 +578,12 @@ export default function LandingPage() {
                 recommendations.
               </p>
               <a
-                href="https://cal.com/adszoo/15min"
+                href="https://cal.com/adszoo/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-3 px-6 rounded-xl text-base sm:text-lg transition-transform transform hover:scale-105 shadow-md"
               >
-                ✅ Yes - Book My Free 30‑Minute Call
+                ✅ Yes - Book My Free 30-Minute Call
               </a>
               <button
                 onClick={() => setShowPopup(false)}
@@ -644,7 +644,7 @@ export default function LandingPage() {
             variants={fadeIn}
           >
             <a
-              href="https://cal.com/adszoo/15min"
+              href="https://cal.com/adszoo/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-6 rounded-xl text-lg shadow-lg"
@@ -740,7 +740,7 @@ export default function LandingPage() {
           </motion.p>
 
           <motion.a
-            href="https://cal.com/adszoo/15min"
+            href="https://cal.com/adszoo/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-3 px-8 rounded-xl text-lg shadow-lg hover:scale-105 transition-transform"
@@ -969,7 +969,7 @@ export default function LandingPage() {
             variants={fadeIn}
           >
             <a
-              href="https://cal.com/adszoo/15min"
+              href="https://cal.com/adszoo/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-xl text-lg shadow-md"
@@ -1026,7 +1026,7 @@ export default function LandingPage() {
         {/* Mobile Sticky CTA */}
         <div className="fixed bottom-0 left-0 w-full bg-emerald-600 text-white text-center py-3 px-4 z-40 md:hidden">
           <a
-            href="https://cal.com/adszoo/15min"
+            href="https://cal.com/adszoo/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="block font-semibold text-lg"

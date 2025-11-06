@@ -11,11 +11,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
+import CalDotCom from "@/components/cal";
 
 export const CommunitySection = () => {
   const reduceMotion = useReducedMotion();
 
-  // Variants that respect reduced motion
   const containerVariants = useMemo(
     () => ({
       hidden: { opacity: 0, y: reduceMotion ? 0 : 12 },
@@ -98,7 +98,7 @@ export const CommunitySection = () => {
                   className="w-full sm:w-auto px-6 py-3 rounded-full bg-black text-white hover:bg-black/90"
                 >
                   <Link
-                    href="https://cal.com/adszoo/15min?overlayCalendar=true"
+                    href="https://cal.com/adszoo/30min?overlayCalendar=true"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Book a Strategy Call"
@@ -111,22 +111,15 @@ export const CommunitySection = () => {
           </motion.div>
         </motion.div>
 
+        {/* CalDotCom Embed Section - Added spacing */}
         <motion.div
-          className="w-full mt-8 sm:mt-10"
           variants={iframeVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
+          className="mt-10 sm:mt-16"
         >
-          <iframe
-            src="https://cal.com/adszoo/15min?embed=true&theme=light&layout=month_view"
-            className="w-full"
-            style={{
-              height: "600px",
-              border: "none",
-            }}
-            allowFullScreen
-          />
+          <CalDotCom />
         </motion.div>
       </div>
     </section>

@@ -48,7 +48,7 @@ export const HeroSection = () => {
           >
             <Button className="font-bold w-full md:w-auto px-6 py-3 flex items-center justify-center group/arrow">
               <Link
-                href="https://cal.com/adszoo/15min"
+                href="https://cal.com/adszoo/30min"
                 target="_blank"
                 className="text-white text-lg font-bold cursor-pointer flex items-center"
                 rel="noopener noreferrer"
@@ -120,7 +120,7 @@ export const HeroSection = () => {
 //           >
 //             <Button className="font-bold w-full md:w-auto px-6 py-3 flex items-center justify-center group/arrow">
 //               <Link
-//                 href="https://cal.com/adszoo/15min"
+//                 href="https://cal.com/adszoo/30min"
 //                 target="_blank"
 //                 className="text-white text-lg font-bold cursor-pointer flex items-center"
 //                 rel="noopener noreferrer"

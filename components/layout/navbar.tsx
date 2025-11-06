@@ -161,7 +161,7 @@ export const Navbar = () => {
 
       <div className="hidden lg:flex">
         <Button className="md:w-4/4 font-bold group/arrow">
-          <Link href="https://cal.com/adszoo/15min">Schedule a Call</Link>
+          <Link href="https://cal.com/adszoo/30min">Schedule a Call</Link>
           <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
         </Button>
       </div>

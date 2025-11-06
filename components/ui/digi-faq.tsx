@@ -72,7 +72,7 @@ export default function DigitalMarketingFAQ() {
               More Questions
             </button>
             <button className="px-8 py-3 text-black font-medium hover:text-gray-600 transition-colors duration-200">
-              <a href="https://cal.com/adszoo/15min" target="_blank">
+              <a href="https://cal.com/adszoo/30min" target="_blank">
                 Contact Us
               </a>
             </button>

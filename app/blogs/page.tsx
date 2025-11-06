@@ -37,7 +37,7 @@ export default function BlogPage() {
           {/* Header */}
           <header className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-emerald-600 font-semibold mb-2">Our Blogs</h2>
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tighter">
               Ideas, Insights & Real Talk
             </h1>
             <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto">

@@ -18,7 +18,7 @@ const grotesk = Space_Grotesk({
 });
 
 const BRAND_GREEN = "#53D366";
-const BOOKING_LINK = "https://cal.com/adszoo/15min";
+const BOOKING_LINK = "https://cal.com/adszoo/30min";
 const PDF_DOWNLOAD_LINK = "/adszoo-web-system.pdf";
 
 type LeadFormData = { name: string; role: string; contact: string };

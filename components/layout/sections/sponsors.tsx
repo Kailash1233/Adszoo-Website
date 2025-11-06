@@ -20,6 +20,12 @@ const sponsors: SponsorsProps[] = [
   { logo: "/clients/Tagknot.webp", name: "Tagknot" },
   { logo: "/clients/Taiyo.webp", name: "Taiyo" },
   { logo: "/clients/abdesignlabs.webp", name: "AB Design Labs" },
+  {
+    logo: "/clients/Promide_Steel_Logo.png",
+    name: "Promide Steel Fabrication",
+  },
+  { logo: "/clients/Mei.png", name: "Mei IFF" },
+  { logo: "/clients/nura.png", name: "Nura" },
 ];
 
 export const SponsorsSection = () => {
