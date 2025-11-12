@@ -78,6 +78,7 @@
 // }
 
 // app/layout.tsx
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -89,10 +90,7 @@ export const metadata: Metadata = {
   title: "Adszoo | High-Converting Websites & Sales Funnels",
   description:
     "This is a private landing page for business owners. If you're here, it means we sent you this page personally to explore how we can grow your business online.",
-  robots: {
-    index: false,
-    follow: false,
-  },
+  robots: { index: false, follow: false },
   openGraph: {
     title: "Adszoo | High-Converting Websites & Funnels",
     description:
@@ -125,28 +123,34 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* You can omit this <head> entirely since metadata handles robots.
-          Keeping it is fine if you want the explicit meta tag. */}
       <head>
         <meta name="robots" content="noindex, nofollow" />
+        {/* <meta name="referrer" content="origin-when-cross-origin" /> */}
       </head>
       <body className={`${inter.className} bg-white text-black antialiased`}>
-        {/* Google Analytics (App Router helper) */}
         <GoogleAnalytics
           gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"}
         />
 
-        {/* Facebook Pixel via next/script (avoids SSR errors) */}
-        <Script id="fb-pixel" strategy="afterInteractive">
+        {/* Load the FB library */}
+        <Script
+          id="fb-pixel-lib"
+          src="https://connect.facebook.net/en_US/fbevents.js"
+          strategy="afterInteractive"
+        />
+
+        {/* Initialize after the lib loads */}
+        <Script id="fb-pixel-init" strategy="afterInteractive">
           {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+            if (!window.fbq) {
+              window.fbq = function(){fbq.callMethod ?
+                fbq.callMethod.apply(fbq, arguments) : fbq.queue.push(arguments)};
+              if (!window._fbq) window._fbq = fbq;
+              fbq.push = fbq;
+              fbq.loaded = true;
+              fbq.version = '2.0';
+              fbq.queue = [];
+            }
             fbq('init', '1940003706575360');
             fbq('track', 'PageView');
           `}
@@ -154,7 +158,6 @@ export default function RootLayout({
 
         {children}
 
-        {/* Correct JSX style object + alt for accessibility */}
         <noscript>
           <img
             height="1"

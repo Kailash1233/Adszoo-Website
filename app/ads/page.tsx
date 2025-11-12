@@ -129,7 +129,7 @@ export default function AdsLanding() {
             transition={{ duration: 0.6, delay: 0.08 }}
             className="mt-6 text-xl text-white/95 font-semibold"
           >
-            Download the Playbook: “The Web System Blueprint”
+            Download the &apos;Web System Blueprint&apos; now
           </motion.p>
 
           <motion.p
@@ -138,7 +138,7 @@ export default function AdsLanding() {
             transition={{ duration: 0.6, delay: 0.14 }}
             className="mt-2 text-base md:text-lg text-zinc-300"
           >
-            Learn how 7-figure agencies design web systems that drive sales -
+            Learn how 7-figure agencies design web systems that drive sales,
             without endless redesigns, confusion, or wasted spend.
           </motion.p>
 
@@ -350,13 +350,13 @@ function AfterForm() {
         websites. We build revenue systems.
       </p>
       <div className="mt-4 flex flex-wrap gap-3">
-        <a
+        {/* <a
           href={PDF_DOWNLOAD_LINK}
           className="px-5 py-2 rounded-xl text-black font-semibold"
           style={{ backgroundColor: BRAND_GREEN }}
         >
           Download again
-        </a>
+        </a> */}
         <a
           href={BOOKING_LINK}
           target="_blank"

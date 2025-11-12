@@ -44,6 +44,30 @@ const reviews = [
     body: "Kailash’s edits were sharp, timely, and always on point. Game changer for my content!",
     img: "https://avatar.vercel.sh/jill",
   },
+  {
+    name: "Gafur",
+    username: "Founder, GafClickz",
+    body: "Delivered a robust, SEO-friendly website for our page. Smooth process and clear communication.",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  {
+    name: "Abdul",
+    username: "Founder, AbDesign Labs",
+    body: "Handled our website build and ongoing maintenance with excellent attention to detail, reliable and fast.",
+    img: "https://avatar.vercel.sh/james",
+  },
+  {
+    name: "Barani",
+    username: "Brand Ambassador, Gonex Labs",
+    body: "Worked on a project’s website and SEO, results were visible within weeks. Very professional team.",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  {
+    name: "Sabir",
+    username: "Friend of Owner, Promide Steel Fabrication",
+    body: "Great support for our local business website and small improvements that made a big difference.",
+    img: "https://avatar.vercel.sh/jane",
+  },
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
