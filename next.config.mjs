@@ -4,33 +4,14 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "i.pravatar.cc",
+        hostname: "**",
       },
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "github.com",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.create.vista.com",
-      },
-      {
-        protocol: "https",
-        hostname: "www.bigeng.io",
-      },
-      {
-        protocol: 'https',
-        hostname: 'cdn.pixabay.com',
-        port: '',
-        pathname: '/**',
+        protocol: "http",
+        hostname: "**",
       },
     ],
   },
 };
 
 export default nextConfig;
-

@@ -1,10 +1,8 @@
 // /app/api/lead/route.ts
 import nodemailer from "nodemailer";
 import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/lib/firebaseAdmin";
 import path from "path";
-
-export const dynamic = "force-dynamic";
+import { db } from "@/lib/firebaseAdmin";
 
 export async function POST(req: NextRequest) {
   try {
@@ -16,7 +14,14 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Save to Firestore
+    if (!db) {
+      console.error("Firestore (db) not initialized");
+      return NextResponse.json(
+        { ok: false, error: "Database not initialized" },
+        { status: 500 }
+      );
+    }
+
     await db.collection("leads").add({
       name,
       role,
