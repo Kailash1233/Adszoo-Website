@@ -153,7 +153,7 @@ export default function LeadPopup() {
         aria-modal="true"
         className={`
             relative m-4 w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100
-            transform transition-all duration-500 ease-[cubic-bezier(.16,.84,.44,1)]
+            transform transition-all duration-500 ease-&lsqb;cubic-bezier(.16,.84,.44,1)&rsqb;
             ${
               animate
                 ? "opacity-100 translate-y-0 scale-100"
