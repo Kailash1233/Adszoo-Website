@@ -419,7 +419,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                       href={`/case-study/${study.slug}`}
                       className="text-emerald-600 font-medium inline-flex items-center gap-2 hover:text-emerald-700"
                     >
-                      View case study
+                      View case studies
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5 ml-1"

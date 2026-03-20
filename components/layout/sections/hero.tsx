@@ -1,9 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { SponsorsSection } from "./sponsors";
+import { HeroImageSlider } from "@/components/HeroImageSlider";
 
 const containerVariants = {
   hidden: { opacity: 1, y: 0 },
@@ -35,14 +34,17 @@ export const HeroSection = () => {
       >
         <motion.div className="text-center space-y-8" variants={textVariants}>
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-7xl font-extrabold tracking-tighter leading-tight">
-            <h1>We Turn Your Visitors into Paying Customers.</h1>
+            <h1>
+              Getting Website Visitors…
+              <br /> But No Customers?
+            </h1>
           </div>
 
           <p className="max-w-screen-sm mx-auto text-lg md:text-xl text-muted-foreground font-medium tracking-tighter">
-            {`Conversion-focused websites and targeted ads that pull in ready-to-buy customers and grow your business, fast.`}
+            {`We build conversion-focused websites and run targeted ad campaigns that turn visitors into real paying customers.`}
           </p>
 
-          <motion.div
+          {/* <motion.div
             className="flex flex-col md:flex-row justify-center items-center gap-4 mt-6 w-full"
             variants={buttonVariants}
           >
@@ -53,7 +55,7 @@ export const HeroSection = () => {
                 className="text-white text-lg font-bold cursor-pointer flex items-center"
                 rel="noopener noreferrer"
               >
-                Schedule a Call
+                Book a Strategy Call
                 <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -62,11 +64,37 @@ export const HeroSection = () => {
                 href="/case-study"
                 className="w-full text-center text-primary text-lg font-bold"
               >
-                View Case Study
+                View Case Studies
               </Link>
             </Button>
+          </motion.div> */}
+          <motion.div
+            className="flex flex-row justify-center items-center gap-3 mt-6 flex-nowrap"
+            variants={buttonVariants}
+          >
+            {/* PRIMARY */}
+            <Link
+              href="https://cal.com/adszoo/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-black text-white px-6 py-3 text-sm font-semibold transition-all hover:bg-black/90 tracking-tighter"
+            >
+              Book a Strategy Call
+              <span className="inline-flex items-center justify-center rounded-full bg-white/10 w-5 h-5">
+                ⚡
+              </span>
+            </Link>
+
+            {/* SECONDARY */}
+            <Link
+              href="/case-study"
+              className="inline-flex items-center rounded-full border border-black px-6 py-3 text-sm font-semibold tracking-tighter text-black transition-all hover:bg-black/10"
+            >
+              See Real Client Results
+            </Link>
           </motion.div>
         </motion.div>
+        {/* <HeroImageSlider /> */}
 
         <SponsorsSection />
       </motion.div>
@@ -125,7 +153,7 @@ export const HeroSection = () => {
 //                 className="text-white text-lg font-bold cursor-pointer flex items-center"
 //                 rel="noopener noreferrer"
 //               >
-//                 Schedule a Call
+//                 Book a Strategy Call
 //                 <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
 //               </Link>
 //             </Button>

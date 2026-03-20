@@ -320,7 +320,7 @@ export const PricingSection: React.FC = () => {
       </div>
 
       <div className="mt-8 text-center text-sm text-gray-600 max-w-2xl mx-auto">
-        <strong>Need a custom plan?</strong> Schedule a quick 15-minute call and
+        <strong>Need a custom plan?</strong> Book a quick 15-minute call and
         we&apos;ll audit your current funnel and recommend the fastest path to
         ROI.
       </div>

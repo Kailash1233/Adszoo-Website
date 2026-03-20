@@ -984,7 +984,7 @@ export default function WebSystemsLanding() {
       <section className="py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <div className="mb-8">
-            <div className="inline-block w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
+            <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
               <Rocket className="w-10 h-10 text-white" />
             </div>
           </div>

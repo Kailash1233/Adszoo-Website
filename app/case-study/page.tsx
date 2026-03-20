@@ -70,72 +70,47 @@ export default function CaseStudiesPage() {
             </p>
           </div>
 
-          <div className="grid gap-12 md:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {caseStudies.map((caseStudy) => (
-              <div
+              <Link
                 key={caseStudy.id}
-                className="grid md:grid-cols-2 gap-8 border border-gray-200 rounded-2xl overflow-hidden"
+                href={`/case-study/${caseStudy.slug}`}
+                className="group rounded-2xl border border-gray-200 overflow-hidden bg-white hover:shadow-xl transition-shadow"
               >
-                <div className="relative h-64 md:h-auto bg-gray-200">
+                <div className="relative aspect-[16/9] bg-gray-100">
                   <Image
                     src={caseStudy.logoUrl || "/placeholder.svg"}
-                    alt={`${caseStudy.title} Image`}
+                    alt={`${caseStudy.title} cover`}
                     fill
-                    className="object-cover filter grayscale"
+                    className="object-cover"
                   />
-                  {/* <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                    <h3 className="text-white text-3xl font-bold text-center">
-                      {caseStudy.title}
-                    </h3>
-                  </div> */}
                 </div>
 
-                <div className="p-8">
-                  <h3 className="text-3xl font-bold mb-4">{caseStudy.title}</h3>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 leading-snug">
+                    {caseStudy.title}
+                  </h3>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {caseStudy.services.map((service, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full"
-                      >
-                        {service}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-sm text-gray-500 mb-4">
+                    {caseStudy.services.join(", ")}
+                  </p>
 
-                  <h4 className="text-gray-500 mb-2">Industry</h4>
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {caseStudy.industry.map((industry, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full"
+                        className="px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-700"
                       >
                         {industry}
                       </span>
                     ))}
                   </div>
 
-                  <Link
-                    href={`/case-study/${caseStudy.slug}`}
-                    className="inline-flex items-center text-emerald-600 font-medium hover:text-emerald-700"
-                  >
-                    View Case Study
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 ml-1"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </Link>
+                  <span className="inline-flex items-center text-emerald-600 font-medium group-hover:underline">
+                    View Case Study →
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

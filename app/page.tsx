@@ -1,3 +1,4 @@
+import { CaseStudyPreview } from "@/components/CaseStudySection";
 import { Navbar } from "@/components/layout/navbar";
 import { BenefitsSection } from "@/components/layout/sections/benefits";
 import BlogSection from "@/components/layout/sections/blogsection";
@@ -53,22 +54,23 @@ export default function Home() {
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
       <HeroSection />
-      <LeadPopup />
       {/* <SponsorsSection /> */}
       <BenefitsSection />
+      <CaseStudyPreview />
       {/* <ServicesAccordion /> */}
-      <ServiceFAQ />
       {/* <FeaturesSection /> */}
       {/* <ServicesSection /> */}
       <TestimonialSection />
       {/* <TeamSection /> */}
       <CommunitySection />
+      <ServiceFAQ />
       {/* <PricingSection /> */}
       <DigitalMarketingFAQ />
       <BlogSection />
       {/* <ContactSection /> */}
       {/* <FAQSection /> */}
       <FooterSection />
+      <LeadPopup />
     </>
   );
 }

@@ -30,6 +30,12 @@
       {
         "frame-title": "off"
       }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "listitem": "off"
+      }
     ]
   }
 }

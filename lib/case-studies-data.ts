@@ -53,7 +53,7 @@ export const caseStudies: CaseStudy[] = [
     id: "2",
     title: "Vizhipom Vidhaipom",
     slug: "vizhipom-vidhaipom",
-    website: "https://vizhipomvidhaipom.org/",
+    website: "https://www.vizhipomvidhaipom.in/",
     description:
       "Vizhipom Vidhaipom, a youth-driven NGO, wanted a digital space to share their weekly service work, attract donors, and inspire volunteers to join their mission.",
     shortDescription: "Mission-driven NGO website for youth-led social impact",
@@ -123,7 +123,7 @@ export const caseStudies: CaseStudy[] = [
     id: "5",
     title: "Srinivasan Chess Academy",
     slug: "srinivasan-chess-academy",
-    website: "https://srinivasan-chess.vercel.app/",
+    website: "https://www.srinivasanchessacademy.in/",
     description:
       "Srinivasan Chess Academy wanted a digital platform to simplify how parents and students access class schedules, programs, and academy details.",
     shortDescription: "Educational website for a leading chess academy",
@@ -216,7 +216,7 @@ export const caseStudies: CaseStudy[] = [
     id: "9",
     title: "Nura",
     slug: "nura",
-    website: "https://getnura.shop/",
+    website: "https://nura-sage.vercel.app/index.html",
     description:
       "Nura, a skincare and wellness brand, wanted an e-commerce experience that balanced luxury, simplicity, and trust - helping users buy confidently online.",
     shortDescription: "Luxury skincare e-commerce platform with smooth UX",

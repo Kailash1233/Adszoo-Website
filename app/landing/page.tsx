@@ -944,7 +944,7 @@ export default function LandingPage() {
                     className="inline-flex items-center text-emerald-600 font-medium hover:text-emerald-700"
                     aria-label={`View case study ${study.title}`}
                   >
-                    View Case Study
+                    View Case Studies
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5 ml-1"

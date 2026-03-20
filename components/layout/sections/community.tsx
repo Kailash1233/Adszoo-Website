@@ -79,7 +79,7 @@ export const CommunitySection = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} initial={false}>
             <Card className="bg-white text-black border border-black/10 rounded-3xl shadow-sm text-center flex flex-col items-center justify-center tracking-tighter">
               <CardHeader className="px-4 sm:px-8 pt-8 sm:pt-10">
                 <CardTitle className="text-3xl sm:text-4xl md:text-5xl font-bold flex flex-col items-center gap-3 leading-tight tracking-tighter">

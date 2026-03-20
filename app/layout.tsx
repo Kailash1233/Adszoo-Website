@@ -9,6 +9,7 @@ import { Analytics } from "@vercel/analytics/react";
 // import PageTransitionProvider from "./PageTransitionProvider";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Adszoo | Best Website Development & Social Media Marketing Agency",
@@ -80,9 +81,9 @@ export default function RootLayout({
         />
         <Analytics />
         <SpeedInsights />
+        <SmoothScroll>{children}</SmoothScroll>
         {/* <Navbar /> */}
         {/* <PageTransitionProvider>{children}</PageTransitionProvider> */}
-        {children}
 
         {/* <FooterSection /> */}
         {/* </ThemeProvider> */}
