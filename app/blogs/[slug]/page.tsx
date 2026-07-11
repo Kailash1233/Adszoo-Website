@@ -125,6 +125,35 @@ export async function generateStaticParams() {
   }));
 }
 
+function safeJsonLd(data: object) {
+  // Prevents "</script>" (or any "<") inside content from breaking out of the script tag
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: Promise<{ slug: string }>;
+// }) {
+//   const { slug } = await params;
+//   const blogPost = blogPosts.find((post) => post.slug === slug);
+//   if (!blogPost) return { title: "Not Found" };
+
+//   return {
+//     title: blogPost.metaTitle ?? blogPost.title,
+//     description: blogPost.metaDescription ?? blogPost.description,
+//     openGraph: {
+//       title: blogPost.metaTitle ?? blogPost.title,
+//       description: blogPost.metaDescription ?? blogPost.description,
+//       images: [
+//         {
+//           url: `https://adszoo.in${blogPost.image}`,
+//         },
+//       ],
+//     },
+//   };
+// }
+
 export async function generateMetadata({
   params,
 }: {
@@ -132,19 +161,45 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const blogPost = blogPosts.find((post) => post.slug === slug);
+
   if (!blogPost) return { title: "Not Found" };
+
+  const url = `https://adszoo.in/blogs/${slug}`;
 
   return {
     title: blogPost.metaTitle ?? blogPost.title,
     description: blogPost.metaDescription ?? blogPost.description,
+
+    alternates: {
+      canonical: url,
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+
     openGraph: {
       title: blogPost.metaTitle ?? blogPost.title,
       description: blogPost.metaDescription ?? blogPost.description,
+      url,
+      siteName: "Adszoo",
       images: [
         {
           url: `https://adszoo.in${blogPost.image}`,
+          width: 1200,
+          height: 630,
         },
       ],
+      locale: "en_IN",
+      type: "article",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: blogPost.metaTitle ?? blogPost.title,
+      description: blogPost.metaDescription ?? blogPost.description,
+      images: [`https://adszoo.in${blogPost.image}`],
     },
   };
 }
@@ -170,6 +225,32 @@ const BlogPostPage = async ({
   const shareUrl = `https://adszoo.in${
     blogPost.href ?? `/blogs/${blogPost.slug}`
   }`;
+
+  // const blogSchema = {
+  //   "@context": "https://schema.org",
+  //   "@type": "BlogPosting",
+  //   headline: title,
+  //   image: `https://adszoo.in${image}`,
+  //   author: {
+  //     "@type": "Person",
+  //     name: blogPost.author ?? author,
+  //   },
+  //   publisher: {
+  //     "@type": "Organization",
+  //     name: "Adszoo",
+  //     logo: {
+  //       "@type": "ImageObject",
+  //       url: "https://adszoo.in/Logo1.png",
+  //     },
+  //   },
+  //   datePublished: blogPost.date,
+  //   dateModified: blogPost.date,
+  //   description: blogPost.metaDescription ?? blogPost.description,
+  //   mainEntityOfPage: {
+  //     "@type": "WebPage",
+  //     "@id": shareUrl,
+  //   },
+  // };
 
   const blogSchema = {
     "@context": "https://schema.org",
@@ -197,6 +278,28 @@ const BlogPostPage = async ({
     },
   };
 
+  const faqSchema =
+    blogPost.faqs && blogPost.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: blogPost.faqs.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: f.answer,
+            },
+          })),
+        }
+      : null;
+
+  // Combine into one graph so there's only ever one script tag
+  const schemaGraph = {
+    "@context": "https://schema.org",
+    "@graph": faqSchema ? [blogSchema, faqSchema] : [blogSchema],
+  };
+
   return (
     <>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
@@ -206,7 +309,7 @@ const BlogPostPage = async ({
       {/* JSON-LD schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(schemaGraph) }}
       />
 
       <section className="w-full tracking-tight">
@@ -317,7 +420,7 @@ const BlogPostPage = async ({
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full md:w-auto">
                       <Link
                         href="https://cal.com/adszoo/30min"
-                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 border bg-emerald-600 text-white font-semibold hover:opacity-95 transition"
+                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 border bg-[#ff6321] text-white font-semibold hover:opacity-95 transition"
                       >
                         Work with us
                       </Link>
@@ -366,7 +469,7 @@ const BlogPostPage = async ({
                           </div>
 
                           <div className="p-4">
-                            <h3 className="text-lg font-semibold mb-1 group-hover:text-emerald-600">
+                            <h3 className="text-lg font-semibold mb-1 group-hover:text-[#ff6321]">
                               {post.title}
                             </h3>
                             <p className="text-sm text-muted-foreground">
@@ -402,9 +505,9 @@ const BlogPostPage = async ({
                   <div>
                     <Link
                       href="/contact"
-                      className="block rounded-md border px-4 py-3 text-center font-semibold bg-emerald-600 text-white hover:opacity-95"
+                      className="block rounded-md border px-4 py-3 text-center font-semibold bg-[#ff6321] text-white hover:opacity-95"
                     >
-                      Book a free strategy call
+                      Discuss your ideas!
                     </Link>
                   </div>
                 </div>
@@ -620,7 +723,7 @@ export default BlogPostPage;
 //                   <div className="px-4 py-3 border-t border-slate-100">
 //                     <Link
 //                       href="/blogs"
-//                       className="text-sm inline-flex items-center gap-2 text-emerald-600 font-medium"
+//                       className="text-sm inline-flex items-center gap-2 text-[#ff6321] font-medium"
 //                     >
 //                       View all posts
 //                       <svg

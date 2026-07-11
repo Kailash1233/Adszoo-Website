@@ -166,7 +166,7 @@ export default function LeadPopup() {
       >
         <div className="flex gap-4 p-6 md:p-8">
           {/* Left visual */}
-          <div className="hidden md:flex md:w-1/3 flex-col justify-between bg-gradient-to-b from-emerald-600 to-green-500 text-white p-6 rounded-xl">
+          <div className="hidden md:flex md:w-1/3 flex-col justify-between bg-gradient-to-r from-orange-600 to-orange-500 text-white p-6 rounded-xl">
             <div>
               <h3 className="text-lg font-semibold">Bring your brand online</h3>
               <p className="mt-2 text-sm opacity-90">
@@ -345,7 +345,7 @@ export default function LeadPopup() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold shadow hover:shadow-md transition disabled:opacity-60 bg-gradient-to-r from-emerald-600 to-green-500 text-white"
+                className="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold shadow hover:shadow-md transition disabled:opacity-60 bg-gradient-to-r from-orange-600 to-orange-500 text-white"
               >
                 {submitting ? "Sending..." : "Get my proposal"}
               </button>

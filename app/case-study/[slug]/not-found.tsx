@@ -12,7 +12,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/case-study"
-          className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700"
+          className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#ff6321] hover:bg-[#e96500]"
         >
           View All Case Studies
         </Link>

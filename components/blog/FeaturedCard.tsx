@@ -17,6 +17,7 @@ type Featured = {
   readTime?: string;
   href?: string;
   tags?: string[];
+  faqs?: { question: string; answer: string }[];
 };
 
 export default function FeaturedCard({ featured }: { featured: Featured }) {
@@ -42,7 +43,7 @@ export default function FeaturedCard({ featured }: { featured: Featured }) {
       tabIndex={0}
       onClick={() => handleNavigate(postUrl)}
       onKeyDown={onKeyDown}
-      className="relative rounded-2xl overflow-hidden shadow-lg mb-12 border border-gray-200 cursor-pointer group transition hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-emerald-300"
+      className="relative rounded-2xl overflow-hidden shadow-lg mb-12 border border-gray-200 cursor-pointer group transition hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#fdba74]"
       aria-label={"Read featured article: ${featured.title}"}
     >
       {/* Image */}

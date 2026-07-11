@@ -12,7 +12,7 @@ export function CaseStudyPreview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-2xl mb-10 md:mb-12">
-          <p className="text-emerald-600 font-medium mb-2">Case Studies</p>
+          <p className="text-[#ff6321] font-medium mb-2">Case Studies</p>
 
           <h2 className="text-4xl md:text-6xl font-extrabold mb-4">
             Real businesses. Real measurable growth.
@@ -51,7 +51,7 @@ export function CaseStudyPreview() {
               Services: {featured.services.join(", ")}
             </p>
 
-            <span className="text-emerald-600 font-semibold group-hover:underline">
+            <span className="text-[#ff6321] font-semibold group-hover:underline">
               Read the full case study →
             </span>
           </div>
@@ -63,7 +63,7 @@ export function CaseStudyPreview() {
             <Link
               key={study.id}
               href={`/case-study/${study.slug}`}
-              className="group border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition bg-white"
+              className="group border border-gray-200 rounded-2xl overflow-hidden bg-white"
             >
               <div className="relative aspect-[16/9]">
                 <Image
@@ -83,7 +83,7 @@ export function CaseStudyPreview() {
                   {study.title}
                 </h4>
 
-                <span className="text-emerald-600 font-medium group-hover:underline">
+                <span className="text-[#ff6321] font-medium group-hover:underline">
                   View Case Study →
                 </span>
               </div>

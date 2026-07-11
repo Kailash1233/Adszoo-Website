@@ -103,7 +103,7 @@ export const CommunitySection = () => {
                     rel="noopener noreferrer"
                     aria-label="Book a Strategy Call"
                   >
-                    Book a Strategy Call
+                    Discuss your ideas
                   </Link>
                 </Button>
               </CardFooter>

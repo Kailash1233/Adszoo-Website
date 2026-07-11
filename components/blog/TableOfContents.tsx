@@ -174,9 +174,9 @@ export default function TableOfContents({
               <a
                 href={`#${item.id}`}
                 onClick={(e) => handleClick(e, item.id)}
-                className={`block rounded px-2 py-1 hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-300 ${
+                className={`block rounded px-2 py-1 hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-[#fdba74] ${
                   isActive
-                    ? "text-emerald-600 font-medium"
+                    ? "text-[#ff6321] font-medium"
                     : "text-muted-foreground"
                 }`}
                 aria-current={isActive ? "true" : undefined}

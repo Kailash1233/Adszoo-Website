@@ -59,7 +59,7 @@ export default function CaseStudiesPage() {
       <div className="bg-white text-black min-h-screen tracking-tighter">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center mb-16">
-            <h2 className="text-emerald-600 font-medium mb-3">Case Studies</h2>
+            <h2 className="text-[#ff6321] font-medium mb-3">Case Studies</h2>
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6">
               Real Work. Real Results.
             </h1>
@@ -106,7 +106,7 @@ export default function CaseStudiesPage() {
                     ))}
                   </div>
 
-                  <span className="inline-flex items-center text-emerald-600 font-medium group-hover:underline">
+                  <span className="inline-flex items-center text-[#ff6321] font-medium group-hover:underline">
                     View Case Study →
                   </span>
                 </div>
@@ -166,7 +166,7 @@ export default function CaseStudiesPage() {
 //         {/* HERO */}
 //         <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
 //           <div className="text-center max-w-3xl mx-auto">
-//             <p className="inline-flex items-center rounded-full bg-emerald-50 text-emerald-600 px-3 py-1 text-sm font-medium mb-4">
+//             <p className="inline-flex items-center rounded-full bg-emerald-50 text-[#ff6321] px-3 py-1 text-sm font-medium mb-4">
 //               Case Studies
 //             </p>
 
@@ -183,7 +183,7 @@ export default function CaseStudiesPage() {
 //             <div className="flex items-center justify-center gap-3">
 //               <Link
 //                 href="/contact"
-//                 className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-full font-semibold shadow"
+//                 className="inline-flex items-center gap-2 bg-[#ff6321] hover:bg-emerald-700 text-white px-5 py-3 rounded-full font-semibold shadow"
 //               >
 //                 Book a free strategy call
 //               </Link>
@@ -295,7 +295,7 @@ export default function CaseStudiesPage() {
 //                 <div className="mt-6 flex items-center gap-3">
 //                   <Link
 //                     href={`/case-study/${featured.slug}`}
-//                     className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full font-semibold shadow"
+//                     className="inline-flex items-center gap-2 bg-[#ff6321] hover:bg-emerald-700 text-white px-4 py-2 rounded-full font-semibold shadow"
 //                   >
 //                     View Case Study
 //                   </Link>
@@ -399,7 +399,7 @@ export default function CaseStudiesPage() {
 
 //                     <Link
 //                       href={`/case-study/${cs.slug}`}
-//                       className="text-emerald-600 font-medium hover:text-emerald-700"
+//                       className="text-[#ff6321] font-medium hover:text-emerald-700"
 //                     >
 //                       View Case Study
 //                     </Link>
@@ -524,7 +524,7 @@ export default function CaseStudiesPage() {
 //         {/* HERO */}
 //         <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
 //           <div className="text-center max-w-3xl mx-auto">
-//             <p className="inline-flex items-center rounded-full bg-emerald-50 text-emerald-600 px-3 py-1 text-sm font-medium mb-4">
+//             <p className="inline-flex items-center rounded-full bg-emerald-50 text-[#ff6321] px-3 py-1 text-sm font-medium mb-4">
 //               Case Studies
 //             </p>
 
@@ -541,7 +541,7 @@ export default function CaseStudiesPage() {
 //             <div className="flex items-center justify-center gap-3">
 //               <Link
 //                 href="/contact"
-//                 className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-full font-semibold shadow"
+//                 className="inline-flex items-center gap-2 bg-[#ff6321] hover:bg-emerald-700 text-white px-5 py-3 rounded-full font-semibold shadow"
 //               >
 //                 Book a free strategy call
 //               </Link>
@@ -655,7 +655,7 @@ export default function CaseStudiesPage() {
 //                 <div className="mt-6 flex items-center gap-3">
 //                   <Link
 //                     href={`/case-study/${(featured as any).slug ?? ""}`}
-//                     className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full font-semibold shadow"
+//                     className="inline-flex items-center gap-2 bg-[#ff6321] hover:bg-emerald-700 text-white px-4 py-2 rounded-full font-semibold shadow"
 //                   >
 //                     View Case Study
 //                   </Link>
@@ -767,7 +767,7 @@ export default function CaseStudiesPage() {
 
 //                     <Link
 //                       href={`/case-study/${cs.slug}`}
-//                       className="text-emerald-600 font-medium hover:text-emerald-700"
+//                       className="text-[#ff6321] font-medium hover:text-emerald-700"
 //                     >
 //                       View Case Study
 //                     </Link>

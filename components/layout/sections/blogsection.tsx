@@ -82,13 +82,13 @@ export default function BlogSection() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <span className="absolute bottom-3 right-3 bg-emerald-600 text-white text-xs font-semibold rounded-full px-3 py-1 uppercase tracking-wider select-none">
+                <span className="absolute bottom-3 right-3 bg-[#ff6321] text-white text-xs font-semibold rounded-full px-3 py-1 uppercase tracking-wider select-none">
                   {date}
                 </span>
               </Link>
 
               <div className="p-6 flex flex-col justify-between">
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-emerald-600 transition-colors duration-300">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-[#ff6321] transition-colors duration-300">
                   <Link href={`/blogs/${slug}`}>{title}</Link>
                 </h3>
 

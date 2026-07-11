@@ -4,7 +4,6 @@ import React, { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/layout/navbar";
 import { blogPosts } from "@/lib/blog-posts";
@@ -82,7 +81,7 @@ export default function BlogPage() {
           {/* Header */}
           <header className="flex items-start justify-between mb-12 gap-6">
             <div className="max-w-3xl">
-              <h2 className="text-emerald-600 font-semibold mb-2">Our Blogs</h2>
+              <h2 className="text-[#ff6321] font-semibold mb-2">Our Blogs</h2>
               <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tighter">
                 Ideas, Insights & Real Talk
               </h1>
@@ -128,7 +127,7 @@ export default function BlogPage() {
                   <h3 className="text-lg font-semibold mb-2 leading-snug">
                     <Link
                       href={`/blogs/${post.slug}`}
-                      className="hover:text-emerald-600"
+                      className="hover:text-[#ff6321]"
                     >
                       {post.title}
                     </Link>

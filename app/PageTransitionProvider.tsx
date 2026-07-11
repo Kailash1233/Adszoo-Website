@@ -33,7 +33,7 @@ const PageTransitionProvider = ({
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-[9999] bg-white/60 backdrop-blur-md flex items-center justify-center"
           >
-            <div className="w-12 h-12 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-12 h-12 border-4 border-[#ff6321] border-t-transparent rounded-full animate-spin"></div>
           </motion.div>
         )}
       </AnimatePresence>

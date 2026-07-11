@@ -50,7 +50,7 @@ export default function LeadGenerationGuide() {
           <div className="border p-6 rounded-xl bg-slate-50">
             <p className="font-medium">Want more qualified leads?</p>
             <Link href="/contact" className="text-blue-600 underline">
-              Book a strategy call →
+              Discuss your ideas
             </Link>
           </div>
         </div>
