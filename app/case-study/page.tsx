@@ -75,7 +75,7 @@ export default function CaseStudiesPage() {
               <Link
                 key={caseStudy.id}
                 href={`/case-study/${caseStudy.slug}`}
-                className="group rounded-2xl border border-gray-200 overflow-hidden bg-white hover:shadow-xl transition-shadow"
+                className="group rounded-2xl border border-gray-200 overflow-hidden bg-white"
               >
                 <div className="relative aspect-[16/9] bg-gray-100">
                   <Image

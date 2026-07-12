@@ -12,7 +12,7 @@ export interface BlogPost {
   authorAvatar?: string;
   readTime?: string;
   tags?: string[];
-  faqs?: { question: string; answer: string }[]; // ← add this line
+  faqs?: { question: string; answer: string }[];
 }
 
 export const blogPosts: BlogPost[] = [

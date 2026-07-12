@@ -200,49 +200,49 @@ export const FooterSection = () => {
           <h4 className="font-bold text-lg mb-2">Services</h4>
 
           <Link
-            href="/website-design"
+            href="/services/conversion-focused-websites"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Conversion Focused Websites
           </Link>
 
           <Link
-            href="/landing-page-design"
+            href="/services/landing-page-design"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Landing Page Design
           </Link>
 
           <Link
-            href="/google-ads-management"
+            href="/services/google-ads-management"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Google Ads Management
           </Link>
 
           <Link
-            href="/meta-ads-management"
+            href="/services/meta-ads-management"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Meta Ads Management
           </Link>
 
           <Link
-            href="/conversion-rate-optimization"
+            href="/services/conversion-rate-optimization"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Conversion Rate Optimization
           </Link>
 
           <Link
-            href="/lead-generation"
+            href="/services/lead-generation"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Lead Generation Systems
           </Link>
 
           <Link
-            href="/sales-funnel-building"
+            href="/services/sales-funnel-building"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Sales Funnel Building
@@ -254,35 +254,35 @@ export const FooterSection = () => {
           <h4 className="font-bold text-lg mb-2">Industries</h4>
 
           <Link
-            href="/marketing-for-real-estate"
+            href="/industries/marketing-for-real-estate"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Real Estate Marketing
           </Link>
 
           <Link
-            href="/marketing-for-dentists"
+            href="/industries/marketing-for-dentists"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Dental Marketing
           </Link>
 
           <Link
-            href="/marketing-for-interior-designers"
+            href="/industries/marketing-for-interior-designers"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Interior Design Marketing
           </Link>
 
           <Link
-            href="/marketing-for-hospitals"
+            href="/industries/marketing-for-hospitals"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Healthcare Marketing
           </Link>
 
           <Link
-            href="/marketing-for-ecommerce"
+            href="/industries/marketing-for-ecommerce"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Ecommerce Marketing
@@ -294,7 +294,7 @@ export const FooterSection = () => {
           <h4 className="font-bold text-lg mb-2">Resources</h4>
 
           <Link
-            href="/blogs"
+            href="/resources/marketing-blog"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Marketing Blog
@@ -308,21 +308,21 @@ export const FooterSection = () => {
           </Link>
 
           <Link
-            href="/marketing-guides"
+            href="/resources/marketing-guides"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Marketing Guides
           </Link>
 
           <Link
-            href="/website-conversion-guide"
+            href="/resources/website-conversion-guide"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Website Conversion Guide
           </Link>
 
           <Link
-            href="/lead-generation-guide"
+            href="/resources/lead-generation-guide"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Lead Generation Guide
@@ -334,35 +334,35 @@ export const FooterSection = () => {
           <h4 className="font-bold text-lg mb-2">Company</h4>
 
           <Link
-            href="/about"
+            href="/company/about-adszoo"
             className="text-sm text-muted-foreground hover:text-black"
           >
             About Adszoo
           </Link>
 
           <Link
-            href="/contact"
+            href="/company/contact"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Contact Us
           </Link>
 
           <Link
-            href="/careers"
+            href="/company/careers"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Careers
           </Link>
 
           <Link
-            href="/partners"
+            href="/company/partners"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Partners
           </Link>
 
           <Link
-            href="/case-study"
+            href="/company/client-success-stories"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Client Success Stories
@@ -374,28 +374,28 @@ export const FooterSection = () => {
           <h4 className="font-bold text-lg mb-2">Locations</h4>
 
           <Link
-            href="/digital-marketing-agency-chennai"
+            href="/locations/digital-marketing-agency-chennai"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Digital Marketing Agency Chennai
           </Link>
 
           <Link
-            href="/google-ads-agency-chennai"
+            href="/locations/google-ads-agency-chennai"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Google Ads Agency Chennai
           </Link>
 
           <Link
-            href="/website-design-company-chennai"
+            href="/locations/website-design-chennai"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Website Design Chennai
           </Link>
 
           <Link
-            href="/meta-ads-agency-chennai"
+            href="/locations/meta-ads-agency-chennai"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Meta Ads Agency Chennai

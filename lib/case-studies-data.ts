@@ -239,9 +239,6 @@ export const caseStudies: CaseStudy[] = [
     results:
       "The result was a conversion-focused website that strengthened Nura’s brand identity and simplified how customers discover and purchase their products.",
   },
-
-  // ── New case studies ──────────────────────────────────────────────
-
   {
     id: "10",
     title: "PriVio Health",

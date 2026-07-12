@@ -50,15 +50,6 @@ export default function RootLayout({
           content="Boost your business with expert PPC, Website Development and Social Media services. Partner with Adszoo for proven digital marketing strategies."
         /> */}
         {/* Add JSON-LD structured data */}
-        <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "xl5wvfu4ip");
-    `}
-        </Script>
 
         <script
           type="application/ld+json"
@@ -75,10 +66,10 @@ export default function RootLayout({
                 "https://www.facebook.com/profile.php?id=61565406179842",
               ],
               address: {
-                "@type": "Chromepet, Chennai",
+                "@type": "PostalAddress",
                 streetAddress: "Nehru Nagar",
                 addressLocality: "Chennai",
-                addressRegion: "TamilNadu",
+                addressRegion: "Tamil Nadu",
                 postalCode: "600044",
                 addressCountry: "IN",
               },
@@ -87,6 +78,15 @@ export default function RootLayout({
         />
       </head>
       <body className={cn("min-h-screen bg-background", inter.className)}>
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "xl5wvfu4ip");
+    `}
+        </Script>
         {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
