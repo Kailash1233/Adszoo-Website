@@ -10,11 +10,18 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import SmoothScroll from "@/components/SmoothScroll";
+import type { Viewport } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Adszoo | Best Website Development & Social Media Marketing Agency",
   description:
     "Boost your business with expert PPC, Website Development and Social Media services. Partner with Adszoo for proven digital marketing strategies.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -26,7 +33,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="google-site-verification"
           content="2scpu4pXHJ-tPOYU7PA9trnQsFwk6z3AUfDywzNVt6Y"
@@ -35,6 +41,7 @@ export default function RootLayout({
           name="ahrefs-site-verification"
           content="52cc875c8d0ea547fbd9cfc1b7a156038a191d34a4edbf623f55a5e7590ac90b"
         ></meta>
+
         {/* <title>
           Adszoo - Best Website Development & Social Media Marketing Agency
         </title>
@@ -43,6 +50,16 @@ export default function RootLayout({
           content="Boost your business with expert PPC, Website Development and Social Media services. Partner with Adszoo for proven digital marketing strategies."
         /> */}
         {/* Add JSON-LD structured data */}
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "xl5wvfu4ip");
+    `}
+        </Script>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

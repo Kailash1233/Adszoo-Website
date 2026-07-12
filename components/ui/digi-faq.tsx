@@ -58,9 +58,9 @@ export default function DigitalMarketingFAQ() {
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         <div className="space-y-8">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">
               Digital Marketing FAQs
-            </h1>
+            </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
               Welcome to Adszoo&apos;s FAQ hub - where business owners get clear
               answers to SEO, Ads, social media, and leads. These come straight
