@@ -235,7 +235,7 @@ export const FooterSection = () => {
           </Link>
 
           <Link
-            href="/services/lead-generation"
+            href="/services/lead-generation-systems"
             className="text-sm text-muted-foreground hover:text-black"
           >
             Lead Generation Systems
