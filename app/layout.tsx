@@ -14,10 +14,63 @@ import type { Viewport } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Adszoo | Best Website Development & Social Media Marketing Agency",
+  title: "Best Digital Marketing Agency in Chromepet, Chennai | Adszoo",
   description:
-    "Boost your business with expert PPC, Website Development and Social Media services. Partner with Adszoo for proven digital marketing strategies.",
-  metadataBase: new URL("https://www.adszoo.in"),
+    "Adszoo is a Chromepet-based digital marketing agency helping local businesses rank on Google Maps, run high-converting ads, and turn website traffic into revenue. Free consultation.",
+  keywords: [
+    "digital marketing agency in Chromepet",
+    "website design Chromepet",
+    "SEO agency Chromepet",
+    "Google Ads management Chromepet",
+    "social media marketing Chromepet Chennai",
+  ],
+
+  alternates: {
+    canonical: "https://www.adszoo.in/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    url: "https://www.adszoo.in/",
+    siteName: "Adszoo",
+    locale: "en_IN",
+    title: "Best Digital Marketing Agency in Chromepet, Chennai | Adszoo",
+    description:
+      "Local digital marketing agency in Chromepet helping businesses convert traffic into revenue — websites, SEO, Google Ads, and Meta Ads.",
+    images: [
+      {
+        url: "https://www.adszoo.in/Logo1.png",
+        width: 1200,
+        height: 630,
+        alt: "Adszoo - Digital Marketing Agency in Chromepet, Chennai",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Digital Marketing Agency in Chromepet, Chennai | Adszoo",
+    description:
+      "Local digital marketing agency in Chromepet helping businesses convert traffic into revenue.",
+    images: ["https://www.adszoo.in/Logo1.png"],
+  },
+
+  other: {
+    "geo.region": "IN-TN",
+    "geo.placename": "Chromepet, Chennai",
+    "geo.position": "12.9516;80.1462",
+    ICBM: "12.9516, 80.1462",
+  },
 };
 
 export const viewport: Viewport = {
