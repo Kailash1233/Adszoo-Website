@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Ads Adszoo",
     images: [
       {
-        url: "https://adszoo.in/og-image.jpg", // Replace with your actual OG image
+        url: "https://www.adszoo.in/og-image.jpg", // Replace with your actual OG image
         width: 1200,
         height: 630,
         alt: "Ads Adszoo Landing",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Ads Adszoo | Get More Qualified Leads Today",
     description:
       "Book your free strategy session and start converting better with Adszoo.",
-    images: ["https://adszoo.in/og-image.jpg"],
+    images: ["https://www.adszoo.in/og-image.jpg"],
   },
 };
 

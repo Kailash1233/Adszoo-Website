@@ -478,12 +478,12 @@ export async function generateMetadata({
 
   if (!caseStudy) return { title: "Not Found" };
 
-  const url = `https://adszoo.in/case-study/${slug}`;
+  const url = `https://www.adszoo.in/case-study/${slug}`;
   const title = caseStudy.metaTitle ?? `${caseStudy.title} | Adszoo Case Study`;
   const description = caseStudy.metaDescription ?? caseStudy.description;
   const ogImage = caseStudy.previewImage
     ? `https://adszoo.in${caseStudy.previewImage}`
-    : "https://adszoo.in/og-case-studies.png";
+    : "https://www.adszoo.in/og-case-studies.png";
 
   return {
     title,
@@ -532,7 +532,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!caseStudy) notFound();
 
   const relatedCaseStudies = getRelatedCaseStudies(slug, 3);
-  const shareUrl = `https://adszoo.in/case-study/${slug}`;
+  const shareUrl = `https://www.adszoo.in/case-study/${slug}`;
 
   // 3. JSON-LD CreativeWork schema — structured entity data for search + AI answer engines
   const caseStudySchema = {

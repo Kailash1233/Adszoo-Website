@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "Adszoo | Best Website Development & Social Media Marketing Agency",
   description:
     "Boost your business with expert PPC, Website Development and Social Media services. Partner with Adszoo for proven digital marketing strategies.",
+  metadataBase: new URL("https://www.adszoo.in"),
 };
 
 export const viewport: Viewport = {
@@ -56,10 +57,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "DigitalMarketingAgency",
+              "@type": ["ProfessionalService", "LocalBusiness"],
+              telephone: "+91-6369050929",
+              priceRange: "₹50,000 - ₹500,000",
               name: "Adszoo",
               url: "https://www.adszoo.in",
-              logo: "https://scontent.fmaa3-2.fna.fbcdn.net/v/t39.30808-6/458183186_1154363618956225_8041723116845708442_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=DVNm2ZPTdb0Q7kNvgFb9Teo&_nc_zt=23&_nc_ht=scontent.fmaa3-2.fna&_nc_gid=Amezj7l9h0sZE6iavzBW-MW&oh=00_AYCSGZJIE2EOEFvZwtc-yQl5TP2K2AGfUbCWLuCJ0alDrw&oe=67147A90",
+              logo: "https://www.adszoo.in/Logo1.png",
               description:
                 "Adszoo offers Website Development and Social Media services to grow your business online.",
               sameAs: [

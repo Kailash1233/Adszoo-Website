@@ -25,7 +25,7 @@ export const metadata = {
     "We specialize in empowering your business with a comprehensive suite of digital solutions",
   openGraph: {
     type: "website",
-    url: "https://adszoo.in/",
+    url: "https://www.adszoo.in/",
     title: "Adszoo - Digital Marketing Agency",
     description:
       "We specialize in empowering your business with a comprehensive suite of digital solutions",
@@ -40,7 +40,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://adszoo.in/",
+    site: "https://www.adszoo.in/",
     title: "Adszoo - Digital Marketing Agency",
     description:
       "We specialize in empowering your business with a comprehensive suite of digital solutions",

@@ -71,7 +71,7 @@ export async function generateMetadata({
 
   if (!industry) return { title: "Not Found" };
 
-  const url = `https://adszoo.in/industries/${slug}`;
+  const url = `https://www.adszoo.in/industries/${slug}`;
 
   return {
     title: industry.metaTitle,
@@ -110,7 +110,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
   if (!industry) notFound();
 
-  const url = `https://adszoo.in/industries/${slug}`;
+  const url = `https://www.adszoo.in/industries/${slug}`;
 
   // Service schema — tells Google & AI systems exactly what this page offers, to whom
   const serviceSchema = {

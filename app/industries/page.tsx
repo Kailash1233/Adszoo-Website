@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   description:
     "Adszoo builds websites, SEO, and AI search visibility strategies tailored to real estate, dental, interior design, healthcare, and ecommerce businesses.",
   alternates: {
-    canonical: "https://adszoo.in/industries",
+    canonical: "https://www.adszoo.in/industries",
   },
   robots: {
     index: true,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Industries We Serve | Adszoo",
     description:
       "Marketing, websites, and AI search visibility built specifically for your industry — not generic templates.",
-    url: "https://adszoo.in/industries",
+    url: "https://www.adszoo.in/industries",
     siteName: "Adszoo",
     type: "website",
   },

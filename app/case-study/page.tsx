@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     title: "Client Success Stories | Real Digital Marketing Results - Adszoo",
     description:
       "Discover real-world case studies of how Adszoo has delivered measurable results for clients across industries.",
-    url: "https://adszoo.in/case-study",
+    url: "https://www.adszoo.in/case-study",
     siteName: "Adszoo",
     images: [
       {
-        url: "https://adszoo.in/og-case-studies.png",
+        url: "https://www.adszoo.in/og-case-studies.png",
         width: 1200,
         height: 630,
         alt: "Adszoo Case Studies",
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     title: "Client Success Stories | Real Digital Marketing Results - Adszoo",
     description:
       "Explore how Adszoo helped real businesses grow using proven digital marketing strategies.",
-    images: ["https://adszoo.in/og-case-studies.png"],
+    images: ["https://www.adszoo.in/og-case-studies.png"],
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://adszoo.in/case-study",
+    canonical: "https://www.adszoo.in/case-study",
   },
 };
 
@@ -138,11 +138,11 @@ export default function CaseStudiesPage() {
 //     title: "Client Success Stories | Real Digital Marketing Results - Adszoo",
 //     description:
 //       "Discover real-world case studies of how Adszoo has delivered measurable results for clients across industries.",
-//     url: "https://adszoo.in/case-study",
+//     url: "https://www.adszoo.in/case-study",
 //     siteName: "Adszoo",
 //     images: [
 //       {
-//         url: "https://adszoo.in/og-case-studies.png",
+//         url: "https://www.adszoo.in/og-case-studies.png",
 //         width: 1200,
 //         height: 630,
 //         alt: "Adszoo Case Studies",
@@ -436,11 +436,11 @@ export default function CaseStudiesPage() {
 //     title: "Client Success Stories | Real Digital Marketing Results - Adszoo",
 //     description:
 //       "Discover real-world case studies of how Adszoo has delivered measurable results for clients across industries.",
-//     url: "https://adszoo.in/case-study",
+//     url: "https://www.adszoo.in/case-study",
 //     siteName: "Adszoo",
 //     images: [
 //       {
-//         url: "https://adszoo.in/og-case-studies.png",
+//         url: "https://www.adszoo.in/og-case-studies.png",
 //         width: 1200,
 //         height: 630,
 //         alt: "Adszoo Case Studies",

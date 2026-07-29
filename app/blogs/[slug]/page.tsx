@@ -164,7 +164,7 @@ export async function generateMetadata({
 
   if (!blogPost) return { title: "Not Found" };
 
-  const url = `https://adszoo.in/blogs/${slug}`;
+  const url = `https://www.adszoo.in/blogs/${slug}`;
 
   return {
     title: blogPost.metaTitle ?? blogPost.title,
@@ -240,7 +240,7 @@ const BlogPostPage = async ({
   //     name: "Adszoo",
   //     logo: {
   //       "@type": "ImageObject",
-  //       url: "https://adszoo.in/Logo1.png",
+  //       url: "https://www.adszoo.in/Logo1.png",
   //     },
   //   },
   //   datePublished: blogPost.date,
@@ -266,7 +266,7 @@ const BlogPostPage = async ({
       name: "Adszoo",
       logo: {
         "@type": "ImageObject",
-        url: "https://adszoo.in/Logo1.png",
+        url: "https://www.adszoo.in/Logo1.png",
       },
     },
     datePublished: blogPost.date,
@@ -588,7 +588,7 @@ export default BlogPostPage;
 //     publisher: {
 //       "@type": "Organization",
 //       name: "Adszoo",
-//       logo: { "@type": "ImageObject", url: "https://adszoo.in/Logo1.png" },
+//       logo: { "@type": "ImageObject", url: "https://www.adszoo.in/Logo1.png" },
 //     },
 //     datePublished: date,
 //     description: blogPost.description || "",

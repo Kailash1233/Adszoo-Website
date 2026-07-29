@@ -22,7 +22,7 @@
 //     siteName: "Adszoo",
 //     images: [
 //       {
-//         url: "https://adszoo.in/og-image.jpg",
+//         url: "https://www.adszoo.in/og-image.jpg",
 //         width: 1200,
 //         height: 630,
 //         alt: "Adszoo Landing Page",
@@ -35,7 +35,7 @@
 //     title: "Adszoo | High-Converting Websites & Funnels",
 //     description:
 //       "Let’s help your business generate more leads and sales online.",
-//     images: ["https://adszoo.in/og-image.jpg"],
+//     images: ["https://www.adszoo.in/og-image.jpg"],
 //   },
 // };
 
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     siteName: "Adszoo",
     images: [
       {
-        url: "https://adszoo.in/og-image.jpg",
+        url: "https://www.adszoo.in/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Adszoo Landing Page",
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
     title: "Adszoo | High-Converting Websites & Funnels",
     description:
       "Let’s help your business generate more leads and sales online.",
-    images: ["https://adszoo.in/og-image.jpg"],
+    images: ["https://www.adszoo.in/og-image.jpg"],
   },
 };
 

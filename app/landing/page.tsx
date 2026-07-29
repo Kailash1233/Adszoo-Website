@@ -85,7 +85,7 @@
 //           property="og:description"
 //           content="Our strategies help you get more qualified leads and turn them into sales. Book your free strategy session today."
 //         />
-//         <meta property="og:image" content="https://adszoo.in/og-image.jpg" />
+//         <meta property="og:image" content="https://www.adszoo.in/og-image.jpg" />
 //         <meta property="og:url" content="https://adszoo.in" />
 //         <meta property="og:type" content="website" />
 //         <meta name="twitter:card" content="summary_large_image" />
@@ -97,7 +97,7 @@
 //           name="twitter:description"
 //           content="Get more qualified leads and higher conversion rates with Ads Adszoo’s custom marketing strategies."
 //         />
-//         <meta name="twitter:image" content="https://adszoo.in/og-image.jpg" />
+//         <meta name="twitter:image" content="https://www.adszoo.in/og-image.jpg" />
 //       </Head>
 
 //       <div className="bg-white text-black relative">
@@ -490,7 +490,7 @@ export default function LandingPage() {
     "@type": "ProfessionalService",
     name: "Adszoo",
     url: "https://adszoo.in",
-    logo: "https://adszoo.in/og-image.jpg",
+    logo: "https://www.adszoo.in/og-image.jpg",
     description:
       "Adszoo helps small businesses get higher quality leads and better conversions using data-driven digital marketing.",
     telephone: "+91-7200580860",
@@ -529,11 +529,11 @@ export default function LandingPage() {
           property="og:description"
           content="Get better quality leads and higher conversion rates with Adszoo's tailored digital marketing strategies. Book your free 30-minute strategy call."
         />
-        <meta property="og:image" content="https://adszoo.in/og-image.jpg" />
-        <meta property="og:url" content="https://adszoo.in/landing" />
+        <meta property="og:image" content="https://www.adszoo.in/og-image.jpg" />
+        <meta property="og:url" content="https://www.adszoo.in/landing" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://adszoo.in/landing" />
+        <link rel="canonical" href="https://www.adszoo.in/landing" />
 
         {/* JSON-LD for SEO */}
         <script
