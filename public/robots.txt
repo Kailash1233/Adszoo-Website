@@ -2,8 +2,5 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: https://adszoo.in
-
 # Sitemaps
 Sitemap: https://adszoo.in/sitemap.xml
