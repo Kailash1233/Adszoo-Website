@@ -417,7 +417,8 @@ export const FooterSection = () => {
 
         <div className="flex items-center">
           <MapPin className="w-4 h-4 mr-2 fill-black text-white" />
-          Chromepet, Chennai, India
+          43, Ramachandra Rd, Nehru Nagar, Chromepet, Chennai, Tambaram, Tamil
+          Nadu 600044
         </div>
       </div>
 

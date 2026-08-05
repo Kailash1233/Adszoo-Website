@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     "SEO agency Chromepet",
     "Google Ads management Chromepet",
     "social media marketing Chromepet Chennai",
+    "digital marketing agency in Chennai",
+    "website design Chennai",
+    "SEO agency Chennai",
+    "Google Ads management Chennai",
   ],
 
   alternates: {
