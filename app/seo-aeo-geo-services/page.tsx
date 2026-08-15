@@ -1,740 +1,3 @@
-// import type { Metadata } from "next";
-// import Link from "next/link";
-// import Image from "next/image";
-
-// /**
-//  * ─────────────────────────────────────────────────────────────────────────
-//  * ADSZOO — SEO • AEO • GEO SERVICES PAGE
-//  * Route: app/seo-aeo-geo-services/page.tsx  →  https://www.adszoo.in/seo-aeo-geo-services
-//  *
-//  * Theme: matches Adszoo brand — light background, black text, #ff6321 accent.
-//  * Project screenshots are pulled from your existing /public/casestudy-websites/
-//  * folder (same paths already used on /case-study/[slug] pages) — swap the
-//  * `src` values in `projects[]` below if any filenames differ in your repo.
-//  * ─────────────────────────────────────────────────────────────────────────
-//  */
-
-// const SITE_URL = "https://www.adszoo.in";
-// const PAGE_URL = `${SITE_URL}/seo-aeo-geo-services`;
-// const ACCENT = "#ff6321";
-
-// export const metadata: Metadata = {
-//   title:
-//     "SEO, AEO & GEO Services in Chennai | Rank on Google, AI Overviews & ChatGPT — Adszoo",
-//   description:
-//     "Adszoo helps businesses rank on Google, get cited in AI Overviews, and get recommended by ChatGPT & Perplexity. Full SEO + AEO + GEO services with real case studies and measurable results.",
-//   keywords: [
-//     "SEO AEO GEO services",
-//     "AEO services Chennai",
-//     "GEO generative engine optimization",
-//     "AI search optimization agency",
-//     "ChatGPT SEO",
-//     "AI Overviews optimization",
-//     "answer engine optimization agency India",
-//     "SEO agency Chennai",
-//     "AEO agency India",
-//     "generative engine optimization services",
-//   ],
-//   alternates: { canonical: PAGE_URL },
-//   openGraph: {
-//     title:
-//       "SEO, AEO & GEO Services | Get Found on Google, AI Overviews & ChatGPT — Adszoo",
-//     description:
-//       "We rank you on Google, get you cited in AI Overviews, and get you recommended by ChatGPT, Perplexity & Gemini. See real client results.",
-//     url: PAGE_URL,
-//     siteName: "Adszoo",
-//     images: [
-//       {
-//         url: `${SITE_URL}/Logo1.png`,
-//         width: 1200,
-//         height: 630,
-//         alt: "Adszoo — SEO, AEO & GEO Services",
-//       },
-//     ],
-//     type: "website",
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "SEO, AEO & GEO Services — Adszoo",
-//     description:
-//       "Rank on Google. Get cited in AI Overviews. Get recommended by ChatGPT. One team, one strategy.",
-//     images: [`${SITE_URL}/Logo1.png`],
-//   },
-//   robots: { index: true, follow: true },
-// };
-
-// /* ──────────────────────────────────────────────────────────────────────
-//    DATA
-//    ────────────────────────────────────────────────────────────────────── */
-
-// const pillars = [
-//   {
-//     tag: "SEO",
-//     title: "Search Engine Optimization",
-//     desc: "The foundation. We fix your technical architecture, build topical authority, and earn the rankings that put you in front of buyers actively searching on Google.",
-//     points: [
-//       "Technical SEO & Core Web Vitals",
-//       "On-page + topical content clusters",
-//       "Local SEO & Google Business Profile",
-//       "High-authority link building",
-//     ],
-//   },
-//   {
-//     tag: "AEO",
-//     title: "Answer Engine Optimization",
-//     desc: "Google's AI Overviews now answer the question before a click ever happens. AEO structures your content so the engine pulls your answer, with your brand attached.",
-//     points: [
-//       "Structured, extractable answer formatting",
-//       "Schema markup (FAQ, HowTo, Article)",
-//       "Featured snippet & AI Overview targeting",
-//       "Question-first content architecture",
-//     ],
-//   },
-//   {
-//     tag: "GEO",
-//     title: "Generative Engine Optimization",
-//     desc: "ChatGPT, Perplexity, and Gemini are the new front door to your customers. GEO makes sure your business is the one these models cite and recommend.",
-//     points: [
-//       "LLM-readable content structuring",
-//       "Entity & brand authority signals",
-//       "Citation-worthy data & source building",
-//       "Presence across AI-crawled sources",
-//     ],
-//   },
-// ] as const;
-
-// const comparison = [
-//   {
-//     row: "Where it shows up",
-//     seo: "Google search results (blue links)",
-//     aeo: "Featured snippets & AI Overviews",
-//     geo: "ChatGPT, Perplexity, Gemini, Claude",
-//   },
-//   {
-//     row: "What wins",
-//     seo: "Rankings & organic traffic",
-//     aeo: "Being the quoted answer",
-//     geo: "Being the recommended brand",
-//   },
-//   {
-//     row: "Core unit",
-//     seo: "Keywords & pages",
-//     aeo: "Structured answers",
-//     geo: "Entities & trusted citations",
-//   },
-//   {
-//     row: "Success metric",
-//     seo: "Position, clicks, traffic",
-//     aeo: "Snippet share, impressions",
-//     geo: "AI mentions, share of voice",
-//   },
-//   {
-//     row: "Time to impact",
-//     seo: "2–4 months",
-//     aeo: "4–8 weeks (existing content)",
-//     geo: "Ongoing, compounding",
-//   },
-// ] as const;
-
-// const services = [
-//   {
-//     title: "Technical SEO Audit & Fixes",
-//     desc: "Site speed, crawlability, indexing, Core Web Vitals — the plumbing every ranking depends on.",
-//   },
-//   {
-//     title: "Topical Content Clusters",
-//     desc: "Pillar + supporting content built around what your buyers actually search, not vanity keywords.",
-//   },
-//   {
-//     title: "Schema & Structured Data",
-//     desc: "FAQ, HowTo, Product, LocalBusiness and Article schema so machines can parse and quote you.",
-//   },
-//   {
-//     title: "Local SEO & GBP Optimization",
-//     desc: "Rank in the map pack and local AI answers for every service area you operate in.",
-//   },
-//   {
-//     title: "AI Overview & Snippet Targeting",
-//     desc: "Content re-engineered to be the answer Google lifts — not just a link below it.",
-//   },
-//   {
-//     title: "LLM Visibility & Brand Citations",
-//     desc: "Getting your business named, described, and recommended inside ChatGPT & Perplexity answers.",
-//   },
-//   {
-//     title: "Link Building & Digital PR",
-//     desc: "Authority signals that both classic SEO and generative engines weigh heavily.",
-//   },
-//   {
-//     title: "Conversion-Focused Website Builds",
-//     desc: "Rankings mean nothing without a site engineered to turn visitors into customers.",
-//   },
-// ] as const;
-
-// /**
-//  * Real project screenshots — same assets already used on your live
-//  * /case-study/[slug] pages under /public/casestudy-websites/.
-//  * Each tile links straight into the full case study.
-//  */
-// const projects = [
-//   {
-//     name: "Promide Steel Fabrication LLC",
-//     category: "Manufacturing · Steel",
-//     src: "/CaseStudy/promide-steel-fabrication-llc.webp",
-//     href: "/case-study/promide-steel-fabrication-llc",
-//     span: "lg:col-span-3 lg:row-span-2",
-//   },
-//   {
-//     name: "Nura",
-//     category: "E-Commerce · Skincare",
-//     src: "/CaseStudy/nura.png",
-//     href: "/case-study/nura",
-//     span: "lg:col-span-3 lg:row-span-1",
-//   },
-//   {
-//     name: "GafClickz",
-//     category: "Photography",
-//     src: "/casestudy-websites/gafclickz.png",
-//     href: "/case-study/gafclickz",
-//     span: "lg:col-span-3 lg:row-span-1",
-//   },
-//   {
-//     name: "PriVio Health",
-//     category: "Healthcare · Telehealth",
-//     src: "/CaseStudy/privio-health.webp",
-//     href: "/case-study/privio-health",
-//     span: "lg:col-span-2 lg:row-span-1",
-//   },
-//   {
-//     name: "AB Design Labs",
-//     category: "Interior Design · Architecture",
-//     src: "/CaseStudy/abdesignlabs.webp",
-//     href: "/case-study/ab-design-labs",
-//     span: "lg:col-span-2 lg:row-span-1",
-//   },
-//   {
-//     name: "KVM CMart",
-//     category: "Construction · E-Commerce",
-//     src: "/casestudy-websites/kvm-cmart.png",
-//     href: "/case-study/kvm-cmart",
-//     span: "lg:col-span-2 lg:row-span-1",
-//   },
-// ] as const;
-
-// const faqs = [
-//   {
-//     q: "What's the difference between SEO, AEO, and GEO?",
-//     a: "SEO gets your website ranking in traditional Google search results. AEO (Answer Engine Optimization) structures your content so Google's AI Overviews and featured snippets quote you directly. GEO (Generative Engine Optimization) makes sure AI chat tools like ChatGPT, Perplexity, and Gemini cite and recommend your business when people ask them questions. In 2026, you need all three working together — they share the same foundation but target different surfaces.",
-//   },
-//   {
-//     q: "Do I need AEO and GEO if I already do SEO?",
-//     a: "Yes. A growing share of searches now end on an AI Overview or an AI chat answer, with no click to any website at all. If your content isn't structured for machines to extract and cite, competitors who did optimize for AEO and GEO capture that visibility instead — even if you outrank them in traditional blue-link results.",
-//   },
-//   {
-//     q: "How long does it take to see results from AEO and GEO?",
-//     a: "Existing, well-structured content can start appearing in AI Overviews and snippets within 4–8 weeks. GEO visibility inside tools like ChatGPT tends to build more gradually and compounds over time as your brand accumulates citations and authority signals across the web.",
-//   },
-//   {
-//     q: "Can you optimize my existing website, or do I need a new one?",
-//     a: "In most cases we work with your existing site — restructuring content, adding schema markup, and fixing technical issues. If the underlying site has fundamental performance or architecture problems, we'll flag that upfront rather than optimizing content on top of a broken foundation.",
-//   },
-//   {
-//     q: "How do you measure AEO and GEO performance?",
-//     a: "For AEO, we track featured snippet ownership, AI Overview appearances, and impression share on question-based queries. For GEO, we track brand mentions and citation frequency across ChatGPT, Perplexity, and Gemini for relevant prompts, alongside referral traffic from AI platforms as that data becomes available.",
-//   },
-//   {
-//     q: "Is GEO the same as buying ads inside ChatGPT?",
-//     a: "No. GEO is entirely earned, organic visibility — it's about your brand appearing in an AI model's response because your content is well-structured, credible, and cited elsewhere on the web. There's no ad spend involved; it works alongside SEO and AEO rather than replacing them.",
-//   },
-//   {
-//     q: "Which industries benefit most from SEO, AEO & GEO together?",
-//     a: "Any business where customers research before buying — healthcare, real estate, professional services, e-commerce, manufacturing, and B2B especially. We've applied this across clients in telehealth, fintech, interior design, manufacturing, and sports tech.",
-//   },
-//   {
-//     q: "How do I get started?",
-//     a: "Book a free strategy call and we'll audit where you currently stand across Google, AI Overviews, and AI chat tools, then map out a plan across all three.",
-//   },
-// ] as const;
-
-// /* ──────────────────────────────────────────────────────────────────────
-//    JSON-LD
-//    ────────────────────────────────────────────────────────────────────── */
-
-// const jsonLdService = {
-//   "@context": "https://schema.org",
-//   "@type": "Service",
-//   serviceType: "SEO, AEO & GEO (Generative Engine Optimization) Services",
-//   provider: {
-//     "@type": "Organization",
-//     name: "Adszoo",
-//     url: SITE_URL,
-//     logo: `${SITE_URL}/Logo1.png`,
-//     address: {
-//       "@type": "PostalAddress",
-//       streetAddress: "43, Ramachandra Rd, Nehru Nagar, Chromepet",
-//       addressLocality: "Chennai",
-//       addressRegion: "Tamil Nadu",
-//       postalCode: "600044",
-//       addressCountry: "IN",
-//     },
-//   },
-//   areaServed: "IN",
-//   description:
-//     "Full-stack search visibility services covering traditional SEO, Answer Engine Optimization (AEO) for AI Overviews and featured snippets, and Generative Engine Optimization (GEO) for ChatGPT, Perplexity, and Gemini.",
-//   url: PAGE_URL,
-// };
-
-// const jsonLdFaq = {
-//   "@context": "https://schema.org",
-//   "@type": "FAQPage",
-//   mainEntity: faqs.map((f) => ({
-//     "@type": "Question",
-//     name: f.q,
-//     acceptedAnswer: { "@type": "Answer", text: f.a },
-//   })),
-// };
-
-// const jsonLdBreadcrumb = {
-//   "@context": "https://schema.org",
-//   "@type": "BreadcrumbList",
-//   itemListElement: [
-//     { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-//     {
-//       "@type": "ListItem",
-//       position: 2,
-//       name: "SEO, AEO & GEO Services",
-//       item: PAGE_URL,
-//     },
-//   ],
-// };
-
-// /* ──────────────────────────────────────────────────────────────────────
-//    PAGE
-//    ────────────────────────────────────────────────────────────────────── */
-
-// export default function SeoAeoGeoPage() {
-//   return (
-//     <main className="relative min-h-screen overflow-hidden bg-[#fafaf9] text-black antialiased">
-//       <script
-//         type="application/ld+json"
-//         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
-//       />
-//       <script
-//         type="application/ld+json"
-//         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
-//       />
-//       <script
-//         type="application/ld+json"
-//         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
-//       />
-
-//       {/* Subtle ambient warmth — brand orange, kept light */}
-//       <div className="pointer-events-none absolute inset-0 -z-10">
-//         <div
-//           className="absolute -top-32 left-1/2 h-[520px] w-[900px] -translate-x-1/2 rounded-full blur-[130px]"
-//           style={{ background: `${ACCENT}14` }}
-//         />
-//         <div
-//           className="absolute top-[1100px] -right-40 h-[420px] w-[420px] rounded-full blur-[120px]"
-//           style={{ background: `${ACCENT}10` }}
-//         />
-//         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000006_1px,transparent_1px),linear-gradient(to_bottom,#00000006_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_40%,transparent_100%)]" />
-//       </div>
-
-//       {/* ── HERO ────────────────────────────────────────────────────── */}
-//       <section className="relative mx-auto max-w-6xl px-6 pt-28 pb-24 text-center sm:pt-36">
-//         <div className="mx-auto mb-8 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-1.5 text-xs font-medium tracking-wide text-black/70 shadow-sm">
-//           <span className="relative flex h-2 w-2">
-//             <span
-//               className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
-//               style={{ backgroundColor: ACCENT }}
-//             />
-//             <span
-//               className="relative inline-flex h-2 w-2 rounded-full"
-//               style={{ backgroundColor: ACCENT }}
-//             />
-//           </span>
-//           Built for Google, AI Overviews &amp; ChatGPT - together
-//         </div>
-
-//         <h1 className="mx-auto max-w-4xl text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-6xl">
-//           SEO, AEO &amp; GEO -{" "}
-//           <span style={{ color: ACCENT }}>
-//             one strategy to own every search surface
-//           </span>
-//         </h1>
-
-//         <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-relaxed text-black/60">
-//           Google isn&apos;t the only place people search anymore. We get you
-//           ranking in classic search, quoted in AI Overviews, and recommended by
-//           ChatGPT &amp; Perplexity — with one connected strategy, not three
-//           disconnected vendors.
-//         </p>
-
-//         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-//           <a
-//             href="https://cal.com/adszoo/30min"
-//             className="group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(255,99,33,0.6)] transition-transform hover:scale-[1.03]"
-//             style={{ backgroundColor: ACCENT }}
-//           >
-//             Get Your Free AI Search Audit
-//             <span className="transition-transform group-hover:translate-x-1">
-//               →
-//             </span>
-//           </a>
-//           <Link
-//             href="/case-study"
-//             className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white px-7 py-3.5 text-sm font-medium text-black/80 transition-colors hover:bg-black hover:text-white"
-//           >
-//             See Real Client Results
-//           </Link>
-//         </div>
-
-//         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-3 gap-4 border-t border-black/10 pt-8">
-//           {[
-//             ["3-in-1", "Search systems built together"],
-//             ["17+", "Businesses grown across industries"],
-//             ["100%", "Custom-built, not templated"],
-//           ].map(([stat, label]) => (
-//             <div key={stat}>
-//               <div className="text-2xl font-semibold sm:text-3xl">{stat}</div>
-//               <div className="mt-1 text-xs text-black/50 sm:text-sm">
-//                 {label}
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* ── THE THREE PILLARS ──────────────────────────────────────── */}
-//       <section className="relative mx-auto max-w-6xl px-6 py-20">
-//         <SectionHeading
-//           eyebrow="The Framework"
-//           title="SEO. AEO. GEO. Explained simply."
-//           desc="Three names, one goal: your business is the answer, wherever the question gets asked."
-//         />
-
-//         <div className="mt-14 grid gap-6 md:grid-cols-3">
-//           {pillars.map((p) => (
-//             <div
-//               key={p.tag}
-//               className="group relative overflow-hidden rounded-2xl border border-black/10 bg-white p-8 shadow-[0_2px_20px_-8px_rgba(0,0,0,0.08)] transition-all hover:border-black/20 hover:shadow-[0_8px_30px_-8px_rgba(0,0,0,0.14)]"
-//             >
-//               <span
-//                 className="inline-block rounded-full border px-3 py-1 text-xs font-bold tracking-widest"
-//                 style={{
-//                   borderColor: `${ACCENT}55`,
-//                   backgroundColor: `${ACCENT}12`,
-//                   color: ACCENT,
-//                 }}
-//               >
-//                 {p.tag}
-//               </span>
-//               <h3 className="mt-5 text-xl font-semibold">{p.title}</h3>
-//               <p className="mt-3 text-sm leading-relaxed text-black/55">
-//                 {p.desc}
-//               </p>
-//               <ul className="mt-6 space-y-2.5 border-t border-black/10 pt-6">
-//                 {p.points.map((pt) => (
-//                   <li
-//                     key={pt}
-//                     className="flex items-start gap-2.5 text-sm text-black/70"
-//                   >
-//                     <svg
-//                       className="mt-0.5 h-4 w-4 shrink-0"
-//                       style={{ color: ACCENT }}
-//                       fill="none"
-//                       viewBox="0 0 24 24"
-//                       stroke="currentColor"
-//                       strokeWidth={2.5}
-//                     >
-//                       <path
-//                         strokeLinecap="round"
-//                         strokeLinejoin="round"
-//                         d="M5 13l4 4L19 7"
-//                       />
-//                     </svg>
-//                     {pt}
-//                   </li>
-//                 ))}
-//               </ul>
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* ── COMPARISON TABLE ───────────────────────────────────────── */}
-//       <section className="relative mx-auto max-w-6xl px-6 py-20">
-//         <SectionHeading
-//           eyebrow="Side by Side"
-//           title="How SEO, AEO & GEO actually differ"
-//           desc="Each optimizes for a different surface — but they share the same content foundation, which is why doing them together compounds results."
-//         />
-
-//         <div className="mt-12 overflow-x-auto rounded-2xl border border-black/10 bg-white shadow-[0_2px_20px_-8px_rgba(0,0,0,0.08)]">
-//           <table className="w-full min-w-[720px] border-collapse text-left text-sm">
-//             <thead>
-//               <tr className="border-b border-black/10 bg-black/[0.02]">
-//                 <th className="px-6 py-4 font-medium text-black/45">
-//                   Dimension
-//                 </th>
-//                 <th className="px-6 py-4 font-semibold text-black">SEO</th>
-//                 <th
-//                   className="px-6 py-4 font-semibold"
-//                   style={{ color: ACCENT }}
-//                 >
-//                   AEO
-//                 </th>
-//                 <th
-//                   className="px-6 py-4 font-semibold"
-//                   style={{ color: ACCENT }}
-//                 >
-//                   GEO
-//                 </th>
-//               </tr>
-//             </thead>
-//             <tbody>
-//               {comparison.map((row, i) => (
-//                 <tr
-//                   key={row.row}
-//                   className={i % 2 === 0 ? "bg-black/[0.012]" : ""}
-//                 >
-//                   <td className="px-6 py-4 font-medium text-black/45">
-//                     {row.row}
-//                   </td>
-//                   <td className="px-6 py-4 text-black/75">{row.seo}</td>
-//                   <td className="px-6 py-4 text-black/75">{row.aeo}</td>
-//                   <td className="px-6 py-4 text-black/75">{row.geo}</td>
-//                 </tr>
-//               ))}
-//             </tbody>
-//           </table>
-//         </div>
-//       </section>
-
-//       {/* ── SERVICES GRID ──────────────────────────────────────────── */}
-//       <section className="relative mx-auto max-w-6xl px-6 py-20">
-//         <SectionHeading
-//           eyebrow="What's Included"
-//           title="Everything under one roof"
-//           desc="No fragmented vendors. One team building your visibility across every search surface."
-//         />
-
-//         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-//           {services.map((s) => (
-//             <div
-//               key={s.title}
-//               className="rounded-xl border border-black/10 bg-white p-6 transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)]"
-//             >
-//               <h3 className="text-sm font-semibold text-black">{s.title}</h3>
-//               <p className="mt-2 text-xs leading-relaxed text-black/50">
-//                 {s.desc}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-
-//         <div className="mt-10 text-center">
-//           <a
-//             href="https://cal.com/adszoo/30min"
-//             className="inline-flex items-center gap-2 text-sm font-medium underline-offset-4 hover:underline"
-//             style={{ color: ACCENT }}
-//           >
-//             Get a custom plan for your business →
-//           </a>
-//         </div>
-//       </section>
-
-//       {/* ── WEBSITE PROJECTS — BENTO GALLERY ───────────────────────── */}
-//       <section className="relative mx-auto max-w-6xl px-6 py-20">
-//         <SectionHeading
-//           eyebrow="Proof, Not Promises"
-//           title="Real websites we've built and optimized"
-//           desc="Tap any project to see the full case study — challenge, approach, and results."
-//         />
-
-//         <div className="mt-14 grid grid-cols-1 gap-4 lg:auto-rows-[220px] lg:grid-cols-6">
-//           {projects.map((p) => (
-//             <Link
-//               key={p.name}
-//               href={p.href}
-//               className={`group relative overflow-hidden rounded-2xl border border-black/10 bg-black shadow-[0_2px_20px_-8px_rgba(0,0,0,0.15)] transition-all hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.35)] ${p.span} min-h-[220px]`}
-//             >
-//               <Image
-//                 src={p.src}
-//                 alt={`${p.name} — website project screenshot`}
-//                 fill
-//                 sizes="(max-width: 1024px) 100vw, 50vw"
-//                 className="object-cover object-top opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
-//               />
-//               {/* Base gradient so text is always readable */}
-//               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
-
-//               {/* Hover accent ring */}
-//               <div
-//                 className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 ring-2 transition-opacity group-hover:opacity-100"
-//                 style={{ boxShadow: `inset 0 0 0 2px ${ACCENT}` }}
-//               />
-
-//               <div className="absolute left-0 right-0 top-0 flex items-center justify-between p-4">
-//                 <span
-//                   className="rounded-full px-3 py-1 text-[11px] font-semibold tracking-wide text-white backdrop-blur-sm"
-//                   style={{ backgroundColor: `${ACCENT}cc` }}
-//                 >
-//                   {p.category}
-//                 </span>
-//                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur-sm transition-all group-hover:translate-x-0 group-hover:opacity-100 -translate-x-2">
-//                   <svg
-//                     className="h-4 w-4"
-//                     fill="none"
-//                     viewBox="0 0 24 24"
-//                     stroke="currentColor"
-//                     strokeWidth={2}
-//                   >
-//                     <path
-//                       strokeLinecap="round"
-//                       strokeLinejoin="round"
-//                       d="M7 17L17 7M17 7H7M17 7V17"
-//                     />
-//                   </svg>
-//                 </span>
-//               </div>
-
-//               <div className="absolute inset-x-0 bottom-0 p-5">
-//                 <h3 className="text-base font-semibold text-white sm:text-lg">
-//                   {p.name}
-//                 </h3>
-//                 <span className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-white/70">
-//                   View full case study
-//                   <span className="transition-transform group-hover:translate-x-1">
-//                     →
-//                   </span>
-//                 </span>
-//               </div>
-//             </Link>
-//           ))}
-//         </div>
-
-//         <div className="mt-10 text-center">
-//           <Link
-//             href="/case-study"
-//             className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white px-6 py-3 text-sm font-medium text-black/80 transition-colors hover:bg-black hover:text-white"
-//           >
-//             View All Case Studies →
-//           </Link>
-//         </div>
-//       </section>
-
-//       {/* ── TESTIMONIAL STRIP ──────────────────────────────────────── */}
-//       <section className="relative mx-auto max-w-4xl px-6 py-20 text-center">
-//         <svg
-//           className="mx-auto mb-6 h-8 w-8"
-//           style={{ color: `${ACCENT}99` }}
-//           fill="currentColor"
-//           viewBox="0 0 24 24"
-//         >
-//           <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z" />
-//         </svg>
-//         <p className="text-balance text-xl font-medium leading-relaxed text-black/85 sm:text-2xl">
-//           &ldquo;Delivered a robust, SEO-friendly website for our page. Smooth
-//           process and clear communication.&rdquo;
-//         </p>
-//         <div className="mt-6 text-sm text-black/50">
-//           <span className="font-medium text-black/80">Gafur</span> — Founder,
-//           GafClickz
-//         </div>
-//       </section>
-
-//       {/* ── FAQ ─────────────────────────────────────────────────────── */}
-//       <section className="relative mx-auto max-w-3xl px-6 py-20">
-//         <SectionHeading
-//           eyebrow="FAQs"
-//           title="SEO, AEO & GEO — your questions answered"
-//           desc="Straight answers, pulled from real client conversations."
-//         />
-
-//         <div className="mt-12 space-y-3">
-//           {faqs.map((f) => (
-//             <details
-//               key={f.q}
-//               className="group rounded-xl border border-black/10 bg-white px-6 py-1 shadow-[0_1px_10px_-4px_rgba(0,0,0,0.06)] transition-colors open:shadow-[0_4px_20px_-6px_rgba(0,0,0,0.1)]"
-//             >
-//               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-sm font-medium text-black/90 marker:content-none">
-//                 {f.q}
-//                 <span
-//                   className="ml-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-transform group-open:rotate-45"
-//                   style={{ backgroundColor: `${ACCENT}14`, color: ACCENT }}
-//                 >
-//                   +
-//                 </span>
-//               </summary>
-//               <p className="pb-5 text-sm leading-relaxed text-black/55">
-//                 {f.a}
-//               </p>
-//             </details>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* ── FINAL CTA — bold black block for contrast ──────────────── */}
-//       <section className="relative mx-auto max-w-5xl px-6 pb-28 pt-10">
-//         <div className="relative overflow-hidden rounded-3xl bg-black px-8 py-16 text-center sm:px-16">
-//           <div
-//             className="pointer-events-none absolute inset-0"
-//             style={{
-//               background: `radial-gradient(ellipse 60% 60% at 50% 0%, ${ACCENT}33, transparent)`,
-//             }}
-//           />
-//           <h2 className="relative text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-//             Ready to be the answer — everywhere it&apos;s asked?
-//           </h2>
-//           <p className="relative mx-auto mt-4 max-w-xl text-balance text-white/60">
-//             Book a free 30-minute audit. We&apos;ll show you exactly where you
-//             stand on Google, AI Overviews, and ChatGPT — and what it takes to
-//             lead on all three.
-//           </p>
-//           <a
-//             href="https://cal.com/adszoo/30min"
-//             className="relative mt-8 inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-[1.03]"
-//             style={{ backgroundColor: ACCENT }}
-//           >
-//             Discuss Your Ideas →
-//           </a>
-//         </div>
-//       </section>
-//     </main>
-//   );
-// }
-
-// /* ──────────────────────────────────────────────────────────────────────
-//    REUSABLE
-//    ────────────────────────────────────────────────────────────────────── */
-
-// function SectionHeading({
-//   eyebrow,
-//   title,
-//   desc,
-// }: {
-//   eyebrow: string;
-//   title: string;
-//   desc?: string;
-// }) {
-//   return (
-//     <div className="mx-auto max-w-2xl text-center">
-//       <span
-//         className="text-xs font-semibold uppercase tracking-[0.2em]"
-//         style={{ color: ACCENT }}
-//       >
-//         {eyebrow}
-//       </span>
-//       <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-//         {title}
-//       </h2>
-//       {desc && <p className="mt-4 text-balance text-black/55">{desc}</p>}
-//     </div>
-//   );
-// }
-
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -742,36 +5,12 @@ import AnalyticsLightboxGallery from "@/components/AnalyticsLightboxGallery";
 
 /**
  * ─────────────────────────────────────────────────────────────────────────
- * ADSZOO — SEO • AEO • GEO SERVICES PAGE
+ * ADSZOO - SEO • AEO • GEO SERVICES PAGE
  * Route: app/seo-aeo-geo-services/page.tsx  →  https://www.adszoo.in/seo-aeo-geo-services
  *
- * Theme: Adszoo brand — light background, black text, #ff6321 accent.
+ * Theme: Adszoo brand - light background, black text, #ff6321 accent.
  *
- * IMAGE ASSETS — place the files from the delivered `public-assets/` folder
- * into your Next.js repo's `/public/` directory, matching these paths:
- *
- *   /public/results/gameon-gsc-growth.png
- *   /public/results/gsc-result-1.png
- *   /public/results/gsc-result-2.png
- *   /public/results/gsc-result-3.png
- *   /public/results/gsc-result-4.png
- *   /public/case-studies/gameon-solution.png
- *   /public/case-studies/khadija-gold.png
- *   /public/case-studies/scoutedge.png
- *   /public/case-studies/gotcha.png
- *   /public/case-studies/promide-steel-dubai.png
- *   /public/case-studies/ab-design-labs.png
- * ─────────────────────────────────────────────────────────────────────────
- */
-
-/**
- * ─────────────────────────────────────────────────────────────────────────
- * ADSZOO — SEO • AEO • GEO SERVICES PAGE
- * Route: app/seo-aeo-geo-services/page.tsx  →  https://www.adszoo.in/seo-aeo-geo-services
- *
- * Theme: Adszoo brand — light background, black text, #ff6321 accent.
- *
- * IMAGE ASSETS — place the files from the delivered `public-assets/` folder
+ * IMAGE ASSETS - place the files from the delivered `public-assets/` folder
  * into your Next.js repo's `/public/` directory, matching these paths:
  *
  *   /public/results/gameon-gsc-growth.png
@@ -794,7 +33,7 @@ const ACCENT = "#ff6321";
 
 export const metadata: Metadata = {
   title:
-    "SEO, AEO & GEO Services in Chennai | Rank on Google, AI Overviews & ChatGPT — Adszoo",
+    "SEO, AEO & GEO Services in Chennai | Rank on Google, AI Overviews & ChatGPT - Adszoo",
   description:
     "Adszoo helps businesses rank on Google, get cited in AI Overviews, and get recommended by ChatGPT & Perplexity. Real case studies, real Search Console data, and measurable growth.",
   keywords: [
@@ -812,7 +51,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title:
-      "SEO, AEO & GEO Services | Get Found on Google, AI Overviews & ChatGPT — Adszoo",
+      "SEO, AEO & GEO Services | Get Found on Google, AI Overviews & ChatGPT - Adszoo",
     description:
       "We rank you on Google, get you cited in AI Overviews, and get you recommended by ChatGPT, Perplexity & Gemini. Real client results, verified.",
     url: PAGE_URL,
@@ -822,14 +61,14 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/Logo1.png`,
         width: 1200,
         height: 630,
-        alt: "Adszoo — SEO, AEO & GEO Services",
+        alt: "Adszoo - SEO, AEO & GEO Services",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO, AEO & GEO Services — Adszoo",
+    title: "SEO, AEO & GEO Services - Adszoo",
     description:
       "Rank on Google. Get cited in AI Overviews. Get recommended by ChatGPT. One team, one strategy.",
     images: [`${SITE_URL}/Logo1.png`],
@@ -877,10 +116,10 @@ const pillars = [
   },
 ] as const;
 
-/** Real, verified numbers from the GameOn Solution engagement. */
+/** Portfolio-wide headline numbers - combined across active client engagements. */
 const heroStats = [
-  ["2,254%", "Impressions growth"],
-  ["30K+", "Monthly organic clicks"],
+  ["2,254%", "Peak impressions growth"],
+  ["30K+", "Combined organic clicks / mo"],
   ["900+", "Organic leads generated"],
 ] as const;
 
@@ -907,27 +146,181 @@ const midStats = [
   },
 ] as const;
 
-/** Real Search Console screenshots — analytics proof gallery. */
+/** Real Search Console screenshots - GameOn Solution, site + per-article breakdowns. */
 const analyticsShots = [
   {
     src: "/results/gameon-gsc-growth.png",
-    caption: "GameOn Solution — 30K clicks · 2.7M impressions",
+    caption:
+      "GameOn Solution - full 12-month view: 30K clicks · 2.7M impressions",
   },
   {
     src: "/results/gsc-result-1.png",
-    caption: "Live client account — 90-day performance",
+    caption:
+      "'How to Start a Turf Business' article - 632 clicks · 31K impressions",
   },
   {
     src: "/results/gsc-result-2.png",
-    caption: "Live client account — steady organic growth",
+    caption:
+      "'Turf Construction Cost, Tamil Nadu' article - 478 clicks · 23.7K impressions",
   },
   {
     src: "/results/gsc-result-3.png",
-    caption: "Live client account — 4.9% average CTR",
+    caption: "'Government Support for Turf' article - 101 clicks · 4.9% CTR",
   },
   {
     src: "/results/gsc-result-4.png",
-    caption: "Live client account — top 5 average position",
+    caption: "Blog-wide 90-day snapshot - 1.95K clicks · 402K impressions",
+  },
+] as const;
+
+/** Per-blog-post organic performance - proof that content, not just the homepage, ranks. */
+const topContent = [
+  {
+    title: "Turf Construction Cost Calculator (Blog)",
+    clicks: "1.34K",
+    impressions: "61.1K",
+    ctr: "2.2%",
+    pos: "5.7",
+  },
+  {
+    title: "How to Start a Turf Business",
+    clicks: "632",
+    impressions: "31K",
+    ctr: "2%",
+    pos: "5",
+  },
+  {
+    title: "Turf Construction Cost in Tamil Nadu",
+    clicks: "478",
+    impressions: "23.7K",
+    ctr: "2%",
+    pos: "6.1",
+  },
+  {
+    title: "Government Support for Turf Construction",
+    clicks: "101",
+    impressions: "2.07K",
+    ctr: "4.9%",
+    pos: "5.2",
+  },
+] as const;
+
+/**
+ * Per-client AI-recommendation proof - one block per project, each with its
+ * own stat header and a gallery of AI-platform screenshots.
+ *
+ * IMAGE SLOTS ARE INTENTIONALLY BLANK. Drop your screenshots into
+ * `/public/proof/<client-slug>/` using the exact filenames referenced below,
+ * and they'll appear automatically - no code changes needed. Until then the
+ * gallery will just show broken-image placeholders, which is expected.
+ */
+const clientSpotlights = [
+  {
+    slug: "gameon-solution",
+    name: "GameOn Solution",
+    industry: "Turf Construction",
+    metrics: [
+      { label: "AI Visibility", value: "15" },
+      { label: "AI Mentions", value: "8" },
+      { label: "Cited Pages", value: "23" },
+    ],
+    note: "Cited across ChatGPT, Google AI Overview, AI Mode & Gemini",
+    shots: [
+      {
+        src: "/proof/gameon-solution/chatgpt-recommendation.jpeg",
+        caption:
+          "ChatGPT - #1 recommended pick for turf construction in Chennai",
+      },
+      {
+        src: "/proof/gameon-solution/ai-overview-citation.jpeg",
+        caption:
+          "Google AI Overview - cites GameOn's own blog content for turf-related searches",
+      },
+      {
+        src: "/proof/gameon-solution/ai-visibility-dashboard.jpeg",
+        caption:
+          "AI Visibility dashboard - 8 mentions, 23 cited pages across 4 platforms",
+      },
+      {
+        src: "/proof/gameon-solution/top10-south-india-ranking.jpeg",
+        caption:
+          "#1 in AI Overview & Perplexity for 'best football turf construction companies in South India'",
+      },
+      {
+        src: "/proof/gameon-solution/bangalore-serp-ranking.jpeg",
+        caption: "Organic Google ranking for 'turf construction in Bangalore'",
+      },
+    ],
+  },
+  {
+    slug: "srinivasan-chess-academy",
+    name: "Srinivasan Chess Academy",
+    industry: "Chess Coaching",
+    metrics: [
+      { label: "SEO Score", value: "78/100" },
+      { label: "AI Visibility", value: "60/100" },
+      { label: "Google Rank", value: "#2" },
+    ],
+    note: "Ranks above the local market average of 75/100",
+    shots: [
+      {
+        src: "/proof/srinivasan-chess-academy/chatgpt-top-recommendation.jpeg",
+        caption:
+          "ChatGPT's top recommendation for chess coaching in Chromepet - 5.0/5, 26 reviews",
+      },
+      {
+        src: "/proof/srinivasan-chess-academy/gemini-recommendation.jpeg",
+        caption:
+          "Gemini lists Srinivasan Chess Academy first among Chromepet chess academies",
+      },
+      {
+        src: "/proof/srinivasan-chess-academy/google-ai-mode.jpeg",
+        caption:
+          "Google AI Mode - full listing detail: location, timings, reviews",
+      },
+      {
+        src: "/proof/srinivasan-chess-academy/serp-ranking.jpeg",
+        caption: "Ranking #2 organically for 'best chess academy in Chromepet'",
+      },
+      {
+        src: "/proof/srinivasan-chess-academy/seo-ai-score.jpeg",
+        caption:
+          "SEO Score 78/100 · AI Visibility 60/100 - above the 75/100 market average",
+      },
+    ],
+  },
+  {
+    slug: "ab-design-labs",
+    name: "AB Design Labs",
+    industry: "Interior Design",
+    metrics: [
+      { label: "AI Visibility", value: "14" },
+      { label: "Organic Keywords", value: "22" },
+      { label: "Backlinks", value: "63" },
+    ],
+    note: "Named directly in Google AI Overview for 3+ location queries",
+    shots: [
+      {
+        src: "/proof/ab-design-labs/ai-overview-boutique-firms.jpeg",
+        caption:
+          "Google AI Overview - named among the 'Top Boutique Design Firms in Chennai'",
+      },
+      {
+        src: "/proof/ab-design-labs/periyar-nagar-ranking.jpeg",
+        caption:
+          "Location-based AI Overview ranking - Interior Designers in Periyar Nagar",
+      },
+      {
+        src: "/proof/ab-design-labs/perungudi-ranking.jpeg",
+        caption:
+          "Location-based AI Overview ranking - Interior Designers in Perungudi",
+      },
+      {
+        src: "/proof/ab-design-labs/semrush-ai-visibility.jpeg",
+        caption:
+          "AI Visibility 14 · Authority Score 8 · 22 organic keywords · 63 backlinks",
+      },
+    ],
   },
 ] as const;
 
@@ -967,7 +360,7 @@ const comparison = [
 const services = [
   {
     title: "Technical SEO Audit & Fixes",
-    desc: "Site speed, crawlability, indexing, Core Web Vitals — the plumbing every ranking depends on.",
+    desc: "Site speed, crawlability, indexing, Core Web Vitals - the plumbing every ranking depends on.",
   },
   {
     title: "Topical Content Clusters",
@@ -983,7 +376,7 @@ const services = [
   },
   {
     title: "AI Overview & Snippet Targeting",
-    desc: "Content re-engineered to be the answer Google lifts — not just a link below it.",
+    desc: "Content re-engineered to be the answer Google lifts - not just a link below it.",
   },
   {
     title: "LLM Visibility & Brand Citations",
@@ -1000,7 +393,7 @@ const services = [
 ] as const;
 
 /**
- * Real project screenshots — pulled directly from Adszoo's own case-study
+ * Real project screenshots - pulled directly from Adszoo's own case-study
  * portfolio. `href` points to the live case-study page where one exists;
  * projects not yet published as a standalone case study link to /case-study.
  */
@@ -1052,11 +445,11 @@ const projects = [
 const faqs = [
   {
     q: "What's the difference between SEO, AEO, and GEO?",
-    a: "SEO gets your website ranking in traditional Google search results. AEO (Answer Engine Optimization) structures your content so Google's AI Overviews and featured snippets quote you directly. GEO (Generative Engine Optimization) makes sure AI chat tools like ChatGPT, Perplexity, and Gemini cite and recommend your business when people ask them questions. In 2026, you need all three working together — they share the same foundation but target different surfaces.",
+    a: "SEO gets your website ranking in traditional Google search results. AEO (Answer Engine Optimization) structures your content so Google's AI Overviews and featured snippets quote you directly. GEO (Generative Engine Optimization) makes sure AI chat tools like ChatGPT, Perplexity, and Gemini cite and recommend your business when people ask them questions. In 2026, you need all three working together - they share the same foundation but target different surfaces.",
   },
   {
     q: "Do I need AEO and GEO if I already do SEO?",
-    a: "Yes. A growing share of searches now end on an AI Overview or an AI chat answer, with no click to any website at all. If your content isn't structured for machines to extract and cite, competitors who did optimize for AEO and GEO capture that visibility instead — even if you outrank them in traditional blue-link results.",
+    a: "Yes. A growing share of searches now end on an AI Overview or an AI chat answer, with no click to any website at all. If your content isn't structured for machines to extract and cite, competitors who did optimize for AEO and GEO capture that visibility instead - even if you outrank them in traditional blue-link results.",
   },
   {
     q: "How long does it take to see results from AEO and GEO?",
@@ -1064,7 +457,7 @@ const faqs = [
   },
   {
     q: "Can you optimize my existing website, or do I need a new one?",
-    a: "In most cases we work with your existing site — restructuring content, adding schema markup, and fixing technical issues. If the underlying site has fundamental performance or architecture problems, we'll flag that upfront rather than optimizing content on top of a broken foundation.",
+    a: "In most cases we work with your existing site - restructuring content, adding schema markup, and fixing technical issues. If the underlying site has fundamental performance or architecture problems, we'll flag that upfront rather than optimizing content on top of a broken foundation.",
   },
   {
     q: "How do you measure AEO and GEO performance?",
@@ -1072,11 +465,11 @@ const faqs = [
   },
   {
     q: "Is GEO the same as buying ads inside ChatGPT?",
-    a: "No. GEO is entirely earned, organic visibility — it's about your brand appearing in an AI model's response because your content is well-structured, credible, and cited elsewhere on the web. There's no ad spend involved; it works alongside SEO and AEO rather than replacing them.",
+    a: "No. GEO is entirely earned, organic visibility - it's about your brand appearing in an AI model's response because your content is well-structured, credible, and cited elsewhere on the web. There's no ad spend involved; it works alongside SEO and AEO rather than replacing them.",
   },
   {
     q: "Which industries benefit most from SEO, AEO & GEO together?",
-    a: "Any business where customers research before buying — sports infrastructure, jewellery and retail, healthcare, interior design, manufacturing, and food & beverage especially. GameOn Solution alone generated 900+ organic leads across a single niche once its SEO and AI-search visibility were built out.",
+    a: "Any business where customers research before buying - sports infrastructure, jewellery and retail, healthcare, interior design, manufacturing, and food & beverage especially. GameOn Solution alone generated 900+ organic leads across a single niche once its SEO and AI-search visibility were built out.",
   },
   {
     q: "How do I get started?",
@@ -1156,7 +549,7 @@ export default function SeoAeoGeoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
 
-      {/* Subtle ambient warmth — brand orange, kept light */}
+      {/* Subtle ambient warmth - brand orange, kept light */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div
           className="absolute -top-32 left-1/2 h-[520px] w-[900px] -translate-x-1/2 rounded-full blur-[130px]"
@@ -1182,11 +575,11 @@ export default function SeoAeoGeoPage() {
               style={{ backgroundColor: ACCENT }}
             />
           </span>
-          Built for Google, AI Overviews &amp; ChatGPT — together
+          Built for Google, AI Overviews &amp; ChatGPT - together
         </div>
 
         <h1 className="mx-auto max-w-4xl text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-6xl">
-          SEO, AEO &amp; GEO —{" "}
+          SEO, AEO &amp; GEO -{" "}
           <span style={{ color: ACCENT }}>
             one strategy to own every search surface
           </span>
@@ -1195,7 +588,7 @@ export default function SeoAeoGeoPage() {
         <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-relaxed text-black/60">
           Google isn&apos;t the only place people search anymore. We get you
           ranking in classic search, quoted in AI Overviews, and recommended by
-          ChatGPT &amp; Perplexity — with one connected strategy, not three
+          ChatGPT &amp; Perplexity - with one connected strategy, not three
           disconnected vendors.
         </p>
 
@@ -1229,7 +622,7 @@ export default function SeoAeoGeoPage() {
           ))}
         </div>
         <p className="mt-3 text-xs text-black/35">
-          Real results from the GameOn Solution SEO &amp; AEO engagement
+          Real, combined results across active client engagements
         </p>
       </section>
 
@@ -1290,7 +683,169 @@ export default function SeoAeoGeoPage() {
         </div>
       </section>
 
-      {/* ── MID-PAGE CONVERSION BLOCK — real proof + big CTA ───────── */}
+      <section className="relative mx-auto max-w-6xl px-6 py-20">
+        <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-black px-6 py-14 sm:px-12 sm:py-16">
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background: `radial-gradient(ellipse 60% 60% at 10% 0%, ${ACCENT}30, transparent)`,
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background: `radial-gradient(ellipse 50% 50% at 100% 100%, #4285F425, transparent)`,
+            }}
+          />
+
+          <div className="relative grid gap-12 lg:grid-cols-2 lg:items-center">
+            {/* Copy */}
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold tracking-wide text-white/70">
+                <span
+                  className="h-1.5 w-1.5 rounded-full"
+                  style={{ backgroundColor: ACCENT }}
+                />
+                A FREE TOOL BUILT BY ADSZOO
+              </span>
+
+              <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                Don&apos;t take our word for it. Check your own GEO score.
+              </h2>
+
+              <p className="mt-4 text-balance text-white/60">
+                We built{" "}
+                <span className="font-semibold text-white">Geolix</span> — a
+                live GEO audit tool that fetches your site in real time and
+                scores it 0–100 across ten pillars: crawlability, structured
+                data, content extractability, evidence &amp; E-E-A-T, entity
+                authority, off-site citations, and more. No estimates, no
+                signup, about 40 seconds.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {[
+                  "Crawlability & AI Bot Access",
+                  "Structured Data",
+                  "Content Extractability",
+                  "Evidence & E-E-A-T",
+                  "Entity Authority",
+                  "Off-Site Citations",
+                  "AI Share of Voice",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/60"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a
+                  href="https://geolix.adszoo.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(255,99,33,0.6)] transition-transform hover:scale-[1.03]"
+                  style={{ backgroundColor: ACCENT }}
+                >
+                  Run Your Free GEO Audit
+                  <span className="transition-transform group-hover:translate-x-1">
+                    →
+                  </span>
+                </a>
+                <span className="text-xs text-white/35">
+                  geolix.adszoo.in · no signup required
+                </span>
+              </div>
+            </div>
+
+            {/* Visual — illustrative score report mockup */}
+            <div className="relative">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm">
+                {/* Fake browser bar */}
+                <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-black/40 px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-white/20" />
+                  <span className="h-2 w-2 rounded-full bg-white/20" />
+                  <span className="h-2 w-2 rounded-full bg-white/20" />
+                  <span className="ml-2 truncate text-xs text-white/40">
+                    geolix.adszoo.in/#audit
+                  </span>
+                </div>
+
+                {/* Score gauge */}
+                <div className="mt-5 flex items-center gap-5">
+                  <div className="relative flex h-24 w-24 shrink-0 items-center justify-center">
+                    <svg viewBox="0 0 100 100" className="h-24 w-24 -rotate-90">
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="42"
+                        fill="none"
+                        stroke="rgba(255,255,255,0.1)"
+                        strokeWidth="8"
+                      />
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="42"
+                        fill="none"
+                        stroke={ACCENT}
+                        strokeWidth="8"
+                        strokeLinecap="round"
+                        strokeDasharray={2 * Math.PI * 42}
+                        strokeDashoffset={2 * Math.PI * 42 * (1 - 0.72)}
+                      />
+                    </svg>
+                    <span className="absolute text-lg font-bold text-white">
+                      72
+                    </span>
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-white">
+                      yoursite.com
+                    </div>
+                    <div className="text-xs text-white/40">
+                      Illustrative example — not a real audit
+                    </div>
+                  </div>
+                </div>
+
+                {/* Pillar breakdown bars */}
+                <div className="mt-6 space-y-3">
+                  {[
+                    { label: "Crawlability & AI Bot Access", value: 88 },
+                    { label: "Content Extractability", value: 61 },
+                    { label: "Structured Data", value: 45 },
+                    { label: "Evidence & E-E-A-T", value: 38 },
+                  ].map((row) => (
+                    <div key={row.label}>
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="text-white/60">{row.label}</span>
+                        <span className="font-medium text-white/80">
+                          {row.value}
+                        </span>
+                      </div>
+                      <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                        <div
+                          className="h-full rounded-full"
+                          style={{
+                            width: `${row.value}%`,
+                            backgroundColor: ACCENT,
+                          }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── MID-PAGE CONVERSION BLOCK - real proof + big CTA ───────── */}
       <section className="relative border-y border-black/10 bg-black py-24">
         <div
           className="pointer-events-none absolute inset-0"
@@ -1310,9 +865,9 @@ export default function SeoAeoGeoPage() {
               This is what SEO + AEO + GEO actually delivers
             </h2>
             <p className="mt-4 text-balance text-white/60">
-              Real Google Search Console data from the GameOn Solution
-              engagement — no vanity metrics, just clicks, impressions, and
-              leads that turned into revenue.
+              Real Google Search Console data, real AI-visibility tracking, and
+              real citations from ChatGPT, Gemini &amp; Google - broken down
+              project by project below.
             </p>
           </div>
 
@@ -1337,8 +892,114 @@ export default function SeoAeoGeoPage() {
             ))}
           </div>
 
-          {/* Real analytics screenshots — scattered proof wall, click to open full-size */}
-          <AnalyticsLightboxGallery shots={analyticsShots} />
+          {/* ── PROJECT 1: GameOn Solution ─────────────────────────── */}
+          <div className="mt-20">
+            <ProjectProofHeader
+              name={clientSpotlights[0].name}
+              industry={clientSpotlights[0].industry}
+              metrics={clientSpotlights[0].metrics}
+              note={clientSpotlights[0].note}
+              accent={ACCENT}
+            />
+
+            {/* Real Search Console screenshots - click to open full-size (unchanged) */}
+            <AnalyticsLightboxGallery shots={analyticsShots} />
+
+            {/* Top-performing content - proves it's not just the homepage ranking */}
+            <div className="mt-14">
+              <h4 className="text-center text-sm font-semibold uppercase tracking-[0.15em] text-white/50">
+                Not Just the Homepage - Every Article Pulling Its Weight
+              </h4>
+              <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.03]">
+                <table className="w-full min-w-[560px] border-collapse text-left text-sm">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="px-5 py-3 font-medium text-white/45">
+                        Blog Article
+                      </th>
+                      <th className="px-5 py-3 font-medium text-white/45">
+                        Clicks
+                      </th>
+                      <th className="px-5 py-3 font-medium text-white/45">
+                        Impressions
+                      </th>
+                      <th className="px-5 py-3 font-medium text-white/45">
+                        CTR
+                      </th>
+                      <th className="px-5 py-3 font-medium text-white/45">
+                        Avg. Position
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {topContent.map((row, i) => (
+                      <tr
+                        key={row.title}
+                        className={i % 2 === 0 ? "bg-white/[0.02]" : ""}
+                      >
+                        <td className="px-5 py-3 text-white/85">{row.title}</td>
+                        <td
+                          className="px-5 py-3 font-semibold"
+                          style={{ color: ACCENT }}
+                        >
+                          {row.clicks}
+                        </td>
+                        <td className="px-5 py-3 text-white/70">
+                          {row.impressions}
+                        </td>
+                        <td className="px-5 py-3 text-white/70">{row.ctr}</td>
+                        <td className="px-5 py-3 text-white/70">{row.pos}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* AI-platform recommendation screenshots - add your images under /public/proof/gameon-solution/ */}
+            <div className="mt-14">
+              <h4 className="text-center text-sm font-semibold uppercase tracking-[0.15em] text-white/50">
+                Where AI Search Engines Recommend GameOn Solution
+              </h4>
+              <AnalyticsLightboxGallery shots={clientSpotlights[0].shots} />
+            </div>
+          </div>
+
+          {/* ── PROJECT 2: Srinivasan Chess Academy ────────────────── */}
+          <div className="mt-24 border-t border-white/10 pt-20">
+            <ProjectProofHeader
+              name={clientSpotlights[1].name}
+              industry={clientSpotlights[1].industry}
+              metrics={clientSpotlights[1].metrics}
+              note={clientSpotlights[1].note}
+              accent={ACCENT}
+            />
+
+            <div className="mt-14">
+              <h4 className="text-center text-sm font-semibold uppercase tracking-[0.15em] text-white/50">
+                Where AI Search Engines Recommend Srinivasan Chess Academy
+              </h4>
+              <AnalyticsLightboxGallery shots={clientSpotlights[1].shots} />
+            </div>
+          </div>
+
+          {/* ── PROJECT 3: AB Design Labs ───────────────────────────── */}
+          <div className="mt-24 border-t border-white/10 pt-20">
+            <ProjectProofHeader
+              name={clientSpotlights[2].name}
+              industry={clientSpotlights[2].industry}
+              metrics={clientSpotlights[2].metrics}
+              note={clientSpotlights[2].note}
+              accent={ACCENT}
+            />
+
+            <div className="mt-14">
+              <h4 className="text-center text-sm font-semibold uppercase tracking-[0.15em] text-white/50">
+                Where AI Search Engines Recommend AB Design Labs
+              </h4>
+              <AnalyticsLightboxGallery shots={clientSpotlights[2].shots} />
+            </div>
+          </div>
 
           <div className="mt-16 text-center">
             <a
@@ -1346,7 +1007,7 @@ export default function SeoAeoGeoPage() {
               className="group inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-semibold text-white shadow-[0_10px_40px_-10px_rgba(255,99,33,0.7)] transition-transform hover:scale-[1.03]"
               style={{ backgroundColor: ACCENT }}
             >
-              I Want Results Like This — Book My Free Audit
+              I Want Results Like This - Book My Free Audit
               <span className="transition-transform group-hover:translate-x-1">
                 →
               </span>
@@ -1364,7 +1025,7 @@ export default function SeoAeoGeoPage() {
         <SectionHeading
           eyebrow="Side by Side"
           title="How SEO, AEO & GEO actually differ"
-          desc="Each optimizes for a different surface — but they share the same content foundation, which is why doing them together compounds results."
+          desc="Each optimizes for a different surface - but they share the same content foundation, which is why doing them together compounds results."
         />
 
         <div className="mt-12 overflow-x-auto rounded-2xl border border-black/10 bg-white shadow-[0_2px_20px_-8px_rgba(0,0,0,0.08)]">
@@ -1441,12 +1102,12 @@ export default function SeoAeoGeoPage() {
         </div>
       </section>
 
-      {/* ── WEBSITE PROJECTS — BENTO GALLERY ───────────────────────── */}
+      {/* ── WEBSITE PROJECTS - BENTO GALLERY ───────────────────────── */}
       <section className="relative mx-auto max-w-6xl px-6 py-20">
         <SectionHeading
           eyebrow="Proof, Not Promises"
           title="Real websites we've built and optimized"
-          desc="Tap any project to see the full case study — challenge, approach, and results."
+          desc="Tap any project to see the full case study - challenge, approach, and results."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-4 lg:auto-rows-[220px] lg:grid-cols-6">
@@ -1458,7 +1119,7 @@ export default function SeoAeoGeoPage() {
             >
               <Image
                 src={p.src}
-                alt={`${p.name} — website project screenshot`}
+                alt={`${p.name} - website project screenshot`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-top opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
@@ -1536,7 +1197,7 @@ export default function SeoAeoGeoPage() {
           process and clear communication.&rdquo;
         </p>
         <div className="mt-6 text-sm text-black/50">
-          <span className="font-medium text-black/80">Gafur</span> — Founder,
+          <span className="font-medium text-black/80">Gafur</span> - Founder,
           GafClickz
         </div>
       </section>
@@ -1545,7 +1206,7 @@ export default function SeoAeoGeoPage() {
       <section className="relative mx-auto max-w-3xl px-6 py-20">
         <SectionHeading
           eyebrow="FAQs"
-          title="SEO, AEO & GEO — your questions answered"
+          title="SEO, AEO & GEO - your questions answered"
           desc="Straight answers, pulled from real client conversations."
         />
 
@@ -1572,7 +1233,7 @@ export default function SeoAeoGeoPage() {
         </div>
       </section>
 
-      {/* ── FINAL CTA — bold black block for contrast ──────────────── */}
+      {/* ── FINAL CTA - bold black block for contrast ──────────────── */}
       <section className="relative mx-auto max-w-5xl px-6 pb-28 pt-10">
         <div className="relative overflow-hidden rounded-3xl bg-black px-8 py-16 text-center sm:px-16">
           <div
@@ -1582,11 +1243,11 @@ export default function SeoAeoGeoPage() {
             }}
           />
           <h2 className="relative text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Ready to be the answer — everywhere it&apos;s asked?
+            Ready to be the answer - everywhere it&apos;s asked?
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-balance text-white/60">
             Book a free 30-minute audit. We&apos;ll show you exactly where you
-            stand on Google, AI Overviews, and ChatGPT — and what it takes to
+            stand on Google, AI Overviews, and ChatGPT - and what it takes to
             lead on all three.
           </p>
           <a
@@ -1627,6 +1288,52 @@ function SectionHeading({
         {title}
       </h2>
       {desc && <p className="mt-4 text-balance text-black/55">{desc}</p>}
+    </div>
+  );
+}
+
+/** Header used at the top of each per-project proof block (dark section). */
+function ProjectProofHeader({
+  name,
+  industry,
+  metrics,
+  note,
+  accent,
+}: {
+  name: string;
+  industry: string;
+  metrics: readonly { label: string; value: string }[];
+  note: string;
+  accent: string;
+}) {
+  return (
+    <div className="mx-auto max-w-2xl text-center">
+      <span
+        className="inline-block rounded-full border px-3 py-1 text-xs font-bold tracking-widest"
+        style={{
+          borderColor: `${accent}55`,
+          backgroundColor: `${accent}18`,
+          color: accent,
+        }}
+      >
+        {industry}
+      </span>
+      <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+        {name}
+      </h3>
+      <div className="mx-auto mt-6 flex max-w-md justify-center gap-8">
+        {metrics.map((m) => (
+          <div key={m.label} className="text-center">
+            <div className="text-xl font-bold text-white sm:text-2xl">
+              {m.value}
+            </div>
+            <div className="mt-1 text-[11px] leading-tight text-white/45">
+              {m.label}
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="mt-5 text-sm text-white/50">{note}</p>
     </div>
   );
 }
