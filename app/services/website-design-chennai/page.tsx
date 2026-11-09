@@ -4,6 +4,16 @@ import { FooterSection } from "@/components/layout/sections/footer";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Website Design & Development Company in Chennai | Conversion-Focused — Adszoo",
+  description: "Adszoo is a Chennai website development company building fast, SEO-ready, conversion-focused websites for manufacturers, builders, clinics and growing businesses.",
+  alternates: { canonical: "/services/website-design-chennai" },
+  openGraph: { url: "/services/website-design-chennai", title: "Website Design & Development Company in Chennai | Conversion-Focused — Adszoo", description: "Adszoo is a Chennai website development company building fast, SEO-ready, conversion-focused websites for manufacturers, builders, clinics and growing businesses." },
+};
+
+
+
 const serviceName = "Website Design Company Chennai";
 
 const whatsappLink = `https://wa.me/916369050929?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(

@@ -1,429 +1,153 @@
-// import { Separator } from "@/components/ui/separator";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-
-// export const FooterSection = () => {
-//   const currentYear = new Date().getFullYear();
-
-//   return (
-//     <footer id="footer" className="container py-4 sm:py-4">
-//       <div className="p-10 bg-card border border-secondary rounded-2xl">
-//         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
-//           <div className="col-span-full xl:col-span-2">
-//             <Link href="/" className="font-bold text-lg flex items-center">
-//               <Image
-//                 src="/Logo.webp"
-//                 alt="Adszoo Logo"
-//                 width={24}
-//                 height={24}
-//                 style={{ marginRight: "6px" }}
-//               />
-//               ADSZOO
-//             </Link>
-//           </div>
-
-//           <div className="flex flex-col gap-2">
-//             <h3 className="font-bold text-lg">Pages</h3>
-//             <div>
-//               <Link href="/services" className="opacity-60 hover:opacity-100">
-//                 Services
-//               </Link>
-//             </div>
-//             <div>
-//               <Link href="/" className="opacity-60 hover:opacity-100">
-//                 About Us
-//               </Link>
-//             </div>
-//             <div>
-//               <Link href="#contact" className="opacity-60 hover:opacity-100">
-//                 Contact Us
-//               </Link>
-//             </div>
-//           </div>
-
-//           <div className="flex flex-col gap-2">
-//             <h3 className="font-bold text-lg">Services</h3>
-//             <div>
-//               <Link href="/" className="opacity-60 hover:opacity-100">
-//                 Web Development
-//               </Link>
-//             </div>
-//             <div>
-//               <Link href="/" className="opacity-60 hover:opacity-100">
-//                 Lead Generation
-//               </Link>
-//             </div>
-//             <div>
-//               <Link href="/" className="opacity-60 hover:opacity-100">
-//                 Social Media Management
-//               </Link>
-//             </div>
-//           </div>
-
-//           <div className="flex flex-col gap-2">
-//             <h3 className="font-bold text-lg">Help</h3>
-//             <div>
-//               <Link href="#contact" className="opacity-60 hover:opacity-100">
-//                 Contact Us
-//               </Link>
-//             </div>
-//             <div>
-//               <Link href="#faq" className="opacity-60 hover:opacity-100">
-//                 FAQ
-//               </Link>
-//             </div>
-//             <div>
-//               <Link href="/" className="opacity-60 hover:opacity-100">
-//                 Feedback
-//               </Link>
-//             </div>
-//           </div>
-
-//           <div className="flex flex-col gap-2">
-//             <h3 className="font-bold text-lg">Quick Links</h3>
-//             <div>
-//               <Link
-//                 href="https://www.freeprivacypolicy.com/live/88aab8d7-80e1-4933-b668-bd3ade2e645a"
-//                 className="opacity-60 hover:opacity-100"
-//               >
-//                 Privacy Policy
-//               </Link>
-//             </div>
-//             <div>
-//               <Link
-//                 href="https://www.termsfeed.com/live/a6fc321c-401b-4e40-a8f8-b488b9697882"
-//                 className="opacity-60 hover:opacity-100"
-//               >
-//                 Terms and Conditions
-//               </Link>
-//             </div>
-//             <div>
-//               <Link
-//                 href="https://www.termsfeed.com/live/a6fc321c-401b-4e40-a8f8-b488b9697882"
-//                 className="opacity-60 hover:opacity-100"
-//               >
-//                 Code of Conduct
-//               </Link>
-//             </div>
-//           </div>
-//         </div>
-
-//         <Separator className="my-6" />
-
-//         <section className="flex justify-between items-center">
-//           <h3>
-//             &copy; {currentYear} All rights reserved
-//             <Link
-//               target="_blank"
-//               href="/"
-//               className="text-primary transition-all border-primary hover:border-b-2 ml-1"
-//             >
-//               Adszoo
-//             </Link>
-//           </h3>
-
-//           <div className="flex gap-4">
-//             <Link
-//               href="https://www.facebook.com/profile.php?id=61565406179842"
-//               target="_blank"
-//             >
-//               <Facebook className="w-5 h-5 text-accent-foreground hover:text-primary" />
-//             </Link>
-//             <Link href="https://x.com/Kailash61203" target="_blank">
-//               <Twitter className="w-5 h-5 text-accent-foreground hover:text-primary" />
-//             </Link>
-//             <Link href="https://www.instagram.com/adszoo_/" target="_blank">
-//               <Instagram className="w-5 h-5 text-accent-foreground hover:text-primary" />
-//             </Link>
-//             <Link
-//               href="https://www.linkedin.com/company/adszoo/"
-//               target="_blank"
-//             >
-//               <Linkedin className="w-5 h-5 text-accent-foreground hover:text-primary" />
-//             </Link>
-//           </div>
-//         </section>
-//       </div>
-//     </footer>
-//   );
-// };
-
 "use client";
 
-import {
-  Mail,
-  MapPin,
-  Phone,
-  Facebook,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { CONTACT, waLink } from "@/lib/site";
+
+const columns: { title: string; links: { label: string; href: string }[] }[] = [
+  {
+    title: "Services",
+    links: [
+      { label: "Website Development", href: "/services/conversion-focused-websites" },
+      { label: "E-commerce Websites", href: "/services/ecommerce-website-development" },
+      { label: "Custom Software Development", href: "/services/custom-software-development" },
+      { label: "Mobile App Development", href: "/services/mobile-app-development" },
+      { label: "SEO for Manufacturers", href: "/services/seo-for-manufacturers" },
+      { label: "SEO, AEO & GEO", href: "/seo-aeo-geo-services" },
+      { label: "Social Media Marketing", href: "/services/social-media-marketing" },
+      { label: "Google Ads Management", href: "/services/google-ads-management" },
+      { label: "Meta Ads Management", href: "/services/meta-ads-management" },
+      { label: "Landing Page Design", href: "/services/landing-page-design" },
+      { label: "Lead Generation Systems", href: "/services/lead-generation-systems" },
+    ],
+  },
+  {
+    title: "Products",
+    links: [
+      { label: "All Products", href: "/products" },
+      { label: "Unizo — GST Billing & Inventory", href: "/products/unizo-gst-billing-inventory-software" },
+      { label: "PropertyGenie — Real Estate", href: "/products/propertygenie-real-estate-listing-software" },
+      { label: "Smart Queue — Restaurants", href: "/products/smart-queue-restaurant-queue-management-system" },
+    ],
+  },
+  {
+    title: "Our Work",
+    links: [
+      { label: "All Case Studies", href: "/case-study" },
+      { label: "Hitech Insulation (B2B SEO)", href: "/case-study/hitech-insulation" },
+      { label: "Srinivasan Chess Academy", href: "/case-study/srinivasan-chess-academy" },
+      { label: "KVM Agencies (Software)", href: "/case-study/kvm-agencies" },
+      { label: "Supreme Aluminium", href: "/case-study/supreme-aluminium" },
+    ],
+  },
+  {
+    title: "Industries",
+    links: [
+      { label: "Manufacturing & B2B", href: "/services/seo-for-manufacturers" },
+      { label: "Real Estate", href: "/industries/marketing-for-real-estate" },
+      { label: "Healthcare", href: "/industries/marketing-for-hospitals" },
+      { label: "Dental Clinics", href: "/industries/marketing-for-dentists" },
+      { label: "Interior Designers", href: "/industries/marketing-for-interior-designers" },
+      { label: "E-commerce", href: "/industries/marketing-for-ecommerce" },
+      { label: "All Industries", href: "/industries" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { label: "Blog", href: "/blogs" },
+      { label: "Marketing Guides", href: "/resources/marketing-guides" },
+      { label: "Website Conversion Guide", href: "/resources/website-conversion-guide" },
+      { label: "Lead Generation Guide", href: "/resources/lead-generation-guide" },
+      { label: "SEO, AEO & GEO Guide", href: "/blogs/seo-aeo-geo-complete-guide" },
+    ],
+  },
+  {
+    title: "Company & Locations",
+    links: [
+      { label: "About Adszoo", href: "/company/about-adszoo" },
+      { label: "Contact Us", href: "/contact" },
+      { label: "Careers", href: "/company/careers" },
+      { label: "Partners", href: "/company/partners" },
+      { label: "Digital Marketing Agency Chennai", href: "/locations/digital-marketing-agency-chennai" },
+      { label: "Website Design Chennai", href: "/services/website-design-chennai" },
+      { label: "Website Design Tambaram", href: "/services/website-design-tambaram" },
+      { label: "Google Ads Agency Chennai", href: "/locations/google-ads-agency-chennai" },
+      { label: "Meta Ads Agency Chennai", href: "/locations/meta-ads-agency-chennai" },
+    ],
+  },
+];
 
 export const FooterSection = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white text-black py-16 border-t tracking-tighter">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
-        {/* Logo + About */}
-        <div>
-          <Link href="/" className="flex items-center mb-4">
-            <Image src="/Logo1.png" alt="Adszoo Logo" width={32} height={32} />
-            <span className="ml-2 font-bold text-xl">Adszoo</span>
-          </Link>
-
-          <p className="text-sm text-muted-foreground mb-4">
-            We help businesses turn website visitors into paying customers
-            through conversion-focused websites, high-intent advertising, and
-            data-driven marketing systems.
-          </p>
-
-          <div className="flex gap-4 mt-4">
-            <Link href="https://www.facebook.com/profile.php?id=61565406179842">
-              <Facebook className="w-5 h-5 hover:text-primary" />
+    <footer className="bg-white text-black pt-16 border-t tracking-tight">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_3fr]">
+          {/* Brand + NAP */}
+          <div>
+            <Link href="/" className="flex items-center mb-4">
+              <Image src="/Logo1.png" alt="Adszoo logo" width={32} height={32} />
+              <span className="ml-2 font-bold text-xl">Adszoo</span>
             </Link>
-            <Link href="https://www.linkedin.com/company/adszoo/">
-              <Linkedin className="w-5 h-5 hover:text-primary" />
-            </Link>
-            <Link href="https://www.instagram.com/adszoo_/">
-              <Instagram className="w-5 h-5 hover:text-primary" />
-            </Link>
+            <p className="text-sm text-gray-600 mb-5">
+              Chennai-based digital marketing &amp; software company. Conversion-focused websites, custom
+              software &amp; apps, social media marketing and SEO/AEO/GEO that bring in enquiries — especially
+              for B2B manufacturers.
+            </p>
+            <address className="not-italic space-y-3 text-sm text-gray-700">
+              <a href={CONTACT.phoneHref} className="flex items-start gap-2 hover:text-[#ff6321]">
+                <Phone className="w-4 h-4 mt-0.5 shrink-0" /> {CONTACT.phone}
+              </a>
+              <a
+                href={waLink("Hi Adszoo, I'd like to know more about your software products.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 hover:text-[#ff6321]"
+              >
+                <MessageCircle className="w-4 h-4 mt-0.5 shrink-0" /> {CONTACT.productPhone} (WhatsApp · Products)
+              </a>
+              <a href={`mailto:${CONTACT.email}`} className="flex items-start gap-2 hover:text-[#ff6321]">
+                <Mail className="w-4 h-4 mt-0.5 shrink-0" /> {CONTACT.email}
+              </a>
+              <span className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" /> {CONTACT.address.full}
+              </span>
+            </address>
+            <div className="flex gap-4 mt-5">
+              <a href="https://www.facebook.com/profile.php?id=61565406179842" target="_blank" rel="noopener" aria-label="Adszoo on Facebook">
+                <Facebook className="w-5 h-5 hover:text-[#ff6321]" />
+              </a>
+              <a href="https://www.linkedin.com/company/adszoo/" target="_blank" rel="noopener" aria-label="Adszoo on LinkedIn">
+                <Linkedin className="w-5 h-5 hover:text-[#ff6321]" />
+              </a>
+              <a href="https://www.instagram.com/adszoo_/" target="_blank" rel="noopener" aria-label="Adszoo on Instagram">
+                <Instagram className="w-5 h-5 hover:text-[#ff6321]" />
+              </a>
+            </div>
           </div>
+
+          <nav aria-label="Footer" className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            {columns.map((col) => (
+              <div key={col.title} className="flex flex-col gap-2">
+                <p className="font-bold text-base mb-1">{col.title}</p>
+                {col.links.map((l) => (
+                  <Link key={l.href + l.label} href={l.href} className="text-sm text-gray-600 hover:text-[#ff6321]">
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </nav>
         </div>
 
-        {/* Services */}
-        <div className="flex flex-col gap-2">
-          <h4 className="font-bold text-lg mb-2">Services</h4>
-
-          <Link
-            href="/services/conversion-focused-websites"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Conversion Focused Websites
-          </Link>
-
-          <Link
-            href="/services/landing-page-design"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Landing Page Design
-          </Link>
-
-          <Link
-            href="/services/google-ads-management"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Google Ads Management
-          </Link>
-
-          <Link
-            href="/services/meta-ads-management"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Meta Ads Management
-          </Link>
-
-          <Link
-            href="/services/conversion-rate-optimization"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Conversion Rate Optimization
-          </Link>
-
-          <Link
-            href="/services/lead-generation-systems"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Lead Generation Systems
-          </Link>
-
-          <Link
-            href="/services/sales-funnel-building"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Sales Funnel Building
-          </Link>
+        <div className="mt-12 border-t pt-6 flex flex-col md:flex-row justify-between gap-3 text-sm text-gray-500">
+          <span>© {currentYear} Adszoo. All rights reserved.</span>
+          <span>Website Development · Software · SEO/AEO/GEO · Social Media — Chennai, Tamil Nadu, India</span>
         </div>
-
-        {/* Industries */}
-        <div className="flex flex-col gap-2">
-          <h4 className="font-bold text-lg mb-2">Industries</h4>
-
-          <Link
-            href="/industries/marketing-for-real-estate"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Real Estate Marketing
-          </Link>
-
-          <Link
-            href="/industries/marketing-for-dentists"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Dental Marketing
-          </Link>
-
-          <Link
-            href="/industries/marketing-for-interior-designers"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Interior Design Marketing
-          </Link>
-
-          <Link
-            href="/industries/marketing-for-hospitals"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Healthcare Marketing
-          </Link>
-
-          <Link
-            href="/industries/marketing-for-ecommerce"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Ecommerce Marketing
-          </Link>
-        </div>
-
-        {/* Resources */}
-        <div className="flex flex-col gap-2">
-          <h4 className="font-bold text-lg mb-2">Resources</h4>
-
-          <Link
-            href="/resources/marketing-blog"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Marketing Blog
-          </Link>
-
-          <Link
-            href="/case-study"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Case Studies
-          </Link>
-
-          <Link
-            href="/resources/marketing-guides"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Marketing Guides
-          </Link>
-
-          <Link
-            href="/resources/website-conversion-guide"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Website Conversion Guide
-          </Link>
-
-          <Link
-            href="/resources/lead-generation-guide"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Lead Generation Guide
-          </Link>
-        </div>
-
-        {/* Company */}
-        <div className="flex flex-col gap-2">
-          <h4 className="font-bold text-lg mb-2">Company</h4>
-
-          <Link
-            href="/company/about-adszoo"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            About Adszoo
-          </Link>
-
-          <Link
-            href="/company/contact"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Contact Us
-          </Link>
-
-          <Link
-            href="/company/careers"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Careers
-          </Link>
-
-          <Link
-            href="/company/partners"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Partners
-          </Link>
-
-          <Link
-            href="/company/client-success-stories"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Client Success Stories
-          </Link>
-        </div>
-
-        {/* Locations */}
-        <div className="flex flex-col gap-2">
-          <h4 className="font-bold text-lg mb-2">Locations</h4>
-
-          <Link
-            href="/locations/digital-marketing-agency-chennai"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Digital Marketing Agency Chennai
-          </Link>
-
-          <Link
-            href="/locations/google-ads-agency-chennai"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Google Ads Agency Chennai
-          </Link>
-
-          <Link
-            href="/locations/website-design-chennai"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Website Design Chennai
-          </Link>
-
-          <Link
-            href="/locations/meta-ads-agency-chennai"
-            className="text-sm text-muted-foreground hover:text-black"
-          >
-            Meta Ads Agency Chennai
-          </Link>
-        </div>
-      </div>
-
-      {/* Contact */}
-      <div className="max-w-7xl mx-auto px-4 mt-12 flex flex-col md:flex-row justify-between gap-6 text-sm text-muted-foreground">
-        <div className="flex items-center">
-          <Phone className="w-4 h-4 mr-2 fill-black text-white" />
-          +91 63690 50929
-        </div>
-
-        <div className="flex items-center">
-          <Mail className="w-4 h-4 mr-2 fill-black text-white" />
-          adszoo.digital@gmail.com
-        </div>
-
-        <div className="flex items-center">
-          <MapPin className="w-4 h-4 mr-2 fill-black text-white" />
-          43, Ramachandra Rd, Nehru Nagar, Chromepet, Chennai, Tambaram, Tamil
-          Nadu 600044
-        </div>
-      </div>
-
-      <div className="text-center text-sm text-muted-foreground mt-8">
-        © {currentYear} Adszoo. All rights reserved.
       </div>
 
       <motion.div
@@ -431,165 +155,12 @@ export const FooterSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full h-auto object-contain opacity-90"
+        className="w-full h-auto object-contain opacity-90 mt-8"
       >
         <div className="relative w-full h-[140px] sm:h-[220px] md:h-[320px] lg:h-[420px]">
-          <Image
-            src="/adszoo-divider.png"
-            alt="Adszoo visual divider"
-            fill
-            className="object-cover object-center"
-          />
+          <Image src="/adszoo-divider.png" alt="" fill sizes="100vw" className="object-cover object-center" />
         </div>
       </motion.div>
     </footer>
   );
 };
-// "use client";
-
-// import {
-//   Mail,
-//   MapPin,
-//   Phone,
-//   Facebook,
-//   Instagram,
-//   Linkedin,
-// } from "lucide-react";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { motion } from "framer-motion";
-
-// export const FooterSection = () => {
-//   const currentYear = new Date().getFullYear();
-
-//   return (
-//     <footer className="bg-white text-black py-16 border-t tracking-tighter">
-//       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-//         {/* Logo + About */}
-//         <div>
-//           <Link href="/" className="flex items-center mb-4">
-//             <Image src="/Logo1.png" alt="Adszoo Logo" width={32} height={32} />
-//             <span className="ml-2 font-bold text-xl">Adszoo</span>
-//           </Link>
-//           <p className="text-sm text-muted-foreground mb-4">
-//             We offer a comprehensive suite of digital marketing services that
-//             cover all aspects of your online presence. From SEO and social media
-//             marketing to content creation and PPC advertising, we have the
-//             expertise and resources to handle your diverse marketing needs.
-//           </p>
-//           <div className="flex gap-4 mt-4">
-//             <Link href="https://www.facebook.com/profile.php?id=61565406179842">
-//               <Facebook className="w-5 h-5 hover:text-primary" />
-//             </Link>
-//             {/* <Link href="#">
-//               <Twitter className="w-5 h-5 hover:text-primary" />
-//             </Link> */}
-//             <Link href="https://www.linkedin.com/company/adszoo/">
-//               <Linkedin className="w-5 h-5 hover:text-primary" />
-//             </Link>
-//             <Link href="https://www.instagram.com/adszoo_/">
-//               <Instagram className="w-5 h-5 hover:text-primary" />
-//             </Link>
-//           </div>
-//         </div>
-
-//         {/* Navigation */}
-//         <div className="flex flex-col gap-2">
-//           <h4 className="font-bold text-lg mb-2">Navigation</h4>
-//           <Link
-//             href="/blogs"
-//             className="text-sm text-muted-foreground hover:text-black"
-//           >
-//             Blogs
-//           </Link>
-//           {/* <Link
-//             href="/agency"
-//             className="text-sm text-muted-foreground hover:text-black"
-//           >
-//             Agency
-//           </Link> */}
-//           <Link
-//             href="/case-study"
-//             className="text-sm text-muted-foreground hover:text-black"
-//           >
-//             Case Studies
-//           </Link>
-//           {/* <Link
-//             href="/resources"
-//             className="text-sm text-muted-foreground hover:text-black"
-//           >
-//             Resource
-//           </Link>
-//           <Link
-//             href="/contact"
-//             className="text-sm text-muted-foreground hover:text-black"
-//           >
-//             Contact
-//           </Link> */}
-//         </div>
-
-//         {/* Licence */}
-//         <div className="flex flex-col gap-2">
-//           <h4 className="font-bold text-lg mb-2">Licence</h4>
-//           <Link
-//             href="https://www.termsfeed.com/live/db33214e-8ccd-4fa2-a894-871b309c383c"
-//             className="text-sm text-muted-foreground hover:text-black"
-//           >
-//             Privacy Policy
-//           </Link>
-//           <Link
-//             href="https://www.termsfeed.com/live/db33214e-8ccd-4fa2-a894-871b309c383c"
-//             className="text-sm text-muted-foreground hover:text-black"
-//           >
-//             Copyright
-//           </Link>
-//           <Link
-//             href="mailto:adszoo.digital@gmail.com"
-//             className="text-sm text-muted-foreground hover:text-black"
-//           >
-//             Email Address
-//           </Link>
-//         </div>
-
-//         {/* Contact */}
-//         <div className="flex flex-col gap-2">
-//           <h4 className="font-bold text-lg mb-2">Contact</h4>
-//           <div className="flex items-center text-sm text-muted-foreground">
-//             <Phone className="w-4 h-4 mr-2 fill-black text-white" />
-//             +91 63690 50929
-//           </div>
-//           <div className="flex items-center text-sm text-muted-foreground">
-//             <Mail className="w-4 h-4 mr-2 fill-black text-white" />
-//             adszoo.digital@gmail.com
-//           </div>
-//           <div className="flex items-center text-sm text-muted-foreground">
-//             <MapPin className="w-4 h-4 mr-2 fill-black text-white" />
-//             Chromepet, Chennai, India
-//           </div>
-//         </div>
-//       </div>
-
-//       <div className="text-center text-sm text-muted-foreground mt-12">
-//         &copy; {currentYear} Adszoo. All rights reserved.
-//       </div>
-
-//       <motion.div
-//         initial={{ opacity: 0, y: 40 }}
-//         whileInView={{ opacity: 1, y: 0 }}
-//         viewport={{ once: true }}
-//         transition={{ duration: 0.8, ease: "easeOut" }}
-//         className="w-full h-auto object-contain opacity-90"
-//       >
-//         <div className="relative w-full h-[140px] sm:h-[220px] md:h-[320px] lg:h-[420px]">
-//           <Image
-//             src="/adszoo-divider.png"
-//             alt="Adszoo visual divider"
-//             fill
-//             priority={false}
-//             className="object-cover object-center"
-//           />
-//         </div>
-//       </motion.div>
-//     </footer>
-//   );
-// };

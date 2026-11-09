@@ -1,6 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Digital Marketing Agency in Chennai | Websites, SEO, Ads & Software — Adszoo",
+  description: "Full-service digital marketing agency in Chennai (Chromepet): websites, SEO/AEO/GEO, social media, Google & Meta Ads, and custom software that drive enquiries.",
+  alternates: { canonical: "/locations/digital-marketing-agency-chennai" },
+  openGraph: { url: "/locations/digital-marketing-agency-chennai", title: "Digital Marketing Agency in Chennai | Websites, SEO, Ads & Software — Adszoo", description: "Full-service digital marketing agency in Chennai (Chromepet): websites, SEO/AEO/GEO, social media, Google & Meta Ads, and custom software that drive enquiries." },
+};
+
+
+
 export default function DigitalMarketingChennaiServicePage() {
   return (
     <main className="bg-white">

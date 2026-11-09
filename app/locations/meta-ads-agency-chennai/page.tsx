@@ -2,6 +2,16 @@ import { Navbar } from "@/components/layout/navbar";
 import { FooterSection } from "@/components/layout/sections/footer";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Meta Ads Agency in Chennai | Facebook & Instagram Ads — Adszoo",
+  description: "Chennai Meta Ads agency running Facebook & Instagram lead, WhatsApp and sales campaigns with proper tracking and creative testing.",
+  alternates: { canonical: "/locations/meta-ads-agency-chennai" },
+  openGraph: { url: "/locations/meta-ads-agency-chennai", title: "Meta Ads Agency in Chennai | Facebook & Instagram Ads — Adszoo", description: "Chennai Meta Ads agency running Facebook & Instagram lead, WhatsApp and sales campaigns with proper tracking and creative testing." },
+};
+
+
+
 export default function MetaAdsChennai() {
   return (
     <main className="bg-white text-black">

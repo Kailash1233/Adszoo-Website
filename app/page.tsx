@@ -15,46 +15,41 @@ import ServiceFAQ from "@/components/layout/sections/servicefaq";
 // import { TeamSection } from "@/components/layout/sections/team";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 import LeadPopup from "@/components/LeadPopup";
+import HomeServicesProducts from "@/components/HomeServicesProducts";
+import type { Metadata } from "next";
+import { blogPosts } from "@/lib/blog-posts";
 import DigitalMarketingFAQ from "@/components/ui/digi-faq";
-import { GoogleAnalytics } from "@next/third-parties/google";
 // import ServicesAccordion from "@/components/ui/service-accordion";
 
-export const metadata = {
-  title: "Adszoo - Best Digital Marketing Agency in Chromepet",
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  title: "Adszoo | Website Development, SEO & Software Company in Chennai",
   description:
-    "We specialize in empowering your business with a comprehensive suite of digital solutions",
+    "Chennai digital marketing & software company: conversion-focused websites, custom web & mobile apps, social media marketing and SEO/AEO/GEO that generates B2B leads for manufacturers. Free consultation.",
   openGraph: {
     type: "website",
-    url: "https://www.adszoo.in/",
-    title: "Adszoo - Digital Marketing Agency",
+    url: "/",
+    title: "Adszoo | Websites, Software, SEO & Social Media that Bring Enquiries",
     description:
-      "We specialize in empowering your business with a comprehensive suite of digital solutions",
-    images: [
-      {
-        url: "https://www.adszoo.in/Logo1.png",
-        width: 1200,
-        height: 630,
-        alt: "Adszoo - Digital Marketing Agency",
-      },
-    ],
+      "Conversion-focused websites, custom software, SEO/AEO/GEO for manufacturers and social media marketing — from Chromepet, Chennai.",
+    images: [{ url: "/Logo1.png", width: 600, height: 600, alt: "Adszoo" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://www.adszoo.in/",
-    title: "Adszoo - Digital Marketing Agency",
+    title: "Adszoo | Website Development, SEO & Software Company in Chennai",
     description:
-      "We specialize in empowering your business with a comprehensive suite of digital solutions",
-    images: ["https://www.adszoo.in/Logo1.png"],
+      "Conversion-focused websites, custom software, SEO/AEO/GEO and social media marketing.",
+    images: ["/Logo1.png"],
   },
 };
 
 export default function Home() {
   return (
     <>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
       <HeroSection />
       {/* <SponsorsSection /> */}
+      <HomeServicesProducts />
       <BenefitsSection />
       <CaseStudyPreview />
       {/* <ServicesAccordion /> */}
@@ -66,7 +61,11 @@ export default function Home() {
       <ServiceFAQ />
       {/* <PricingSection /> */}
       <DigitalMarketingFAQ />
-      <BlogSection />
+      <BlogSection
+        posts={blogPosts.slice(0, 3).map(({ slug, title, description, image, date, readTime, author }) => ({
+          slug, title, description, image, date, readTime, author, href: `/blogs/${slug}`,
+        }))}
+      />
       {/* <ContactSection /> */}
       {/* <FAQSection /> */}
       <FooterSection />

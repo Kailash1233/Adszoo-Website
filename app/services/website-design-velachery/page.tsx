@@ -4,6 +4,16 @@ import { FooterSection } from "@/components/layout/sections/footer";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Website Design Company in Velachery, Chennai | Adszoo",
+  description: "Website design in Velachery, Chennai for businesses that want more enquiries — conversion-focused design, local SEO and WhatsApp integration.",
+  alternates: { canonical: "/services/website-design-velachery" },
+  openGraph: { url: "/services/website-design-velachery", title: "Website Design Company in Velachery, Chennai | Adszoo", description: "Website design in Velachery, Chennai for businesses that want more enquiries — conversion-focused design, local SEO and WhatsApp integration." },
+};
+
+
+
 const serviceName = "Website Design Company in Velachery, Chennai";
 
 const whatsappLink = `https://wa.me/916369050929?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(

@@ -3,6 +3,16 @@ import { FooterSection } from "@/components/layout/sections/footer";
 import Image from "next/image";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Conversion-Focused Website Development | Websites that Generate Leads — Adszoo",
+  description: "We design and build conversion-focused websites with clear messaging, fast performance, tracking and CTAs that turn visitors into enquiries and sales.",
+  alternates: { canonical: "/services/conversion-focused-websites" },
+  openGraph: { url: "/services/conversion-focused-websites", title: "Conversion-Focused Website Development | Websites that Generate Leads — Adszoo", description: "We design and build conversion-focused websites with clear messaging, fast performance, tracking and CTAs that turn visitors into enquiries and sales." },
+};
+
+
+
 export default function ConversionFocusedWebsites() {
   return (
     <>

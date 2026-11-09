@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import ContactForm from "./contact-form";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact Adszoo | Start Your Project",
   description:
     "Contact Adszoo to discuss your marketing strategy, website design, or lead generation system. Let's build something that drives real results.",

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/google-ads-management" },
   title: "Google Ads Management Services | Adszoo",
   description:
     "Professional Google Ads management services by Adszoo. Generate leads and increase sales with optimized PPC campaigns.",

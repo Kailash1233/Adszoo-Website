@@ -4,14 +4,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { blogPosts } from "@/lib/blog-posts";
 import { motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
-function getRandomBlogs(count: number) {
-  const shuffled = [...blogPosts].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
-}
+export type BlogCard = {
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  readTime?: string;
+  author?: string;
+  href?: string;
+};
 
 const containerVariants = {
   hidden: {},
@@ -27,16 +32,11 @@ const cardVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-export default function BlogSection() {
+export default function BlogSection({ posts }: { posts: BlogCard[] }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const [randomBlogs, setRandomBlogs] = useState<typeof blogPosts>([]);
-
-  useEffect(() => {
-    const selected = getRandomBlogs(3);
-    setRandomBlogs(selected);
-  }, []);
+  const randomBlogs = posts;
 
   return (
     <motion.section
@@ -53,9 +53,9 @@ export default function BlogSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-lg text-primary text-center mb-2 tracking-tighter">
+          <p className="text-lg text-[#ff6321] text-center mb-2 tracking-tighter">
             Blogs
-          </h2>
+          </p>
           <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
             From Our Blogs{" "}
           </h2>

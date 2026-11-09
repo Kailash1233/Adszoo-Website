@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/landing-page-design" },
   title: "Landing Page Design Services | Adszoo",
   description:
     "High converting landing page design services by Adszoo. We design landing pages optimized for ads, lead generation, and sales conversions.",

@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 // // app/layout.tsx
-// import { GoogleAnalytics } from "@next/third-parties/google";
-// import type { Metadata } from "next";
+// // import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -81,7 +80,6 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -122,15 +120,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <meta name="robots" content="noindex, nofollow" />
-        {/* <meta name="referrer" content="origin-when-cross-origin" /> */}
-      </head>
-      <body className={`${inter.className} bg-white text-black antialiased`}>
-        <GoogleAnalytics
-          gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"}
-        />
+    <div className={`${inter.className} bg-white text-black antialiased`}>
 
         {/* Load the FB library */}
         <Script
@@ -167,7 +157,6 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
-      </body>
-    </html>
+    </div>
   );
 }

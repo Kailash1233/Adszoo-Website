@@ -1,106 +1,161 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Navbar } from "@/components/layout/navbar";
+import { FooterSection } from "@/components/layout/sections/footer";
+import EnquiryForm from "@/components/EnquiryForm";
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import FaqBlock from "@/components/seo/FaqBlock";
+import { products } from "@/lib/products-data";
 
-const services = [
+export const metadata: Metadata = {
+  title: "Digital Marketing, Website & Software Development Services in Chennai | Adszoo",
+  description:
+    "Website development, custom software & mobile apps, SEO/AEO/GEO for manufacturers, social media marketing, Google & Meta Ads — all services from Adszoo, Chennai.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    url: "/services",
+    title: "Adszoo Services — Websites, Software, SEO & Social Media",
+    description:
+      "Conversion-focused websites, custom software, SEO/AEO/GEO and social media marketing that generate enquiries.",
+  },
+};
+
+const pillars = [
   {
     title: "Website Development",
-    description:
-      "Custom websites that are designed to elevate your brand and meet your business needs.",
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image paths
+    blurb:
+      "Fast, SEO-ready websites engineered to convert visitors into calls, WhatsApp chats and RFQs — not just look good.",
+    links: [
+      { label: "Conversion-focused websites", href: "/services/conversion-focused-websites" },
+      { label: "E-commerce website development", href: "/services/ecommerce-website-development" },
+      { label: "Landing page design", href: "/services/landing-page-design" },
+      { label: "Conversion rate optimisation", href: "/services/conversion-rate-optimization" },
+      { label: "Website design in Chennai", href: "/services/website-design-chennai" },
+    ],
   },
   {
-    title: "Custom Web Development",
-    description:
-      "Tailored, scalable, and high-performance solutions to enhance user engagement.",
-    image:
-      "https://www.bigeng.io/content/images/2023/02/Product-Lifecycle-Header.jpg",
+    title: "Software Development",
+    blurb:
+      "Custom web apps, mobile apps, billing & inventory systems, portals and SaaS — built and supported in-house.",
+    links: [
+      { label: "Custom software & web apps", href: "/services/custom-software-development" },
+      { label: "Mobile app development", href: "/services/mobile-app-development" },
+      { label: "Web systems (website + automation)", href: "/websystems" },
+      { label: "Our software products", href: "/products" },
+    ],
   },
   {
-    title: "Lead Generation",
-    description:
-      "Targeted ad campaigns on Facebook and Instagram to generate high-quality leads.",
-    image: "/services/ads.jpg",
+    title: "SEO · AEO · GEO",
+    blurb:
+      "Rank on Google, get cited by ChatGPT & AI Overviews, and win high-intent B2B enquiries — our strongest specialisation.",
+    links: [
+      { label: "SEO & lead generation for manufacturers", href: "/services/seo-for-manufacturers" },
+      { label: "SEO, AEO & GEO services", href: "/seo-aeo-geo-services" },
+      { label: "Lead generation systems", href: "/services/lead-generation-systems" },
+      { label: "Sales funnel building", href: "/services/sales-funnel-building" },
+    ],
   },
   {
-    title: "Social Media Management",
-    description:
-      "From Instagram to LinkedIn, we craft content that connects with your audience.",
-    image:
-      "https://cdn.pixabay.com/photo/2021/08/19/08/06/social-media-6557345_1280.jpg",
-  },
-  {
-    title: "Graphic Designing",
-    description:
-      "Eye-catching logos, banners, and designs to make your brand stand out.",
-    image: "/services/graphic.jpg",
-  },
-  {
-    title: "Video Editing",
-    description:
-      "Create stunning videos with smooth cuts, effects, and storytelling to captivate your audience.",
-    image: "/services/video.jpg",
+    title: "Social Media Marketing",
+    blurb:
+      "Organic content, reels and paid campaigns on Instagram, Facebook, LinkedIn and Google — measured in leads.",
+    links: [
+      { label: "Social media marketing (organic + ads)", href: "/services/social-media-marketing" },
+      { label: "Meta Ads management", href: "/services/meta-ads-management" },
+      { label: "Google Ads management", href: "/services/google-ads-management" },
+    ],
   },
 ];
 
-const ServicesPage = () => {
+const faqs = [
+  {
+    question: "What services does Adszoo offer?",
+    answer:
+      "Adszoo offers conversion-focused website development, e-commerce, custom software and mobile app development, SEO/AEO/GEO (with a specialisation in B2B manufacturers), social media marketing, and Google & Meta Ads management, plus ready-made software products like Unizo, PropertyGenie and Smart Queue.",
+  },
+  {
+    question: "Where is Adszoo located?",
+    answer:
+      "Adszoo is based in Chromepet, Chennai, Tamil Nadu, and works with businesses across Chennai, Tamil Nadu, India and overseas clients remotely.",
+  },
+  {
+    question: "Do you work with manufacturers outside Chennai?",
+    answer:
+      "Yes. Most of our B2B SEO and website work is remote. We work with manufacturers, traders and exporters across Tamil Nadu and India, and visit on-site when needed.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Book a free consultation via the form, WhatsApp or a phone call. We'll review your current website and marketing and propose a practical plan with clear deliverables and pricing.",
+  },
+];
+
+export default function ServicesPage() {
   return (
-    <section className="container w-full py-20 md:py-32">
-      <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto">
-        {/* Title Section */}
-        <div className="text-center space-y-8 mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            <span>Empower Your Business with</span>{" "}
-            <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-              Cutting-Edge Services
-            </span>
-          </h1>
-          <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            Explore our wide range of digital marketing services designed to
-            help your business thrive in the digital era.
-          </p>
-        </div>
+    <>
+      <Navbar />
+      <main className="bg-white text-black tracking-tight">
+        <section className="bg-gradient-to-b from-[#fff6ed] to-white">
+          <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+            <Breadcrumbs items={[{ name: "Services", href: "/services" }]} />
+            <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tighter md:text-6xl">
+              Websites, software &amp; marketing that bring in <span className="text-[#ff6321]">enquiries</span>
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg text-gray-600">
+              Adszoo is a Chennai digital marketing and software company. We build conversion-focused websites and custom software, then drive the right traffic to them with SEO, AEO, GEO and social media — with a particular focus on generating B2B leads for manufacturers.
+            </p>
+          </div>
+        </section>
 
-        {/* Services Grid */}
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="relative bg-white shadow-lg rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="relative">
-                {/* Service Image */}
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={500}
-                  height={300}
-                  className="w-full h-[200px] object-cover"
-                />
-                {/* Background Glow */}
-                <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-[80%] h-24 bg-primary/50 rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+        <section className="py-16">
+          <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2">
+            {pillars.map((p) => (
+              <div key={p.title} className="rounded-3xl border border-gray-200 p-8">
+                <h2 className="text-2xl font-bold">{p.title}</h2>
+                <p className="mt-3 text-gray-600">{p.blurb}</p>
+                <ul className="mt-6 space-y-2">
+                  {p.links.map((l) => (
+                    <li key={l.href}>
+                      <Link href={l.href} className="font-medium hover:text-[#ff6321]">
+                        → {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            ))}
+          </div>
+        </section>
 
-              <div className="p-6 space-y-4">
-                {/* Service Title */}
-                <h3 className="text-2xl font-bold">{service.title}</h3>
-
-                {/* Service Description */}
-                <p className="text-muted-foreground">{service.description}</p>
-
-                {/* Call to Action */}
-                <Button className="mt-4 group/arrow">
-                  <span>Learn More</span>
-                  <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
-                </Button>
-              </div>
+        <section className="bg-gray-950 py-16 text-white">
+          <div className="mx-auto max-w-7xl px-6">
+            <h2 className="text-3xl font-bold">Ready-made software products</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {products.map((p) => (
+                <Link key={p.slug} href={`/products/${p.slug}`} className="rounded-2xl border border-white/10 p-6 hover:border-[#ff6321]">
+                  <h3 className="text-xl font-bold">{p.name}</h3>
+                  <p className="mt-2 text-sm text-gray-300">{p.tagline}</p>
+                </Link>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+          </div>
+        </section>
 
-export default ServicesPage;
+        <section className="py-20">
+          <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-2">
+            <div>
+              <h2 className="text-3xl font-bold md:text-4xl">Not sure where to start?</h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Most businesses need two things: a website that converts and a steady stream of the right visitors. Tell us your goal and we&apos;ll recommend the shortest path to more enquiries.
+              </p>
+            </div>
+            <EnquiryForm kind="service" />
+          </div>
+        </section>
+
+        <FaqBlock faqs={faqs} />
+      </main>
+      <FooterSection />
+    </>
+  );
+}
