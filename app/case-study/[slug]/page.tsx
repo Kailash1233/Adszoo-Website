@@ -289,6 +289,21 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                   </div>
                 )}
 
+                {caseStudy.proofImage && (
+                  <figure className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
+                    <Image
+                      src={caseStudy.proofImage.src}
+                      alt={caseStudy.proofImage.alt}
+                      width={1120}
+                      height={772}
+                      className="h-auto w-full"
+                    />
+                    <figcaption className="border-t p-4 text-sm text-gray-600">
+                      {caseStudy.proofImage.caption}
+                    </figcaption>
+                  </figure>
+                )}
+
                 {caseStudy.relatedLinks && caseStudy.relatedLinks.length > 0 && (
                   <div>
                     <h2 className="text-xl font-bold mb-3">Related</h2>

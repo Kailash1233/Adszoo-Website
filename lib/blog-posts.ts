@@ -2009,7 +2009,7 @@ const newPosts1: BlogPost[] = [
     <tr><td>Product + spec</td><td>"mica sheet 0.5mm", "6063 T5 aluminium profile"</td><td>Very high — buyer knows what they want</td></tr>
     <tr><td>Product + role + place</td><td>"insulation tape manufacturer in Chennai", "TMT supplier Coimbatore"</td><td>High — shortlisting suppliers</td></tr>
     <tr><td>Product + application</td><td>"insulation sheet for induction furnace"</td><td>High — solving a problem</td></tr>
-    <tr><td>Question / comparison</td><td>"FR4 vs bakelite sheet", "what is syndanio sheet used for"</td><td>Research — great for AEO & trust</td></tr>
+    <tr><td>Question / comparison</td><td>"FR4 vs bakelite sheet", "pre-compressed pressboard for transformers"</td><td>Research — great for AEO & trust</td></tr>
   </tbody>
 </table>
 <p>Sources for these: your sales team's most common questions, past RFQ emails, Google Search Console (if you have it), Google's "People also ask" boxes, and the product names your competitors and distributors use. Group keywords by product line — each group becomes a page.</p>
@@ -2149,7 +2149,7 @@ const newPosts1: BlogPost[] = [
     content: `
 <p><strong>Quick answer:</strong> The right billing software for a construction material or hardware dealer must handle contractor/dealer/retail pricing, credit sales with outstanding tracking, multiple GST slabs and HSN-wise reports, live stock across hundreds of items, and fast counter billing — ideally working even without internet, at a one-time price rather than a per-user monthly fee.</p>
 
-<p>We learned this the hands-on way. When we built software for <a href="/case-study/kvm-agencies">KVM Agencies</a>, a construction raw material supplier serving 1000+ clients, the generic billing apps they'd tried kept failing at the same points. That project became <a href="/products/unizo-gst-billing-inventory-software">Unizo</a>, our billing and inventory software. Here's what we learned about what actually matters.</p>
+<p>We learned this the hands-on way. When we built software for <a href="/case-study/kvm-agencies">KVM Agencies</a>, a construction material supplier in Chengalpattu since 2002, the generic billing apps they'd tried kept failing at the same points. That project became <a href="/products/unizo-gst-billing-inventory-software">Unizo</a>, our billing and inventory software. Here's what we learned about what actually matters.</p>
 
 <h2>Why building material businesses outgrow generic billing apps</h2>
 <p>A supermarket and a cement-and-steel dealer both "make bills", but their days look completely different:</p>
