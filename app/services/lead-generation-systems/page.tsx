@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/lead-generation-systems" },
   title: "Lead Generation Systems | Adszoo",
   description:
     "Adszoo builds lead generation systems that help businesses consistently attract, capture, and convert qualified leads through websites, funnels, and advertising campaigns.",

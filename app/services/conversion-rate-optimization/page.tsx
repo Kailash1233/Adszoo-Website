@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/conversion-rate-optimization" },
   title:
     "Conversion Rate Optimization Services | Increase Website Conversions | Adszoo",
   description:

@@ -1,41 +1,15 @@
-"use client";
-
-import React, { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 import { ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/layout/navbar";
 import { blogPosts } from "@/lib/blog-posts";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { FooterSection } from "@/components/layout/sections/footer";
 import FeaturedCard from "@/components/blog/FeaturedCard";
-
-/**
- * Blog listing page with a large "featured" hero post and a grid of other posts below.
- * The featured post is chosen randomly on each render (useMemo with no deps will be stable per render).
- *
- * Required fields per post:
- * - slug: string
- * - title: string
- * - description: string
- * - image: string (path or url)
- * - date: string | Date
- * Optional:
- * - author: string
- * - authorAvatar: string
- * - readTime: string
- * - tags: string[]
- */
-
-const title = "Best Digital Marketing Blogs in 2025 | Adszoo";
-const description =
-  "Stay updated with the latest trends, tips, and strategies in digital marketing. Explore in-depth insights on social media, advertising, and online business growth.";
 
 function formatDate(d?: string | Date) {
   if (!d) return "";
   const date = typeof d === "string" ? new Date(d) : d;
-  return date.toLocaleDateString(undefined, {
+  return date.toLocaleDateString("en-IN", {
     month: "short",
     day: "numeric",
     year: "numeric",
@@ -43,53 +17,29 @@ function formatDate(d?: string | Date) {
 }
 
 export default function BlogPage() {
-  // If blogPosts is empty, we won't crash.
-  const posts = Array.isArray(blogPosts) ? blogPosts : [];
-
-  // Pick a random featured post (memoized per render)
-  const featured = useMemo(() => {
-    if (!posts.length) return null;
-    const idx = Math.floor(Math.random() * posts.length);
-    return posts[idx];
-  }, [posts]);
-
-  // Other posts (keep original order but exclude featured)
-  const otherPosts = useMemo(() => {
-    if (!posts.length) return [];
-    return posts.filter((p) => p !== featured);
-  }, [posts, featured]);
+  // Server component: only slim fields reach the client (no article HTML).
+  const posts = blogPosts.map(({ content, faqs, ...rest }) => rest);
+  const featured = posts[0] ?? null; // newest post
+  const otherPosts = posts.slice(1);
 
   return (
     <>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta
-          name="keywords"
-          content="digital marketing, SEO, social media, business growth"
-        />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content="/blogs/why-you-need-website.jpg" />
-        <meta property="og:type" content="article" />
-      </Head>
 
       <main className="bg-gray-50 text-slate-900">
         <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 md:py-28">
           {/* Header */}
           <header className="flex items-start justify-between mb-12 gap-6">
             <div className="max-w-3xl">
-              <h2 className="text-[#ff6321] font-semibold mb-2">Our Blogs</h2>
+              <p className="text-[#ff6321] font-semibold mb-2">The Adszoo Blog</p>
               <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tighter">
-                Ideas, Insights & Real Talk
+                Guides on SEO, Websites, Software &amp; Growth
               </h1>
               <p className="text-gray-600 mt-3">
-                No jargon. No fluff. Just straight-up marketing tips, trends,
-                and stories from the frontlines. Whether you&apos;re a business
-                owner or a curious marketer, there&apos;s something here for
-                you.
+                In-depth, practical guides on SEO, AEO &amp; GEO, B2B lead
+                generation for manufacturers, conversion-focused websites,
+                social media, ads and business software — written from real
+                client work in Chennai and across India.
               </p>
             </div>
           </header>

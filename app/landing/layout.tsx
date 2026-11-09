@@ -1,11 +1,11 @@
 // app/layout.tsx
-import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: "Ads Adszoo | Get More Qualified Leads Today",
   description:
     "Discover how Adszoo boosts lead quality and conversion rates with expert digital marketing strategies. Book your free strategy call now.",
@@ -48,13 +48,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-white text-black antialiased`}>
-        <GoogleAnalytics
-          gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"}
-        />
+    <div className={`${inter.className} bg-white text-black antialiased`}>
         {children}
-      </body>
-    </html>
+    </div>
   );
 }

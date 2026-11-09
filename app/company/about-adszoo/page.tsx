@@ -25,6 +25,7 @@ import { Stats } from "fs";
 import StatsSection from "@/components/StatsSection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/company/about-adszoo" },
   title: "About Adszoo | Website Development, SEO & AI Visibility Agency",
   description:
     "Learn about Adszoo, a digital growth agency helping businesses grow through websites, SEO, AI visibility, branding and performance marketing.",

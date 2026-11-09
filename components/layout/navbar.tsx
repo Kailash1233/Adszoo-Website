@@ -1,7 +1,7 @@
 "use client";
 import { Menu, ArrowRight } from "lucide-react";
 import React, { useEffect } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   Sheet,
   SheetContent,
@@ -26,37 +26,17 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
-  { href: "#service", label: "Services" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#faq", label: "FAQs" },
-  { href: "/blogs", label: "Blogs" },
+  { href: "/services", label: "Services" },
+  { href: "/products", label: "Products" },
+  { href: "/services/seo-for-manufacturers", label: "B2B SEO" },
   { href: "/case-study", label: "Case Studies" },
+  { href: "/blogs", label: "Blog" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const Navbar = () => {
-  const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = React.useState(false);
-
-  const handleNavClick = (href: string) => {
-    const isSection = href.startsWith("#");
-
-    if (isSection) {
-      if (pathname !== "/") {
-        localStorage.setItem("scrollTo", href);
-        router.push("/");
-      } else {
-        const el = document.querySelector(href);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    } else {
-      router.push(href);
-    }
-
-    setIsOpen(false); // Close mobile sheet
-  };
 
   useEffect(() => {
     const scrollTo = localStorage.getItem("scrollTo");
@@ -120,19 +100,23 @@ export const Navbar = () => {
                 {routeList.map(({ href, label }) => (
                   <Button
                     key={href}
-                    onClick={() => handleNavClick(href)}
+                    asChild
                     variant="ghost"
                     className="justify-start text-base"
                   >
-                    {label}
+                    <Link href={href} onClick={() => setIsOpen(false)}>
+                      {label}
+                    </Link>
                   </Button>
                 ))}
               </div>
             </div>
 
-            <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-              <Link href="#contact">Talk to Us</Link>
-              <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+            <Button asChild className="w-5/6 md:w-1/4 font-bold group/arrow bg-[#ff6321] hover:bg-[#e85716]">
+              <Link href="/contact" onClick={() => setIsOpen(false)}>
+                Talk to Us
+                <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+              </Link>
             </Button>
           </SheetContent>
         </Sheet>
@@ -143,16 +127,15 @@ export const Navbar = () => {
         <NavigationMenuList>
           {routeList.map(({ href, label }) => (
             <NavigationMenuItem key={href}>
-              <NavigationMenuLink
-                asChild
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(href);
-                }}
-              >
-                <a href={href} className="text-base px-3">
+              <NavigationMenuLink asChild>
+                <Link
+                  href={href}
+                  className={`text-base px-3 hover:text-[#ff6321] ${
+                    pathname === href ? "text-[#ff6321] font-semibold" : ""
+                  }`}
+                >
                   {label}
-                </a>
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           ))}
@@ -167,10 +150,10 @@ export const Navbar = () => {
           <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
         </Button> */}
         <Link
-          href="https://cal.com/adszoo/30min"
+          href="/contact"
           className="bg-[#ff6321] text-white px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition flex items-center gap-2"
         >
-          Discuss your ideas
+          Get a free consultation
           <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs">
             →
           </span>

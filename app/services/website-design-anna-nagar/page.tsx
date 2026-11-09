@@ -4,6 +4,16 @@ import { FooterSection } from "@/components/layout/sections/footer";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Website Design Company in Anna Nagar, Chennai | Adszoo",
+  description: "Professional website design in Anna Nagar, Chennai. Conversion-focused, SEO-optimised websites for clinics, retailers, builders and service businesses.",
+  alternates: { canonical: "/services/website-design-anna-nagar" },
+  openGraph: { url: "/services/website-design-anna-nagar", title: "Website Design Company in Anna Nagar, Chennai | Adszoo", description: "Professional website design in Anna Nagar, Chennai. Conversion-focused, SEO-optimised websites for clinics, retailers, builders and service businesses." },
+};
+
+
+
 const serviceName = "Website Design Company in Anna Nagar, Chennai";
 
 const whatsappLink = `https://wa.me/916369050929?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(

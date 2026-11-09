@@ -19,7 +19,6 @@ import {
 
 import { Navbar } from "@/components/layout/navbar";
 import { FooterSection } from "@/components/layout/sections/footer";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { industries } from "@/lib/industries-data";
 
 export const metadata: Metadata = {
@@ -56,7 +55,6 @@ const industryIconMap: Record<string, LucideIcon> = {
 export default function IndustriesPage() {
   return (
     <>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
 
       <main className="bg-white text-black">

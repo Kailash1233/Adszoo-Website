@@ -2,6 +2,16 @@ import { Navbar } from "@/components/layout/navbar";
 import { FooterSection } from "@/components/layout/sections/footer";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Lead Generation Guide for Businesses in India | Adszoo",
+  description: "A practical lead generation guide: channels, landing pages, tracking and follow-up systems that turn traffic into qualified enquiries.",
+  alternates: { canonical: "/resources/lead-generation-guide" },
+  openGraph: { url: "/resources/lead-generation-guide", title: "Lead Generation Guide for Businesses in India | Adszoo", description: "A practical lead generation guide: channels, landing pages, tracking and follow-up systems that turn traffic into qualified enquiries." },
+};
+
+
+
 export default function LeadGenerationGuide() {
   return (
     <main className="bg-white">

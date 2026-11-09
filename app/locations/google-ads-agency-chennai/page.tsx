@@ -1,6 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Google Ads Agency in Chennai | PPC Management — Adszoo",
+  description: "Google Ads management in Chennai — search, Performance Max and local campaigns built on high-intent keywords, landing pages and conversion tracking.",
+  alternates: { canonical: "/locations/google-ads-agency-chennai" },
+  openGraph: { url: "/locations/google-ads-agency-chennai", title: "Google Ads Agency in Chennai | PPC Management — Adszoo", description: "Google Ads management in Chennai — search, Performance Max and local campaigns built on high-intent keywords, landing pages and conversion tracking." },
+};
+
+
+
 export default function GoogleAdsServicePage() {
   return (
     <main className="bg-white">

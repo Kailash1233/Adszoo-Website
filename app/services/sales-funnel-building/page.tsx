@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/sales-funnel-building" },
   title: "Sales Funnel Building Services | Adszoo",
   description:
     "Adszoo builds high converting sales funnels that attract prospects, nurture leads, and convert them into customers through optimized funnel strategies.",

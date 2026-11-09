@@ -4,6 +4,16 @@ import { FooterSection } from "@/components/layout/sections/footer";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Website Design Company in Tambaram, Chennai | SEO-Ready Websites — Adszoo",
+  description: "Website design & development in Tambaram, Chromepet & Pallavaram. Fast, mobile-first, SEO-ready websites that generate enquiries for local businesses. Free consultation.",
+  alternates: { canonical: "/services/website-design-tambaram" },
+  openGraph: { url: "/services/website-design-tambaram", title: "Website Design Company in Tambaram, Chennai | SEO-Ready Websites — Adszoo", description: "Website design & development in Tambaram, Chromepet & Pallavaram. Fast, mobile-first, SEO-ready websites that generate enquiries for local businesses. Free consultation." },
+};
+
+
+
 const serviceName = "Website Design Company in Tambaram, Chennai";
 
 const whatsappLink = `https://wa.me/916369050929?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(

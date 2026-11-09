@@ -3,6 +3,16 @@ import { FooterSection } from "@/components/layout/sections/footer";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Marketing Guides — SEO, Ads, Websites & Lead Generation | Adszoo",
+  description: "Free marketing guides from Adszoo on SEO, AEO/GEO, Google & Meta Ads, conversion-focused websites and lead generation for Indian businesses.",
+  alternates: { canonical: "/resources/marketing-guides" },
+  openGraph: { url: "/resources/marketing-guides", title: "Marketing Guides — SEO, Ads, Websites & Lead Generation | Adszoo", description: "Free marketing guides from Adszoo on SEO, AEO/GEO, Google & Meta Ads, conversion-focused websites and lead generation for Indian businesses." },
+};
+
+
+
 export default function ServicePage() {
   return (
     <main className="bg-white">

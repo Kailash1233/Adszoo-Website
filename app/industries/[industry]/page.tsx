@@ -26,7 +26,6 @@ import { FooterSection } from "@/components/layout/sections/footer";
 import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/about/ServiceCard";
 import StatsSection from "@/components/StatsSection";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { industries, getIndustryBySlug } from "@/lib/industries-data";
 import {
@@ -152,7 +151,6 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
   return (
     <>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-FDVY1D5V41"} />
       <Navbar />
 
       <script

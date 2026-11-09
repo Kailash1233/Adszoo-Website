@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/meta-ads-management" },
   title: "Meta Ads Management | Facebook & Instagram Ads | Adszoo",
   description:
     "Adszoo provides Meta Ads management services to help businesses generate leads and grow sales through Facebook and Instagram advertising.",

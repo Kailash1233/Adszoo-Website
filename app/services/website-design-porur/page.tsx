@@ -4,6 +4,16 @@ import { FooterSection } from "@/components/layout/sections/footer";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Website Design Company in Porur, Chennai | Adszoo",
+  description: "Website design & development in Porur, Chennai — fast, mobile-friendly, SEO-ready websites built to turn visitors into leads.",
+  alternates: { canonical: "/services/website-design-porur" },
+  openGraph: { url: "/services/website-design-porur", title: "Website Design Company in Porur, Chennai | Adszoo", description: "Website design & development in Porur, Chennai — fast, mobile-friendly, SEO-ready websites built to turn visitors into leads." },
+};
+
+
+
 const serviceName = "Website Design Company in Porur, Chennai";
 
 const whatsappLink = `https://wa.me/916369050929?text=Hi%20I%20am%20interested%20in%20${encodeURIComponent(

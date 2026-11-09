@@ -2,6 +2,16 @@ import GenericPage from "@/components/GenericPage";
 import { Navbar } from "@/components/layout/navbar";
 import { FooterSection } from "@/components/layout/sections/footer";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Partner with Adszoo | Agency & Technology Partnerships",
+  description: "Partner with Adszoo, Chennai — white-label web development, software and marketing partnerships for agencies, consultants and technology providers.",
+  alternates: { canonical: "/company/partners" },
+  openGraph: { url: "/company/partners", title: "Partner with Adszoo | Agency & Technology Partnerships", description: "Partner with Adszoo, Chennai — white-label web development, software and marketing partnerships for agencies, consultants and technology providers." },
+};
+
+
+
 export default function PartnersPage() {
   return (
     <>

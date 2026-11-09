@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/company/careers" },
   title: "Careers | Adszoo",
   description:
     "Interested in joining Adszoo? We currently don't have active openings, but we're always looking to connect with talented developers, designers, marketers, and creative professionals.",

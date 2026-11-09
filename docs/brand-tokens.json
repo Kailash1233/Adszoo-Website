@@ -1,0 +1,78 @@
+{
+  "name": "Adszoo",
+  "version": 1,
+  "color": {
+    "themes": [{ "id": "light", "name": "Light" }, { "id": "dark", "name": "Dark" }],
+    "tokens": [
+      { "name": "brand-orange", "value": { "light": "#ff6321", "dark": "#ff7a45" }, "usage": "Signature Adszoo orange. Large fills, highlight words in headlines, icons, illustrations, black-text CTAs. White text on it is only 2.98:1, so never put small white text on this orange." },
+      { "name": "action-orange", "value": { "light": "#c2410c", "dark": "#ff7a45" }, "usage": "Accessible orange for small text, links and buttons with white labels (5.18:1 with white on light). Use for text links on white." },
+      { "name": "orange-hover", "value": { "light": "#e85716", "dark": "#ff8f61" }, "usage": "Hover/pressed state of orange elements." },
+      { "name": "peach", "value": { "light": "#fdba74", "dark": "#fdba74" }, "usage": "Accent text on dark/black sections (eyebrows, small highlights). 11.7:1 on ink." },
+      { "name": "cream", "value": { "light": "#fff6ed", "dark": "#2a1d14" }, "usage": "Soft brand background for hero bands, callouts and pricing panels." },
+      { "name": "cream-line", "value": { "light": "#ffedd5", "dark": "#4a2e1c" }, "usage": "Border on cream panels." },
+      { "name": "ink", "value": { "light": "#0b0b0b", "dark": "#f5f3f0" }, "usage": "Primary text, logo, headlines, black buttons. 18.4:1 on cream." },
+      { "name": "ink-panel", "value": { "light": "#030712", "dark": "#030712" }, "usage": "Dark contrast sections (proof, pricing, CTA boxes) in both themes; pair with surface-text and peach." },
+      { "name": "surface", "value": { "light": "#ffffff", "dark": "#141210" }, "usage": "Page background." },
+      { "name": "surface-muted", "value": { "light": "#f9fafb", "dark": "#1c1916" }, "usage": "Alternating section background, feature-card grids." },
+      { "name": "surface-text", "value": { "light": "#ffffff", "dark": "#ffffff" }, "usage": "Text on ink-panel." },
+      { "name": "text-muted", "value": { "light": "#4b5563", "dark": "#a8a29e" }, "usage": "Body copy and descriptions. 7.6:1 on white." },
+      { "name": "line", "value": { "light": "#e5e7eb", "dark": "#2e2a26" }, "usage": "Card borders, dividers, input borders." },
+      { "name": "whatsapp", "value": { "light": "#25d366", "dark": "#25d366" }, "usage": "WhatsApp buttons only (brand-mandated green). White text is 1.98:1, so keep labels 18px+ bold or use whatsapp-deep." },
+      { "name": "whatsapp-deep", "value": { "light": "#128c7e", "dark": "#25d366" }, "usage": "WhatsApp text links and outline buttons (4.1:1 on white)." },
+      { "name": "success", "value": { "light": "#16a34a", "dark": "#4ade80" }, "usage": "Ticks, positive results, 'SEO progress' markers." },
+      { "name": "danger", "value": { "light": "#dc2626", "dark": "#f87171" }, "usage": "Errors and 'problem' crosses only." }
+    ]
+  },
+  "type": {
+    "fonts": [],
+    "families": {
+      "sans": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+      "wordmark": "Montserrat, Inter, system-ui, sans-serif"
+    },
+    "groups": [
+      {
+        "name": "Display",
+        "family": "sans",
+        "styles": [
+          { "name": "display-xl", "fontSize": "72px", "lineHeight": 1.05, "fontWeight": 800, "letterSpacing": "-0.05em", "usage": "Homepage hero (md+). Tight tracking is part of the look.", "sample": "Websites that bring enquiries" },
+          { "name": "display-l", "fontSize": "60px", "lineHeight": 1.05, "fontWeight": 800, "letterSpacing": "-0.05em", "usage": "Page H1 on desktop; 36–40px on mobile.", "sample": "SEO for Manufacturers" },
+          { "name": "heading-1", "fontSize": "36px", "lineHeight": 1.15, "fontWeight": 700, "letterSpacing": "-0.025em", "usage": "Section headings (H2).", "sample": "How Adszoo does it" },
+          { "name": "heading-2", "fontSize": "24px", "lineHeight": 1.25, "fontWeight": 700, "letterSpacing": "-0.025em", "usage": "Card titles, sub-sections.", "sample": "Spec-led product pages" }
+        ]
+      },
+      {
+        "name": "Text",
+        "family": "sans",
+        "styles": [
+          { "name": "body-l", "fontSize": "18px", "lineHeight": 1.65, "fontWeight": 400, "letterSpacing": "-0.01em", "usage": "Hero intros and article body.", "sample": "We build conversion-focused websites and software." },
+          { "name": "body", "fontSize": "16px", "lineHeight": 1.6, "fontWeight": 400, "usage": "Default UI and card text.", "sample": "One-time fee, no per-user monthly rent." },
+          { "name": "eyebrow", "fontSize": "12px", "lineHeight": 1.4, "fontWeight": 600, "letterSpacing": "0.08em", "usage": "UPPERCASE labels above headings, inside a cream/orange pill.", "sample": "B2B SEO · AEO · GEO" },
+          { "name": "button", "fontSize": "16px", "lineHeight": 1.2, "fontWeight": 600, "usage": "Buttons and CTAs.", "sample": "Book a free demo" }
+        ]
+      }
+    ]
+  },
+  "spacing": {
+    "tokens": [
+      { "name": "space-2", "value": "8px", "usage": "Gaps between chips and small inline items." },
+      { "name": "space-4", "value": "16px", "usage": "Mobile side gutter; form field gaps." },
+      { "name": "space-6", "value": "24px", "usage": "Card padding; grid gap." },
+      { "name": "space-8", "value": "32px", "usage": "Large card padding." },
+      { "name": "space-20", "value": "80px", "usage": "Vertical section padding (py-20)." }
+    ]
+  },
+  "radius": {
+    "tokens": [
+      { "name": "radius-md", "value": "12px", "usage": "Inputs, small cards (rounded-xl)." },
+      { "name": "radius-lg", "value": "16px", "usage": "Feature cards, nav bar (rounded-2xl)." },
+      { "name": "radius-xl", "value": "24px", "usage": "Large panels, product cards, CTA boxes (rounded-3xl)." },
+      { "name": "radius-pill", "value": "9999px", "usage": "All buttons, eyebrow pills, tags. Pill buttons are an Adszoo signature." }
+    ]
+  },
+  "shadow": {
+    "tokens": [
+      { "name": "shadow-card", "value": "0 1px 2px rgba(0,0,0,0.05)", "usage": "Resting cards." },
+      { "name": "shadow-lift", "value": "0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1)", "usage": "Hover state of cards; floating nav; product mockups." }
+    ]
+  }
+}

@@ -2,6 +2,16 @@ import { Navbar } from "@/components/layout/navbar";
 import { FooterSection } from "@/components/layout/sections/footer";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Website Conversion Guide — Turn Visitors into Leads | Adszoo",
+  description: "Learn how to increase website conversions: messaging, page speed, trust signals, CTAs, forms and tracking that turn more visitors into customers.",
+  alternates: { canonical: "/resources/website-conversion-guide" },
+  openGraph: { url: "/resources/website-conversion-guide", title: "Website Conversion Guide — Turn Visitors into Leads | Adszoo", description: "Learn how to increase website conversions: messaging, page speed, trust signals, CTAs, forms and tracking that turn more visitors into customers." },
+};
+
+
+
 export default function WebsiteConversionGuide() {
   return (
     <main className="bg-white">
