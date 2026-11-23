@@ -130,7 +130,7 @@ export default function ServicesPage() {
         <section className="bg-gray-950 py-16 text-white">
           <div className="mx-auto max-w-7xl px-6">
             <h2 className="text-3xl font-bold">Ready-made software products</h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {products.map((p) => (
                 <Link key={p.slug} href={`/products/${p.slug}`} className="rounded-2xl border border-white/10 p-6 hover:border-[#ff6321]">
                   <h3 className="text-xl font-bold">{p.name}</h3>

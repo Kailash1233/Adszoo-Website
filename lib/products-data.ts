@@ -9,6 +9,7 @@ export interface ProductFeature {
 
 export interface Product {
   slug: string;
+  kind?: "software" | "physical";
   name: string;
   tagline: string;
   category: string; // schema.org applicationCategory
@@ -26,6 +27,7 @@ export interface Product {
   pricingModel: { title: string; description: string; points: string[] };
   outcomes: string[];
   screenshots?: { src: string; alt: string; caption: string; portrait?: boolean }[];
+  screenshotsNote?: string;
   faqs: { question: string; answer: string }[];
   relatedBlogs: string[];
   relatedCaseStudies: string[];
@@ -35,7 +37,7 @@ export interface Product {
   status: string;
 }
 
-export const products: Product[] = [
+const allProducts: Product[] = [
   {
     slug: "unizo-gst-billing-inventory-software",
     name: "Unizo",
@@ -512,6 +514,7 @@ export const products: Product[] = [
       "Better table utilisation with best-fit allocation",
       "Data on wait times and no-shows to plan staffing",
     ],
+    screenshotsNote: "Screens from a live demo configured for a popular mess in Erode (restaurant branding blurred).",
     screenshots: [
       { src: "/products/smart-queue/tv-display.webp", alt: "Smart Queue restaurant TV token display showing in-process and allocated tokens", caption: "TV display — tokens in process and allocated, with today's QR" },
       { src: "/products/smart-queue/dashboard-queue.webp", alt: "Smart Queue manager dashboard with live waiting list", caption: "Manager dashboard — live queue with one-tap actions" },
@@ -562,7 +565,119 @@ export const products: Product[] = [
     accent: "#F5B800",
     status: "Live demo — onboarding restaurants",
   },
+  {
+    slug: "nfc-google-review-card",
+    name: "NFC Google Review Card",
+    kind: "physical",
+    tagline:
+      "Tap the card, land on your Google review box. Get more 5-star reviews and rank higher on Google Maps in Chennai",
+    category: "Product",
+    shortDescription:
+      "A tap-to-review card with an NFC 213 chip and a backup QR code. Customers tap or scan, your Google review box opens, they pick the stars and submit. Single cards or bulk orders for every counter, table and branch.",
+    definition:
+      "An NFC Google Review Card is a counter or table card with an NFC 213 chip programmed with your business's Google review link: customers tap it with their phone (or scan the QR on the back if their phone has no NFC) and land directly on your Google Maps review form, so leaving a review takes seconds.",
+    heroDescription:
+      "Most happy customers never leave a review, because finding your listing and the review button takes too many taps. The Adszoo NFC Google Review Card fixes that. Customers tap the card with their phone and your Google review form opens straight away: choose the stars, write a line, submit. Phones without NFC can scan the QR code on the back, which opens the same review page. Place one at your billing counter, reception, tables or delivery bag and watch the reviews build up. Reviews are one of the strongest signals for ranking on Google Maps in Chennai.",
+    metaTitle: "NFC Google Review Card in Chennai | Tap-to-Review Cards & Stands — Adszoo",
+    metaDescription:
+      "Get more Google reviews with NFC review cards in Chennai: customers tap (or scan the QR) and the review form opens instantly. Programmed for your business, bulk orders for shops, clinics & restaurants. WhatsApp +91 81900 69737.",
+    keywords: [
+      "NFC Google review card Chennai",
+      "Google review card",
+      "tap to review card",
+      "Google review NFC stand",
+      "Google review QR code stand Chennai",
+      "NFC review card for business",
+      "custom NFC card with logo Chennai",
+      "how to get more Google reviews",
+      "Google Maps ranking Chennai",
+    ],
+    idealFor: [
+      "Restaurants, cafés, messes & sweet shops",
+      "Clinics, dental & diagnostic centres",
+      "Salons, spas & gyms",
+      "Retail, hardware & showroom counters",
+      "Hotels, schools, academies & coaching centres",
+      "Multi-branch businesses (bulk orders)",
+    ],
+    problem: {
+      title: "Why your happy customers aren't leaving Google reviews",
+      points: [
+        "Asking 'please review us on Google' rarely works. Customers forget once they leave.",
+        "Finding your listing, scrolling to reviews and tapping 'Write a review' takes 6–8 steps.",
+        "Competitors with more and fresher reviews appear above you in Google Maps.",
+        "Printed QR posters fade, get ignored, or open the wrong page.",
+      ],
+    },
+    features: [
+      { title: "Tap to open your review form", description: "An NFC 213 chip programmed with your exact Google review link. A tap on any NFC phone opens the review form directly, with no app needed." },
+      { title: "QR code backup on the back", description: "Phones without NFC (or with NFC switched off) scan the QR on the back and reach the same review page." },
+      { title: "Goes straight to the stars", description: "No searching for your listing. Customers land on the review box, pick the stars and submit in seconds." },
+      { title: "Programmed and tested for you", description: "We find your correct Google Business Profile review link, program every card and test it before delivery." },
+      { title: "Your logo on the card (bulk orders)", description: "Bulk orders can be custom-branded with your logo, business name and brand colours, so the card looks like part of your shop, not a generic sticker." },
+      { title: "Bulk orders for every counter", description: "Order one card or hundreds, with a card for each table, counter, staff member or branch." },
+      { title: "Durable and reusable", description: "Sturdy cards that work every time, with no batteries or charging. The link can be re-programmed if your listing changes." },
+    ],
+    howItWorks: [
+      { step: "Share your business name", description: "WhatsApp us your business name or Google Maps link." },
+      { step: "We program the card", description: "NFC chip + QR code set to your exact review link, then tested." },
+      { step: "Place it where customers pay", description: "Billing counter, reception, tables or delivery bags." },
+      { step: "Customers tap & review", description: "Stars, a short review, submit. Your rating and Maps ranking grow." },
+    ],
+    deployment: [
+      { title: "Single business", description: "One or a few cards for your counter and reception, programmed with your Google review link." },
+      { title: "Bulk & multi-branch (custom branded)", description: "Cards for every table, staff member and branch, each pointing to the correct location's review page and printed with your logo and brand colours. Ideal for chains, franchises, clinics and restaurants." },
+      { title: "Agencies & resellers", description: "Buying for your clients? We supply programmed cards in bulk. WhatsApp us for trade enquiries." },
+    ],
+    pricingModel: {
+      title: "Single cards or custom-branded bulk orders",
+      description:
+        "Pricing depends on quantity and custom logo branding. Bulk orders for multiple counters, staff and branches get better rates and can carry your own logo. Message us for a quote.",
+      points: [
+        "Programmed & tested before delivery",
+        "Bulk pricing for multiple cards and branches",
+        "Custom logo & brand colours on bulk orders",
+        "Delivery across Chennai and Tamil Nadu",
+        "Pair with Google Maps SEO for faster ranking",
+      ],
+    },
+    outcomes: [
+      "More Google reviews every week, without awkward asking",
+      "Higher star rating and fresher reviews than competitors",
+      "Better Google Maps ranking for 'near me' searches",
+      "More calls and walk-ins from Maps",
+    ],
+    screenshots: [
+      { src: "/products/nfc/nfc-review-card-qr-side.webp", alt: "Google review card front with QR code: scan me to leave a Google review", caption: "Front: scan the QR code to review (works on every phone)", portrait: false },
+      { src: "/products/nfc/nfc-review-card-tap-side.webp", alt: "Google review NFC card: tap to rate your experience", caption: "Back: tap with an NFC phone and the review form opens instantly", portrait: false },
+    ],
+    faqs: [
+      { question: "How does an NFC Google review card work?", answer: "The card has an NFC 213 chip programmed with your Google review link. When a customer taps it with an NFC-enabled phone, the Google Maps review form for your business opens directly, so they choose the stars and submit. A QR code on the card does the same for phones without NFC." },
+      { question: "Does it work on iPhone and Android?", answer: "Yes. Most modern Android phones and iPhones (XS and newer) read NFC. Any phone can also scan the QR code on the card." },
+      { question: "Do customers need to install an app?", answer: "No. The review form opens in Google Maps or the browser. No app or login beyond their usual Google account is needed." },
+      { question: "Can I order cards in bulk for all my branches?", answer: "Yes. We supply bulk orders and program each card with the correct branch's review link, so reviews go to the right location." },
+      { question: "Can you print my logo on the NFC review cards?", answer: "Yes. Bulk orders can be custom-branded with your logo, business name and brand colours. Share your logo on WhatsApp and we'll send a design preview before printing." },
+      { question: "Will more reviews help my business rank on Google Maps in Chennai?", answer: "Yes. The number, freshness and quality of reviews are important local ranking signals on Google Maps. A steady flow of genuine reviews helps you appear above competitors for 'near me' searches." },
+      { question: "Is it allowed to ask customers for reviews this way?", answer: "Yes. Making it easy for every customer to leave an honest review is fine. Don't offer rewards for positive reviews or review your own business, which breaks Google's policies." },
+    ],
+    relatedBlogs: ["how-to-get-more-google-reviews-chennai", "local-seo-small-business-guide", "how-to-get-your-business-recommended-by-chatgpt"],
+    relatedCaseStudies: ["srinivasan-chess-academy", "supreme-aluminium"],
+    locations: ["Chennai", "Chromepet", "Tambaram", "Velachery", "T Nagar", "Anna Nagar", "OMR", "Porur", "Tamil Nadu"],
+    accent: "#4338ca",
+    status: "Available now · Bulk orders",
+  },
 ];
+
+// Display order: priority products first.
+const ORDER = [
+  "unizo-gst-billing-inventory-software",
+  "smart-queue-restaurant-queue-management-system",
+  "nfc-google-review-card",
+  "propertygenie-real-estate-listing-software",
+];
+export const products: Product[] = [...allProducts].sort(
+  (a, b) => ORDER.indexOf(a.slug) - ORDER.indexOf(b.slug)
+);
 
 export function getProduct(slug: string) {
   return products.find((p) => p.slug === slug);

@@ -23,9 +23,9 @@ import DigitalMarketingFAQ from "@/components/ui/digi-faq";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
-  title: "Adszoo | Website Development, SEO & Software Company in Chennai",
+  title: "Digital Marketing Agency in Chromepet, Chennai | Websites, SEO, Ads & Software — Adszoo",
   description:
-    "Chennai digital marketing & software company: conversion-focused websites, custom web & mobile apps, social media marketing and SEO/AEO/GEO that generates B2B leads for manufacturers. Free consultation.",
+    "Adszoo is a digital marketing & advertising agency in Chromepet (Chrompet), Chennai near Tambaram: websites, Google & Meta ads, SEO/AEO/GEO, social media and custom software that bring enquiries. Call or WhatsApp.",
   openGraph: {
     type: "website",
     url: "/",

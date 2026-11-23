@@ -14,6 +14,7 @@ import type { Viewport } from "next";
 import Script from "next/script";
 import { CONTACT, SITE_URL, SOCIALS, jsonLd } from "@/lib/site";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import ContactClickTracker from "@/components/ContactClickTracker";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -228,6 +229,7 @@ export default function RootLayout({
         <SpeedInsights />
         <SmoothScroll>{children}</SmoothScroll>
         <WhatsAppFloat />
+        <ContactClickTracker />
         {/* <Navbar /> */}
         {/* <PageTransitionProvider>{children}</PageTransitionProvider> */}
 

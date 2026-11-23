@@ -912,9 +912,9 @@ const basePosts: BlogPost[] = [
     image: "/blogs/blog12.jpg",
     date: "AUGUST 29, 2025",
     href: "/blogs/local-seo-small-business-guide",
-    metaTitle: "Local SEO Guide 2025: Rank on Google Maps | Adszoo",
+    metaTitle: "Local SEO for Small Businesses (2026): Rank in Google Maps Step by Step",
     metaDescription:
-      "Simple local SEO tips to rank higher on Google Maps and local search. Get more calls and visits in Chennai, Tamil Nadu with Adszoo.",
+      "A step-by-step local SEO checklist: Google Business Profile, reviews, local pages, citations and schema to rank in Google Maps and get more calls in your area.",
     author: "Kailash",
     authorAvatar: "/blogs/kailash.png",
     readTime: "9 min read",
@@ -1629,7 +1629,7 @@ const basePosts: BlogPost[] = [
       "How to Build High-Quality Backlinks in 2025: The Ultimate Link Building Strategy for Digital Marketing Agencies",
     description:
       "A comprehensive guide for digital marketing agencies on building high-quality backlinks in 2025 using white-hat, authority-driven strategies for SEO, AEO, and GEO.",
-    content: `<h1 id="" class="font-display first:mt-xs mb-2 mt-4 font-semimedium text-lg leading-[1.5em] lg:text-xl"><strong>How to Build High-Quality Backlinks in 2025: The Ultimate Link Building Strategy for Digital Marketing Agencies</strong></h1>
+    content: `<p class="lead"><strong>The ultimate link building strategy for digital marketing agencies and businesses.</strong></p>
 <p class="my-2 [&amp;+p]:mt-4 [&amp;_strong:has(+br)]:inline-block [&amp;_strong:has(+br)]:pb-2">Backlinks remain the backbone of SEO success, but the game has changed dramatically. In 2025, Google's algorithms prioritize&nbsp;<strong>authority, relevance, and authenticity</strong>&nbsp;over sheer volume. For digital marketing agencies like&nbsp;<strong>adszoo</strong>, mastering modern link-building strategies is essential not just for ranking, but for establishing trust with both search engines and AI-powered platforms like ChatGPT and Google's AI Overviews.</p>
 <p class="my-2 [&amp;+p]:mt-4 [&amp;_strong:has(+br)]:inline-block [&amp;_strong:has(+br)]:pb-2">Whether you're scaling your agency or helping clients dominate their niche, this guide reveals the&nbsp;<strong>white-hat, high-impact backlink strategies</strong>&nbsp;that work today, and will continue to deliver results tomorrow.</p>
 <hr class="bg-subtle h-px border-0" />
@@ -2948,13 +2948,26 @@ const rewrites1: Record<string, Rewrite> = {
     title: "How Much to Charge (or Pay) for Social Media Management in India — 2026 Pricing Guide",
     description:
       "What goes into social media management pricing in India — platforms, content volume, reels, ad management and reporting — with sample packages and red flags for both agencies and clients.",
-    metaTitle: "Social Media Management Pricing in India (2026) — Packages & What's Included | Adszoo",
+    metaTitle: "Social Media Management Pricing in India (2026): Monthly Packages & Rates",
     metaDescription:
-      "How social media management is priced in India: platforms, posts, reels, community management and ad management. Sample packages, pricing models and red flags.",
+      "What social media management costs per month in India in 2026: typical ₹ ranges for freelancers vs agencies, what each package includes, and red flags before you pay.",
     updatedDate: U,
     readTime: "8 min read",
     content: `
 <p><strong>Quick answer:</strong> Social media management in India is usually priced as a monthly retainer based on four things: the number of platforms, content volume (posts, carousels, reels), whether video shooting is included, and whether paid ad management is part of the scope. Ad spend is always separate and paid directly to Meta, LinkedIn or Google. Good pricing is tied to deliverables and outcomes — not just "X posts per month".</p>
+
+<h2>Typical monthly social media management prices in India (2026)</h2>
+<p>These are typical market ranges we see in Chennai and other Indian metros. They are not Adszoo's rate card, and the ad budget is always extra.</p>
+<table>
+  <thead><tr><th>Who you hire</th><th>Typical monthly fee</th><th>What you usually get</th></tr></thead>
+  <tbody>
+    <tr><td>Freelancer (1 platform)</td><td>₹5,000 – ₹15,000</td><td>8–12 designed posts, basic captions, no shoots, little strategy</td></tr>
+    <tr><td>Small agency – starter</td><td>₹15,000 – ₹30,000</td><td>1–2 platforms, 12–16 posts, a few edited reels, monthly report</td></tr>
+    <tr><td>Agency – growth (content + ads)</td><td>₹30,000 – ₹75,000</td><td>2–3 platforms, reels with shoot days, Meta/LinkedIn ad management, landing page/WhatsApp funnel</td></tr>
+    <tr><td>Full-service / B2B programmes</td><td>₹75,000+</td><td>Multi-platform content, video production, LinkedIn ads, lead tracking and strategy calls</td></tr>
+  </tbody>
+</table>
+<p>Ad spend is paid directly to Meta, Google or LinkedIn on top of these fees. Local businesses typically start with ₹300–₹1,000 a day.</p>
 
 <h2>What you're actually paying for</h2>
 <ul>
@@ -3031,7 +3044,7 @@ const rewrites1: Record<string, Rewrite> = {
     title: "How to Use Social Media to Grow Your Business: A Step-by-Step Plan That Brings Enquiries",
     description:
       "A practical, step-by-step plan to turn social media into a growth channel — choosing platforms, content pillars, posting rhythm, ads, DMs to WhatsApp and measuring leads.",
-    metaTitle: "How to Use Social Media to Grow Your Business (Step-by-Step) | Adszoo",
+    metaTitle: "How to Grow Your Business on Social Media: 8-Step Plan That Gets Enquiries",
     metaDescription:
       "Turn social media into enquiries: pick the right platforms, plan content pillars, post consistently, use ads wisely and route DMs to WhatsApp. A practical plan for Indian businesses.",
     updatedDate: U,
@@ -3110,7 +3123,7 @@ const rewrites1: Record<string, Rewrite> = {
     title: "9 Proven Strategies to Grow Your Online Business in 2026",
     description:
       "Nine practical strategies to grow an online business — conversion-focused website, SEO/AEO, Google & Meta ads, WhatsApp, email, content, partnerships, retention and analytics.",
-    metaTitle: "9 Strategies to Grow Your Online Business in 2026 | Adszoo",
+    metaTitle: "How to Grow Your Business Online in India: 9 Proven Strategies (2026)",
     metaDescription:
       "Grow your online business with 9 practical strategies: website conversion, SEO & AI search, paid ads, WhatsApp, email, content, partnerships, retention and analytics.",
     updatedDate: U,
@@ -3759,7 +3772,7 @@ const rewrites2: Record<string, Rewrite> = {
     title: "B2B LinkedIn Ads: A Beginner's Guide for Indian Manufacturers and Service Firms",
     description:
       "How to run your first LinkedIn Ads campaign — objectives, targeting by job title and industry, ad formats, lead gen forms, budgets and measurement — without wasting money.",
-    metaTitle: "LinkedIn Ads for B2B — Beginner's Guide for Indian Businesses | Adszoo",
+    metaTitle: "LinkedIn Ads for B2B Marketing: Beginner's Guide for Indian Businesses",
     metaDescription:
       "Launch LinkedIn Ads the right way: campaign objectives, job title & industry targeting, lead gen forms, creatives, budgets and tracking — for manufacturers and B2B firms.",
     updatedDate: U,
@@ -3812,7 +3825,7 @@ const rewrites2: Record<string, Rewrite> = {
     title: "YouTube Ads for Lead Generation: A Simple Setup That Works for Small Businesses",
     description:
       "How to use YouTube ads to generate leads — campaign types, targeting, a 30-second video script structure, landing pages and remarketing — on a small budget.",
-    metaTitle: "YouTube Ads for Lead Generation — Simple Setup Guide | Adszoo",
+    metaTitle: "YouTube Ads for Lead Generation in India: Setup, Targeting & Script (2026)",
     metaDescription:
       "Generate leads with YouTube Ads: campaign types, audience targeting, a proven 30-second ad script, landing pages, remarketing and measurement for small businesses.",
     updatedDate: U,
@@ -3860,7 +3873,7 @@ const rewrites2: Record<string, Rewrite> = {
     title: "WhatsApp Marketing Best Practices for 2026: Grow Sales Without Getting Blocked",
     description:
       "How Indian businesses use WhatsApp Business and the WhatsApp Business Platform to generate and close leads — profiles, catalogues, labels, broadcasts, automation and compliance.",
-    metaTitle: "WhatsApp Marketing Best Practices 2026 for Indian Businesses | Adszoo",
+    metaTitle: "WhatsApp Business Profile Optimization & Marketing Best Practices (2026)",
     metaDescription:
       "WhatsApp marketing done right: business profile, catalogue, quick replies, labels, opt-in broadcasts, click-to-WhatsApp ads, automation and avoiding blocks.",
     updatedDate: U,
@@ -4659,6 +4672,225 @@ const expansions2: Record<string, string> = {
 `,
 };
 
+// ===== new-posts-4 (Nov 2026: reviews, construction billing, restaurant crowds) =====
+const newPosts4: BlogPost[] = [
+  {
+    slug: "how-to-get-more-google-reviews-chennai",
+    title: "How to Get More Google Reviews for Your Business in Chennai (Without Begging Customers)",
+    description:
+      "Reviews decide who shows up first on Google Maps in Chennai. A practical system for getting a steady flow of genuine 5-star reviews: timing, NFC tap cards, QR codes, replies and what not to do.",
+    metaTitle: "How to Get More Google Reviews in Chennai (2026): NFC Cards, QR & Scripts",
+    metaDescription:
+      "A practical system to get more genuine Google reviews for your Chennai business: when to ask, NFC tap-to-review cards, QR codes, WhatsApp scripts, replying to reviews and Google's rules.",
+    keywords: ["how to get more Google reviews", "Google reviews Chennai", "NFC Google review card", "Google review QR code", "improve Google Maps ranking"],
+    image: "/blogs/covers/how-to-get-more-google-reviews-chennai.webp",
+    date: "November 21, 2026",
+    author: "Kailash",
+    authorAvatar: "/blogs/kailash.png",
+    tags: ["Local SEO", "Google Reviews", "Google Maps", "NFC"],
+    content: `
+<p><strong>Quick answer:</strong> To get more Google reviews, ask every happy customer at the moment they are happiest (right after paying or finishing service), make it a one-step action with an NFC tap-to-review card or a QR code that opens your review form directly, follow up on WhatsApp with the same direct link, and reply to every review. Never pay for or fake reviews: Google removes them and can penalise your listing.</p>
+
+<p>In Chennai, two businesses on the same street can have completely different fortunes on Google Maps. Search "dentist in Velachery" or "biryani near Chromepet" and the top three results nearly always have more reviews, more recent reviews and a higher rating. Reviews are one of the strongest local ranking signals, and they're the first thing a customer reads before calling.</p>
+
+<h2>Why most happy customers never leave a review</h2>
+<ul>
+  <li><strong>Too many steps:</strong> open Maps, search your name, find the right listing, scroll to reviews, tap "Write a review". Most people give up halfway.</li>
+  <li><strong>Wrong moment:</strong> asking a week later on WhatsApp gets ignored. Asking at the counter works, if it's easy.</li>
+  <li><strong>No reminder:</strong> customers mean to do it and forget the moment they walk out.</li>
+</ul>
+
+<h2>Step 1: Get your direct review link</h2>
+<p>In your Google Business Profile, open <em>Ask for reviews</em> (or "Get more reviews") to copy the short link that opens the review box directly. Every method below uses this link. Reference: <a href="https://support.google.com/business/answer/3474122" target="_blank" rel="noopener">Google Business Profile help on reviews</a>.</p>
+
+<h2>Step 2: Make it a one-tap action at the counter</h2>
+<p>This is where an <a href="/products/nfc-google-review-card">NFC Google review card</a> changes everything. The card has an NFC chip programmed with your review link. The customer taps it with their phone and the review form opens instantly. Phones without NFC scan the QR code on the card instead. One tap, five stars, submit, all before they leave the counter.</p>
+<table>
+  <thead><tr><th>Method</th><th>Steps for the customer</th><th>Works best for</th></tr></thead>
+  <tbody>
+    <tr><td>Verbal ask only</td><td>6–8 (they must find you)</td><td>Rarely works</td></tr>
+    <tr><td>QR poster on the wall</td><td>2–3</td><td>Waiting areas</td></tr>
+    <tr><td>NFC tap card + QR backup</td><td>1–2</td><td>Billing counters, tables, reception</td></tr>
+    <tr><td>WhatsApp link after service</td><td>1–2</td><td>Home services, deliveries, follow-ups</td></tr>
+  </tbody>
+</table>
+
+<h2>Step 3: Use a simple script</h2>
+<p><strong>At the counter:</strong> "If you liked our service, could you tap this card and give us a quick review? It really helps a small business like ours."</p>
+<p><strong>On WhatsApp:</strong> "Thank you for choosing us today! If you were happy, a quick Google review would mean a lot: [link]. Takes 20 seconds."</p>
+
+<h2>Step 4: Place cards where happiness peaks</h2>
+<ul>
+  <li><strong>Restaurants and cafés:</strong> on each table and at billing.</li>
+  <li><strong>Clinics:</strong> at the pharmacy or billing desk after consultation.</li>
+  <li><strong>Salons, spas and gyms:</strong> at the mirror or the exit desk.</li>
+  <li><strong>Retail and hardware:</strong> beside the UPI QR at the counter.</li>
+  <li><strong>Home services:</strong> technicians hand the card over after the job.</li>
+</ul>
+<p>We've written placement tips for specific areas, such as <a href="/nfc-google-review-card/velachery">Velachery</a>, <a href="/nfc-google-review-card/t-nagar">T Nagar</a> and <a href="/nfc-google-review-card/chromepet">Chromepet</a>.</p>
+
+<h2>Step 5: Reply to every review</h2>
+<p>Thank positive reviewers by name and mention what they liked. Respond to negative reviews calmly with a fix and a contact number. Replies show both Google and future customers that you're active, and they help your profile rank.</p>
+
+<h2>Step 6: Track your progress weekly</h2>
+<p>Note your review count and average rating every Monday. A realistic goal for a busy Chennai shop is 5–15 new reviews a week once cards are at every counter.</p>
+
+<h2>What not to do (Google's rules)</h2>
+<ul>
+  <li>Don't offer discounts or gifts in exchange for reviews.</li>
+  <li>Don't write reviews for yourself or ask staff to.</li>
+  <li>Don't "gate" reviews by only asking happy customers through a filter. Make it easy for everyone.</li>
+</ul>
+<p>See <a href="https://support.google.com/contributionpolicy/answer/7400114" target="_blank" rel="noopener">Google's prohibited and restricted content policy</a>.</p>
+
+<h2>Reviews also help you show up in AI answers</h2>
+<p>AI assistants like ChatGPT, Gemini and Google AI Overviews lean on reviews and consistent business details when recommending local businesses. A steady flow of detailed reviews is step one of being recommended by AI. We cover the rest in <a href="/blogs/how-to-get-your-business-recommended-by-chatgpt">how to get your business recommended by ChatGPT</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<p><strong>How many Google reviews do I need to rank on Maps?</strong><br/>There's no fixed number. You need more, and more recent, reviews than the businesses above you for your main search, plus a complete profile. Look at the top three competitors and aim to beat their recent review count.</p>
+<p><strong>Do NFC review cards work on iPhones?</strong><br/>Yes. iPhone XS and newer read NFC tags automatically, and the QR code works on every phone.</p>
+`,
+    faqs: [
+      { question: "What is the fastest way to get more Google reviews?", answer: "Ask at the moment customers are happiest and make it one step: an NFC tap-to-review card or QR code at the counter that opens your Google review form directly, plus a WhatsApp follow-up with the same link." },
+      { question: "Is it allowed to use NFC cards to ask for Google reviews?", answer: "Yes. Making it easy for every customer to leave an honest review is allowed. Offering rewards for reviews or writing fake reviews is against Google's policies." },
+      { question: "Do Google reviews improve Google Maps ranking?", answer: "Yes. The number, freshness, rating and content of reviews are important local ranking signals, alongside profile completeness, relevance and distance." },
+    ],
+  },
+  {
+    slug: "construction-billing-software-guide",
+    title: "Construction Billing Software: What Contractors and Material Suppliers Actually Need (2026)",
+    description:
+      "'Construction billing software' means different things to a civil contractor and a building-material dealer. Here's how to tell which one you need, the must-have features for each, and how to choose.",
+    metaTitle: "Construction Billing Software (2026): Contractor vs Material Supplier — What to Choose",
+    metaDescription:
+      "Civil contractors need RA bills and project invoicing; building-material dealers need GST counter billing, stock and credit. Features, costs and how to choose construction billing software in India.",
+    keywords: ["construction billing software", "civil billing software", "contractor invoicing software", "construction invoicing software India", "building material billing software"],
+    image: "/blogs/covers/construction-billing-software-guide.webp",
+    date: "November 19, 2026",
+    author: "Kailash",
+    authorAvatar: "/blogs/kailash.png",
+    tags: ["Billing Software", "Construction", "GST", "Software"],
+    content: `
+<p><strong>Quick answer:</strong> There are two kinds of "construction billing software". <strong>Contractor billing software</strong> creates running-account (RA) bills, tracks measurements, retention and project payments for civil contractors. <strong>Construction material billing software</strong> handles GST counter billing, stock, contractor credit and GST registers for dealers selling cement, sand, steel and hardware. Choose based on whether you <em>build</em> or <em>sell materials</em>.</p>
+
+<h2>Which one are you?</h2>
+<table>
+  <thead><tr><th></th><th>Civil / building contractor</th><th>Construction material dealer</th></tr></thead>
+  <tbody>
+    <tr><td>Main document</td><td>RA bills, measurement sheets, project invoices</td><td>GST tax invoices at the counter</td></tr>
+    <tr><td>Who pays</td><td>Clients, builders, government departments</td><td>Contractors, masons, homeowners</td></tr>
+    <tr><td>Key risk</td><td>Unbilled work, retention, delayed payments</td><td>Credit outstanding, stock mismatch</td></tr>
+    <tr><td>Must-have features</td><td>BOQ, measurements, RA bills, retention, GST, project reports</td><td>Fast billing, contractor pricing, credit limits, stock, GST/HSN reports</td></tr>
+  </tbody>
+</table>
+
+<h2>Must-have features for material suppliers</h2>
+<ul>
+  <li>Billing in mixed units (bags, tonnes, units, numbers).</li>
+  <li>Retail, contractor and dealer price levels.</li>
+  <li>Credit limits, running ledgers and statements.</li>
+  <li>Stock tracked through every purchase, sale and return.</li>
+  <li>Sales and purchase registers, HSN summary, tax-slab summary.</li>
+  <li>Offline billing with automatic backups.</li>
+</ul>
+<p>That's exactly what <a href="/software/construction-material-billing-software">Unizo for construction material dealers</a> does. It was built inside a real supplier, <a href="/case-study/kvm-agencies">KVM Agencies in Chengalpattu</a>.</p>
+
+<h2>Must-have features for contractors</h2>
+<ul>
+  <li>BOQ items and rates per project.</li>
+  <li>Measurement entry and cumulative quantities.</li>
+  <li>RA bills with previous-bill deductions, retention and advances.</li>
+  <li>GST invoices and TDS tracking.</li>
+  <li>Project-wise profitability and receivables.</li>
+</ul>
+<p>Many contractors run this in Excel today. If off-the-shelf tools don't match your format, a <a href="/services/custom-software-development">custom module</a> is often cheaper than years of subscription.</p>
+
+<h2>Five questions to ask before buying</h2>
+<ol>
+  <li>Does it handle <em>my</em> documents (RA bills or counter invoices)?</li>
+  <li>Does it work when the internet is down at site or shop?</li>
+  <li>Is it per-user monthly, or one-time?</li>
+  <li>Can I export everything to Excel for my auditor?</li>
+  <li>Is there local installation and training?</li>
+</ol>
+
+<h2>Hardware and electrical shops</h2>
+<p>If you sell fittings, tools and paints rather than bulk materials, see <a href="/software/billing-software-for-hardware-shop">billing software for hardware shops</a> and <a href="/software/electrical-plumbing-shop-billing-software">electrical &amp; plumbing shops</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<p><strong>What is civil billing software?</strong><br/>Usually software for civil contractors to prepare measurement-based RA bills and project invoices. It's different from GST billing software used by material shops.</p>
+<p><strong>Can one software do both?</strong><br/>Some ERPs try, but they are expensive and complex. Most small businesses are better served by focused software for their side, customised if needed.</p>
+`,
+    faqs: [
+      { question: "What is the difference between contractor billing and construction material billing software?", answer: "Contractor billing software creates RA bills, measurements and project invoices for civil contractors. Construction material billing software handles GST counter billing, stock and credit for dealers selling cement, sand, steel and hardware." },
+      { question: "Which billing software is best for a construction material shop?", answer: "Choose software with mixed-unit billing, contractor pricing, credit limits, stock tracking, GST/HSN reports and offline billing, such as Unizo, which was built for a construction material supplier." },
+    ],
+  },
+  {
+    slug: "how-to-manage-restaurant-waiting-crowd",
+    title: "How to Manage the Weekend Waiting Crowd at Your Restaurant (A Chennai Owner's Guide)",
+    description:
+      "Long Sunday queues are a good problem, until guests walk away. Practical ways to manage restaurant waiting crowds: token systems, table mix, digital waitlists, staffing and keeping guests happy while they wait.",
+    metaTitle: "How to Manage Restaurant Waiting Crowds: Token Systems, Waitlists & Table Tips",
+    metaDescription:
+      "Practical ways for restaurants and messes to manage weekend waiting crowds: digital waitlists vs paper tokens, best-fit table allocation, TV token displays, staffing and reducing walk-aways.",
+    keywords: ["how to manage restaurant waiting list", "restaurant token system", "restaurant crowd management", "waiting list for restaurants", "restaurant queue system India"],
+    image: "/blogs/covers/how-to-manage-restaurant-waiting-crowd.webp",
+    date: "November 17, 2026",
+    author: "Kailash",
+    authorAvatar: "/blogs/kailash.png",
+    tags: ["Restaurant", "Queue Management", "Hospitality", "Software"],
+    content: `
+<p><strong>Quick answer:</strong> Manage weekend waiting crowds by moving from shouting names to a visible, fair token system, ideally a digital waitlist guests join by QR so they can wait away from the door. Allocate tables by party size (best fit, not just first come), show tokens on a TV, alert guests by phone, and track wait times and walk-aways so you can staff peak hours properly.</p>
+
+<h2>The hidden cost of a messy waiting area</h2>
+<p>A queue outside looks like success. But every guest who gives up and walks to the restaurant next door is revenue you never see, and an unhappy first impression for those who stay. The problem isn't demand; it's how the wait is handled.</p>
+
+<h2>1. Replace name-calling with tokens</h2>
+<p>Names get misheard and skipped, and arguments start. Numbered tokens are fair and visible. Paper token slips are a start; digital tokens on the guest's phone are better because guests don't have to stand near the door.</p>
+
+<h2>2. Let guests wait anywhere</h2>
+<p>With a QR waitlist, guests scan at the entrance, enter name, party size and phone, and see how many groups are ahead. They can sit in the car or browse nearby and come back when alerted. Your entrance stays clear.</p>
+
+<h2>3. Allocate tables by best fit</h2>
+<p>The fastest way to lengthen a queue is seating a party of two at an eight-seater. A good system allocates in order but skips to the next group that fits a freed table, within limits you set, and lets you merge tables for big families.</p>
+
+<h2>4. Show the queue on a TV</h2>
+<p>A TV showing tokens "In process" and "Allocated", with a chime or voice call-out, removes the "how long?" questions at the desk and makes the order transparent.</p>
+
+<h2>5. Speak your guests' language</h2>
+<p>In Tamil Nadu, guest screens in Tamil and English (and Hindi for travellers) make a real difference to adoption.</p>
+
+<h2>6. Connect billing to tables</h2>
+<p>When the bill prints, the table should free up and the next group get allocated automatically. If that isn't possible, give staff a one-tap "bill done" button.</p>
+
+<h2>7. Measure walk-aways and wait times</h2>
+<p>Track tokens per hour, average wait and no-shows. You'll quickly see the exact half-hour where an extra server or a faster turnover routine pays for itself.</p>
+
+<h2>Paper tokens vs digital waitlist</h2>
+<table>
+  <thead><tr><th></th><th>Paper / shouting</th><th>Digital waitlist (QR + TV)</th></tr></thead>
+  <tbody>
+    <tr><td>Guest experience</td><td>Stand and listen</td><td>Wait anywhere, get alerted</td></tr>
+    <tr><td>Fairness</td><td>Disputes</td><td>Transparent order</td></tr>
+    <tr><td>Table use</td><td>Ad hoc</td><td>Best-fit allocation</td></tr>
+    <tr><td>Data</td><td>None</td><td>Waits, peaks, no-shows</td></tr>
+  </tbody>
+</table>
+
+<p>We built <a href="/products/smart-queue-restaurant-queue-management-system">Smart Queue</a> to do all of this, and demoed it for a popular mess in Erode. If you run a restaurant in Chennai, see <a href="/software/restaurant-queue-management-system-chennai">restaurant queue management in Chennai</a> or read the full <a href="/blogs/restaurant-queue-management-system-guide">queue management system guide</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<p><strong>Do guests need an app?</strong><br/>No. Good digital waitlists run in the phone browser after a QR scan.</p>
+<p><strong>What if a guest has no smartphone?</strong><br/>Staff add them as a walk-in from the dashboard, and they watch their token on the TV.</p>
+`,
+    faqs: [
+      { question: "How do restaurants manage long waiting lists?", answer: "By using a fair token system, ideally a QR-based digital waitlist with a TV token display and phone alerts, allocating tables by party size and tracking wait times to staff peak hours." },
+      { question: "Is a digital waitlist better than paper tokens?", answer: "Yes for busy restaurants: guests can wait anywhere and get alerted, the order is transparent, tables are allocated by best fit, and you get data on waits and no-shows." },
+    ],
+  },
+];
+
 // ---------------------------------------------------------------------------
 // Final export: new long-form posts first (newest first), then existing posts
 // with expanded rewrites applied. Slugs never change, so URLs stay stable.
@@ -4684,7 +4916,7 @@ function readingTime(html: string) {
 }
 
 export const blogPosts: BlogPost[] = [
-  ...[...newPosts1, ...newPosts2, ...newPosts3].sort(byDateDesc),
+  ...[...newPosts1, ...newPosts2, ...newPosts3, ...newPosts4].sort(byDateDesc),
   ...basePosts.map((p) => (rewrites[p.slug] ? { ...p, ...rewrites[p.slug] } : p)),
 ].map((p) => {
   const content = withExpansion(p.slug, p.content);

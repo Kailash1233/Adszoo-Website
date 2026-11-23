@@ -10,7 +10,8 @@ function iso(date) {
 // Money pages get a higher priority hint.
 const PRIORITY = [
   [/^\/$/, 1.0],
-  [/^\/(products|services)(\/|$)/, 0.9],
+  [/^\/(products|services|software)(\/|$)/, 0.9],
+  [/^\/nfc-google-review-card\//, 0.8],
   [/^\/seo-aeo-geo-services$/, 0.9],
   [/^\/case-study(\/|$)/, 0.8],
   [/^\/locations\//, 0.8],

@@ -113,6 +113,19 @@ const T = {
       { label: "Mobile app development", href: "/services/mobile-app-development" },
     ],
   },
+  reviews: {
+    primary: {
+      href: "/products/nfc-google-review-card",
+      cta: "Order NFC review cards",
+      headline: "Turn every happy customer into a Google review",
+      text: "NFC tap-to-review cards with QR backup: customers tap, the review form opens, and your Google Maps ranking climbs. Bulk orders across Chennai.",
+    },
+    links: [
+      { label: "NFC Google Review Card", href: "/products/nfc-google-review-card" },
+      { label: "Get recommended by AI search", href: "/seo-aeo-geo-services" },
+      { label: "Digital marketing in Chromepet", href: "/locations/digital-marketing-agency-chromepet" },
+    ],
+  },
   realestate: {
     primary: {
       href: "/products/propertygenie-real-estate-listing-software",
@@ -129,6 +142,7 @@ const T = {
 } satisfies Record<string, Omit<TopicLinks, "whatsapp">>;
 
 const RULES: [RegExp, keyof typeof T][] = [
+  [/google reviews|nfc|review card/i, "reviews"],
   [/billing|gst|inventory|pos|unizo|trader|hardware/i, "billing"],
   [/restaurant|queue|hospitality|f&b|food/i, "restaurant"],
   [/real estate|broker|property|developer/i, "realestate"],
@@ -148,7 +162,7 @@ export function getTopicLinks(tags: string[], slug = ""): TopicLinks {
     ...t,
     whatsapp: waLink(
       `Hi Adszoo, I read your article (${slug}) and want to discuss ${t.primary.cta.toLowerCase()}.`,
-      key === "billing" || key === "restaurant" || key === "realestate" ? CONTACT.productWhatsApp : CONTACT.generalWhatsApp
+      key === "billing" || key === "restaurant" || key === "realestate" || key === "reviews" ? CONTACT.productWhatsApp : CONTACT.generalWhatsApp
     ),
   };
 }

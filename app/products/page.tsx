@@ -9,7 +9,7 @@ import { products } from "@/lib/products-data";
 import { CONTACT, SITE_URL, absUrl, jsonLd, waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Business Software Products for Indian SMEs — Billing, Real Estate & Restaurant Queue | Adszoo",
+  title: "Business Products by Adszoo — Billing Software, Restaurant Queue System & NFC Review Cards",
   description:
     "Ready-to-deploy software built by Adszoo, Chennai: Unizo GST billing & inventory software, PropertyGenie for real estate brokers, and Smart Queue restaurant waitlist system. One-time fee + support.",
   keywords: [
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "What software products does Adszoo offer?",
     answer:
-      "Adszoo offers three ready-to-deploy products: Unizo (GST billing, stock and accounts software for construction material and trading businesses), PropertyGenie (listing pages, brochures and lead capture for real estate brokers) and Smart Queue (a QR-based restaurant waitlist and table management system).",
+      "Adszoo offers Unizo (GST billing, stock and accounts software for construction material, hardware and trading businesses), Smart Queue (a QR-based restaurant waitlist and table management system), the NFC Google Review Card (tap-to-review cards that bring more Google reviews), and PropertyGenie (listing pages, brochures and lead capture for real estate brokers).",
   },
   {
     question: "How are Adszoo products priced?",
@@ -97,7 +97,7 @@ export default function ProductsPage() {
         </section>
 
         <section className="py-16">
-          <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2 xl:grid-cols-4">
             {products.map((p) => (
               <article key={p.slug} className="flex flex-col rounded-3xl border border-gray-200 bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl">
                 <span className="w-fit rounded-full px-3 py-1 text-xs font-semibold text-white" style={{ background: p.accent === "#F5B800" ? "#b98a00" : p.accent }}>
@@ -116,12 +116,12 @@ export default function ProductsPage() {
                     Explore {p.name}
                   </Link>
                   <a
-                    href={waLink(`Hi Adszoo, I'd like a demo of ${p.name}.`)}
+                    href={waLink(p.kind === "physical" ? `Hi Adszoo, I'd like to order ${p.name}s.` : `Hi Adszoo, I'd like a demo of ${p.name}.`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-full border border-gray-300 px-6 py-3 text-center font-semibold"
                   >
-                    Get a demo on WhatsApp
+                    {p.kind === "physical" ? "Order on WhatsApp" : "Get a demo on WhatsApp"}
                   </a>
                 </div>
               </article>

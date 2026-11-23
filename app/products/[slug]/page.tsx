@@ -8,6 +8,9 @@ import EnquiryForm from "@/components/EnquiryForm";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import FaqBlock from "@/components/seo/FaqBlock";
 import ProductVisual from "@/components/products/ProductVisual";
+import AiUpsell from "@/components/products/AiUpsell";
+import { nfcAreas } from "@/lib/nfc-areas";
+import { solutionPages } from "@/lib/solution-pages";
 import { products, getProduct } from "@/lib/products-data";
 import { blogPosts } from "@/lib/blog-posts";
 import { caseStudies } from "@/lib/case-studies-data";
@@ -45,12 +48,15 @@ export default async function ProductPage({ params }: Props) {
   const p = getProduct(slug);
   if (!p) notFound();
 
-  const interest =
-    p.name === "Unizo"
-      ? "Unizo — Billing & Inventory Software"
-      : p.name === "PropertyGenie"
-      ? "PropertyGenie — Real Estate Listing Software"
-      : "Smart Queue — Restaurant Queue System";
+  const INTEREST: Record<string, string> = {
+    Unizo: "Unizo — Billing & Inventory Software",
+    PropertyGenie: "PropertyGenie — Real Estate Listing Software",
+    "Smart Queue": "Smart Queue — Restaurant Queue System",
+    "NFC Google Review Card": "NFC Google Review Card",
+  };
+  const interest = INTEREST[p.name] ?? p.name;
+  const physical = p.kind === "physical";
+  const ctaLabel = physical ? "Order / bulk enquiry" : "Book a free demo";
 
   const blogs = p.relatedBlogs
     .map((s) => blogPosts.find((b) => b.slug === s))
@@ -60,7 +66,21 @@ export default async function ProductPage({ params }: Props) {
     .filter(Boolean) as typeof caseStudies;
   const others = products.filter((o) => o.slug !== p.slug);
 
-  const softwareSchema = {
+  const productSchema = physical
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        name: `${p.name} by Adszoo`,
+        description: p.heroDescription,
+        brand: { "@type": "Brand", name: "Adszoo" },
+        category: "NFC review card",
+        url: absUrl(`/products/${p.slug}`),
+        image: p.screenshots?.map((s) => absUrl(s.src)) ?? absUrl("/Logo1.png"),
+        keywords: p.keywords.join(", "),
+      }
+    : null;
+
+  const softwareSchema = productSchema ?? {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: `${p.name} by Adszoo`,
@@ -96,7 +116,7 @@ export default async function ProductPage({ params }: Props) {
             <div>
               <Breadcrumbs items={[{ name: "Products", href: "/products" }, { name: p.name, href: `/products/${p.slug}` }]} />
               <span className="mt-6 inline-flex rounded-full bg-[#ff6321]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#e85716]">
-                {p.status} · Built by Adszoo
+                {p.status} · {physical ? "Supplied by Adszoo" : "Built by Adszoo"}
               </span>
               <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tighter md:text-6xl">
                 {p.name}
@@ -105,7 +125,7 @@ export default async function ProductPage({ params }: Props) {
               <p className="mt-6 text-lg leading-relaxed text-gray-600">{p.heroDescription}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a href="#enquire" className="rounded-full bg-[#ff6321] px-7 py-3.5 text-center font-semibold text-white hover:bg-[#e85716]">
-                  Book a free demo
+                  {ctaLabel}
                 </a>
                 <a
                   href={waLink(`Hi Adszoo, I'd like a demo and pricing for ${p.name}.`)}
@@ -122,7 +142,7 @@ export default async function ProductPage({ params }: Props) {
                 )}
               </div>
               <p className="mt-4 text-sm text-gray-500">
-                Or call <a className="font-semibold text-black underline" href={CONTACT.productPhoneHref}>{CONTACT.productPhone}</a> · Demo in Tamil or English
+                Or call <a className="font-semibold text-black underline" href={CONTACT.productPhoneHref}>{CONTACT.productPhone}</a> · {physical ? "Bulk orders welcome" : "Demo in Tamil or English"}
               </p>
             </div>
             <ProductVisual slug={p.slug} />
@@ -133,7 +153,7 @@ export default async function ProductPage({ params }: Props) {
         <section className="border-y bg-white">
           <div className="mx-auto max-w-4xl px-6 py-10">
             <p className="text-lg leading-relaxed">
-              <strong>In short:</strong> {p.definition} It is built and supported by Adszoo, a software and digital marketing company in Chennai, and is available across{" "}
+              <strong>In short:</strong> {p.definition} {physical ? "It is programmed and supplied by Adszoo, a digital marketing and software company in Chromepet, Chennai, with delivery across" : "It is built and supported by Adszoo, a software and digital marketing company in Chennai, and is available across"}{" "}
               {p.locations.slice(0, -1).join(", ")} and {p.locations[p.locations.length - 1]}.
             </p>
           </div>
@@ -198,7 +218,7 @@ export default async function ProductPage({ params }: Props) {
           <section className="py-20">
             <div className="mx-auto max-w-7xl px-6">
               <h2 className="text-3xl font-bold tracking-tight md:text-4xl">See {p.name} in action</h2>
-              <p className="mt-3 text-gray-600">Screens from a live demo configured for a popular mess in Erode.</p>
+              {p.screenshotsNote && <p className="mt-3 text-gray-600">{p.screenshotsNote}</p>}
               <div className="mt-10 grid gap-6 md:grid-cols-3">
                 {p.screenshots.filter((s) => !s.portrait).map((s) => (
                   <figure key={s.src} className="overflow-hidden rounded-2xl border bg-white">
@@ -276,9 +296,13 @@ export default async function ProductPage({ params }: Props) {
         <section className="py-20">
           <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">See {p.name} working for a business like yours</h2>
+              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+                {physical ? `Order ${p.name}s for your business` : `See ${p.name} working for a business like yours`}
+              </h2>
               <p className="mt-4 text-lg text-gray-600">
-                Tell us about your business and we&apos;ll set up a live demo with sample data that looks like yours. No obligation, no hard sell.
+                {physical
+                  ? "Tell us your business name, how many counters, tables or branches you have, and we'll send a quote on WhatsApp. Bulk orders welcome."
+                  : "Tell us about your business and we'll set up a live demo with sample data that looks like yours. No obligation, no hard sell."}
               </p>
               <div className="mt-8 space-y-4 text-gray-700">
                 <p><strong>Call:</strong> <a className="underline" href={CONTACT.productPhoneHref}>{CONTACT.productPhone}</a></p>
@@ -293,6 +317,28 @@ export default async function ProductPage({ params }: Props) {
             <EnquiryForm kind="product" defaultInterest={interest} />
           </div>
         </section>
+
+        {physical && <AiUpsell />}
+
+        {physical && (
+          <section className="border-t py-16">
+            <div className="mx-auto max-w-7xl px-6">
+              <h2 className="text-2xl font-bold tracking-tight md:text-3xl">NFC Google review cards delivered across Chennai</h2>
+              <p className="mt-3 max-w-3xl text-gray-600">
+                Programmed in Chromepet and delivered to shops, clinics, restaurants and offices across Chennai. Find your area:
+              </p>
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {nfcAreas.map((a) => (
+                  <li key={a.slug}>
+                    <Link href={`/nfc-google-review-card/${a.slug}`} className="inline-block rounded-full border border-gray-300 px-4 py-2 text-sm hover:border-[#ff6321] hover:text-[#c2410c]">
+                      NFC review card in {a.area}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         <FaqBlock faqs={p.faqs} title={`${p.name} — frequently asked questions`} />
 
@@ -337,6 +383,15 @@ export default async function ProductPage({ params }: Props) {
                     </Link>
                   </li>
                 ))}
+                {solutionPages
+                  .filter((x) => (p.name === "Unizo" && x.product === "unizo") || (p.name === "Smart Queue" && x.product === "smart-queue"))
+                  .map((x) => (
+                    <li key={x.slug}>
+                      <Link href={`/software/${x.slug}`} className="font-medium text-gray-800 hover:text-[#ff6321]">
+                        {x.h1.split(" — ")[0]} →
+                      </Link>
+                    </li>
+                  ))}
                 <li>
                   <Link href="/services/custom-software-development" className="font-medium text-gray-800 hover:text-[#ff6321]">
                     Need something custom? Custom software development →
