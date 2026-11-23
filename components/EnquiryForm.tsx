@@ -57,7 +57,7 @@ export default function EnquiryForm({
       company: fd.get("company"),
       city: fd.get("city"),
       message: fd.get("message"),
-      website: fd.get("website"),
+      hp: fd.get("hp"),
       interest,
       kind: SERVICES.includes(interest) ? "service" : "product",
       page: pathname,
@@ -97,7 +97,7 @@ export default function EnquiryForm({
 
       <form onSubmit={onSubmit} className="mt-6 space-y-4">
         {/* honeypot */}
-        <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+        <input type="text" name="hp" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
 
         <div className={compact ? "space-y-4" : "grid gap-4 sm:grid-cols-2"}>
           <label className="block">

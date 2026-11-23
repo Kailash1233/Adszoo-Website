@@ -26,7 +26,11 @@ type Lead = {
   kind: "product" | "service";
   message?: string;
   page?: string;
-  website?: string; // honeypot
+  website?: string; // prospect's website (optional)
+  industry?: string;
+  budget?: string;
+  challenge?: string;
+  hp?: string; // honeypot (hidden field bots fill)
 };
 
 function esc(s = "") {
@@ -46,7 +50,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Honeypot: bots fill hidden fields. Pretend success.
-  if (lead.website) return NextResponse.json({ ok: true });
+  if (lead.hp) return NextResponse.json({ ok: true });
 
   const name = (lead.name || "").trim();
   const phone = (lead.phone || "").trim();
@@ -64,7 +68,11 @@ export async function POST(req: NextRequest) {
     ["Name", name],
     ["Phone / WhatsApp", phone],
     ["Email", lead.email],
-    ["Company", lead.company],
+    ["Business", lead.company],
+    ["Website", lead.website],
+    ["Industry", lead.industry],
+    ["Monthly marketing budget", lead.budget],
+    ["Main challenge", lead.challenge],
     ["City", lead.city],
     ["Message", lead.message],
     ["Page", lead.page],
@@ -123,6 +131,10 @@ export async function POST(req: NextRequest) {
           phone,
           email: lead.email || "",
           company: lead.company || "",
+          website: lead.website || "",
+          industry: lead.industry || "",
+          budget: lead.budget || "",
+          challenge: lead.challenge || "",
           city: lead.city || "",
           service: lead.interest,
           message: text,
