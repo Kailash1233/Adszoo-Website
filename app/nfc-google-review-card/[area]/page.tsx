@@ -63,13 +63,16 @@ export default async function NfcAreaPage({ params }: Props) {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: `NFC Google Review Card — ${a.area}, Chennai`,
-    description: `Tap-to-review NFC card with QR backup that opens your Google review form, delivered to businesses in ${a.area}, Chennai.`,
-    brand: { "@type": "Brand", name: "Adszoo" },
+    serviceType: "NFC Google review cards (programmed, supplied and custom branded)",
+    description: `Tap-to-review NFC cards with QR backup that open your Google review form, programmed and delivered to businesses in ${a.area}, Chennai. Custom logo branding on bulk orders.`,
     image: absUrl("/products/nfc/nfc-google-review-card.webp"),
     url: absUrl(`/nfc-google-review-card/${a.slug}`),
-    isRelatedTo: { "@id": `${SITE_URL}/#localbusiness` },
+    provider: { "@id": `${SITE_URL}/#localbusiness` },
+    brand: { "@type": "Brand", name: "Adszoo" },
+    areaServed: [a.area, ...a.nearby].map((n) => ({ "@type": "Place", name: `${n}, Chennai` })),
+    audience: { "@type": "BusinessAudience", audienceType: a.businesses.join(", ") },
   };
 
   return (

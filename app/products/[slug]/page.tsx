@@ -66,48 +66,41 @@ export default async function ProductPage({ params }: Props) {
     .filter(Boolean) as typeof caseStudies;
   const others = products.filter((o) => o.slug !== p.slug);
 
-  const productSchema = physical
-    ? {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        name: `${p.name} by Adszoo`,
-        description: p.heroDescription,
-        brand: { "@type": "Brand", name: "Adszoo" },
-        category: "NFC review card",
-        url: absUrl(`/products/${p.slug}`),
-        image: p.screenshots?.map((s) => absUrl(s.src)) ?? absUrl("/Logo1.png"),
-        keywords: p.keywords.join(", "),
-      }
-    : null;
-
-  const softwareSchema = productSchema ?? {
+  // Service schema: describes what we supply without needing a public price
+  // or reviews (Product / SoftwareApplication rich results require offers.price,
+  // review or aggregateRating, which we don't publish).
+  const SERVICE_TYPE: Record<string, string> = {
+    Unizo: "GST billing and inventory software",
+    "Smart Queue": "Restaurant queue management system",
+    PropertyGenie: "Real estate listing and lead capture software",
+    "NFC Google Review Card": "NFC Google review cards (programmed, supplied and custom branded)",
+  };
+  const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "Service",
     name: `${p.name} by Adszoo`,
+    serviceType: SERVICE_TYPE[p.name] ?? p.name,
     description: p.heroDescription,
-    applicationCategory: p.category,
-    operatingSystem: p.name === "Unizo" ? "Windows, Web (Cloud)" : "Web, Android, iOS (browser)",
     url: absUrl(`/products/${p.slug}`),
     image: p.screenshots?.map((s) => absUrl(s.src)) ?? absUrl("/Logo1.png"),
-    featureList: p.features.map((f) => f.title).join(", "),
-    keywords: p.keywords.join(", "),
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    provider: { "@id": `${SITE_URL}/#organization` },
+    provider: { "@id": `${SITE_URL}/#localbusiness` },
+    brand: { "@type": "Brand", name: "Adszoo" },
     areaServed: p.locations.map((l) => ({ "@type": "Place", name: l })),
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
-      url: absUrl(`/products/${p.slug}#enquire`),
-      description: p.pricingModel.description,
-      seller: { "@id": `${SITE_URL}/#organization` },
+    audience: { "@type": "BusinessAudience", audienceType: p.idealFor.join(", ") },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `${p.name} features`,
+      itemListElement: p.features.map((f) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: f.title, description: f.description },
+      })),
     },
   };
 
   return (
     <>
       <Navbar />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(softwareSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(serviceSchema) }} />
 
       <main className="bg-white text-black tracking-tight">
         {/* HERO */}
