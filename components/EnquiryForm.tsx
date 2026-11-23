@@ -4,7 +4,12 @@ import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { CONTACT, waLink } from "@/lib/site";
 
-const PRODUCTS = ["Unizo — Billing & Inventory Software", "PropertyGenie — Real Estate Listing Software", "Smart Queue — Restaurant Queue System"];
+const PRODUCTS = [
+  "Unizo — Billing & Inventory Software",
+  "Smart Queue — Restaurant Queue System",
+  "NFC Google Review Card",
+  "PropertyGenie — Real Estate Listing Software",
+];
 const SERVICES = [
   "Conversion-Focused Website Development",
   "Custom Software / Web App Development",
@@ -12,6 +17,7 @@ const SERVICES = [
   "SEO / AEO / GEO",
   "SEO & Lead Generation for Manufacturers",
   "Social Media Marketing (Organic + Ads)",
+  "Get Recommended by AI (ChatGPT, Gemini, Perplexity)",
   "Google Ads / Meta Ads",
 ];
 
@@ -142,7 +148,7 @@ export default function EnquiryForm({
           disabled={loading}
           className="w-full rounded-full bg-[#ff6321] px-6 py-3.5 font-semibold text-white transition hover:bg-[#e85716] disabled:opacity-60"
         >
-          {loading ? "Sending…" : kind === "product" ? "Request demo & pricing" : "Request free consultation"}
+          {loading ? "Sending…" : defaultInterest === "NFC Google Review Card" ? "Request a quote" : kind === "product" ? "Request demo & pricing" : "Request free consultation"}
         </button>
 
         <div className="flex flex-col gap-2 pt-1 text-sm sm:flex-row">

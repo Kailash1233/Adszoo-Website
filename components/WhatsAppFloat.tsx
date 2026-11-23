@@ -8,7 +8,7 @@ export default function WhatsAppFloat() {
   const pathname = usePathname() || "/";
   if (pathname.startsWith("/ads") || pathname.startsWith("/landing")) return null;
 
-  const isProduct = pathname.startsWith("/products");
+  const isProduct = ["/products", "/software", "/nfc-google-review-card"].some((p) => pathname.startsWith(p));
   const number = isProduct ? CONTACT.productWhatsApp : CONTACT.generalWhatsApp;
   const text = isProduct
     ? `Hi Adszoo, I'm interested in your software product (${pathname}). Please share a demo and pricing.`

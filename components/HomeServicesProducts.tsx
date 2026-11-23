@@ -68,7 +68,7 @@ export default function HomeServicesProducts() {
               View all products
             </Link>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {products.map((p) => (
               <Link
                 key={p.slug}
@@ -77,7 +77,7 @@ export default function HomeServicesProducts() {
               >
                 <h3 className="text-xl font-bold">{p.name}</h3>
                 <p className="mt-2 text-sm text-gray-300">{p.tagline}</p>
-                <span className="mt-4 inline-block text-sm font-semibold text-[#fdba74]">Book a demo →</span>
+                <span className="mt-4 inline-block text-sm font-semibold text-[#fdba74]">{p.kind === "physical" ? "Order now →" : "Book a demo →"}</span>
               </Link>
             ))}
           </div>

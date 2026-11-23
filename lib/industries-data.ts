@@ -288,7 +288,7 @@ export const industries: Industry[] = [
     ],
     ctaHeading: "Ready to fill more chairs with the right patients?",
     ctaSubtext: "Let's look at where your clinic is currently invisible in local search.",
-    metaTitle: "Dental Marketing Agency | Clinic Website & Local SEO — Adszoo",
+    metaTitle: "Dental SEO & Digital Marketing Agency for Dentists in Chennai | Adszoo",
     metaDescription:
       "Website design, local SEO, and Google Business Profile management for dental clinics — built to convert real patient searches into booked appointments.",
     keywords: [

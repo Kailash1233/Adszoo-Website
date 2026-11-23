@@ -1,7 +1,28 @@
 import Image from "next/image";
 
 /** Lightweight, code-drawn product previews (no heavy images) for the hero. */
-export default function ProductVisual({ slug }: { slug: string }) {
+export type BillItem = { name: string; qty: string; gst: number; amount: number };
+
+const DEFAULT_ITEMS: BillItem[] = [
+  { name: "OPC 53 Cement (50kg)", qty: "40 bag", gst: 18, amount: 15200 },
+  { name: "TMT Bar 12mm Fe550", qty: "0.5 t", gst: 18, amount: 29750 },
+  { name: "PVC Pipe 1\" (3m)", qty: "25 nos", gst: 18, amount: 4375 },
+  { name: "River Sand / M-Sand", qty: "2 unit", gst: 5, amount: 11000 },
+];
+
+const inr = (n: number) => Math.round(n).toLocaleString("en-IN");
+
+export default function ProductVisual({
+  slug,
+  items = DEFAULT_ITEMS,
+  customer = "Sri Murugan Constructions",
+}: {
+  slug: string;
+  items?: BillItem[];
+  customer?: string;
+}) {
+  const total = items.reduce((t, i) => t + i.amount, 0);
+  const taxable = items.reduce((t, i) => t + i.amount / (1 + i.gst / 100), 0);
   if (slug.startsWith("smart-queue")) {
     return (
       <div className="relative overflow-hidden rounded-3xl border border-gray-200 shadow-2xl">
@@ -10,6 +31,21 @@ export default function ProductVisual({ slug }: { slug: string }) {
           alt="Smart Queue restaurant TV display with token numbers and QR code"
           width={1400}
           height={787}
+          priority
+          className="h-auto w-full"
+        />
+      </div>
+    );
+  }
+
+  if (slug.startsWith("nfc")) {
+    return (
+      <div className="relative overflow-hidden rounded-3xl border border-gray-200 shadow-2xl">
+        <Image
+          src="/products/nfc/nfc-google-review-card.webp"
+          alt="NFC Google review card: scan the QR on the front or tap the NFC chip to leave a Google review"
+          width={1536}
+          height={1024}
           priority
           className="h-auto w-full"
         />
@@ -65,17 +101,12 @@ export default function ProductVisual({ slug }: { slug: string }) {
               <span className="col-span-2 text-right">GST</span>
               <span className="col-span-2 text-right">Amount</span>
             </div>
-            {[
-              ["OPC 53 Cement (50kg)", "40 bag", "28%", "15,200"],
-              ["TMT Bar 12mm Fe550", "0.5 t", "18%", "29,750"],
-              ["PVC Pipe 1\" (3m)", "25 nos", "18%", "4,375"],
-              ["River Sand / M-Sand", "2 unit", "5%", "11,000"],
-            ].map((r) => (
-              <div key={r[0]} className="grid grid-cols-12 gap-2 border-b px-3 py-2 text-xs last:border-0">
-                <span className="col-span-6 truncate">{r[0]}</span>
-                <span className="col-span-2 text-right text-gray-600">{r[1]}</span>
-                <span className="col-span-2 text-right text-gray-600">{r[2]}</span>
-                <span className="col-span-2 text-right font-semibold">{r[3]}</span>
+            {items.map((r) => (
+              <div key={r.name} className="grid grid-cols-12 gap-2 border-b px-3 py-2 text-xs last:border-0">
+                <span className="col-span-6 truncate">{r.name}</span>
+                <span className="col-span-2 text-right text-gray-600">{r.qty}</span>
+                <span className="col-span-2 text-right text-gray-600">{r.gst}%</span>
+                <span className="col-span-2 text-right font-semibold">{inr(r.amount)}</span>
               </div>
             ))}
           </div>
@@ -83,14 +114,14 @@ export default function ProductVisual({ slug }: { slug: string }) {
         <div className="space-y-3 text-xs">
           <div className="rounded-xl bg-[#fff6ed] p-3">
             <p className="text-gray-500">Customer</p>
-            <p className="font-semibold">Sri Murugan Constructions</p>
+            <p className="font-semibold">{customer}</p>
             <p className="mt-1 text-gray-500">Contractor price · Credit</p>
             <p className="mt-1 font-semibold text-[#e85716]">Outstanding ₹1,82,400</p>
           </div>
           <div className="rounded-xl border p-3">
-            <div className="flex justify-between"><span>Taxable</span><span>₹48,914</span></div>
-            <div className="flex justify-between"><span>CGST + SGST</span><span>₹11,411</span></div>
-            <div className="mt-2 flex justify-between border-t pt-2 text-sm font-bold"><span>Total</span><span>₹60,325</span></div>
+            <div className="flex justify-between"><span>Taxable</span><span>₹{inr(taxable)}</span></div>
+            <div className="flex justify-between"><span>CGST + SGST</span><span>₹{inr(total - taxable)}</span></div>
+            <div className="mt-2 flex justify-between border-t pt-2 text-sm font-bold"><span>Total</span><span>₹{inr(total)}</span></div>
           </div>
           <div className="rounded-xl bg-black p-3 text-center font-semibold text-white">Save & Print</div>
         </div>
