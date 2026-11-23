@@ -51,15 +51,14 @@ export default async function SolutionPage({ params }: Props) {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: `${product.name} by Adszoo`,
-    applicationCategory: "BusinessApplication",
-    operatingSystem: s.product === "unizo" ? "Windows, Web (Cloud)" : "Web (any phone, tablet or smart TV)",
+    "@type": "Service",
+    name: `${product.name} by Adszoo — ${s.eyebrow}`,
+    serviceType: s.product === "unizo" ? "GST billing and inventory software" : "Restaurant queue management system",
     description: s.quickAnswer,
     url: absUrl(`/software/${s.slug}`),
-    keywords: s.keywords.join(", "),
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    isPartOf: { "@type": "WebPage", url: absUrl(`/products/${productSlug}`) },
+    provider: { "@id": `${SITE_URL}/#localbusiness` },
+    brand: { "@type": "Brand", name: "Adszoo" },
+    areaServed: [{ "@type": "City", name: "Chennai" }, { "@type": "State", name: "Tamil Nadu" }, { "@type": "Country", name: "India" }],
   };
 
   return (
