@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const a = getNfcArea(area);
   if (!a) return { title: "Not found" };
   const title = `NFC Google Review Card in ${a.area}, Chennai | Tap-to-Review Cards — Adszoo`;
-  const description = `Get more Google reviews for your ${a.area} business. NFC tap-to-review cards with QR backup, programmed with your Google review link and delivered in ${a.area}. Bulk orders. WhatsApp ${CONTACT.productPhone}.`;
+  const description = `Get more Google reviews for your ${a.area} business. NFC tap-to-review cards with QR backup, programmed with your review link and delivered in ${a.area}. Custom logo on bulk orders. WhatsApp ${CONTACT.productPhone}.`;
   return {
     title,
     description,
@@ -57,7 +57,7 @@ export default async function NfcAreaPage({ params }: Props) {
     },
     {
       question: "Can I order in bulk for multiple counters or branches?",
-      answer: "Yes. We supply bulk orders and program each card with the correct branch's review link so reviews go to the right location.",
+      answer: "Yes. We supply bulk orders, program each card with the correct branch's review link, and print your logo and brand colours on the cards.",
     },
   ];
 
@@ -107,7 +107,7 @@ export default async function NfcAreaPage({ params }: Props) {
                 </a>
               </div>
               <p className="mt-4 text-sm text-gray-500">
-                Or call <a className="font-semibold text-black underline" href={CONTACT.productPhoneHref}>{CONTACT.productPhone}</a> · Programmed &amp; tested before delivery
+                Or call <a className="font-semibold text-black underline" href={CONTACT.productPhoneHref}>{CONTACT.productPhone}</a> · Your logo on bulk orders
               </p>
             </div>
             <div className="overflow-hidden rounded-3xl border border-gray-200 shadow-2xl">
@@ -144,7 +144,7 @@ export default async function NfcAreaPage({ params }: Props) {
               <h3 className="mt-8 font-semibold">How it works</h3>
               <ol className="mt-3 space-y-2 text-gray-700">
                 <li>1. Send us your business name or Google Maps link on WhatsApp.</li>
-                <li>2. We program the NFC chip and QR code with your review link, then test them.</li>
+                <li>2. We program the NFC chip and QR code with your review link (and print your logo on bulk orders), then test them.</li>
                 <li>3. We deliver to your shop in {a.area}; you place the cards at the counter or tables.</li>
                 <li>4. Customers tap, rate and review. Your Maps ranking grows.</li>
               </ol>
@@ -162,7 +162,7 @@ export default async function NfcAreaPage({ params }: Props) {
             <div>
               <h2 className="text-3xl font-bold tracking-tight">Order cards for your {a.area} business</h2>
               <p className="mt-4 text-lg text-gray-600">
-                Single cards or bulk orders for every table, counter and branch. Tell us how many you need and we&apos;ll reply on WhatsApp with a quote.
+                Single cards or bulk orders for every table, counter and branch. Bulk orders can carry <strong>your logo and brand colours</strong>. Tell us how many you need and share your logo, and we&apos;ll reply on WhatsApp with a quote and a design preview.
               </p>
               {sameZone.length > 0 && (
                 <>

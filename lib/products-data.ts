@@ -588,6 +588,7 @@ const allProducts: Product[] = [
       "Google review NFC stand",
       "Google review QR code stand Chennai",
       "NFC review card for business",
+      "custom NFC card with logo Chennai",
       "how to get more Google reviews",
       "Google Maps ranking Chennai",
     ],
@@ -613,7 +614,8 @@ const allProducts: Product[] = [
       { title: "QR code backup on the back", description: "Phones without NFC (or with NFC switched off) scan the QR on the back and reach the same review page." },
       { title: "Goes straight to the stars", description: "No searching for your listing. Customers land on the review box, pick the stars and submit in seconds." },
       { title: "Programmed and tested for you", description: "We find your correct Google Business Profile review link, program every card and test it before delivery." },
-      { title: "Bulk orders for every counter", description: "Order one card or hundreds, with a card for each table, counter, staff member or branch. Ask about custom branding on bulk orders." },
+      { title: "Your logo on the card (bulk orders)", description: "Bulk orders can be custom-branded with your logo, business name and brand colours, so the card looks like part of your shop, not a generic sticker." },
+      { title: "Bulk orders for every counter", description: "Order one card or hundreds, with a card for each table, counter, staff member or branch." },
       { title: "Durable and reusable", description: "Sturdy cards that work every time, with no batteries or charging. The link can be re-programmed if your listing changes." },
     ],
     howItWorks: [
@@ -624,16 +626,17 @@ const allProducts: Product[] = [
     ],
     deployment: [
       { title: "Single business", description: "One or a few cards for your counter and reception, programmed with your Google review link." },
-      { title: "Bulk & multi-branch", description: "Cards for every table, staff member and branch, each pointing to the correct location's review page. Ideal for chains, franchises and clinics." },
+      { title: "Bulk & multi-branch (custom branded)", description: "Cards for every table, staff member and branch, each pointing to the correct location's review page and printed with your logo and brand colours. Ideal for chains, franchises, clinics and restaurants." },
       { title: "Agencies & resellers", description: "Buying for your clients? We supply programmed cards in bulk. WhatsApp us for trade enquiries." },
     ],
     pricingModel: {
-      title: "Single cards or bulk orders",
+      title: "Single cards or custom-branded bulk orders",
       description:
-        "Pricing depends on quantity and whether you need custom branding. Bulk orders for multiple counters, staff and branches get better rates. Message us for a quote.",
+        "Pricing depends on quantity and custom logo branding. Bulk orders for multiple counters, staff and branches get better rates and can carry your own logo. Message us for a quote.",
       points: [
         "Programmed & tested before delivery",
         "Bulk pricing for multiple cards and branches",
+        "Custom logo & brand colours on bulk orders",
         "Delivery across Chennai and Tamil Nadu",
         "Pair with Google Maps SEO for faster ranking",
       ],
@@ -653,6 +656,7 @@ const allProducts: Product[] = [
       { question: "Does it work on iPhone and Android?", answer: "Yes. Most modern Android phones and iPhones (XS and newer) read NFC. Any phone can also scan the QR code on the card." },
       { question: "Do customers need to install an app?", answer: "No. The review form opens in Google Maps or the browser. No app or login beyond their usual Google account is needed." },
       { question: "Can I order cards in bulk for all my branches?", answer: "Yes. We supply bulk orders and program each card with the correct branch's review link, so reviews go to the right location." },
+      { question: "Can you print my logo on the NFC review cards?", answer: "Yes. Bulk orders can be custom-branded with your logo, business name and brand colours. Share your logo on WhatsApp and we'll send a design preview before printing." },
       { question: "Will more reviews help my business rank on Google Maps in Chennai?", answer: "Yes. The number, freshness and quality of reviews are important local ranking signals on Google Maps. A steady flow of genuine reviews helps you appear above competitors for 'near me' searches." },
       { question: "Is it allowed to ask customers for reviews this way?", answer: "Yes. Making it easy for every customer to leave an honest review is fine. Don't offer rewards for positive reviews or review your own business, which breaks Google's policies." },
     ],
